@@ -56,7 +56,6 @@
     <ItemGroup>
         <Compile Include="Model\Base_creature.cs" />
         <Compile Include="Model\database.cs" />
-        <Compile Include="Model\Creature.cs" />
         <Compile Include="Model\Item.cs" />
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
