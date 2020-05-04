@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\xsitin\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\xsitin\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_Game.43876633.00" t="ExcludeRecursive" />
-    <e p="C:\Users\xsitin\Documents\GitHub\Game" t="IncludeFlat">
+    <e p="C:\Users\Loliconshik\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Loliconshik\.Rider2019.3\system\resharper-host\Local\Transient\ReSharperHost\v193\SolutionCaches\_Game.-677738227.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Loliconshik\Desktop\213223" t="IncludeFlat">
       <e p="Game" t="IncludeRecursive">
         <e p="App.config" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
@@ -11,9 +11,14 @@
         <e p="Game.csproj" t="IncludeRecursive" />
         <e p="Model" t="Include">
           <e p="Base_creature.cs" t="Include" />
+          <e p="Buff.cs" t="Include" />
+          <e p="Characteristics.cs" t="Include" />
           <e p="database.cs" t="Include" />
           <e p="Hero.cs" t="Include" />
+          <e p="Inventory.cs" t="Include" />
           <e p="Item.cs" t="Include" />
+          <e p="Player.cs" t="Include" />
+          <e p="Skill.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive" />
         <e p="packages.config" t="Include" />

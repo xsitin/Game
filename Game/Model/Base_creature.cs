@@ -1,25 +1,21 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace Game.Model
 {
-    public abstract class BaseCreature//
+    public abstract class BasicCreature
     {
-        public readonly string Name;
-        public readonly int Health;
-        public readonly CreatureType Type;
+        public string Name { get; }
+        public readonly Dictionary<Characteristics, int> Characteristics;
+        public Inventory Inventory { get; set; }
+        public List<Buff> Buffs = new List<Buff>();
 
-        public BaseCreature(string name, int health, CreatureType type)
+        public BasicCreature(string name, Dictionary<Characteristics, int> characteristics, Inventory inventory)
         {
             Name = name;
-            Health = health;
-            Type = type;
+            Characteristics = characteristics;
+            Inventory = inventory;
         }
-    }
-
-    public enum CreatureType
-    {
-        Peaceful,
-        Enemy,
-        Hero
     }
 }

@@ -2,13 +2,31 @@
 
 namespace Game.Model
 {
-    public class Hero:BaseCreature
+    //TODO
+    public class Hero : BasicCreature
     {
-        public Hero(string name, int health, CreatureType type) : base(name, health, type)
-        { 
-            //Ыы
+        public Specialization Specialization { get; }
+        public Position Position { get; }
+         
+        
+        public Hero(string name, Dictionary<Characteristics, int> characteristics, Inventory inventory, Specialization specialization, Position position) : base(name, characteristics, inventory)
+        {
+            Specialization = specialization;
+            Position = position;
         }
-
-        public List<Item> Inventory = new List<Item>();
     }
+
+    public enum Specialization
+    {
+        Wizard,
+        Warrior, 
+        Archer
+    }
+
+    public enum Position
+    {
+        Melee,
+        Range
+    }
+    
 }
