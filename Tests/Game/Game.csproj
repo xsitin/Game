@@ -59,10 +59,12 @@
     <Compile Include="Model\Buff.cs" />
     <Compile Include="Model\Characteristics.cs" />
     <Compile Include="Model\database.cs" />
+    <Compile Include="Model\EnemyHero.cs" />
     <Compile Include="Model\Hero.cs" />
     <Compile Include="Model\Inventory.cs" />
     <Compile Include="Model\Item.cs" />
     <Compile Include="Model\Player.cs" />
+    <Compile Include="Model\Position.cs" />
     <Compile Include="Model\Skill.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

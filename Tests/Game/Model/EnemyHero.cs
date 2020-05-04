@@ -2,14 +2,14 @@
 
 namespace Game.Model
 {
-    public class Hero : BasicCreature
+    public class EnemyHero : BasicCreature
     {
-        public Specialization Specialization { get; }
+        public EnemySpecialization Specialization { get; }
         public Position Position { get; }
         public List<Skill> Skills;
         public Location Location;
         
-        public Hero(string name, Dictionary<Characteristics, int> characteristics, Inventory inventory, Specialization specialization, Position position, Location location) : base(name, characteristics, inventory)
+        public EnemyHero(string name, Dictionary<Characteristics, int> characteristics, Inventory inventory, EnemySpecialization specialization, Position position, Location location) : base(name, characteristics, inventory)
         {
             Specialization = specialization;
             Position = position;
@@ -25,15 +25,10 @@ namespace Game.Model
         }
     }
 
-    public enum Specialization
+    public enum EnemySpecialization
     {
         Wizard,
         Warrior, 
         Archer
-    }
-
-    public enum Location
-    {
-        //TODO
     }
 }
