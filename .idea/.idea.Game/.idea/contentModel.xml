@@ -12,6 +12,14 @@
         <e p="Model" t="Include">
           <e p="Base_creature.cs" t="Include" />
           <e p="database.cs" t="Include" />
+<<<<<<< Updated upstream
+=======
+          <e p="EnemyFactory.cs" t="Include" />
+          <e p="EnemyHero.cs" t="Include" />
+          <e p="Field.cs" t="Include" />
+          <e p="Game.cs" t="Include" />
+          <e p="GameQueue.cs" t="Include" />
+>>>>>>> Stashed changes
           <e p="Hero.cs" t="Include" />
           <e p="Item.cs" t="Include" />
         </e>
