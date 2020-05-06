@@ -6,12 +6,15 @@
         public int ManaCost { get; }
         public SkillRange Range;
         public (Characteristics characteristic , int value)[] Effect { get; }
-        public Skill(int manaCost, (Characteristics characteristic, int value)[] effect, SkillRange range, string name)
+
+        public Buff Buff { get; }
+        public Skill(int manaCost, (Characteristics characteristic, int value)[] effect, SkillRange range, string name, Buff buff)
         {
             ManaCost = manaCost;
-            this.Effect = effect;
+            Effect = effect;
             Range = range;
             Name = name;
+            Buff = buff;
         }
     }
 

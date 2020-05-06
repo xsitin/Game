@@ -15,12 +15,14 @@
           <e p="Characteristics.cs" t="Include" />
           <e p="database.cs" t="Include" />
           <e p="EnemyHero.cs" t="Include" />
+          <e p="Field.cs" t="Include" />
           <e p="Hero.cs" t="Include" />
           <e p="Inventory.cs" t="Include" />
           <e p="Item.cs" t="Include" />
           <e p="Player.cs" t="Include" />
           <e p="Position.cs" t="Include" />
           <e p="Skill.cs" t="Include" />
+          <e p="Team.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive" />
         <e p="packages.config" t="Include" />

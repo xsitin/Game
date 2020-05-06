@@ -5,17 +5,22 @@ namespace Game.Model
     public class Buff
     {
         public string Name { get; }
-        public BasicCreature Target { get; }
+        public BasicCreature Target {
+            get => Target;
+            set
+            {
+                Target = value ?? throw new ArgumentNullException(nameof(value));
+                foreach ((var characteristic, var val) in buffs) Target.Characteristics[characteristic] += val;
+            }
+        }
         private (Characteristics characteristic , int value)[] buffs;
         public int Duration { get; set; }
 
-        public Buff(BasicCreature target, int duration, string name, params (Characteristics characteristic, int value)[] buffs)
+        public Buff(int duration, string name, params (Characteristics characteristic, int value)[] buffs)
         {
-            Target = target;
             Duration = duration;
             Name = name;
             this.buffs = buffs;
-            foreach (var (characteristic, value) in buffs) target.Characteristics[characteristic] += value;
         }
 
         ~Buff()
