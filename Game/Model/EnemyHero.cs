@@ -20,8 +20,12 @@ namespace Game.Model
         {
             if(action.ManaCost <= this.Characteristics[Model.Characteristics.Mana])
                 foreach (var target in targets)
-                foreach (var (characteristic, value) in action.Effect)
-                    target.Characteristics[characteristic] += value;
+                {
+                    foreach (var (characteristic, value) in action.Effect)
+                        target.Characteristics[characteristic] += value;
+                    if (action.Buff!=null)
+                        target.Buffs.Add(action.Buff);
+                }
         }
     }
 

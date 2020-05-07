@@ -28,16 +28,14 @@ namespace Game.Model
         public Position Position { get; }
         public List<Skill> Skills;
         public Location Location;
-        public Dictionary<Characteristics, int> Characteristics;
-        public Dictionary<Characteristics, int> StandartChars;
+        public Dictionary<Characteristics, int> StandardChars;
         public Hero(string name, Dictionary<Characteristics, int> characteristics, Inventory inventory, Specialization specialization, Position position, Location location) : base(name, characteristics, inventory)
         {
             Specialization = specialization;
             Position = position;
             Location = location;
             Level = 1;
-            Characteristics = characteristics;
-            StandartChars = characteristics.ToDictionary(x=>x.Key,y=>y.Value);
+            StandardChars = characteristics.ToDictionary(x=>x.Key,y=>y.Value);
         }
 
         public void UseSkill(Skill action, params BasicCreature[] targets )
@@ -45,9 +43,10 @@ namespace Game.Model
             if(action.ManaCost <= Characteristics[Model.Characteristics.Mana])
                 foreach (var target in targets)
                 {
-
                     foreach (var (characteristic, value) in action.Effect)
                         target.Characteristics[characteristic] += value;
+                    if (action.Buff!=null)
+                        target.Buffs.Add(action.Buff);
                 }
         }
     }

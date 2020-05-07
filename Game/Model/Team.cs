@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace Game.Model
 {
@@ -12,5 +13,7 @@ namespace Game.Model
             FirstLine = firstLine;
             SecondLine = secondLine;
         }
+
+        public List<BasicCreature> GetTeamList() => FirstLine.Concat(SecondLine).Cast<BasicCreature>().ToList();
     }
 }
