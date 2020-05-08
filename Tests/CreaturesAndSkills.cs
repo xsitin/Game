@@ -137,8 +137,8 @@ namespace Tests
         [Test]
         public void UsingSkillByHeroToEnemy()
         {
-            Mage.UseSkill(Mage.Skills[0], Enemy1);
-            Assert.IsNotNull(Mage.Skills[0].Buff);
+            Mage.UseSkill(Mage.Skills[1], Enemy1);
+            Assert.IsNotNull(Mage.Skills[1].Buff);
             Assert.True(Enemy1.Characteristics[Characteristics.Health] < 0);
             Assert.True(Enemy1.Buffs.Count > 0);
             Assert.True(Enemy1.Characteristics[Characteristics.Evasion] == 90);
@@ -151,7 +151,7 @@ namespace Tests
         [Test]
         public void UsingSkillByHeroToHero()
         {
-            Mage.UseSkill(Mage.Skills[0], Archer);
+            Mage.UseSkill(Mage.Skills[1], Archer);
             Assert.True(Archer.Characteristics[Characteristics.Health] < Archer.StandardChars[Characteristics.Health]);
             Assert.IsNotEmpty(Archer.Buffs);
             Archer.Buffs.Clear();
