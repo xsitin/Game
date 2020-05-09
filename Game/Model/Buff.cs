@@ -4,7 +4,7 @@ namespace Game.Model
 {
     public class Buff
     {
-        private readonly (Characteristics characteristic, int value)[] _buffs;
+        public (Characteristics characteristic, int value)[] _buffs;
         private BasicCreature _target;
 
         public Buff(int duration, string name, params (Characteristics characteristic, int value)[] buffs)

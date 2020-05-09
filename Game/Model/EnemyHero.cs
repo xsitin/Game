@@ -14,6 +14,9 @@ namespace Game.Model
             Specialization = specialization;
             Position = position;
             Location = location;
+            Skills.Add(new Skill(0,
+                new[] {(Model.Characteristics.Health, Characteristics[Model.Characteristics.PhysicalDamage])},
+                SkillRange.Single, "Base Hit", null));
         }
         
         public EnemyHero(string name, Dictionary<Characteristics, int> characteristics, Inventory inventory,
@@ -23,6 +26,9 @@ namespace Game.Model
             Specialization = specialization;
             Position = Transfer[specialization];
             Location = location;
+            Skills.Add(new Skill(0,
+                new[] {(Model.Characteristics.Health, Characteristics[Model.Characteristics.PhysicalDamage])},
+                SkillRange.Single, "Base Hit", null));
         }
 
         public Specialization Specialization { get; }

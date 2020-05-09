@@ -130,7 +130,13 @@ namespace Tests
             Assert.IsEmpty(Archer.Buffs);
             Assert.IsTrue(Archer.Characteristics[Characteristics.Evasion] ==
                           Archer.StandardChars[Characteristics.Evasion]);
-            //todo like enemytohero and enemytoenemy
+        }
+
+        [Test]
+        public void Upgrade()
+        {
+            Mage.Skills[0].Upgrade();
+            Assert.Pass();
         }
     }
 }

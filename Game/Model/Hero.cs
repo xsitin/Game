@@ -8,7 +8,7 @@ namespace Game.Model
     public class Hero : BasicCreature
     {
         private int _exp;
-        public List<Skill> Skills;
+        public List<Skill> Skills = new List<Skill>();
 
         public Hero(string name, Dictionary<Characteristics, int> characteristics, Inventory inventory,
             Specialization specialization, Position position, Location location) : base(name, characteristics,
@@ -21,6 +21,9 @@ namespace Game.Model
             Exp = 0;
             StandardChars = new ReadOnlyDictionary<Characteristics, int>
                 (characteristics.ToDictionary(x => x.Key, y => y.Value));
+            Skills.Add(new Skill(0,
+                new[] {(Model.Characteristics.Health, StandardChars[Model.Characteristics.PhysicalDamage])},
+                SkillRange.Single, "Base Hit", null));
         }
 
         public int UpgradePoints { get; private set; }

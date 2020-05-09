@@ -98,6 +98,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\Base_creature.cs" />
+    <Compile Include="Model\Bot.cs" />
     <Compile Include="Model\Buff.cs" />
     <Compile Include="Model\Characteristics.cs" />
     <Compile Include="Model\Database.cs" />

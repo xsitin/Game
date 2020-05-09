@@ -54,9 +54,11 @@ namespace Game.Model
                         if (enemy.Buffs[i].Duration <= 0)
                             enemy.Buffs.Remove(enemy.Buffs[i]);
                     }
-
             GC.Collect();
             GC.WaitForPendingFinalizers();
+            if(CurrentCreature is EnemyHero)
+                Bot.MakeAMove(this);
+            //Player TODO 
         }
     }
 }
