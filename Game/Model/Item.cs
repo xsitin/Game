@@ -14,6 +14,7 @@ namespace Game.Model
     public class ActiveItem : Item 
     {
         private readonly Action<BasicCreature> _action;
+        public Action<BasicCreature> Action => _action;
 
         public ActiveItem(string name, Action<BasicCreature> action) : base(name)
         {
@@ -26,6 +27,15 @@ namespace Game.Model
         {
             foreach (var target in targets)
                 _action(target);
+        }
+
+        public override bool Equals(object obj) {
+            if (!(obj is ActiveItem item)) return false;
+            return this.Name == item.Name && this.Action == item.Action;
+        }
+
+        public override int GetHashCode() {
+            return base.GetHashCode();
         }
     }
 }

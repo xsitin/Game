@@ -56,6 +56,7 @@
     <Compile Include="GameQueueTests.cs" />
     <Compile Include="Inventory_Should.cs" />
     <Compile Include="Items_Should.cs" />
+    <Compile Include="Saves_Should.cs" />
     <Compile Include="Team_Should.cs" />
     <Compile Include="Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

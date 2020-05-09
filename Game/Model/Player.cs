@@ -7,8 +7,8 @@ namespace Game.Model
         public int Gold { get; set; }
         public string PlayerName { get; set; }
         public List<Hero> Heroes { get; set; }
-        public List<Item> Storage { get; set; }
         public List<Hero> Mercenaries { get; set; }
-        public List<Item> Shop { get; set; }
+        public List<ActiveItem> Storage { get; set; }
+        public List<ActiveItem> Shop { get; set; }
     }
 }

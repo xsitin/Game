@@ -65,9 +65,17 @@ namespace Game.Model
                 }
         }
         
-        public override string ToString()
-        {
+        public override string ToString() {
             return Name;
+        }
+
+        public override bool Equals(object obj) {
+            if (!(obj is Hero hero)) return false;
+            return this.Exp == hero.Exp && this.Name == hero.Name;
+        }
+
+        public override int GetHashCode() {
+            return base.GetHashCode();
         }
     }
 
