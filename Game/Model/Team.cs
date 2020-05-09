@@ -10,6 +10,10 @@ namespace Game.Model
 
         public Team(List<T> firstLine, List<T> secondLine)
         {
+            if (firstLine.Count == 0 && secondLine.Count == 0)
+                throw new System.ArgumentException("Lines shouldn't be empty!");
+            if (firstLine == secondLine)
+                throw new ArgumentException("Lines shouldn't be equals!");
             FirstLine = firstLine;
             SecondLine = secondLine;
         }

@@ -108,5 +108,12 @@ namespace Tests
             foreach (var target in heroes)
                 Assert.AreEqual(220, target.Characteristics[Characteristics.Health]);
         }
+
+        [Test]
+        public void Test_BuffUsingItem() {
+            var poising = new Buff(enemyWizard, 1, "poising", (Characteristics.Health, -10));
+            var arrowWithPoison = new ActiveItem("ArrowWithPoison", target => target.Buffs.Add(poising));
+            Assert.True(enemyWizard.Characteristics[Characteristics.Health] == 190);
+        }
     }
 }
