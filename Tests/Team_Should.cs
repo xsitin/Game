@@ -50,13 +50,6 @@ namespace Tests {
         }
 
         [Test]
-        public void Test_FirstLineIsEmpty() {
-            var archers = new List<Hero>() { heroArcher, heroArcher };
-            var team = new Team<Hero>(new List<Hero>(), archers);
-            Assert.AreEqual(archers, team.GetTeamList());
-        }
-
-        [Test]
         public void Test_WellHeroesSquads() {
             var archers = new List<Hero>() { heroArcher, heroArcher };
             var warriors = new List<Hero>() { heroWarrior, heroWarrior };
@@ -70,6 +63,22 @@ namespace Tests {
             var wizards = new List<EnemyHero>() { enemyWizard, enemyWizard };
             var heroesTeam = new Team<EnemyHero>(warriors, wizards);
             Assert.AreEqual(heroesTeam.GetTeamList(), warriors.Concat(wizards).ToList());
+        }
+
+        [Test]
+        public void Test_MakeStepForward_FirstLineIsEmptyAndSecondLineNotEmpty() {
+            var archers = new List<Hero>() { heroArcher, heroArcher };
+            var team = new Team<Hero>(new List<Hero>(), archers);
+            Assert.AreEqual(archers, team.FirstLine);
+        }
+
+        [Test]
+        public void Test_MakeStepForward_LinesNotEmpty() {
+            var archers = new List<Hero>() { heroArcher, heroArcher };
+            var warriors = new List<Hero>() { heroWarrior, heroWarrior };
+            var team = new Team<Hero>(warriors, archers);
+            Assert.AreEqual(warriors, team.FirstLine);
+            Assert.AreEqual(archers, team.SecondLine);
         }
     }
 }

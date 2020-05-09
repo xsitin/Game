@@ -39,9 +39,7 @@ namespace Tests {
         }
 
         [Test]
-        public void Test_ContainsItemAtName() {
-            Assert.True(plainInventory.Contains("Heal"));
-        }
+        public void Test_ContainsItemAtName() => Assert.True(plainInventory.Contains("Heal"));
 
         [Test]
         public void Test_RemoveItem() {

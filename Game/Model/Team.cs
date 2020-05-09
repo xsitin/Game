@@ -6,19 +6,27 @@ namespace Game.Model
 {
     public class Team<T> where T: BasicCreature
     {
-        public List<T> FirstLine { get; }
-        public List<T> SecondLine { get; }
+        public List<T> FirstLine { get; private set; }
+        public List<T> SecondLine { get; private set; }
 
         public Team(List<T> firstLine, List<T> secondLine)
         {
             if (firstLine.Count == 0 && secondLine.Count == 0)
-                throw new System.ArgumentException("Lines shouldn't be empty!");
+                throw new ArgumentException("Lines shouldn't be empty!");
             if (firstLine == secondLine)
-                throw new System.ArgumentException("Lines shouldn't be equals!");
+                throw new ArgumentException("Lines shouldn't be equals!");
             FirstLine = firstLine;
             SecondLine = secondLine;
+            MakeStepForward();
         }
 
         public List<BasicCreature> GetTeamList() => FirstLine.Concat(SecondLine).Cast<BasicCreature>().ToList();
+
+        public void MakeStepForward() {
+            if (FirstLine.Count == 0 && SecondLine.Count != 0) {
+                FirstLine = SecondLine;
+                SecondLine = new List<T>();
+            }
+        }
     }
 }
