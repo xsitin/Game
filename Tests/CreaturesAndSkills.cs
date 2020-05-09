@@ -1,4 +1,4 @@
-﻿﻿using System;
+﻿using System;
 using System.Collections.Generic;
 using Game.Model;
 using NUnit.Framework;
@@ -75,10 +75,17 @@ namespace Tests
         }
 
         [Test]
+        public void Upgrade()
+        {
+            Mage.Skills[0].Upgrade();
+            Assert.Pass();
+        }
+
+        [Test]
         public void UsingSkillByEnemyToEnemy()
         {
             Assert.AreEqual(Enemy2.Characteristics[Characteristics.Health], 100);
-            Enemy1.UseSkill(Enemy1.Skills[0], Enemy2);
+            Enemy1.UseSkill(Enemy1.Skills[1], Enemy2);
             Assert.AreEqual(Enemy2.Characteristics[Characteristics.Health], 90);
             Assert.AreEqual(Enemy2.Characteristics[Characteristics.Initiative], -70);
             Assert.IsNotEmpty(Enemy2.Buffs);
@@ -91,7 +98,7 @@ namespace Tests
         [Test]
         public void UsingSkillByEnemyToHero()
         {
-            Enemy1.UseSkill(Enemy1.Skills[0], Archer);
+            Enemy1.UseSkill(Enemy1.Skills[1], Archer);
             Assert.AreEqual(Archer.Characteristics[Characteristics.Health],
                 Archer.StandardChars[Characteristics.Health] - 10);
             Assert.IsNotEmpty(Archer.Buffs);
@@ -130,13 +137,6 @@ namespace Tests
             Assert.IsEmpty(Archer.Buffs);
             Assert.IsTrue(Archer.Characteristics[Characteristics.Evasion] ==
                           Archer.StandardChars[Characteristics.Evasion]);
-        }
-
-        [Test]
-        public void Upgrade()
-        {
-            Mage.Skills[0].Upgrade();
-            Assert.Pass();
         }
     }
 }
