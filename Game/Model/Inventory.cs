@@ -20,12 +20,12 @@ namespace Game.Model
         }
         
         public void Remove(string name) {
-            var item = Heap.Where(element => element.Name == name).FirstOrDefault();
+            var item = Heap.FirstOrDefault(element => element.Name == name);
             if (item is null)
                 throw new System.ArgumentException("Item is not contained in inventory!");
             Heap.Remove(item);
         }
 
-        public bool Contains(string name) => Heap.Where(item => item.Name == name).Any();
+        public bool Contains(string name) => Heap.Any(item => item.Name == name);
     }
 }

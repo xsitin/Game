@@ -13,14 +13,14 @@ namespace Tests {
 
         [SetUp]
         public void SetUp() {
-            var poison = new ActiveItem("poison", target => target.Characteristics[Characteristics.Health] -= 20);
-            var healingPotion = new ActiveItem("Heal", target => target.Characteristics[Characteristics.Health] += 20);
+            var poison = new ActiveItem("Poison", new[] { (Characteristics.Health, -20) });
+            var healingPotion = new ActiveItem("Heal", new[] { (Characteristics.Health, 20) });
             var commonItems = new List<ActiveItem>() { poison, healingPotion };
             plainInventory = new Inventory(commonItems, 4);
 
             thingsForAdding = new List<ActiveItem>();
             for (int i = 0; i < 100; i++) {
-                var randomThing = new ActiveItem($"Test item №{i}", target => target.Characteristics[Characteristics.Evasion]++);
+                var randomThing = new ActiveItem($"Test item №{i}", new[] { (Characteristics.Evasion, 1) });
                 thingsForAdding.Add(randomThing);
             }
         }
@@ -42,8 +42,11 @@ namespace Tests {
         public void Test_ContainsItemAtName() => Assert.True(plainInventory.Contains("Heal"));
 
         [Test]
+        public void Test_NotContainsItemAtName() => Assert.False(plainInventory.Contains("Test"));
+
+        [Test]
         public void Test_RemoveItem() {
-            var newItem = new ActiveItem("newItem", item => { });
+            var newItem = new ActiveItem("newItem", new[] { (Characteristics.Health, -20) });
             plainInventory.Add(newItem);
             Assert.True(plainInventory.Heap.Contains(newItem));
             Assert.AreEqual(3, plainInventory.Heap.Count);
@@ -54,10 +57,10 @@ namespace Tests {
 
         [Test]
         public void Test_RemoveItemAtName() {
-            Assert.True(plainInventory.Contains("poison"));
-            plainInventory.Remove("poison");
+            Assert.True(plainInventory.Contains("Poison"));
+            plainInventory.Remove("Poison");
             Assert.AreEqual(1, plainInventory.Heap.Count);
-            Assert.False(plainInventory.Contains("poison"));
+            Assert.False(plainInventory.Contains("Poison"));
         }
 
         [Test]

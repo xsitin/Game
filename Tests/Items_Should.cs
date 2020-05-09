@@ -44,16 +44,9 @@ namespace Tests
         }
 
         [Test]
-        public void Test_NullUsabilityItem()
-        {
-            var exception = Assert.Throws<ArgumentException>(() => new ActiveItem("test", null));
-            Assert.AreEqual(exception.Message, "Action shouldn't be null!");
-        }
-
-        [Test]
         public void Test_OneItem_OneTarget()
         {
-            var poison = new ActiveItem("test", target => target.Characteristics[Characteristics.Health] -= 20);
+            var poison = new ActiveItem("poison", new[] { (Characteristics.Health, -20) });
             poison.Use(enemyWizard);
             Assert.AreEqual(180, enemyWizard.Characteristics[Characteristics.Health]);
         }
@@ -61,7 +54,7 @@ namespace Tests
         [Test]
         public void Test_OneItem_SomeTargets()
         {
-            var poison = new ActiveItem("test", target => target.Characteristics[Characteristics.Health] -= 20);
+            var poison = new ActiveItem("poison", new[] { (Characteristics.Health, -20) });
             var targets = enemySquad.GetTeamList().ToArray();
             poison.Use(targets);
 
@@ -73,8 +66,8 @@ namespace Tests
         public void Test_SomeItem_OneTarget()
         {
             Assert.AreEqual(200, enemyWizard.Characteristics[Characteristics.Health]);
-            var poison = new ActiveItem("posion", target => target.Characteristics[Characteristics.Health] -= 20);
-            var healingPotion = new ActiveItem("heal", target => target.Characteristics[Characteristics.Health] += 20);
+            var poison = new ActiveItem("poison", new[] { (Characteristics.Health, -20) });
+            var healingPotion = new ActiveItem("heal", new[] { (Characteristics.Health, 20) });
             poison.Use(enemyWizard);
             healingPotion.Use(enemyWizard);
             Assert.AreEqual(200, enemyWizard.Characteristics[Characteristics.Health]);
@@ -83,8 +76,8 @@ namespace Tests
         [Test]
         public void Test_TwoItems_TwoTargetsDifferentSides()
         {
-            var poison = new ActiveItem("posion", target => target.Characteristics[Characteristics.Health] -= 20);
-            var healingPotion = new ActiveItem("heal", target => target.Characteristics[Characteristics.Health] += 20);
+            var poison = new ActiveItem("poison", new[] { (Characteristics.Health, -20) });
+            var healingPotion = new ActiveItem("heal", new[] { (Characteristics.Health, 20) });
             poison.Use(enemyWizard);
             healingPotion.Use(heroWarrior);
 
@@ -95,8 +88,8 @@ namespace Tests
         [Test]
         public void Test_SomeItem_SomeTargets()
         {
-            var poison = new ActiveItem("posion", target => target.Characteristics[Characteristics.Health] -= 20);
-            var healingPotion = new ActiveItem("heal", target => target.Characteristics[Characteristics.Health] += 20);
+            var poison = new ActiveItem("poison", new[] { (Characteristics.Health, -20) });
+            var healingPotion = new ActiveItem("heal", new[] { (Characteristics.Health, 20) });
 
             var enemies = enemySquad.GetTeamList().ToArray();
             var heroes = heroSquad.GetTeamList().ToArray();
@@ -110,9 +103,31 @@ namespace Tests
         }
 
         [Test]
-        public void Test_BuffUsingItem() {
+        public void Test_OneMultiItem_OneTarget() {
+            var heal = new ActiveItem("heal", new[] { (Characteristics.Health, 20), (Characteristics.Initiative, 1) });
+            heal.Use(heroWarrior);
+
+            Assert.AreEqual(220, heroWarrior.Characteristics[Characteristics.Health]);
+            Assert.True(heroWarrior.Characteristics[Characteristics.Initiative] == 31);
+        }
+
+        [Test]
+        public void Test_OneMultiItem_OneTargets() {
+            var poison = new ActiveItem("poison", new[] { (Characteristics.Health, -20), (Characteristics.Initiative, -1) });
+            var targets = enemySquad.GetTeamList().ToArray();
+            poison.Use(targets);
+
+            foreach (var target in targets) {
+                Assert.AreEqual(180, target.Characteristics[Characteristics.Health]);
+                Assert.True(target.Characteristics[Characteristics.Initiative] == 29);
+            }
+        }
+
+        [Test]
+        public void Test_Buffusingitem() {
             var poising = new Buff(enemyWizard, 1, "poising", (Characteristics.Health, -10));
-            var arrowWithPoison = new ActiveItem("ArrowWithPoison", target => target.Buffs.Add(poising));
+            var arrowWithPoison = new ActiveItem("ArrowWithPoison", new (Characteristics, int)[0], poising);
+            arrowWithPoison.Use(enemyWizard);
             Assert.True(enemyWizard.Characteristics[Characteristics.Health] == 190);
         }
     }
