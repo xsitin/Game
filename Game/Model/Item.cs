@@ -4,11 +4,16 @@ namespace Game.Model
 {
     public abstract class Item
     {
-        public string Name { get; }
         public Item(string name)
         {
             Name = name;
         }
+
+        protected Item()
+        {
+        }
+
+        public string Name { get; }
     }
 
     public class ActiveItem : Item {
@@ -21,6 +26,12 @@ namespace Game.Model
             Buff = buff;
         }
 
+        public ActiveItem()
+        {
+        }
+
+        public Action<BasicCreature> Action { get; set; }
+
         public void Use(params BasicCreature[] targets)
         {
             foreach (var target in targets) {
@@ -29,14 +40,18 @@ namespace Game.Model
                 if (Buff != null)
                     target.Buffs.Add(Buff);
             }
+
         }
 
-        public override bool Equals(object obj) {
+        public override bool Equals(object obj)
+        {
             if (!(obj is ActiveItem item)) return false;
             return this.Name == item.Name && this.Actions == item.Actions;
+
         }
 
-        public override int GetHashCode() {
+        public override int GetHashCode()
+        {
             return base.GetHashCode();
         }
 

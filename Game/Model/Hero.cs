@@ -26,6 +26,10 @@ namespace Game.Model
                 SkillRange.Single, "Base Hit", null));
         }
 
+        public Hero()
+        {
+        }
+
         public int UpgradePoints { get; private set; }
 
         public Specialization Specialization { get; }
@@ -64,17 +68,21 @@ namespace Game.Model
                         target.Buffs.Add(action.Buff.ToTarget(target));
                 }
         }
-        
-        public override string ToString() {
+
+        public override string ToString()
+        {
             return Name;
         }
 
-        public override bool Equals(object obj) {
-            if (!(obj is Hero hero)) return false;
-            return this.Exp == hero.Exp && this.Name == hero.Name;
+        public override bool Equals(object obj)
+        {
+            if (!(obj is Hero)) return false;
+            var hero = (Hero) obj;
+            return Exp == hero.Exp && Name == hero.Name;
         }
 
-        public override int GetHashCode() {
+        public override int GetHashCode()
+        {
             return base.GetHashCode();
         }
     }

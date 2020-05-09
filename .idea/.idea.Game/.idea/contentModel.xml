@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Loliconshik\.Rider2019.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Loliconshik\.Rider2019.3\system\resharper-host\Local\Transient\ReSharperHost\v193\SolutionCaches\_Game.-1559802761.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Loliconshik\Documents\GitHub\Game" t="IncludeFlat">
+    <e p="C:\Users\xsitin\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\xsitin\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_Game.43876633.00" t="ExcludeRecursive" />
+    <e p="C:\Users\xsitin\Documents\GitHub\Game" t="IncludeFlat">
       <e p="Game" t="IncludeRecursive">
         <e p="App.config" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
@@ -53,10 +53,10 @@
           <e p="Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll" t="Include" />
           <e p="Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll" t="Include" />
         </e>
-        <e p="NUnit3TestAdapter.3.17.0-beta.1\build\net35\nunit.engine.api.dll" t="Include" />
-        <e p="NUnit3TestAdapter.3.17.0-beta.1\build\net35\nunit.engine.dll" t="Include" />
-        <e p="NUnit3TestAdapter.3.17.0-beta.1\build\net35\NUnit3.TestAdapter.dll" t="Include" />
-        <e p="NUnit3TestAdapter.3.17.0-beta.1\build\net35\NUnit3.TestAdapter.pdb" t="Include" />
+        <e p="NUnit3TestAdapter.3.16.1\build\net35\nunit.engine.api.dll" t="Include" />
+        <e p="NUnit3TestAdapter.3.16.1\build\net35\nunit.engine.dll" t="Include" />
+        <e p="NUnit3TestAdapter.3.16.1\build\net35\NUnit3.TestAdapter.dll" t="Include" />
+        <e p="NUnit3TestAdapter.3.16.1\build\net35\NUnit3.TestAdapter.pdb" t="Include" />
       </e>
       <e p="Tests" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
@@ -69,6 +69,7 @@
         <e p="Properties" t="Include">
           <e p="AssemblyInfo.cs" t="Include" />
         </e>
+        <e p="Saves_Should.cs" t="Include" />
         <e p="Team_Should.cs" t="Include" />
         <e p="Tests.cs" t="Include" />
         <e p="Tests.csproj" t="IncludeRecursive" />
