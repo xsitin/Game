@@ -13,7 +13,7 @@ namespace Game.Model
             if (firstLine.Count == 0 && secondLine.Count == 0)
                 throw new System.ArgumentException("Lines shouldn't be empty!");
             if (firstLine == secondLine)
-                throw new ArgumentException("Lines shouldn't be equals!");
+                throw new System.ArgumentException("Lines shouldn't be equals!");
             FirstLine = firstLine;
             SecondLine = secondLine;
         }

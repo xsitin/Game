@@ -68,7 +68,7 @@ namespace Tests {
             var exception = Assert.Throws<ArgumentException>(
                 () => plainInventory.Remove("sword")
             );
-            Assert.AreEqual("Item is not contained in inventory", exception.Message);
+            Assert.AreEqual("Item is not contained in inventory!", exception.Message);
         }
     }
 }

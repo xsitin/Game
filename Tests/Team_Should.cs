@@ -30,7 +30,7 @@ namespace Tests {
             var exception = Assert.Throws<ArgumentException>(
                 () => new Team<BasicCreature>(new List<BasicCreature>(), new List<BasicCreature>())
             );
-            Assert.AreEqual(exception.Message, "Team shouldn't be empty!");
+            Assert.AreEqual("Lines shouldn't be empty!", exception.Message);
         }
 
         [Test]
@@ -46,7 +46,7 @@ namespace Tests {
             var exception = Assert.Throws<ArgumentException>(
                 () => new Team<Hero>(warriors, warriors)
             );
-            Assert.AreEqual(exception.Message, "Lines shouldn't be equals!");
+            Assert.AreEqual("Lines shouldn't be equals!", exception.Message);
         }
 
         [Test]
