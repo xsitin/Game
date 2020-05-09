@@ -1,13 +1,28 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 
 namespace Game.Model
 {
     public class Game
     {
+        private readonly EnemyFactory _enemyFactory;
+        private int _counter;
+
+        public BasicCreature CurrentCreature;
         public Team<Hero> Heroes;
+        public Location Location;
         public GameQueue Queue;
+
+        public Game(Team<Hero> heroes, Location location)
+        {
+            Heroes = heroes;
+            Location = location;
+            _enemyFactory = new EnemyFactory(heroes, Location);
+            Enemy = _enemyFactory.GetEnemyTeam();
+            Queue = new GameQueue(Heroes.GetTeamList().Concat(Enemy.GetTeamList()).ToList());
+            _counter = 0;
+        }
+
         public Team<EnemyHero> Enemy
         {
             get => Enemy;
@@ -19,24 +34,8 @@ namespace Game.Model
             }
         }
 
-        private EnemyFactory _enemyFactory;
-        public Location Location;
-
-        public BasicCreature CurrentCreature;
-        private int _counter;
-        public Game(Team<Hero> heroes, Location location)
-        {
-            Heroes = heroes;
-            Location = location;
-            _enemyFactory = new EnemyFactory(heroes,Location);
-            Enemy = _enemyFactory.GetEnemyTeam();
-            Queue = new GameQueue(Heroes.GetTeamList().Concat(Enemy.GetTeamList()).ToList());
-            _counter = 0;
-        }
-
         public void NextStep()
         {
-            Queue.Update();
             CurrentCreature = Queue.GetNextPerson();
             foreach (var hero in Heroes.GetTeamList())
                 for (var i = 0; i < hero.Buffs.Count; i++)
@@ -46,6 +45,7 @@ namespace Game.Model
                         if (hero.Buffs[i].Duration <= 0)
                             hero.Buffs.Remove(hero.Buffs[i]);
                     }
+
             foreach (var enemy in Enemy.GetTeamList())
                 for (var i = 0; i < enemy.Buffs.Count; i++)
                     if (!(enemy.Buffs[i] is null))
@@ -54,6 +54,9 @@ namespace Game.Model
                         if (enemy.Buffs[i].Duration <= 0)
                             enemy.Buffs.Remove(enemy.Buffs[i]);
                     }
+
+            GC.Collect();
+            GC.WaitForPendingFinalizers();
         }
     }
 }

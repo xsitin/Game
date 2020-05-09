@@ -4,28 +4,52 @@ namespace Game.Model
 {
     public class Buff
     {
-        public string Name { get; }
-        public BasicCreature Target {
-            get => Target;
-            set
-            {
-                Target = value ?? throw new ArgumentNullException(nameof(value));
-                foreach ((var characteristic, var val) in buffs) Target.Characteristics[characteristic] += val;
-            }
-        }
-        private (Characteristics characteristic , int value)[] buffs;
-        public int Duration { get; set; }
+        private readonly (Characteristics characteristic, int value)[] _buffs;
+        private BasicCreature _target;
 
         public Buff(int duration, string name, params (Characteristics characteristic, int value)[] buffs)
         {
             Duration = duration;
             Name = name;
-            this.buffs = buffs;
+            _buffs = buffs;
         }
+
+        public Buff(BasicCreature target, int duration, string name,
+            params (Characteristics characteristic, int value)[] buffs)
+        {
+            Duration = duration;
+            Name = name;
+            _buffs = buffs;
+            Target = target;
+        }
+
+        public string Name { get; }
+
+        public BasicCreature Target
+        {
+            get => _target;
+            set
+            {
+                _target = value ?? throw new ArgumentNullException(nameof(value));
+                foreach (var (characteristic, val) in _buffs) Target.Characteristics[characteristic] += val;
+            }
+        }
+
+        public int Duration { get; set; }
 
         ~Buff()
         {
-            foreach (var (characteristic, value) in buffs) Target.Characteristics[characteristic] -= value;
+            if (_target != null)
+                foreach (var (characteristic, value) in _buffs)
+                    _target.Characteristics[characteristic] -= value;
+        }
+
+        public Buff ToTarget(BasicCreature target)
+        {
+            var buff = new Buff(Duration, Name, _buffs);
+            buff._target = target;
+            foreach (var (characteristic, value) in _buffs) buff._target.Characteristics[characteristic] += value;
+            return buff;
         }
     }
 }

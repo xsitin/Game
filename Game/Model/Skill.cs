@@ -1,4 +1,6 @@
-﻿namespace Game.Model
+﻿using System;
+
+namespace Game.Model
 {
     public class Skill
     {
@@ -15,6 +17,11 @@
             Range = range;
             Name = name;
             Buff = buff;
+        }
+
+        public void Upgrade()
+        {
+            return;
         }
     }
 

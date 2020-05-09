@@ -1,24 +1,44 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 
 namespace Game.Model
 {
     public class Hero : BasicCreature
     {
+        private int _exp;
+        public List<Skill> Skills;
+
+        public Hero(string name, Dictionary<Characteristics, int> characteristics, Inventory inventory,
+            Specialization specialization, Position position, Location location) : base(name, characteristics,
+            inventory)
+        {
+            Specialization = specialization;
+            Position = position;
+            Location = location;
+            Level = 1;
+            Exp = 0;
+            StandardChars = new ReadOnlyDictionary<Characteristics, int>
+                (characteristics.ToDictionary(x => x.Key, y => y.Value));
+        }
+
+        public int UpgradePoints { get; private set; }
+
         public Specialization Specialization { get; }
 
         public int Exp
         {
-            get => Exp;
+            get => _exp;
             set
             {
-                if (value<0)
-                    throw  new Exception("ты шо совсем тупой?");
-                Exp += value;
-                while (Exp>Math.Round((100+Level*100+300*Math.Pow(Level,0.5))))
+                if (value < 0)
+                    throw new Exception("ты шо совсем тупой?");
+                _exp = value;
+                while (_exp >= Math.Round(100 + Level * 100 + 300 * Math.Pow(Level, 0.5)))
                 {
-                    Exp -=(int) Math.Round((100 + Level * 100 + 300 * Math.Pow(Level, 0.5)));
+                    _exp -= (int) Math.Round(100 + Level * 100 + 300 * Math.Pow(Level, 0.5));
+                    UpgradePoints++;
                     Level++;
                 }
             }
@@ -26,40 +46,38 @@ namespace Game.Model
 
         public int Level { get; set; }
         public Position Position { get; }
-        public List<Skill> Skills;
-        public Location Location;
-        public Dictionary<Characteristics, int> StandardChars;
-        public Hero(string name, Dictionary<Characteristics, int> characteristics, Inventory inventory, Specialization specialization, Position position, Location location) : base(name, characteristics, inventory)
-        {
-            Specialization = specialization;
-            Position = position;
-            Location = location;
-            Level = 1;
-            StandardChars = characteristics.ToDictionary(x=>x.Key,y=>y.Value);
-        }
+        public Location Location { get; }
+        public ReadOnlyDictionary<Characteristics, int> StandardChars { get; }
 
-        public void UseSkill(Skill action, params BasicCreature[] targets )
+        public void UseSkill(Skill action, params BasicCreature[] targets)
         {
-            if(action.ManaCost <= Characteristics[Model.Characteristics.Mana])
+            //logic for choosing goals will be in controls
+            if (action.ManaCost <= Characteristics[Model.Characteristics.Mana])
                 foreach (var target in targets)
                 {
-                    foreach (var (characteristic, value) in action.Effect)
+                    foreach ((var characteristic, var value) in action.Effect)
                         target.Characteristics[characteristic] += value;
-                    if (action.Buff!=null)
-                        target.Buffs.Add(action.Buff);
+                    if (action.Buff != null)
+                        target.Buffs.Add(action.Buff.ToTarget(target));
                 }
+        }
+        
+        public override string ToString()
+        {
+            return Name;
         }
     }
 
     public enum Specialization
     {
         Wizard,
-        Warrior, 
+        Warrior,
         Archer
     }
 
     public enum Location
     {
+        SomeLocation
         //TODO
     }
 }

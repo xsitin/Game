@@ -52,11 +52,22 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CreaturesAndSkills.cs" />
+    <Compile Include="GameQueueTests.cs" />
+    <Compile Include="Inventory_Should.cs" />
+    <Compile Include="Items_Should.cs" />
+    <Compile Include="Team_Should.cs" />
     <Compile Include="Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Game\Game.csproj">
+      <Project>{97f08132-ba84-400d-9c5d-ab0f2c6706e9}</Project>
+      <Name>Game</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

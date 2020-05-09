@@ -17,6 +17,8 @@ namespace Game.Model
 
         public ActiveItem(string name, Action<BasicCreature> action) : base(name)
         {
+            if (action is null)
+                throw new ArgumentException("Action shouldn't be null!");
             _action = action;
         }
 

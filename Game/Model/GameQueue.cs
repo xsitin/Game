@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Game.Model
@@ -9,20 +10,21 @@ namespace Game.Model
         public List<BasicCreature> Queue;
         public void GetQueue(List<BasicCreature> creatures)
         {
-            Queue = creatures.OrderBy(x =>
+            Queue = creatures.OrderByDescending(x =>
                 x.Characteristics[Characteristics.Initiative]).ToList();
         }
 
         public GameQueue(List<BasicCreature> creatures)
         {
-            Queue = creatures.OrderBy(x =>
+            if(!creatures.Any()) throw new FormatException("Чел ты даун?");
+            Queue = creatures.OrderByDescending(x =>
                 x.Characteristics[Characteristics.Initiative]).ToList();
         }
 
         public void Update()
         {
             var count = Queue.Take(_count).Count(x =>
-                ((x is null)) || x.Characteristics[Characteristics.Health] <= 0);
+                ((x is null)) || x.Characteristics[Characteristics.Health] <= 0 || x.Characteristics[Characteristics.Initiative] <= 0);
             Queue = Queue.Where(x =>
                 (!(x is null))&&x.Characteristics[Characteristics.Health] > 0).ToList();
             _count -= count;
@@ -30,6 +32,7 @@ namespace Game.Model
 
         public BasicCreature GetNextPerson()
         {
+            Update();
             _count++;
             if (_count >= Queue.Count) _count = 0;
             return Queue[_count];

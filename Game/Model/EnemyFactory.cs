@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading;
 
 namespace Game.Model
 {
@@ -6,16 +9,81 @@ namespace Game.Model
     {
         public Location Location;
         public Team<Hero> Heroes;
+        public int Counter;
         public EnemyFactory(Team<Hero> heroes, Location location)
         {
             Heroes = heroes;
             Location = location;
+            Counter = 1;
         }
 
         public Team<EnemyHero> GetEnemyTeam()
         {
-            throw new Exception("TODO");
-            return null;
+            var random = new Random();
+            var listHero = Heroes.GetTeamList();
+            var minLevel = listHero.Min(x => ((Hero)x).Level);
+            var maxLevel = listHero.Max(x => ((Hero)x).Level);
+            var heroCount = listHero.Count + Counter > 8 ? 8 : listHero.Count + Counter;
+            var enemyCount = random.Next(Counter, heroCount);
+            var firstLine = new List<EnemyHero>(); 
+            var secondLine = new List<EnemyHero>(); 
+            for (var i = 0; i < enemyCount; i++)
+            {
+                var enemy = GetRandomEnemy(minLevel, maxLevel);
+                if(enemy.Position == Position.Range && secondLine.Count < 4)
+                    secondLine.Add(enemy);
+                else 
+                    firstLine.Add(enemy);
+                Thread.Sleep(10);
+            }
+            if (!firstLine.Any())
+            {
+                firstLine.Add(GetEnemy(minLevel,maxLevel,Specialization.Warrior));
+            }
+            Counter++;
+            return new Team<EnemyHero>(firstLine,secondLine);
+        }
+
+        private EnemyHero GetRandomEnemy(int minLevel, int maxLevel)
+        {
+            var random = new Random();
+            var specialization = (Specialization) random.Next(0, Enum.GetValues(typeof(Specialization)).Length - 1);
+            return GetEnemy(maxLevel,maxLevel,specialization);
+        }
+        
+        private EnemyHero GetEnemy(int minLevel, int maxLevel, Specialization specialization)
+        {
+            var random = new Random();
+            var enemy = new EnemyHero(Database.GetName(), new Dictionary<Characteristics, int>(), new Inventory(),
+                specialization, Location);
+            var points = random.Next(minLevel, maxLevel) - 1;
+            Thread.Sleep(10);
+            while (enemy.Skills.Count < 2)
+            {
+                var skill = Database.BasicSkills[specialization][
+                    random.Next(0, Database.BasicSkills[specialization].Count)];
+                if (enemy.Skills.All(x => x.Name != skill.Name))
+                    enemy.Skills.Add(skill);
+            }
+
+            for (var j = 0; j < points; j++)
+            {
+                if (random.Next(0, 2) == 1)
+                {
+                    var character = (Characteristics) random.Next(0, Enum.GetValues(typeof(Characteristics)).Length - 1);
+                    if (character == Characteristics.PhysicalProtection &&
+                        enemy.Specialization == Specialization.Wizard)
+                    { 
+                        enemy.Skills[random.Next(0, enemy.Skills.Count - 1)].Upgrade();
+                        continue;
+                    }
+                    enemy.Characteristics[character] = (int) (enemy.Characteristics[character] * 1.2);
+                }
+                else
+                    enemy.Skills[random.Next(0, enemy.Skills.Count - 1)].Upgrade();
+            }
+            
+            return enemy;
         }
     }
 }

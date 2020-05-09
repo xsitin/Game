@@ -11,50 +11,63 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Game/Program.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Model/Team.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Model/Field.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Model/database.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Model/Base_creature.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Model/Item.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Model/EnemyHero.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Model/GameQueue.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Model/Characteristics.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Model/Position.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Model/EnemyFactory.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Model/Player.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Model/Game.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Tests/packages.config" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Model/Buff.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Model/Hero.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Model/Inventory.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Model/Skill.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Tests/Tests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Game/packages.config" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/GameTests/GameLogicTests.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/Team.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/Skill.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/Position.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/Player.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/Item.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/Inventory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/Hero.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/GameQueue.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/Game.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/Field.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/EnemyHero.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/EnemyFactory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/Database.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/Characteristics.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/Buff.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/Base_creature.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Properties/Resources.resx" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Properties/AssemblyInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/497E7C03-5433-4AE6-B257-9B219192BCF0/95/b11f1403/Reflect.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/packages.config" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/Tests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/Team_Should.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/Items_Should.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/Properties/AssemblyInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/Inventory_Should.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/GameQueueTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/CreaturesAndSkills.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Game/Model/database.cs" />
         <option value="$PROJECT_DIR$/Game/Model/ICreature.cs" />
         <option value="$PROJECT_DIR$/Game/Model/IItem.cs" />
-        <option value="$PROJECT_DIR$/Game/Model/Item.cs" />
-        <option value="$PROJECT_DIR$/Game/Model/Inventory.cs" />
+        <option value="$PROJECT_DIR$/Game/Model/Enemy.cs" />
+        <option value="$PROJECT_DIR$/Game/Program.cs" />
+        <option value="$PROJECT_DIR$/Tests/GameTests/GameLogicTests.cs" />
+        <option value="$PROJECT_DIR$/Game/Tests/GameLohicTests.cs" />
+        <option value="$PROJECT_DIR$/Game/Tests/GameLogicTests.cs" />
         <option value="$PROJECT_DIR$/Game/Model/Characteristics.cs" />
         <option value="$PROJECT_DIR$/Game/Model/Base_creature.cs" />
-        <option value="$PROJECT_DIR$/Game/Model/Enemy.cs" />
-        <option value="$PROJECT_DIR$/Game/Model/Position.cs" />
-        <option value="$PROJECT_DIR$/Game/Model/Skill.cs" />
         <option value="$PROJECT_DIR$/Game/Model/Buff.cs" />
-        <option value="$PROJECT_DIR$/Game/Program.cs" />
-        <option value="$PROJECT_DIR$/Game/Model/Field.cs" />
+        <option value="$PROJECT_DIR$/Game/Model/database.cs" />
         <option value="$PROJECT_DIR$/Game/Model/EnemyFactory.cs" />
-        <option value="$PROJECT_DIR$/Game/Model/Hero.cs" />
         <option value="$PROJECT_DIR$/Game/Model/EnemyHero.cs" />
-        <option value="$PROJECT_DIR$/Game/Model/Team.cs" />
+        <option value="$PROJECT_DIR$/Game/Model/Field.cs" />
         <option value="$PROJECT_DIR$/Game/Model/Game.cs" />
         <option value="$PROJECT_DIR$/Game/Model/GameQueue.cs" />
+        <option value="$PROJECT_DIR$/Game/Model/Hero.cs" />
+        <option value="$PROJECT_DIR$/Game/Model/Inventory.cs" />
+        <option value="$PROJECT_DIR$/Game/Model/Item.cs" />
         <option value="$PROJECT_DIR$/Game/Model/Player.cs" />
+        <option value="$PROJECT_DIR$/Game/Model/Position.cs" />
+        <option value="$PROJECT_DIR$/Game/Model/Skill.cs" />
+        <option value="$PROJECT_DIR$/Game/Model/Team.cs" />
       </list>
     </option>
   </component>
@@ -69,10 +82,11 @@
     <property name="Rider.SolutionExplorerActivator" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TWShift.3" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected=".NET Project.Game">
     <configuration name="Game" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -88,7 +102,7 @@
       <option name="PROJECT_KIND" value="Console" />
       <option name="PROJECT_TFM" value="" />
       <method v="2">
-        <option name="Build" />
+        <option name="Build" enabled="true" />
       </method>
     </configuration>
   </component>
@@ -106,6 +120,15 @@
       <workItem from="1588604938595" duration="104000" />
       <workItem from="1588606416432" duration="9341000" />
       <workItem from="1588616713481" duration="2301000" />
+      <workItem from="1588875380575" duration="10607000" />
+      <workItem from="1588892602515" duration="3770000" />
+      <workItem from="1588927552905" duration="2302000" />
+      <workItem from="1588969320156" duration="3629000" />
+      <workItem from="1588973138538" duration="457000" />
+      <workItem from="1589032048456" duration="309000" />
+      <workItem from="1589033462005" duration="439000" />
+      <workItem from="1589037171198" duration="718000" />
+      <workItem from="1589037933538" duration="17000" />
     </task>
     <servers />
   </component>
@@ -124,10 +147,94 @@
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="410" y="199" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog" timestamp="1588875504382">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="410" y="199" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog/0.0.1536.864@0.0.1536.864" timestamp="1588875504382" />
     <state x="587" y="89" key="CommitChangelistDialog2" timestamp="1588770422551">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="587" y="89" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1588770422551" />
+    <state width="1493" height="277" key="GridCell.Tab.0.bottom" timestamp="1588972951570">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="277" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1588972951570" />
+    <state width="1493" height="277" key="GridCell.Tab.0.center" timestamp="1588972951569">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="277" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1588972951569" />
+    <state width="1493" height="277" key="GridCell.Tab.0.left" timestamp="1588972951569">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="277" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1588972951569" />
+    <state width="1493" height="277" key="GridCell.Tab.0.right" timestamp="1588972951569">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="277" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1588972951569" />
+    <state width="1493" height="277" key="GridCell.Tab.1.bottom" timestamp="1588972951570">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="277" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1588972951570" />
+    <state width="1493" height="277" key="GridCell.Tab.1.center" timestamp="1588972951570">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="277" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1588972951570" />
+    <state width="1493" height="277" key="GridCell.Tab.1.left" timestamp="1588972951570">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="277" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1588972951570" />
+    <state width="1493" height="277" key="GridCell.Tab.1.right" timestamp="1588972951570">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="277" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1588972951570" />
+    <state width="1493" height="277" key="GridCell.Tab.2.bottom" timestamp="1588972951570">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="277" key="GridCell.Tab.2.bottom/0.0.1536.864@0.0.1536.864" timestamp="1588972951570" />
+    <state width="1493" height="277" key="GridCell.Tab.2.center" timestamp="1588972951570">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="277" key="GridCell.Tab.2.center/0.0.1536.864@0.0.1536.864" timestamp="1588972951570" />
+    <state width="1493" height="277" key="GridCell.Tab.2.left" timestamp="1588972951570">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="277" key="GridCell.Tab.2.left/0.0.1536.864@0.0.1536.864" timestamp="1588972951570" />
+    <state width="1493" height="277" key="GridCell.Tab.2.right" timestamp="1588972951570">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="277" key="GridCell.Tab.2.right/0.0.1536.864@0.0.1536.864" timestamp="1588972951570" />
+    <state width="1493" height="277" key="GridCell.Tab.3.bottom" timestamp="1588972951570">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="277" key="GridCell.Tab.3.bottom/0.0.1536.864@0.0.1536.864" timestamp="1588972951570" />
+    <state width="1493" height="277" key="GridCell.Tab.3.center" timestamp="1588972951570">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="277" key="GridCell.Tab.3.center/0.0.1536.864@0.0.1536.864" timestamp="1588972951570" />
+    <state width="1493" height="277" key="GridCell.Tab.3.left" timestamp="1588972951570">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="277" key="GridCell.Tab.3.left/0.0.1536.864@0.0.1536.864" timestamp="1588972951570" />
+    <state width="1493" height="277" key="GridCell.Tab.3.right" timestamp="1588972951570">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="277" key="GridCell.Tab.3.right/0.0.1536.864@0.0.1536.864" timestamp="1588972951570" />
+    <state width="1493" height="277" key="GridCell.Tab.4.bottom" timestamp="1588972951570">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="277" key="GridCell.Tab.4.bottom/0.0.1536.864@0.0.1536.864" timestamp="1588972951570" />
+    <state width="1493" height="277" key="GridCell.Tab.4.center" timestamp="1588972951570">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="277" key="GridCell.Tab.4.center/0.0.1536.864@0.0.1536.864" timestamp="1588972951570" />
+    <state width="1493" height="277" key="GridCell.Tab.4.left" timestamp="1588972951570">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="277" key="GridCell.Tab.4.left/0.0.1536.864@0.0.1536.864" timestamp="1588972951570" />
+    <state width="1493" height="277" key="GridCell.Tab.4.right" timestamp="1588972951570">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1493" height="277" key="GridCell.Tab.4.right/0.0.1536.864@0.0.1536.864" timestamp="1588972951570" />
     <state x="461" y="165" key="SettingsEditor" timestamp="1588784178754">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -136,9 +243,16 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1588768824070" />
-    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1588617849389">
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1588969486983">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1588617849389" />
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1588969486983" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="RiderUnitTests">
+        <watch expression="expectationPers" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

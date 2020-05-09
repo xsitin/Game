@@ -1,19 +1,14 @@
 ﻿using System.Collections.Generic;
-using System.Runtime.Serialization;
 
 namespace Game.Model
 {
-    public class Player:ISerializable
+    public class Player
     {
-        public int Gold;
-        public List<Hero> Heroes;
-        public List<Item> Storage;
-        public List<Hero> Mercenaries;
-        public List<Item> Shop;
-        public void GetObjectData(SerializationInfo info, StreamingContext context)
-        {
-            info.AddValue("porps",Gold);
-            info.AddValue("porps",Heroes,typeof(List<Hero>));
-        }
+        public int Gold { get; set; }
+        public string PlayerName { get; set; }
+        public List<Hero> Heroes { get; set; }
+        public List<Item> Storage { get; set; }
+        public List<Hero> Mercenaries { get; set; }
+        public List<Item> Shop { get; set; }
     }
 }
