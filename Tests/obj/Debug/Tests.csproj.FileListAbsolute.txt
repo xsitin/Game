@@ -115,7 +115,6 @@ C:\Users\Loliconshik\Documents\GitHub\Game\Tests\bin\Debug\Tests.pdb
 C:\Users\Loliconshik\Documents\GitHub\Game\Tests\bin\Debug\FluentAssertions.dll
 C:\Users\Loliconshik\Documents\GitHub\Game\Tests\bin\Debug\Game.exe
 C:\Users\Loliconshik\Documents\GitHub\Game\Tests\bin\Debug\nunit.framework.dll
-C:\Users\Loliconshik\Documents\GitHub\Game\Tests\bin\Debug\System.Text.Json.dll
 C:\Users\Loliconshik\Documents\GitHub\Game\Tests\bin\Debug\System.Memory.dll
 C:\Users\Loliconshik\Documents\GitHub\Game\Tests\bin\Debug\System.Text.Encodings.Web.dll
 C:\Users\Loliconshik\Documents\GitHub\Game\Tests\bin\Debug\System.Numerics.Vectors.dll
@@ -128,7 +127,6 @@ C:\Users\Loliconshik\Documents\GitHub\Game\Tests\bin\Debug\Game.exe.config
 C:\Users\Loliconshik\Documents\GitHub\Game\Tests\bin\Debug\FluentAssertions.pdb
 C:\Users\Loliconshik\Documents\GitHub\Game\Tests\bin\Debug\FluentAssertions.xml
 C:\Users\Loliconshik\Documents\GitHub\Game\Tests\bin\Debug\nunit.framework.xml
-C:\Users\Loliconshik\Documents\GitHub\Game\Tests\bin\Debug\System.Text.Json.xml
 C:\Users\Loliconshik\Documents\GitHub\Game\Tests\bin\Debug\System.Memory.xml
 C:\Users\Loliconshik\Documents\GitHub\Game\Tests\bin\Debug\System.Text.Encodings.Web.xml
 C:\Users\Loliconshik\Documents\GitHub\Game\Tests\bin\Debug\System.Numerics.Vectors.xml
@@ -168,3 +166,8 @@ C:\Users\walue\OneDrive\Документы\GitHub\Game\Tests\bin\Debug\System.Va
 C:\Users\walue\OneDrive\Документы\GitHub\Game\Tests\bin\Debug\Newtonsoft.Json.xml
 C:\Users\walue\OneDrive\Документы\GitHub\Game\Tests\bin\Debug\nunit.framework.pdb
 C:\Users\walue\OneDrive\Документы\GitHub\Game\Tests\bin\Debug\System.ValueTuple.xml
+C:\Users\Loliconshik\Documents\GitHub\Game\Tests\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Loliconshik\Documents\GitHub\Game\Tests\bin\Debug\System.ValueTuple.dll
+C:\Users\Loliconshik\Documents\GitHub\Game\Tests\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Loliconshik\Documents\GitHub\Game\Tests\bin\Debug\nunit.framework.pdb
+C:\Users\Loliconshik\Documents\GitHub\Game\Tests\bin\Debug\System.ValueTuple.xml

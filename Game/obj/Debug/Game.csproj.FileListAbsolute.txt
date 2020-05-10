@@ -112,7 +112,6 @@ C:\Users\Loliconshik\Documents\GitHub\Game\Game\bin\Debug\System.Memory.dll
 C:\Users\Loliconshik\Documents\GitHub\Game\Game\bin\Debug\System.Numerics.Vectors.dll
 C:\Users\Loliconshik\Documents\GitHub\Game\Game\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\Loliconshik\Documents\GitHub\Game\Game\bin\Debug\System.Text.Encodings.Web.dll
-C:\Users\Loliconshik\Documents\GitHub\Game\Game\bin\Debug\System.Text.Json.dll
 C:\Users\Loliconshik\Documents\GitHub\Game\Game\bin\Debug\System.Threading.Tasks.Extensions.dll
 C:\Users\Loliconshik\Documents\GitHub\Game\Game\bin\Debug\System.ValueTuple.dll
 C:\Users\Loliconshik\Documents\GitHub\Game\Game\bin\Debug\FluentAssertions.pdb
@@ -124,7 +123,6 @@ C:\Users\Loliconshik\Documents\GitHub\Game\Game\bin\Debug\System.Memory.xml
 C:\Users\Loliconshik\Documents\GitHub\Game\Game\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\Loliconshik\Documents\GitHub\Game\Game\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Loliconshik\Documents\GitHub\Game\Game\bin\Debug\System.Text.Encodings.Web.xml
-C:\Users\Loliconshik\Documents\GitHub\Game\Game\bin\Debug\System.Text.Json.xml
 C:\Users\Loliconshik\Documents\GitHub\Game\Game\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\Loliconshik\Documents\GitHub\Game\Game\bin\Debug\System.ValueTuple.xml
 C:\Users\Loliconshik\Documents\GitHub\Game\Game\obj\Debug\Game.csproj.CopyComplete
@@ -176,3 +174,6 @@ C:\Users\xsitin\Documents\GitHub\Game\Game\bin\Debug\Newtonsoft.Json.xml
 C:\Users\walue\OneDrive\Документы\GitHub\Game\Game\bin\Debug\Newtonsoft.Json.dll
 C:\Users\walue\OneDrive\Документы\GitHub\Game\Game\bin\Debug\Newtonsoft.Json.xml
 C:\Users\walue\OneDrive\Документы\GitHub\Game\Game\bin\Debug\nunit.framework.pdb
+C:\Users\Loliconshik\Documents\GitHub\Game\Game\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Loliconshik\Documents\GitHub\Game\Game\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Loliconshik\Documents\GitHub\Game\Game\bin\Debug\nunit.framework.pdb

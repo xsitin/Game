@@ -22,10 +22,10 @@ namespace Game.Model
         {
             var random = new Random();
             var listHero = Heroes.GetTeamList();
-            var minLevel = listHero.Min(x => ((Hero) x).Level);
-            var maxLevel = listHero.Max(x => ((Hero) x).Level);
+            var minLevel = listHero.Min(x => ((Hero) x).Level) + Counter/4;
+            var maxLevel = listHero.Max(x => ((Hero) x).Level) + Counter/4;
             var heroCount = listHero.Count + Counter > 8 ? 8 : listHero.Count + Counter;
-            var enemyCount = random.Next(Counter, heroCount);
+            var enemyCount = random.Next(Counter >= heroCount ? heroCount - 2 : Counter, heroCount);
             var firstLine = new List<EnemyHero>();
             var secondLine = new List<EnemyHero>();
             for (var i = 0; i < enemyCount; i++)

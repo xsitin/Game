@@ -27,220 +27,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f51531c-d592-4864-9987-5dbb2ad7efa7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Tests/EnemyFactoryTests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Game/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/Game.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/Game.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Game/Game.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/Model/Base_creature.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Game/Model/Base_creature.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/Model/Characteristics.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Game/Model/Characteristics.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/Model/Hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Game/Model/Hero.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/Model/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Game/Model/Item.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/Model/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Game/Model/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/Model/database.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Game/Model/database.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Game/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/Model/EnemyFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Game/Model/EnemyFactory.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/bin/Debug/Game.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Game/bin/Debug/Game.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/bin/Debug/Game.exe.config" beforeDir="false" afterPath="$PROJECT_DIR$/Game/bin/Debug/Game.exe.config" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/bin/Debug/Game.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Game/bin/Debug/Game.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/bin/Debug/Microsoft.Bcl.AsyncInterfaces.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Game/bin/Debug/Microsoft.Bcl.AsyncInterfaces.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/bin/Debug/System.Buffers.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Game/bin/Debug/System.Buffers.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/bin/Debug/System.Memory.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Game/bin/Debug/System.Memory.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/bin/Debug/System.Runtime.CompilerServices.Unsafe.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Game/bin/Debug/System.Runtime.CompilerServices.Unsafe.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/bin/Debug/System.Runtime.CompilerServices.Unsafe.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Game/bin/Debug/System.Runtime.CompilerServices.Unsafe.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/bin/Debug/System.Text.Encodings.Web.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Game/bin/Debug/System.Text.Encodings.Web.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/bin/Debug/System.Text.Encodings.Web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Game/bin/Debug/System.Text.Encodings.Web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/bin/Debug/System.Text.Json.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/bin/Debug/System.Text.Json.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/bin/Debug/System.Threading.Tasks.Extensions.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Game/bin/Debug/System.Threading.Tasks.Extensions.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/bin/Debug/nunit.framework.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Game/bin/Debug/nunit.framework.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/bin/Debug/nunit.framework.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Game/bin/Debug/nunit.framework.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/bin/Debug/NUnit3.TestAdapter.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Game/bin/Debug/NUnit3.TestAdapter.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/bin/Debug/NUnit3.TestAdapter.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Game/bin/Debug/NUnit3.TestAdapter.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/obj/Debug/Game.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Game/obj/Debug/Game.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/obj/Debug/Game.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Game/obj/Debug/Game.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/obj/Debug/Game.csproj.GenerateResource.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Game/obj/Debug/Game.csproj.GenerateResource.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/obj/Debug/Game.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Game/obj/Debug/Game.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/obj/Debug/Game.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Game/obj/Debug/Game.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/obj/Debug/Game.exe.config" beforeDir="false" afterPath="$PROJECT_DIR$/Game/obj/Debug/Game.exe.config" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/obj/Debug/Game.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Game/obj/Debug/Game.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/packages.config" beforeDir="false" afterPath="$PROJECT_DIR$/Game/packages.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/CreaturesAndSkills.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/CreaturesAndSkills.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/Saves_Should.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Saves_Should.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Tests.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/bin/Debug/FluentAssertions.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/bin/Debug/FluentAssertions.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/bin/Debug/Game.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/bin/Debug/Game.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/bin/Debug/Game.exe.config" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/bin/Debug/Game.exe.config" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/bin/Debug/Game.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/bin/Debug/Game.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/bin/Debug/Microsoft.Bcl.AsyncInterfaces.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/bin/Debug/Microsoft.Bcl.AsyncInterfaces.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/bin/Debug/System.Buffers.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/bin/Debug/System.Buffers.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/bin/Debug/System.Memory.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/bin/Debug/System.Memory.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/bin/Debug/System.Runtime.CompilerServices.Unsafe.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/bin/Debug/System.Runtime.CompilerServices.Unsafe.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/bin/Debug/System.Runtime.CompilerServices.Unsafe.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/bin/Debug/System.Runtime.CompilerServices.Unsafe.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/bin/Debug/System.Text.Encodings.Web.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/bin/Debug/System.Text.Encodings.Web.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/bin/Debug/System.Text.Encodings.Web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/bin/Debug/System.Text.Encodings.Web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/bin/Debug/System.Text.Json.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/bin/Debug/System.Text.Json.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/bin/Debug/System.Threading.Tasks.Extensions.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/bin/Debug/System.Threading.Tasks.Extensions.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/bin/Debug/NUnit3.TestAdapter.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/bin/Debug/NUnit3.TestAdapter.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/bin/Debug/NUnit3.TestAdapter.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/bin/Debug/NUnit3.TestAdapter.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/bin/Debug/Tests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/bin/Debug/Tests.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/bin/Debug/Tests.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/bin/Debug/Tests.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/bin/Debug/nunit.framework.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/bin/Debug/nunit.framework.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/bin/Debug/nunit.framework.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/bin/Debug/nunit.framework.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/obj/Debug/Tests.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/obj/Debug/Tests.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/obj/Debug/Tests.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/obj/Debug/Tests.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/obj/Debug/Tests.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/obj/Debug/Tests.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/obj/Debug/Tests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/obj/Debug/Tests.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/obj/Debug/Tests.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/obj/Debug/Tests.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/packages.config" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/packages.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/Microsoft.Bcl.AsyncInterfaces.1.0.0/.signature.p7s" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/Microsoft.Bcl.AsyncInterfaces.1.0.0/LICENSE.TXT" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/Microsoft.Bcl.AsyncInterfaces.1.0.0/Microsoft.Bcl.AsyncInterfaces.1.0.0.nupkg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/Microsoft.Bcl.AsyncInterfaces.1.0.0/THIRD-PARTY-NOTICES.TXT" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/Microsoft.Bcl.AsyncInterfaces.1.0.0/lib/net461/Microsoft.Bcl.AsyncInterfaces.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/Microsoft.Bcl.AsyncInterfaces.1.0.0/lib/net461/Microsoft.Bcl.AsyncInterfaces.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/Microsoft.Bcl.AsyncInterfaces.1.0.0/lib/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/Microsoft.Bcl.AsyncInterfaces.1.0.0/lib/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/Microsoft.Bcl.AsyncInterfaces.1.0.0/lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/Microsoft.Bcl.AsyncInterfaces.1.0.0/lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/Microsoft.Bcl.AsyncInterfaces.1.0.0/ref/net461/Microsoft.Bcl.AsyncInterfaces.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/Microsoft.Bcl.AsyncInterfaces.1.0.0/ref/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/Microsoft.Bcl.AsyncInterfaces.1.0.0/ref/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/Microsoft.Bcl.AsyncInterfaces.1.0.0/useSharedDesignerContext.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/Microsoft.Bcl.AsyncInterfaces.1.0.0/version.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/NUnit.3.5.0/.signature.p7s" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/NUnit.3.5.0/CHANGES.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/NUnit.3.5.0/LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/NUnit.3.5.0/NOTICES.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/NUnit.3.5.0/NUnit.3.5.0.nupkg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/NUnit.3.5.0/lib/dotnet/nunit.framework.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/NUnit.3.5.0/lib/dotnet/nunit.framework.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/NUnit.3.5.0/lib/net20/NUnit.System.Linq.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/NUnit.3.5.0/lib/net20/nunit.framework.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/NUnit.3.5.0/lib/net20/nunit.framework.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/NUnit.3.5.0/lib/net35/nunit.framework.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/NUnit.3.5.0/lib/net35/nunit.framework.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/NUnit.3.5.0/lib/net40/nunit.framework.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/NUnit.3.5.0/lib/net40/nunit.framework.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/NUnit.3.5.0/lib/net45/nunit.framework.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/NUnit.3.5.0/lib/net45/nunit.framework.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/NUnit.3.5.0/lib/portable-net45+win8+wp8+wpa81+Xamarin.Mac+MonoAndroid10+MonoTouch10+Xamarin.iOS10/nunit.framework.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/NUnit.3.5.0/lib/portable-net45+win8+wp8+wpa81+Xamarin.Mac+MonoAndroid10+MonoTouch10+Xamarin.iOS10/nunit.framework.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/NUnit3TestAdapter.3.17.0-beta.1/.signature.p7s" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/NUnit3TestAdapter.3.17.0-beta.1/LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/NUnit3TestAdapter.3.17.0-beta.1/NUnit3TestAdapter.3.17.0-beta.1.nupkg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/NUnit3TestAdapter.3.17.0-beta.1/build/net35/NUnit3.TestAdapter.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/NUnit3TestAdapter.3.17.0-beta.1/build/net35/NUnit3.TestAdapter.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/NUnit3TestAdapter.3.17.0-beta.1/build/net35/NUnit3TestAdapter.props" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/NUnit3TestAdapter.3.17.0-beta.1/build/net35/nunit.engine.api.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/NUnit3TestAdapter.3.17.0-beta.1/build/net35/nunit.engine.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/NUnit3TestAdapter.3.17.0-beta.1/build/netcoreapp2.1/NUnit3.TestAdapter.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/NUnit3TestAdapter.3.17.0-beta.1/build/netcoreapp2.1/NUnit3.TestAdapter.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/NUnit3TestAdapter.3.17.0-beta.1/build/netcoreapp2.1/NUnit3TestAdapter.props" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/NUnit3TestAdapter.3.17.0-beta.1/build/netcoreapp2.1/nunit.engine.api.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/NUnit3TestAdapter.3.17.0-beta.1/build/netcoreapp2.1/nunit.engine.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Buffers.4.5.0/.signature.p7s" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Buffers.4.5.0/LICENSE.TXT" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Buffers.4.5.0/System.Buffers.4.5.0.nupkg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Buffers.4.5.0/THIRD-PARTY-NOTICES.TXT" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Buffers.4.5.0/lib/netcoreapp2.0/_._" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Buffers.4.5.0/lib/netstandard1.1/System.Buffers.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Buffers.4.5.0/lib/netstandard1.1/System.Buffers.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Buffers.4.5.0/lib/netstandard2.0/System.Buffers.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Buffers.4.5.0/lib/netstandard2.0/System.Buffers.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Buffers.4.5.0/lib/uap10.0.16299/_._" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Buffers.4.5.0/ref/net45/System.Buffers.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Buffers.4.5.0/ref/net45/System.Buffers.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Buffers.4.5.0/ref/netcoreapp2.0/_._" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Buffers.4.5.0/ref/netstandard1.1/System.Buffers.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Buffers.4.5.0/ref/netstandard1.1/System.Buffers.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Buffers.4.5.0/ref/netstandard2.0/System.Buffers.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Buffers.4.5.0/ref/netstandard2.0/System.Buffers.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Buffers.4.5.0/ref/uap10.0.16299/_._" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Buffers.4.5.0/useSharedDesignerContext.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Buffers.4.5.0/version.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Memory.4.5.3/.signature.p7s" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Memory.4.5.3/LICENSE.TXT" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Memory.4.5.3/System.Memory.4.5.3.nupkg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Memory.4.5.3/THIRD-PARTY-NOTICES.TXT" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Memory.4.5.3/lib/netcoreapp2.1/_._" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Memory.4.5.3/lib/netstandard1.1/System.Memory.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Memory.4.5.3/lib/netstandard1.1/System.Memory.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Memory.4.5.3/lib/netstandard2.0/System.Memory.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Memory.4.5.3/lib/netstandard2.0/System.Memory.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Memory.4.5.3/ref/netcoreapp2.1/_._" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Memory.4.5.3/useSharedDesignerContext.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Memory.4.5.3/version.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Runtime.CompilerServices.Unsafe.5.0.0-preview.3.20214.6/.signature.p7s" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Runtime.CompilerServices.Unsafe.5.0.0-preview.3.20214.6/Icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Runtime.CompilerServices.Unsafe.5.0.0-preview.3.20214.6/LICENSE.TXT" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Runtime.CompilerServices.Unsafe.5.0.0-preview.3.20214.6/System.Runtime.CompilerServices.Unsafe.5.0.0-preview.3.20214.6.nupkg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Runtime.CompilerServices.Unsafe.5.0.0-preview.3.20214.6/THIRD-PARTY-NOTICES.TXT" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Runtime.CompilerServices.Unsafe.5.0.0-preview.3.20214.6/lib/net45/System.Runtime.CompilerServices.Unsafe.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Runtime.CompilerServices.Unsafe.5.0.0-preview.3.20214.6/lib/net45/System.Runtime.CompilerServices.Unsafe.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Runtime.CompilerServices.Unsafe.5.0.0-preview.3.20214.6/lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Runtime.CompilerServices.Unsafe.5.0.0-preview.3.20214.6/lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Runtime.CompilerServices.Unsafe.5.0.0-preview.3.20214.6/lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Runtime.CompilerServices.Unsafe.5.0.0-preview.3.20214.6/lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Runtime.CompilerServices.Unsafe.5.0.0-preview.3.20214.6/lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Runtime.CompilerServices.Unsafe.5.0.0-preview.3.20214.6/lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Runtime.CompilerServices.Unsafe.5.0.0-preview.3.20214.6/ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Runtime.CompilerServices.Unsafe.5.0.0-preview.3.20214.6/ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Runtime.CompilerServices.Unsafe.5.0.0-preview.3.20214.6/ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Runtime.CompilerServices.Unsafe.5.0.0-preview.3.20214.6/ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Runtime.CompilerServices.Unsafe.5.0.0-preview.3.20214.6/ref/netstandard2.1/System.Runtime.CompilerServices.Unsafe.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Runtime.CompilerServices.Unsafe.5.0.0-preview.3.20214.6/ref/netstandard2.1/System.Runtime.CompilerServices.Unsafe.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Runtime.CompilerServices.Unsafe.5.0.0-preview.3.20214.6/useSharedDesignerContext.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Runtime.CompilerServices.Unsafe.5.0.0-preview.3.20214.6/version.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Text.Encodings.Web.5.0.0-preview.3.20214.6/.signature.p7s" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Text.Encodings.Web.5.0.0-preview.3.20214.6/Icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Text.Encodings.Web.5.0.0-preview.3.20214.6/LICENSE.TXT" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Text.Encodings.Web.5.0.0-preview.3.20214.6/System.Text.Encodings.Web.5.0.0-preview.3.20214.6.nupkg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Text.Encodings.Web.5.0.0-preview.3.20214.6/THIRD-PARTY-NOTICES.TXT" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Text.Encodings.Web.5.0.0-preview.3.20214.6/lib/netcoreapp3.0/System.Text.Encodings.Web.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Text.Encodings.Web.5.0.0-preview.3.20214.6/lib/netcoreapp3.0/System.Text.Encodings.Web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Text.Encodings.Web.5.0.0-preview.3.20214.6/lib/netstandard1.0/System.Text.Encodings.Web.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Text.Encodings.Web.5.0.0-preview.3.20214.6/lib/netstandard1.0/System.Text.Encodings.Web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Text.Encodings.Web.5.0.0-preview.3.20214.6/lib/netstandard2.0/System.Text.Encodings.Web.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Text.Encodings.Web.5.0.0-preview.3.20214.6/lib/netstandard2.0/System.Text.Encodings.Web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Text.Encodings.Web.5.0.0-preview.3.20214.6/lib/netstandard2.1/System.Text.Encodings.Web.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Text.Encodings.Web.5.0.0-preview.3.20214.6/lib/netstandard2.1/System.Text.Encodings.Web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Text.Encodings.Web.5.0.0-preview.3.20214.6/useSharedDesignerContext.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Text.Encodings.Web.5.0.0-preview.3.20214.6/version.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Text.Json.5.0.0-preview.3.20214.6/.signature.p7s" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Text.Json.5.0.0-preview.3.20214.6/Icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Text.Json.5.0.0-preview.3.20214.6/LICENSE.TXT" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Text.Json.5.0.0-preview.3.20214.6/System.Text.Json.5.0.0-preview.3.20214.6.nupkg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Text.Json.5.0.0-preview.3.20214.6/THIRD-PARTY-NOTICES.TXT" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Text.Json.5.0.0-preview.3.20214.6/lib/net461/System.Text.Json.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Text.Json.5.0.0-preview.3.20214.6/lib/net461/System.Text.Json.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Text.Json.5.0.0-preview.3.20214.6/lib/netcoreapp3.0/System.Text.Json.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Text.Json.5.0.0-preview.3.20214.6/lib/netcoreapp3.0/System.Text.Json.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Text.Json.5.0.0-preview.3.20214.6/lib/netstandard2.0/System.Text.Json.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Text.Json.5.0.0-preview.3.20214.6/lib/netstandard2.0/System.Text.Json.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Text.Json.5.0.0-preview.3.20214.6/useSharedDesignerContext.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Text.Json.5.0.0-preview.3.20214.6/version.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Threading.Tasks.Extensions.4.5.2/.signature.p7s" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Threading.Tasks.Extensions.4.5.2/LICENSE.TXT" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Threading.Tasks.Extensions.4.5.2/System.Threading.Tasks.Extensions.4.5.2.nupkg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Threading.Tasks.Extensions.4.5.2/THIRD-PARTY-NOTICES.TXT" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Threading.Tasks.Extensions.4.5.2/lib/MonoAndroid10/_._" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Threading.Tasks.Extensions.4.5.2/lib/MonoTouch10/_._" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Threading.Tasks.Extensions.4.5.2/lib/netcoreapp2.1/_._" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Threading.Tasks.Extensions.4.5.2/lib/netstandard1.0/System.Threading.Tasks.Extensions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Threading.Tasks.Extensions.4.5.2/lib/netstandard1.0/System.Threading.Tasks.Extensions.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Threading.Tasks.Extensions.4.5.2/lib/netstandard2.0/System.Threading.Tasks.Extensions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Threading.Tasks.Extensions.4.5.2/lib/netstandard2.0/System.Threading.Tasks.Extensions.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Threading.Tasks.Extensions.4.5.2/lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Threading.Tasks.Extensions.4.5.2/lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Threading.Tasks.Extensions.4.5.2/lib/xamarinios10/_._" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Threading.Tasks.Extensions.4.5.2/lib/xamarinmac20/_._" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Threading.Tasks.Extensions.4.5.2/lib/xamarintvos10/_._" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Threading.Tasks.Extensions.4.5.2/lib/xamarinwatchos10/_._" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Threading.Tasks.Extensions.4.5.2/ref/MonoAndroid10/_._" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Threading.Tasks.Extensions.4.5.2/ref/MonoTouch10/_._" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Threading.Tasks.Extensions.4.5.2/ref/netcoreapp2.1/_._" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Threading.Tasks.Extensions.4.5.2/ref/xamarinios10/_._" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Threading.Tasks.Extensions.4.5.2/ref/xamarinmac20/_._" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Threading.Tasks.Extensions.4.5.2/ref/xamarintvos10/_._" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Threading.Tasks.Extensions.4.5.2/ref/xamarinwatchos10/_._" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Threading.Tasks.Extensions.4.5.2/useSharedDesignerContext.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/System.Threading.Tasks.Extensions.4.5.2/version.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -256,47 +69,39 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Game/Model/EnemyFactory.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9AECFB6F-6EE1-4BB3-9CEC-F864D8D0E1D7/b5/bd6cc998/__Error.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/Inventory_Should.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/Saves_Should.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/EnemyFactoryTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/EnemyHero.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/packages.config" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/nunit/nunit/c933a883ea25263ec575a654dae69fa38000edd9/src/NUnitFramework/framework/Internal/Reflect.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/Field.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/GameQueue.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Game/Model/Skill.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/EnemyFactory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/Characteristics.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Game/Model/Position.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9AECFB6F-6EE1-4BB3-9CEC-F864D8D0E1D7/c1/3c9c0157/StringBuilder.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/packages.config" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/Team.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Game/Model/Inventory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Game/Model/Buff.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Tests/Inventory_Should.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Tests/Team_Should.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Properties/Resources.resx" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Properties/AssemblyInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/Item.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/Hero.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/database.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/Player.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/Base_creature.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/Properties/AssemblyInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/App.config" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Roaming/NuGet/NuGet.Config" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Tests/Items_Should.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Tests/GameQueueTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/Team_Should.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Tests/CreaturesAndSkills.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Model/EnemyHero.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Model/Field.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Tests/Tests.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/packages.config" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Model/Player.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2676A2DA-6EDC-420E-890E-D28AA4572EE5/ce/e19a584a/JsonSerializerInternalReader.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Game/Model/Game.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Program.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Model/GameQueue.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Model/Team.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/App.config" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Tests/Saves_Should.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9AECFB6F-6EE1-4BB3-9CEC-F864D8D0E1D7/0f/ffbadda6/RuntimeType.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Model/Base_creature.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Model/Item.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DE1FCB29-CDF8-4697-8C31-A8D6DD497076/6f/d57221af/JsonClassInfo.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Properties/AssemblyInfo.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/AppData/Roaming/NuGet/NuGet.Config" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5B54F26E-7A36-4814-BB66-DF57E0D84513/50/c0b4cdaf/Unsafe.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Properties/Resources.resx" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Tests/packages.config" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Model/Hero.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/DE1FCB29-CDF8-4697-8C31-A8D6DD497076/0/JsonConverterFactory.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D6CD672B-48A5-4D5D-9AC4-21ACA90E1D2C/b1/722cb808/ThrowHelper.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Tests/Properties/AssemblyInfo.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D6CD672B-48A5-4D5D-9AC4-21ACA90E1D2C/39/695ed56b/JsonConverter`1.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Model/Characteristics.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Model/database.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/Tests.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -314,7 +119,6 @@
         <option value="$PROJECT_DIR$/Game/Model/Team.cs" />
         <option value="$PROJECT_DIR$/Tests/Team_Should.cs" />
         <option value="$PROJECT_DIR$/Tests/Inventory_Should.cs" />
-        <option value="$PROJECT_DIR$/Game/Model/EnemyFactory.cs" />
         <option value="$PROJECT_DIR$/Game/Model/Buff.cs" />
         <option value="$PROJECT_DIR$/Game/Model/Skill.cs" />
         <option value="$PROJECT_DIR$/Game/Model/EnemyHero.cs" />
@@ -326,10 +130,13 @@
         <option value="$PROJECT_DIR$/Game/Model/Player.cs" />
         <option value="$PROJECT_DIR$/Game/Program.cs" />
         <option value="$PROJECT_DIR$/Game/Model/database.cs" />
-        <option value="$PROJECT_DIR$/Tests/Saves_Should.cs" />
         <option value="$PROJECT_DIR$/Game/Model/Base_creature.cs" />
         <option value="$PROJECT_DIR$/Game/Model/Hero.cs" />
         <option value="$PROJECT_DIR$/Tests/CreaturesAndSkills.cs" />
+        <option value="$PROJECT_DIR$/Tests/Saves_Should.cs" />
+        <option value="$PROJECT_DIR$/Tests/Properties/EnemyFactoryTests.cs" />
+        <option value="$PROJECT_DIR$/Game/Model/EnemyFactory.cs" />
+        <option value="$PROJECT_DIR$/Tests/EnemyFactoryTests.cs" />
       </list>
     </option>
   </component>
@@ -366,7 +173,7 @@
       <option name="PROJECT_KIND" value="Console" />
       <option name="PROJECT_TFM" value="" />
       <method v="2">
-        <option name="Build" />
+        <option name="Build" enabled="true" />
       </method>
     </configuration>
   </component>
@@ -394,6 +201,7 @@
       <workItem from="1589037171198" duration="718000" />
       <workItem from="1589037933538" duration="17000" />
       <workItem from="1589040529331" duration="8009000" />
+      <workItem from="1589098860713" duration="6229000" />
     </task>
     <servers />
   </component>
@@ -434,12 +242,12 @@
                   </entry>
                 </map>
               </option>
+              <option name="COLUMN_ORDER" />
             </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
@@ -463,105 +271,105 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="515" height="527" key="DebuggerActiveHint/0.0.1536.864@0.0.1536.864" timestamp="1589042165075" />
-    <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1589060754825">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1325" height="277" key="GridCell.Tab.0.bottom" timestamp="1589105080622">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="277" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1589044196434" />
+    <state width="1325" height="277" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1589105080622" />
     <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589060754825" />
-    <state width="1877" height="348" key="GridCell.Tab.0.center" timestamp="1589060754825">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1325" height="277" key="GridCell.Tab.0.center" timestamp="1589105080622">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="277" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1589044196434" />
+    <state width="1325" height="277" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1589105080622" />
     <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589060754825" />
-    <state width="1877" height="348" key="GridCell.Tab.0.left" timestamp="1589060754825">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1325" height="277" key="GridCell.Tab.0.left" timestamp="1589105080622">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="277" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1589044196434" />
+    <state width="1325" height="277" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1589105080622" />
     <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589060754825" />
-    <state width="1877" height="348" key="GridCell.Tab.0.right" timestamp="1589060754825">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1325" height="277" key="GridCell.Tab.0.right" timestamp="1589105080622">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="277" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1589044196434" />
+    <state width="1325" height="277" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1589105080622" />
     <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589060754825" />
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1589060754825">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1325" height="277" key="GridCell.Tab.1.bottom" timestamp="1589105080623">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="277" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1589044196434" />
+    <state width="1325" height="277" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1589105080623" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589060754825" />
-    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1589060754825">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1325" height="277" key="GridCell.Tab.1.center" timestamp="1589105080622">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="277" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1589044196434" />
+    <state width="1325" height="277" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1589105080622" />
     <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589060754825" />
-    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1589060754825">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1325" height="277" key="GridCell.Tab.1.left" timestamp="1589105080622">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="277" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1589044196434" />
+    <state width="1325" height="277" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1589105080622" />
     <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589060754825" />
-    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1589060754825">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1325" height="277" key="GridCell.Tab.1.right" timestamp="1589105080623">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="277" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1589044196434" />
+    <state width="1325" height="277" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1589105080623" />
     <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589060754825" />
-    <state width="1877" height="348" key="GridCell.Tab.2.bottom" timestamp="1589060754825">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1325" height="277" key="GridCell.Tab.2.bottom" timestamp="1589105080623">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="277" key="GridCell.Tab.2.bottom/0.0.1536.864@0.0.1536.864" timestamp="1589044196434" />
+    <state width="1325" height="277" key="GridCell.Tab.2.bottom/0.0.1536.864@0.0.1536.864" timestamp="1589105080623" />
     <state width="1877" height="348" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589060754825" />
-    <state width="1877" height="348" key="GridCell.Tab.2.center" timestamp="1589060754825">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1325" height="277" key="GridCell.Tab.2.center" timestamp="1589105080623">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="277" key="GridCell.Tab.2.center/0.0.1536.864@0.0.1536.864" timestamp="1589044196434" />
+    <state width="1325" height="277" key="GridCell.Tab.2.center/0.0.1536.864@0.0.1536.864" timestamp="1589105080623" />
     <state width="1877" height="348" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589060754825" />
-    <state width="1877" height="348" key="GridCell.Tab.2.left" timestamp="1589060754825">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1325" height="277" key="GridCell.Tab.2.left" timestamp="1589105080623">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="277" key="GridCell.Tab.2.left/0.0.1536.864@0.0.1536.864" timestamp="1589044196434" />
+    <state width="1325" height="277" key="GridCell.Tab.2.left/0.0.1536.864@0.0.1536.864" timestamp="1589105080623" />
     <state width="1877" height="348" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589060754825" />
-    <state width="1877" height="348" key="GridCell.Tab.2.right" timestamp="1589060754825">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1325" height="277" key="GridCell.Tab.2.right" timestamp="1589105080623">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="277" key="GridCell.Tab.2.right/0.0.1536.864@0.0.1536.864" timestamp="1589044196434" />
+    <state width="1325" height="277" key="GridCell.Tab.2.right/0.0.1536.864@0.0.1536.864" timestamp="1589105080623" />
     <state width="1877" height="348" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589060754825" />
-    <state width="1877" height="348" key="GridCell.Tab.3.bottom" timestamp="1589060754826">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1325" height="277" key="GridCell.Tab.3.bottom" timestamp="1589105080623">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="277" key="GridCell.Tab.3.bottom/0.0.1536.864@0.0.1536.864" timestamp="1589044196435" />
+    <state width="1325" height="277" key="GridCell.Tab.3.bottom/0.0.1536.864@0.0.1536.864" timestamp="1589105080623" />
     <state width="1877" height="348" key="GridCell.Tab.3.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589060754826" />
-    <state width="1877" height="348" key="GridCell.Tab.3.center" timestamp="1589060754826">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1325" height="277" key="GridCell.Tab.3.center" timestamp="1589105080623">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="277" key="GridCell.Tab.3.center/0.0.1536.864@0.0.1536.864" timestamp="1589044196435" />
+    <state width="1325" height="277" key="GridCell.Tab.3.center/0.0.1536.864@0.0.1536.864" timestamp="1589105080623" />
     <state width="1877" height="348" key="GridCell.Tab.3.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589060754826" />
-    <state width="1877" height="348" key="GridCell.Tab.3.left" timestamp="1589060754825">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1325" height="277" key="GridCell.Tab.3.left" timestamp="1589105080623">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="277" key="GridCell.Tab.3.left/0.0.1536.864@0.0.1536.864" timestamp="1589044196434" />
+    <state width="1325" height="277" key="GridCell.Tab.3.left/0.0.1536.864@0.0.1536.864" timestamp="1589105080623" />
     <state width="1877" height="348" key="GridCell.Tab.3.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589060754825" />
-    <state width="1877" height="348" key="GridCell.Tab.3.right" timestamp="1589060754826">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1325" height="277" key="GridCell.Tab.3.right" timestamp="1589105080623">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="277" key="GridCell.Tab.3.right/0.0.1536.864@0.0.1536.864" timestamp="1589044196435" />
+    <state width="1325" height="277" key="GridCell.Tab.3.right/0.0.1536.864@0.0.1536.864" timestamp="1589105080623" />
     <state width="1877" height="348" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589060754826" />
-    <state width="1877" height="348" key="GridCell.Tab.4.bottom" timestamp="1589060754826">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1325" height="277" key="GridCell.Tab.4.bottom" timestamp="1589105080623">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="277" key="GridCell.Tab.4.bottom/0.0.1536.864@0.0.1536.864" timestamp="1589044196435" />
+    <state width="1325" height="277" key="GridCell.Tab.4.bottom/0.0.1536.864@0.0.1536.864" timestamp="1589105080623" />
     <state width="1877" height="348" key="GridCell.Tab.4.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589060754826" />
-    <state width="1877" height="348" key="GridCell.Tab.4.center" timestamp="1589060754826">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1325" height="277" key="GridCell.Tab.4.center" timestamp="1589105080623">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="277" key="GridCell.Tab.4.center/0.0.1536.864@0.0.1536.864" timestamp="1589044196435" />
+    <state width="1325" height="277" key="GridCell.Tab.4.center/0.0.1536.864@0.0.1536.864" timestamp="1589105080623" />
     <state width="1877" height="348" key="GridCell.Tab.4.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589060754826" />
-    <state width="1877" height="348" key="GridCell.Tab.4.left" timestamp="1589060754826">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1325" height="277" key="GridCell.Tab.4.left" timestamp="1589105080623">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="277" key="GridCell.Tab.4.left/0.0.1536.864@0.0.1536.864" timestamp="1589044196435" />
+    <state width="1325" height="277" key="GridCell.Tab.4.left/0.0.1536.864@0.0.1536.864" timestamp="1589105080623" />
     <state width="1877" height="348" key="GridCell.Tab.4.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589060754826" />
-    <state width="1877" height="348" key="GridCell.Tab.4.right" timestamp="1589060754826">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1325" height="277" key="GridCell.Tab.4.right" timestamp="1589105080623">
+      <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="277" key="GridCell.Tab.4.right/0.0.1536.864@0.0.1536.864" timestamp="1589044196435" />
+    <state width="1325" height="277" key="GridCell.Tab.4.right/0.0.1536.864@0.0.1536.864" timestamp="1589105080623" />
     <state width="1877" height="348" key="GridCell.Tab.4.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589060754826" />
     <state x="461" y="165" key="SettingsEditor" timestamp="1588784178754">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -584,29 +392,9 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Tests/CreaturesAndSkills.cs</url>
-          <line>138</line>
-          <properties documentPath="$PROJECT_DIR$/Tests/CreaturesAndSkills.cs" initialLine="138">
-            <startOffsets>
-              <option value="5954" />
-            </startOffsets>
-            <endOffsets>
-              <option value="5968" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2676A2DA-6EDC-420E-890E-D28AA4572EE5/ce/e19a584a/JsonSerializerInternalReader.cs</url>
           <line>108</line>
-          <properties documentPath="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2676A2DA-6EDC-420E-890E-D28AA4572EE5/ce/e19a584a/JsonSerializerInternalReader.cs" initialLine="108">
-            <startOffsets>
-              <option value="5175" />
-            </startOffsets>
-            <endOffsets>
-              <option value="5285" />
-            </endOffsets>
-          </properties>
+          <properties documentPath="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2676A2DA-6EDC-420E-890E-D28AA4572EE5/ce/e19a584a/JsonSerializerInternalReader.cs" initialLine="108" />
           <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
