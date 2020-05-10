@@ -49,6 +49,7 @@ namespace Tests
             Assert.AreEqual(2, Archer.Level);
             Assert.AreEqual(0, Archer.Exp);
             Assert.AreEqual(1, Archer.UpgradePoints);
+            Assert.Catch(typeof(ArgumentException), () => Archer.Exp -= 100);
         }
 
         [Test]
@@ -72,14 +73,36 @@ namespace Tests
             Assert.True(Mage.Characteristics[Characteristics.Mana] == 200);
             Assert.True(Enemy1.Characteristics[Characteristics.Health] == 50);
             Assert.True(Enemy1.Characteristics[Characteristics.Evasion] == 100);
+            Assert.AreEqual("gfkrf", Mage.ToString());
         }
 
         [Test]
-        public void Upgrade()
+        public void CorrectEnemyConstructorWithoutPistion()
         {
-            Mage.Skills[0].Upgrade();
-            Assert.Pass();
+            var range = new EnemyHero(Database.GetName(), new Dictionary<Characteristics, int>(), new Inventory(),
+                Specialization.Archer, Location.SomeLocation);
+            var melee = new EnemyHero(Database.GetName(), new Dictionary<Characteristics, int>(), new Inventory(),
+                Specialization.Warrior, Location.SomeLocation);
+            Assert.AreEqual(Position.Melee, melee.Position);
+            Assert.AreEqual(Position.Range, range.Position);
         }
+
+        [Test]
+        public void SkillUpgrade()
+        {
+            Assert.AreEqual(-10, Enemy1.Skills[1].Effect[0].value);
+            Assert.AreEqual(10, Enemy1.Skills[1].ManaCost);
+            Assert.AreEqual(Characteristics.Health, Enemy1.Skills[1].Effect[0].characteristic);
+            Assert.AreEqual(-100, Enemy1.Skills[1].Buff._buffs[0].value);
+            Assert.AreEqual(Characteristics.Initiative, Enemy1.Skills[1].Buff._buffs[0].characteristic);
+            Enemy1.Skills[1].Upgrade();
+            Assert.AreEqual(-12, Enemy1.Skills[1].Effect[0].value);
+            Assert.AreEqual(Characteristics.Health, Enemy1.Skills[1].Effect[0].characteristic);
+            Assert.AreEqual(-120, Enemy1.Skills[1].Buff._buffs[0].value);
+            Assert.AreEqual(Characteristics.Initiative, Enemy1.Skills[1].Buff._buffs[0].characteristic);
+            Assert.AreEqual(12, Enemy1.Skills[1].ManaCost);
+        }
+
 
         [Test]
         public void UsingSkillByEnemyToEnemy()
