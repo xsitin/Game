@@ -16,11 +16,10 @@ namespace Game.Model
         public string Name { get; }
     }
 
-    public class ActiveItem : Item {
-        public (Characteristics characteristic, int value)[] Actions { get; private set; }
-        public Buff Buff { get; }
-
-        public ActiveItem(string name, (Characteristics characteristic, int value)[] actions, Buff buff = null) : base(name)
+    public class ActiveItem : Item
+    {
+        public ActiveItem(string name, (Characteristics characteristic, int value)[] actions, Buff buff = null) :
+            base(name)
         {
             Actions = actions;
             Buff = buff;
@@ -30,24 +29,26 @@ namespace Game.Model
         {
         }
 
+        public (Characteristics characteristic, int value)[] Actions { get; }
+        public Buff Buff { get; }
+
         public Action<BasicCreature> Action { get; set; }
 
         public void Use(params BasicCreature[] targets)
         {
-            foreach (var target in targets) {
-                foreach (var (characteristic, value) in Actions)
+            foreach (var target in targets)
+            {
+                foreach ((var characteristic, var value) in Actions)
                     target.Characteristics[characteristic] += value;
                 if (Buff != null)
                     target.Buffs.Add(Buff);
             }
-
         }
 
         public override bool Equals(object obj)
         {
             if (!(obj is ActiveItem item)) return false;
-            return this.Name == item.Name && this.Actions == item.Actions;
-
+            return Name == item.Name && Actions == item.Actions;
         }
 
         public override int GetHashCode()
@@ -55,8 +56,9 @@ namespace Game.Model
             return base.GetHashCode();
         }
 
-        public override string ToString() {
-            return Name.ToString();
+        public override string ToString()
+        {
+            return Name;
         }
     }
 }

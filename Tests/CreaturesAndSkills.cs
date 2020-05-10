@@ -28,7 +28,6 @@ namespace Tests
                 SkillRange.Single, "skillName", new Buff(5, "debuff", (Characteristics.Initiative, -100))));
             Enemy2 = new EnemyHero("very enemy", new Dictionary<Characteristics, int> {{Characteristics.Health, 100}},
                 new Inventory(), Specialization.Warrior, Position.Melee, Location.SomeLocation);
-            Mage.Skills = new List<Skill>();
             Mage.Skills.Add(new Skill(50, new[] {(Characteristics.Health, -100)}, SkillRange.Enemies, "shpuf",
                 new Buff(3, "shpuf debuff", (Characteristics.Evasion, -10))));
         }
