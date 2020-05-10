@@ -19,32 +19,26 @@
     <select>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:origin/Loliconshik-patch-1" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:Loliconshik-patch-1" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f51531c-d592-4864-9987-5dbb2ad7efa7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/Model/EnemyHero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Game/Model/EnemyHero.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/Model/Hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Game/Model/Hero.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/bin/Debug/Game.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Game/bin/Debug/Game.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/bin/Debug/Game.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Game/bin/Debug/Game.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/bin/Debug/NUnit3.TestAdapter.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Game/bin/Debug/NUnit3.TestAdapter.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/bin/Debug/NUnit3.TestAdapter.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Game/bin/Debug/NUnit3.TestAdapter.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/obj/Debug/Game.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Game/obj/Debug/Game.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/obj/Debug/Game.csproj.GenerateResource.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Game/obj/Debug/Game.csproj.GenerateResource.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/obj/Debug/Game.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Game/obj/Debug/Game.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/obj/Debug/Game.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Game/obj/Debug/Game.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/obj/Debug/Game.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Game/obj/Debug/Game.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/Saves_Should.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Saves_Should.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/CreaturesAndSkills.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/CreaturesAndSkills.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/bin/Debug/Game.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/bin/Debug/Game.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/bin/Debug/Game.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/bin/Debug/Game.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/bin/Debug/NUnit3.TestAdapter.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/bin/Debug/NUnit3.TestAdapter.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/bin/Debug/NUnit3.TestAdapter.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/bin/Debug/NUnit3.TestAdapter.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/bin/Debug/Tests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/bin/Debug/Tests.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/bin/Debug/Tests.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/bin/Debug/Tests.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/obj/Debug/Tests.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/obj/Debug/Tests.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/obj/Debug/Tests.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/obj/Debug/Tests.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/obj/Debug/Tests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/obj/Debug/Tests.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/obj/Debug/Tests.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/obj/Debug/Tests.pdb" afterDir="false" />
@@ -123,7 +117,6 @@
         <option value="$PROJECT_DIR$/Game/Model/EnemyFactory.cs" />
         <option value="$PROJECT_DIR$/Game/Model/Buff.cs" />
         <option value="$PROJECT_DIR$/Game/Model/Skill.cs" />
-        <option value="$PROJECT_DIR$/Game/Model/EnemyHero.cs" />
         <option value="$PROJECT_DIR$/Game/Model/Bot.cs" />
         <option value="$PROJECT_DIR$/Game/Model/Game.cs" />
         <option value="$PROJECT_DIR$/Game/converter.cs" />
@@ -133,9 +126,10 @@
         <option value="$PROJECT_DIR$/Game/Program.cs" />
         <option value="$PROJECT_DIR$/Game/Model/database.cs" />
         <option value="$PROJECT_DIR$/Game/Model/Base_creature.cs" />
-        <option value="$PROJECT_DIR$/Game/Model/Hero.cs" />
-        <option value="$PROJECT_DIR$/Tests/CreaturesAndSkills.cs" />
         <option value="$PROJECT_DIR$/Tests/Saves_Should.cs" />
+        <option value="$PROJECT_DIR$/Game/Model/Hero.cs" />
+        <option value="$PROJECT_DIR$/Game/Model/EnemyHero.cs" />
+        <option value="$PROJECT_DIR$/Tests/CreaturesAndSkills.cs" />
       </list>
     </option>
   </component>
@@ -210,12 +204,30 @@
     <option name="coveragePercentColumnWidth" value="150" />
     <option name="sortOrder" value="DESCENDING" />
     <option name="sortedColumn" value="1" />
-    <option name="symbolColumnWidth" value="248" />
+    <option name="symbolColumnWidth" value="334" />
     <coverage-tree-state>
       <expand>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
           <item name="1" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="1" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="263" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="1" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="263" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="260" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="1" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="263" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="260" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="261" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
       </expand>
       <select />
@@ -234,7 +246,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/Loliconshik-patch-1" />
+                        <option value="Loliconshik-patch-1" />
                       </list>
                     </value>
                   </entry>
@@ -251,7 +263,8 @@
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="xdxdxd" />
-    <option name="LAST_COMMIT_MESSAGE" value="xdxdxd" />
+    <MESSAGE value="uncommented tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="uncommented tests" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -261,10 +274,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="410" y="199" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog/0.0.1536.864@0.0.1536.864" timestamp="1588875504382" />
-    <state x="587" y="89" key="CommitChangelistDialog2" timestamp="1588770422551">
+    <state x="587" y="89" key="CommitChangelistDialog2" timestamp="1589099381812">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="587" y="89" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1588770422551" />
+    <state x="587" y="89" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1589099381812" />
     <state width="515" height="527" key="DebuggerActiveHint" timestamp="1589042165075">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -377,6 +390,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589059965942" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1589099399386">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1589099399386" />
     <state width="968" height="528" key="XDebugger.FullValuePopup" timestamp="1589060015069">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -391,13 +408,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Tests/CreaturesAndSkills.cs</url>
-          <line>138</line>
+          <line>160</line>
           <properties documentPath="$PROJECT_DIR$/Tests/CreaturesAndSkills.cs" initialLine="138">
             <startOffsets>
-              <option value="5954" />
+              <option value="7394" />
             </startOffsets>
             <endOffsets>
-              <option value="5968" />
+              <option value="7408" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="4" />

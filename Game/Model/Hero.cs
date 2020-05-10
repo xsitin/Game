@@ -40,7 +40,7 @@ namespace Game.Model
             set
             {
                 if (value < 0)
-                    throw new Exception("ты шо совсем тупой?");
+                    throw new ArgumentException("Changed exp should be more than 0");
                 _exp = value;
                 while (_exp >= Math.Round(100 + Level * 100 + 300 * Math.Pow(Level, 0.5)))
                 {

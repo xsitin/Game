@@ -4,6 +4,13 @@ namespace Game.Model
 {
     public class EnemyHero : BasicCreature
     {
+        private static readonly Dictionary<Specialization, Position> Transfer = new Dictionary<Specialization, Position>
+        {
+            {Specialization.Wizard, Position.Range},
+            {Specialization.Warrior, Position.Melee},
+            {Specialization.Archer, Position.Range}
+        };
+
         public Location Location;
         public List<Skill> Skills = new List<Skill>();
 
@@ -18,7 +25,7 @@ namespace Game.Model
                 new[] {(Model.Characteristics.Health, Characteristics[Model.Characteristics.PhysicalDamage])},
                 SkillRange.Single, "Base Hit", null));
         }
-        
+
         public EnemyHero(string name, Dictionary<Characteristics, int> characteristics, Inventory inventory,
             Specialization specialization, Location location) : base(name, characteristics,
             inventory)
@@ -45,18 +52,10 @@ namespace Game.Model
                         target.Buffs.Add(action.Buff.ToTarget(target));
                 }
         }
-        
+
         public override string ToString()
         {
             return Name;
         }
-
-        private static readonly Dictionary<Specialization, Position> Transfer = new Dictionary<Specialization, Position>()
-        {
-            {Specialization.Wizard, Position.Range},
-            {Specialization.Warrior,Position.Melee},
-            {Specialization.Archer, Position.Range}
-        };
     }
-    
 }
