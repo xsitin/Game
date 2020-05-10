@@ -94,6 +94,7 @@
   <ItemGroup>
     <Compile Include="CreaturesAndSkills.cs" />
     <Compile Include="EnemyFactoryTests.cs" />
+    <Compile Include="DatabaseTests.cs"/>
     <Compile Include="GameQueueTests.cs" />
     <Compile Include="Inventory_Should.cs" />
     <Compile Include="Items_Should.cs" />

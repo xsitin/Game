@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Reflection;
 using Newtonsoft.Json;
 
 namespace Game.Model
@@ -38,9 +40,21 @@ namespace Game.Model
             }
         };
 
+        //
+        private static int previous;
+
         public static string GetName()
         {
-            return "1";
+            var w = Directory.GetParent(Path.GetFullPath(Assembly.GetExecutingAssembly().Location)).Parent.Parent.Parent
+                .FullName + @"\Game\Properties\Names.txt";
+            var Names = File.ReadAllLines(w);
+            var r = new Random();
+
+            var val = r.Next(0, Names.Length - 1);
+            while (val == previous)
+                val = r.Next(0, Names.Length - 1);
+            previous = val;
+            return Names[val];
         }
 
         public static void SaveGame(Player player)

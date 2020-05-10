@@ -19,8 +19,9 @@
     <select>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:Loliconshik-patch-1" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/Loliconshik-patch-1" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
@@ -28,7 +29,16 @@
     <list default="true" id="0f51531c-d592-4864-9987-5dbb2ad7efa7" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/Tests/EnemyFactoryTests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Game/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game/.idea/contentModel.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Game/Properties/Names.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests/DatabaseTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Game/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Game/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game/.idea/projectSettingsUpdater.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/Game.sln.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/Game.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Game/Game.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/Model/Base_creature.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Game/Model/Base_creature.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/Model/Bot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Game/Model/Bot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/Model/database.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Game/Model/database.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/Model/EnemyFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Game/Model/EnemyFactory.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/bin/Debug/Game.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Game/bin/Debug/Game.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/bin/Debug/Game.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Game/bin/Debug/Game.pdb" afterDir="false" />
@@ -42,12 +52,17 @@
       <change beforePath="$PROJECT_DIR$/Game/obj/Debug/Game.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Game/obj/Debug/Game.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/Saves_Should.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Saves_Should.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Tests.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Tests.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/bin/Debug/Game.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/bin/Debug/Game.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/bin/Debug/Game.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/bin/Debug/Game.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/bin/Debug/NUnit3.TestAdapter.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/bin/Debug/NUnit3.TestAdapter.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/bin/Debug/NUnit3.TestAdapter.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/bin/Debug/NUnit3.TestAdapter.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/bin/Debug/Tests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/bin/Debug/Tests.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/bin/Debug/Tests.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/bin/Debug/Tests.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/obj/Debug/Tests.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/obj/Debug/Tests.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/obj/Debug/Tests.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/obj/Debug/Tests.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/obj/Debug/Tests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/obj/Debug/Tests.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/obj/Debug/Tests.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/obj/Debug/Tests.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/obj/Debug/Tests.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/obj/Debug/Tests.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/obj/Debug/Tests.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/obj/Debug/Tests.csproj.FileListAbsolute.txt" afterDir="false" />
     </list>
@@ -59,29 +74,35 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Xsitin" />
+        <entry key="$PROJECT_DIR$" value="Loliconshik-patch-1" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Game/Model/EnemyFactory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/DatabaseTests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9AECFB6F-6EE1-4BB3-9CEC-F864D8D0E1D7/b5/bd6cc998/__Error.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Game/Model/Skill.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Game/Model/Position.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9AECFB6F-6EE1-4BB3-9CEC-F864D8D0E1D7/c1/3c9c0157/StringBuilder.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Game/Model/Inventory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Game/Model/Buff.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/Bot.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Tests/CreaturesAndSkills.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Game/Model/EnemyHero.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Tests/packages.config" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/nunit/nunit/c933a883ea25263ec575a654dae69fa38000edd9/src/NUnitFramework/framework/Internal/Reflect.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Game/Model/Field.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Tests/Tests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/Inventory_Should.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Game/packages.config" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/Team_Should.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/Saves_Should.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Tests/GameQueueTests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Game/Model/Player.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2676A2DA-6EDC-420E-890E-D28AA4572EE5/ce/e19a584a/JsonSerializerInternalReader.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/Items_Should.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Game/Model/Game.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Game/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Game/Model/GameQueue.cs" root0="FORCE_HIGHLIGHTING" />
@@ -99,7 +120,6 @@
     <setting file="file://$PROJECT_DIR$/Game/Model/Item.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DE1FCB29-CDF8-4697-8C31-A8D6DD497076/6f/d57221af/JsonClassInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Game/Properties/AssemblyInfo.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Tests/Inventory_Should.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Roaming/NuGet/NuGet.Config" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5B54F26E-7A36-4814-BB66-DF57E0D84513/50/c0b4cdaf/Unsafe.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Game/Properties/Resources.resx" root0="FORCE_HIGHLIGHTING" />
@@ -109,7 +129,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/DE1FCB29-CDF8-4697-8C31-A8D6DD497076/0/JsonConverterFactory.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D6CD672B-48A5-4D5D-9AC4-21ACA90E1D2C/b1/722cb808/ThrowHelper.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Tests/Properties/AssemblyInfo.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Tests/Saves_Should.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/database.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D6CD672B-48A5-4D5D-9AC4-21ACA90E1D2C/39/695ed56b/JsonConverter`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Game/Model/Characteristics.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Game/Model/database.cs" root0="FORCE_HIGHLIGHTING" />
@@ -142,6 +162,7 @@
         <option value="$PROJECT_DIR$/Game/Model/Team.cs" />
         <option value="$PROJECT_DIR$/Tests/Team_Should.cs" />
         <option value="$PROJECT_DIR$/Tests/Inventory_Should.cs" />
+        <option value="$PROJECT_DIR$/Game/Model/EnemyFactory.cs" />
         <option value="$PROJECT_DIR$/Game/Model/Buff.cs" />
         <option value="$PROJECT_DIR$/Game/Model/Skill.cs" />
         <option value="$PROJECT_DIR$/Game/Model/Bot.cs" />
@@ -161,6 +182,13 @@
         <option value="$PROJECT_DIR$/Tests/Properties/EnemyFactoryTests.cs" />
         <option value="$PROJECT_DIR$/Game/Model/EnemyFactory.cs" />
         <option value="$PROJECT_DIR$/Tests/EnemyFactoryTests.cs" />
+        <option value="$PROJECT_DIR$/Game/Properties/Names.txt" />
+        <option value="$PROJECT_DIR$/Tests/DatabaseTests.cs" />
+        <option value="$PROJECT_DIR$/Game/Model/Bot.cs" />
+        <option value="$PROJECT_DIR$/Game/Model/Base_creature.cs" />
+        <option value="$PROJECT_DIR$/Game/Properties/Name.Designer.cs" />
+        <option value="$PROJECT_DIR$/Game/Properties/Name.resx" />
+        <option value="$PROJECT_DIR$/Game/Model/database.cs" />
       </list>
     </option>
   </component>
@@ -236,7 +264,7 @@
     <option name="coveragePercentColumnWidth" value="150" />
     <option name="sortOrder" value="DESCENDING" />
     <option name="sortedColumn" value="1" />
-    <option name="symbolColumnWidth" value="334" />
+    <option name="symbolColumnWidth" value="377" />
     <coverage-tree-state>
       <expand>
         <path>
@@ -278,7 +306,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="Loliconshik-patch-1" />
+                        <option value="origin/Loliconshik-patch-1" />
                       </list>
                     </value>
                   </entry>
@@ -290,6 +318,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
@@ -306,10 +335,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="410" y="199" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog/0.0.1536.864@0.0.1536.864" timestamp="1588875504382" />
-    <state x="587" y="89" key="CommitChangelistDialog2" timestamp="1589099381812">
+    <state x="587" y="89" key="CommitChangelistDialog2" timestamp="1589113969241">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="587" y="89" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1589099381812" />
+    <state x="587" y="89" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1589113969241" />
     <state width="515" height="527" key="DebuggerActiveHint" timestamp="1589042165075">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -426,14 +455,15 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1589099399386" />
-    <state width="968" height="528" key="XDebugger.FullValuePopup" timestamp="1589060015069">
+    <state width="968" height="528" key="XDebugger.FullValuePopup" timestamp="1589115365570">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="968" height="528" key="XDebugger.FullValuePopup/0.0.1920.1040@0.0.1920.1040" timestamp="1589060015069" />
-    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1588969486983">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state width="968" height="528" key="XDebugger.FullValuePopup/0.0.1920.1040@0.0.1920.1040" timestamp="1589115365570" />
+    <state x="539" y="218" width="840" height="817" key="search.everywhere.popup" timestamp="1589115094349">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="431" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1588969486983" />
+    <state x="539" y="218" width="840" height="817" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1589115094349" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -456,6 +486,19 @@
           <line>108</line>
           <properties documentPath="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2676A2DA-6EDC-420E-890E-D28AA4572EE5/ce/e19a584a/JsonSerializerInternalReader.cs" initialLine="108" />
           <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Game/Model/database.cs</url>
+          <line>50</line>
+          <properties documentPath="$PROJECT_DIR$/Game/Model/database.cs" initialLine="50">
+            <startOffsets>
+              <option value="2069" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2109" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

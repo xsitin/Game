@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 
 namespace Game.Model
@@ -9,7 +8,7 @@ namespace Game.Model
     {
         public static void MakeAMove(Game game)
         {
-            var current = (EnemyHero) (game.CurrentCreature);
+            var current = (EnemyHero) game.CurrentCreature;
             var random = new Random();
             var skill = current.Skills[random.Next(0, current.Skills.Count - 1)];
             var targets = new List<BasicCreature>();
@@ -25,7 +24,6 @@ namespace Game.Model
                     targets = game.Enemy.GetTeamList();
                     break;
                 case SkillRange.Single:
-                {
                     if (skill.Effect.Any(x => x.characteristic == Characteristics.Health && x.value < 0))
                         if (DateTime.Now.Minute % 2 == 0)
                             targets.Add(current.Position == Position.Melee
@@ -34,10 +32,11 @@ namespace Game.Model
                                     .First());
                         else
                             targets.Add(game.Heroes.GetTeamList()[random.Next(0, game.Heroes.GetTeamList().Count - 1)]);
+                    //todo add using heal
                     break;
-                }
             }
-            current.UseSkill(skill,targets.ToArray());
+
+            current.UseSkill(skill, targets.ToArray());
             game.NextStep();
         }
     }
