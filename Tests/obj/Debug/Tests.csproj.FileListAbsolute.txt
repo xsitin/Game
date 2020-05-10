@@ -76,7 +76,6 @@ C:\Users\walue\OneDrive\Документы\GitHub\Game\Tests\bin\Debug\Tests.pdb
 C:\Users\walue\OneDrive\Документы\GitHub\Game\Tests\bin\Debug\FluentAssertions.dll
 C:\Users\walue\OneDrive\Документы\GitHub\Game\Tests\bin\Debug\Game.exe
 C:\Users\walue\OneDrive\Документы\GitHub\Game\Tests\bin\Debug\nunit.framework.dll
-C:\Users\walue\OneDrive\Документы\GitHub\Game\Tests\bin\Debug\System.Text.Json.dll
 C:\Users\walue\OneDrive\Документы\GitHub\Game\Tests\bin\Debug\System.Memory.dll
 C:\Users\walue\OneDrive\Документы\GitHub\Game\Tests\bin\Debug\System.Text.Encodings.Web.dll
 C:\Users\walue\OneDrive\Документы\GitHub\Game\Tests\bin\Debug\System.Numerics.Vectors.dll
@@ -89,7 +88,6 @@ C:\Users\walue\OneDrive\Документы\GitHub\Game\Tests\bin\Debug\Game.exe.
 C:\Users\walue\OneDrive\Документы\GitHub\Game\Tests\bin\Debug\FluentAssertions.pdb
 C:\Users\walue\OneDrive\Документы\GitHub\Game\Tests\bin\Debug\FluentAssertions.xml
 C:\Users\walue\OneDrive\Документы\GitHub\Game\Tests\bin\Debug\nunit.framework.xml
-C:\Users\walue\OneDrive\Документы\GitHub\Game\Tests\bin\Debug\System.Text.Json.xml
 C:\Users\walue\OneDrive\Документы\GitHub\Game\Tests\bin\Debug\System.Memory.xml
 C:\Users\walue\OneDrive\Документы\GitHub\Game\Tests\bin\Debug\System.Text.Encodings.Web.xml
 C:\Users\walue\OneDrive\Документы\GitHub\Game\Tests\bin\Debug\System.Numerics.Vectors.xml
@@ -165,3 +163,8 @@ C:\Users\xsitin\Documents\GitHub\Game\Tests\bin\Debug\System.ValueTuple.dll
 C:\Users\xsitin\Documents\GitHub\Game\Tests\bin\Debug\System.ValueTuple.xml
 C:\Users\xsitin\Documents\GitHub\Game\Tests\bin\Debug\Newtonsoft.Json.dll
 C:\Users\xsitin\Documents\GitHub\Game\Tests\bin\Debug\Newtonsoft.Json.xml
+C:\Users\walue\OneDrive\Документы\GitHub\Game\Tests\bin\Debug\Newtonsoft.Json.dll
+C:\Users\walue\OneDrive\Документы\GitHub\Game\Tests\bin\Debug\System.ValueTuple.dll
+C:\Users\walue\OneDrive\Документы\GitHub\Game\Tests\bin\Debug\Newtonsoft.Json.xml
+C:\Users\walue\OneDrive\Документы\GitHub\Game\Tests\bin\Debug\nunit.framework.pdb
+C:\Users\walue\OneDrive\Документы\GitHub\Game\Tests\bin\Debug\System.ValueTuple.xml
