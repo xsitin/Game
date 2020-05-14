@@ -5,6 +5,30 @@ namespace Game.Model
 {
     public abstract class BasicCreature
     {
+        public string Name { get; }
+        public  Dictionary<Characteristics, int> Characteristics { get; }
+        public Inventory Inventory;
+        public int Level { get; set; }
+        public Location Location { get; }
+        public Specialization Specialization { get; }
+
+        public BasicCreature(string name, Dictionary<Characteristics, int> characteristics, Inventory inventory,
+            Specialization specialization, Location location)
+        {
+            Name = name;
+            Characteristics = characteristics;
+            if (Characteristics.Count != 7)
+                FillDictionary();
+            Inventory = inventory;
+            Specialization = specialization;
+            Level = 1;
+            Location = location;
+        }
+
+        public BasicCreature()
+        {
+        }
+        
         //TODO move some methods from heroes there and add effect from characters
         public static readonly Dictionary<Characteristics, int> BaseCharacteristics =
             new Dictionary<Characteristics, int>

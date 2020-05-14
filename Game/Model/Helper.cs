@@ -9,6 +9,13 @@ namespace Game.Model
     public class
         Helper //класс отвечающий за доступ к данным в проекте, к примеру, за получение необходимых для view картинок
     {
+        public static readonly Dictionary<Specialization, Position> Transfer = new Dictionary<Specialization, Position>
+        {
+            {Specialization.Wizard, Position.Range},
+            {Specialization.Warrior, Position.Melee},
+            {Specialization.Archer, Position.Range}
+        };
+        
         public static Dictionary<Specialization, List<Skill>> BasicSkills = new Dictionary<Specialization, List<Skill>>
         {
             {
