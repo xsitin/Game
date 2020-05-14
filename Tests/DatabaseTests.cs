@@ -11,8 +11,8 @@ namespace Tests
         {
             for (var i = 0; i < 500; i++)
             {
-                var n1 = Database.GetName();
-                var n2 = Database.GetName();
+                var n1 = Helper.GetName();
+                var n2 = Helper.GetName();
                 if (n1.Equals(n2))
                     Assert.Fail();
             }

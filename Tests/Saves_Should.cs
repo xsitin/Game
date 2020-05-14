@@ -30,8 +30,8 @@ namespace Tests
                 //Storage = new List<ActiveItem>() { healingPotion },
             };
 
-            Database.SaveGame(player);
-            loadedPlayer = Database.LoadGame("Player1");
+            Helper.SaveGame(player);
+            loadedPlayer = Helper.LoadGame("Player1");
         }
 
         [Test]

@@ -57,14 +57,14 @@ namespace Game.Model
         private EnemyHero GetEnemy(int minLevel, int maxLevel, Specialization specialization)
         {
             var random = new Random();
-            var enemy = new EnemyHero(Database.GetName(), new Dictionary<Characteristics, int>(), new Inventory(),
+            var enemy = new EnemyHero(Helper.GetName(), new Dictionary<Characteristics, int>(), new Inventory(),
                 specialization, Location);
             var points = random.Next(minLevel, maxLevel) - 1;
             Thread.Sleep(10);
             while (enemy.Skills.Count < 2)
             {
-                var skill = Database.BasicSkills[specialization][
-                    random.Next(0, Database.BasicSkills[specialization].Count)];
+                var skill = Helper.BasicSkills[specialization][
+                    random.Next(0, Helper.BasicSkills[specialization].Count)];
                 if (enemy.Skills.All(x => x.Name != skill.Name))
                     enemy.Skills.Add(skill);
             }

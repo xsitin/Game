@@ -78,9 +78,9 @@ namespace Tests
         [Test]
         public void CorrectEnemyConstructorWithoutPistion()
         {
-            var range = new EnemyHero(Database.GetName(), new Dictionary<Characteristics, int>(), new Inventory(),
+            var range = new EnemyHero(Helper.GetName(), new Dictionary<Characteristics, int>(), new Inventory(),
                 Specialization.Archer, Location.SomeLocation);
-            var melee = new EnemyHero(Database.GetName(), new Dictionary<Characteristics, int>(), new Inventory(),
+            var melee = new EnemyHero(Helper.GetName(), new Dictionary<Characteristics, int>(), new Inventory(),
                 Specialization.Warrior, Location.SomeLocation);
             Assert.AreEqual(Position.Melee, melee.Position);
             Assert.AreEqual(Position.Range, range.Position);
