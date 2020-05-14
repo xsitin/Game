@@ -52,11 +52,7 @@ namespace Game.Model
                 FillDictionary();
             Inventory = inventory;
         }
-
-        public BasicCreature()
-        {
-        }
-
+        
         public void HpChange(int change, bool isMagic)
         {
             if (isMagic)
@@ -66,11 +62,6 @@ namespace Game.Model
                 Characteristics[Model.Characteristics.Health] +=
                     change * (1 - Characteristics[Model.Characteristics.PhysicalProtection] / 100);
         }
-
-
-        public string Name { get; set; }
-        public Dictionary<Characteristics, int> Characteristics { get; }
-        public Inventory Inventory { get; set; }
 
         private void FillDictionary()
         {
