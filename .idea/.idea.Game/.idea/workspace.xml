@@ -27,8 +27,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f51531c-d592-4864-9987-5dbb2ad7efa7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Game/Model/database.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Game/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/Game.sln.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/Model/Base_creature.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Game/Model/Base_creature.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/Model/EnemyHero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Game/Model/EnemyHero.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/Model/Helper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Game/Model/Helper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/Model/Hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Game/Model/Hero.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/bin/Debug/Game.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Game/bin/Debug/Game.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/bin/Debug/Game.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Game/bin/Debug/Game.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/obj/Debug/Game.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Game/obj/Debug/Game.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/obj/Debug/Game.csproj.GenerateResource.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Game/obj/Debug/Game.csproj.GenerateResource.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/obj/Debug/Game.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Game/obj/Debug/Game.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/obj/Debug/Game.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Game/obj/Debug/Game.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/obj/Debug/Game.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Game/obj/Debug/Game.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/Saves_Should.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Saves_Should.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/bin/Debug/Game.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/bin/Debug/Game.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/bin/Debug/Game.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/bin/Debug/Game.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/bin/Debug/Tests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/bin/Debug/Tests.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/bin/Debug/Tests.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/bin/Debug/Tests.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/obj/Debug/Tests.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/obj/Debug/Tests.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/obj/Debug/Tests.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/obj/Debug/Tests.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/obj/Debug/Tests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/obj/Debug/Tests.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/obj/Debug/Tests.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/obj/Debug/Tests.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,47 +65,40 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Game/Model/EnemyFactory.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Model/Skill.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Model/Position.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Model/Inventory.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Model/Buff.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Model/EnemyHero.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Model/Field.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/packages.config" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Tests/Team_Should.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Tests/GameQueueTests.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Model/Player.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2676A2DA-6EDC-420E-890E-D28AA4572EE5/ce/e19a584a/JsonSerializerInternalReader.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Tests/Items_Should.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Model/Game.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Program.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Model/GameQueue.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Model/Team.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Tests/Inventory_Should.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Game/App.config" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Tests/DatabaseTests.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Tests/Saves_Should.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9AECFB6F-6EE1-4BB3-9CEC-F864D8D0E1D7/0f/ffbadda6/RuntimeType.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Model/Bot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/Team.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/EnemyFactory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/Player.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/Buff.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/Inventory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Game/Model/Base_creature.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/Position.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/GameQueue.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/Field.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/Bot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/Hero.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/EnemyHero.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/Characteristics.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/Game.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/Skill.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Game/Model/Item.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DE1FCB29-CDF8-4697-8C31-A8D6DD497076/6f/d57221af/JsonClassInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/Saves_Should.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/DatabaseTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/Helper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Game/Properties/AssemblyInfo.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/AppData/Roaming/NuGet/NuGet.Config" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Game/Properties/Resources.resx" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Tests/packages.config" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/DE1FCB29-CDF8-4697-8C31-A8D6DD497076/0/JsonConverterFactory.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D6CD672B-48A5-4D5D-9AC4-21ACA90E1D2C/b1/722cb808/ThrowHelper.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Tests/Properties/AssemblyInfo.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D6CD672B-48A5-4D5D-9AC4-21ACA90E1D2C/39/695ed56b/JsonConverter`1.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9AECFB6F-6EE1-4BB3-9CEC-F864D8D0E1D7/b5/bd6cc998/__Error.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9AECFB6F-6EE1-4BB3-9CEC-F864D8D0E1D7/c1/3c9c0157/StringBuilder.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Tests/CreaturesAndSkills.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Tests/Tests.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5B54F26E-7A36-4814-BB66-DF57E0D84513/50/c0b4cdaf/Unsafe.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Model/Hero.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Model/Characteristics.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/Inventory_Should.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/Properties/AssemblyInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/packages.config" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Roaming/NuGet/NuGet.Config" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/packages.config" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/GameQueueTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/Items_Should.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/EnemyFactoryTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/Team_Should.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Program.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -102,7 +116,6 @@
         <option value="$PROJECT_DIR$/Game/Model/Team.cs" />
         <option value="$PROJECT_DIR$/Tests/Team_Should.cs" />
         <option value="$PROJECT_DIR$/Tests/Inventory_Should.cs" />
-        <option value="$PROJECT_DIR$/Game/Model/EnemyFactory.cs" />
         <option value="$PROJECT_DIR$/Game/Model/Buff.cs" />
         <option value="$PROJECT_DIR$/Game/Model/Skill.cs" />
         <option value="$PROJECT_DIR$/Game/Model/Bot.cs" />
@@ -113,22 +126,26 @@
         <option value="$PROJECT_DIR$/Game/Model/Player.cs" />
         <option value="$PROJECT_DIR$/Game/Program.cs" />
         <option value="$PROJECT_DIR$/Game/Model/database.cs" />
-        <option value="$PROJECT_DIR$/Game/Model/Base_creature.cs" />
-        <option value="$PROJECT_DIR$/Tests/Saves_Should.cs" />
-        <option value="$PROJECT_DIR$/Game/Model/Hero.cs" />
-        <option value="$PROJECT_DIR$/Game/Model/EnemyHero.cs" />
         <option value="$PROJECT_DIR$/Tests/CreaturesAndSkills.cs" />
-        <option value="$PROJECT_DIR$/Tests/Saves_Should.cs" />
         <option value="$PROJECT_DIR$/Tests/Properties/EnemyFactoryTests.cs" />
-        <option value="$PROJECT_DIR$/Game/Model/EnemyFactory.cs" />
         <option value="$PROJECT_DIR$/Tests/EnemyFactoryTests.cs" />
         <option value="$PROJECT_DIR$/Game/Properties/Names.txt" />
         <option value="$PROJECT_DIR$/Tests/DatabaseTests.cs" />
         <option value="$PROJECT_DIR$/Game/Model/Bot.cs" />
-        <option value="$PROJECT_DIR$/Game/Model/Base_creature.cs" />
         <option value="$PROJECT_DIR$/Game/Properties/Name.Designer.cs" />
         <option value="$PROJECT_DIR$/Game/Properties/Name.resx" />
         <option value="$PROJECT_DIR$/Game/Model/database.cs" />
+        <option value="$PROJECT_DIR$/Game/Game.csproj" />
+        <option value="$PROJECT_DIR$/Game/Model/EnemyFactory.cs" />
+        <option value="$PROJECT_DIR$/Game/Model/EnemyFactory.cs" />
+        <option value="$PROJECT_DIR$/Game/Model/Helper.cs" />
+        <option value="$PROJECT_DIR$/Game/Model/BasicHero.cs" />
+        <option value="$PROJECT_DIR$/Game/Model/EnemyHero.cs" />
+        <option value="$PROJECT_DIR$/Game/Model/Base_creature.cs" />
+        <option value="$PROJECT_DIR$/Game/Model/Base_creature.cs" />
+        <option value="$PROJECT_DIR$/Game/Model/Hero.cs" />
+        <option value="$PROJECT_DIR$/Tests/Saves_Should.cs" />
+        <option value="$PROJECT_DIR$/Tests/Saves_Should.cs" />
       </list>
     </option>
   </component>
@@ -147,7 +164,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="TWShift.3" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
   </component>
   <component name="RunManager" selected=".NET Project.Game">
     <configuration name="Game" type="DotNetProject" factoryName=".NET Project">
@@ -165,7 +182,7 @@
       <option name="PROJECT_KIND" value="Console" />
       <option name="PROJECT_TFM" value="" />
       <method v="2">
-        <option name="Build" enabled="true" />
+        <option name="Build" />
       </method>
     </configuration>
   </component>
@@ -366,13 +383,15 @@
     </state>
     <state width="1325" height="277" key="GridCell.Tab.4.right/0.0.1536.864@0.0.1536.864" timestamp="1589105080623" />
     <state width="1877" height="348" key="GridCell.Tab.4.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589060754826" />
-    <state x="461" y="165" key="SettingsEditor" timestamp="1588784178754">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="369" y="115" key="SettingsEditor" timestamp="1589462443167">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="369" y="115" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1589462443167" />
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1588784178754" />
-    <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog" timestamp="1589059965942">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="74" y="73" width="1389" height="679" key="VCS.FileHistoryDialog" timestamp="1589465094130">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="74" y="73" width="1389" height="679" key="VCS.FileHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1589465094130" />
     <state x="92" y="92" width="1736" height="856" key="VCS.FileHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589059965942" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1589099399386">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -415,6 +434,19 @@
           <line>50</line>
           <properties documentPath="$PROJECT_DIR$/Game/Model/database.cs" initialLine="50" />
           <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Tests/Saves_Should.cs</url>
+          <line>55</line>
+          <properties documentPath="$PROJECT_DIR$/Tests/Saves_Should.cs" initialLine="55">
+            <startOffsets>
+              <option value="1895" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1924" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

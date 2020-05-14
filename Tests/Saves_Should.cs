@@ -16,9 +16,9 @@ namespace Tests
         public void SetUp()
         {
             healingPotion = new ActiveItem("heal", new[] { (Characteristics.Health, 20) });            
-            heroWarrior = new Hero("Герой", new Dictionary<Characteristics, int> {[Characteristics.Health] = 200},
+            heroWarrior = new Hero("Hero", new Dictionary<Characteristics, int> {[Characteristics.Health] = 200},
                 new Inventory(), Specialization.Warrior, Position.Melee, Location.SomeLocation);
-            heroArcher = new Hero("Герой", new Dictionary<Characteristics, int> {[Characteristics.Health] = 200},
+            heroArcher = new Hero("Hero", new Dictionary<Characteristics, int> {[Characteristics.Health] = 200},
                 new Inventory(), Specialization.Archer, Position.Range, Location.SomeLocation);
             player = new Player
             {
@@ -61,7 +61,7 @@ namespace Tests
         }
 
         [Test]
-        public void Test_CompareLists()
+        public void Test_CompareMercs()
         {
             for (var i = 0; i < player.Mercenaries.Count; i++)
             {
