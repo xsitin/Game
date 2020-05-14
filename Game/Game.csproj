@@ -102,7 +102,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\Base_creature.cs" />
+    <Compile Include="Model\BasicCreature.cs" />
     <Compile Include="Model\Bot.cs" />
     <Compile Include="Model\Buff.cs" />
     <Compile Include="Model\Characteristics.cs" />
@@ -113,6 +113,7 @@
     <Compile Include="Model\GameQueue.cs" />
     <Compile Include="Model\Helper.cs" />
     <Compile Include="Model\Hero.cs" />
+    <Compile Include="Model\HeroesFactory.cs" />
     <Compile Include="Model\Inventory.cs" />
     <Compile Include="Model\Item.cs" />
     <Compile Include="Model\Player.cs" />
