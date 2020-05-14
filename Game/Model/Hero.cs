@@ -9,18 +9,17 @@ namespace Game.Model
     {
         private int _exp;
         public List<Skill> Skills = new List<Skill>();
+        public Position Position { get; }
+        public ReadOnlyDictionary<Characteristics, int> StandardChars { get; }
 
         public Hero(string name, Dictionary<Characteristics, int> characteristics, Inventory inventory,
             Specialization specialization, Position position, Location location) : base(name, characteristics,
-            inventory)
+            inventory, specialization, location)
         {
-            Specialization = specialization;
-            Position = position;
-            Location = location;
-            Level = 1;
             Exp = 0;
             StandardChars = new ReadOnlyDictionary<Characteristics, int>
                 (characteristics.ToDictionary(x => x.Key, y => y.Value));
+            Position = position;
             Skills.Add(new Skill(0,
                 new[] {(Model.Characteristics.Health, StandardChars[Model.Characteristics.PhysicalDamage])},
                 SkillRange.Single, "Base Hit", null));
@@ -31,8 +30,7 @@ namespace Game.Model
         }
 
         public int UpgradePoints { get; private set; }
-
-        public Specialization Specialization { get; }
+        
 
         public int Exp
         {
@@ -50,11 +48,6 @@ namespace Game.Model
                 }
             }
         }
-
-        public int Level { get; set; }
-        public Position Position { get; }
-        public Location Location { get; }
-        public ReadOnlyDictionary<Characteristics, int> StandardChars { get; }
 
         public void UseSkill(Skill action, params BasicCreature[] targets)
         {
