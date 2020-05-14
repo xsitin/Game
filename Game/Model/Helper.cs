@@ -1,7 +1,8 @@
-﻿﻿using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
+using System.Windows.Forms;
 using Newtonsoft.Json;
 
 namespace Game.Model
@@ -9,6 +10,13 @@ namespace Game.Model
     public class
         Helper //класс отвечающий за доступ к данным в проекте, к примеру, за получение необходимых для view картинок
     {
+        public static readonly Dictionary<Specialization, Position> Transfer = new Dictionary<Specialization, Position>
+        {
+            {Specialization.Wizard, Position.Range},
+            {Specialization.Warrior, Position.Melee},
+            {Specialization.Archer, Position.Range}
+        };
+
         public static Dictionary<Specialization, List<Skill>> BasicSkills = new Dictionary<Specialization, List<Skill>>
         {
             {
@@ -39,7 +47,7 @@ namespace Game.Model
                 }
             }
         };
-        
+
         private static int previous;
 
         public static string GetName()
@@ -59,12 +67,16 @@ namespace Game.Model
         public static void SaveGame(Player player)
         {
             var serialized = JsonConvert.SerializeObject(player);
-            File.WriteAllText(Path.Combine(Directory.GetCurrentDirectory(), player.PlayerName), serialized);
+            File.WriteAllText(Directory.GetParent(Path.GetFullPath(Assembly.GetExecutingAssembly().Location)).Parent
+                .Parent.Parent
+                .FullName + @"\Game\Saves", serialized);
         }
 
         public static Player LoadGame(string playerName)
         {
-            var text = File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), playerName));
+            var text = File.ReadAllText(Directory.GetParent(Path.GetFullPath(Assembly.GetExecutingAssembly().Location))
+                .Parent.Parent.Parent
+                .FullName + @"\Game\Saves");
             return JsonConvert.DeserializeObject<Player>(text);
         }
     }

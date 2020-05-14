@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Loliconshik\.Rider2019.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Loliconshik\.Rider2019.3\system\resharper-host\Local\Transient\ReSharperHost\v193\SolutionCaches\_Game.-1559802761.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Loliconshik\Documents\GitHub\Game" t="IncludeFlat">
+    <e p="C:\Users\xsitin\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\xsitin\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_Game.-864978504.00" t="ExcludeRecursive" />
+    <e p="C:\Users\xsitin\Game" t="IncludeFlat">
       <e p="Game" t="IncludeRecursive">
         <e p="App.config" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
-        <e p="Control" t="Include" />
+        <e p="Controls" t="Include">
+          <e p="SomeControl.cs" t="Include" />
+        </e>
         <e p="Game.csproj" t="IncludeRecursive" />
         <e p="Model" t="Include">
-          <e p="Base_creature.cs" t="Include" />
+          <e p="BasicCreature.cs" t="Include" />
           <e p="Bot.cs" t="Include" />
           <e p="Buff.cs" t="Include" />
           <e p="Characteristics.cs" t="Include" />
@@ -21,6 +23,7 @@
           <e p="GameQueue.cs" t="Include" />
           <e p="Helper.cs" t="Include" />
           <e p="Hero.cs" t="Include" />
+          <e p="HeroesFactory.cs" t="Include" />
           <e p="Inventory.cs" t="Include" />
           <e p="Item.cs" t="Include" />
           <e p="Player.cs" t="Include" />
@@ -33,15 +36,20 @@
         <e p="Program.cs" t="Include" />
         <e p="Properties" t="Include">
           <e p="AssemblyInfo.cs" t="Include" />
+          <e p="cont.png" t="Include" />
+          <e p="load.png" t="Include" />
           <e p="Names.txt" t="Include" />
+          <e p="newGame.png" t="Include" />
           <e p="Resources.Designer.cs" t="Include" />
           <e p="Resources.resx" t="Include" />
           <e p="Settings.Designer.cs" t="Include" />
           <e p="Settings.settings" t="Include" />
+          <e p="StartGameArt.jpg" t="Include" />
         </e>
         <e p="View" t="Include">
           <e p="Form1.cs" t="Include" />
           <e p="Form1.Designer.cs" t="Include" />
+          <e p="Form1.resx" t="Include" />
         </e>
       </e>
       <e p="Game.sln" t="IncludeFlat" />
@@ -65,6 +73,7 @@
         <e p="DatabaseTests.cs" t="Include" />
         <e p="EnemyFactoryTests.cs" t="Include" />
         <e p="GameQueueTests.cs" t="Include" />
+        <e p="HeroesFactoryTests.cs" t="Include" />
         <e p="Inventory_Should.cs" t="Include" />
         <e p="Items_Should.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive" />

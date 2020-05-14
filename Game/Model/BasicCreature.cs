@@ -5,6 +5,30 @@ namespace Game.Model
 {
     public abstract class BasicCreature
     {
+        public string Name { get; set; }
+        public  Dictionary<Characteristics, int> Characteristics { get; set; }
+        public Inventory Inventory;
+        public int Level { get; set; }
+        public Location Location { get; set; }
+        public Specialization Specialization { get; set; }
+
+        public BasicCreature(string name, Dictionary<Characteristics, int> characteristics, Inventory inventory,
+            Specialization specialization, Location location)
+        {
+            Name = name;
+            Characteristics = characteristics;
+            if (Characteristics.Count != 7)
+                FillDictionary();
+            Inventory = inventory;
+            Specialization = specialization;
+            Level = 1;
+            Location = location;
+        }
+
+        public BasicCreature()
+        {
+        }
+        
         //TODO move some methods from heroes there and add effect from characters
         public static readonly Dictionary<Characteristics, int> BaseCharacteristics =
             new Dictionary<Characteristics, int>
@@ -29,10 +53,6 @@ namespace Game.Model
             Inventory = inventory;
         }
 
-        public BasicCreature()
-        {
-        }
-
         public void HpChange(int change, bool isMagic)
         {
             if (isMagic)
@@ -42,12 +62,7 @@ namespace Game.Model
                 Characteristics[Model.Characteristics.Health] +=
                     change * (1 - Characteristics[Model.Characteristics.PhysicalProtection] / 100);
         }
-
-
-        public string Name { get; set; }
-        public Dictionary<Characteristics, int> Characteristics { get; }
-        public Inventory Inventory { get; set; }
-
+        
         private void FillDictionary()
         {
             for (var i = 0; i < 7; i++)
