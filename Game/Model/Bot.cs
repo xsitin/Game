@@ -15,13 +15,16 @@ namespace Game.Model
             switch (skill.Range)
             {
                 case SkillRange.All:
-                    targets.AddRange(game.Heroes.GetTeamList().Concat(game.Enemy.GetTeamList()));
+                    targets.AddRange(game.Heroes.GetTeamList()
+                            .Concat(game.Enemy.GetTeamList())
+                        .Where(x => x.Characteristics[Characteristics.Health] > 0)
+                        .ToList());
                     break;
                 case SkillRange.Enemies:
-                    targets = game.Heroes.GetTeamList();
+                    targets = game.Heroes.GetTeamList().Where(x=>x.Characteristics[Characteristics.Health]>0).ToList();
                     break;
                 case SkillRange.Friendly:
-                    targets = game.Enemy.GetTeamList();
+                    targets = game.Enemy.GetTeamList().Where(x=>x.Characteristics[Characteristics.Health]>0).ToList();
                     break;
                 case SkillRange.Single:
                     if (skill.Effect.Any(x => x.characteristic == Characteristics.Health && x.value < 0))
@@ -32,7 +35,11 @@ namespace Game.Model
                                     .First());
                         else
                             targets.Add(game.Heroes.GetTeamList()[random.Next(0, game.Heroes.GetTeamList().Count - 1)]);
-                    //todo add using heal
+                    else
+                        targets.Add(game.Enemy.GetTeamList()
+                            .OrderBy(x => x.Characteristics[Characteristics.Health])
+                            .First(x => x.Characteristics[Characteristics.Health] > 0));
+
                     break;
             }
 

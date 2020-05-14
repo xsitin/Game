@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Game.Model
 {
@@ -31,6 +32,17 @@ namespace Game.Model
         public BasicCreature()
         {
         }
+
+        public void HpChange(int change, bool isMagic)
+        {
+            if (isMagic)
+                Characteristics[Model.Characteristics.Health] +=
+                    change * (1 - Characteristics[Model.Characteristics.MagicalProtection] / 100);
+            else if ((new Random()).Next(0, 100) < Characteristics[Model.Characteristics.Evasion])
+                Characteristics[Model.Characteristics.Health] +=
+                    change * (1 - Characteristics[Model.Characteristics.PhysicalProtection] / 100);
+        }
+
 
         public string Name { get; set; }
         public Dictionary<Characteristics, int> Characteristics { get; }

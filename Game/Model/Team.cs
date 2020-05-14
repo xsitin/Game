@@ -28,5 +28,12 @@ namespace Game.Model
                 SecondLine = new List<T>();
             }
         }
+
+        public void Update()
+        {
+            FirstLine = FirstLine.Where(x => x.Characteristics[Characteristics.Health] > 0).ToList();
+            SecondLine = SecondLine.Where(x => x.Characteristics[Characteristics.Health] > 0).ToList();
+            MakeStepForward();
+        }
     }
 }
