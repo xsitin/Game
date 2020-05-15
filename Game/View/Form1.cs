@@ -9,7 +9,6 @@ using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Game.Controls;
 
 namespace Game
 {
@@ -37,13 +36,17 @@ namespace Game
             var menu = new TableLayoutPanel();
             Table.BackColor = Color.Transparent;
             var newGame = new Button(){Dock = DockStyle.Fill,Margin = new Padding(20)};
-            newGame.BackgroundImage = new Bitmap(directoryWithImages + "Image\\newGame.png");
+            newGame.BackgroundImage = Properties.Resources.newGame;
             newGame.BackgroundImageLayout = ImageLayout.Stretch;
+            newGame.Click += (a, b) =>
+            {
+                this.CleanMenu();
+            };
             var loadGame = new Button(){Dock = DockStyle.Fill,Margin = new Padding(20)};
-            loadGame.BackgroundImage = new Bitmap(directoryWithImages + "Image\\load.png");
+            loadGame.BackgroundImage = Properties.Resources.load;
             loadGame.BackgroundImageLayout = ImageLayout.Stretch;
             var continueGame = new Button(){Dock = DockStyle.Fill,Margin = new Padding(20)};
-            continueGame.BackgroundImage = new Bitmap(directoryWithImages + "Image\\cont.png");
+            continueGame.BackgroundImage = Properties.Resources.cont;
             continueGame.BackgroundImageLayout = ImageLayout.Stretch;
             menu.Dock = DockStyle.Fill;
             menu.RowStyles.Add(new RowStyle(SizeType.Percent, 30));
@@ -54,12 +57,18 @@ namespace Game
             menu.Controls.Add(continueGame, 0, 1);
             menu.Controls.Add(loadGame, 0, 2);
             Table.Controls.Add(menu, 0, 0);
-            BackgroundImage = new Bitmap(directoryWithImages + "Image\\StartGameArt.jpg");
+            BackgroundImage = Properties.Resources.StartGameArt;
+            BackgroundImageLayout = ImageLayout.Stretch;
             Table.BackColor = Color.Transparent;
-            Table.Controls.Add(new SomeControl(){Dock = DockStyle.Fill}, 1, 0);
+            Table.Controls.Add(new Panel(), 1, 0);
             Table.Controls.Add(new Panel(), 1, 1);
             Table.Controls.Add(new Panel(), 0, 1);
+            WindowState = FormWindowState.Maximized;
         }
 
+        public void CleanMenu()
+        {
+            Table.Controls.Clear();
+        }
     }
 }

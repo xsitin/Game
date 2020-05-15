@@ -215,3 +215,7 @@ C:\Users\xsitin\Game\Tests\obj\Debug\Tests.csproj.CoreCompileInputs.cache
 C:\Users\xsitin\Game\Tests\obj\Debug\Tests.csproj.CopyComplete
 C:\Users\xsitin\Game\Tests\obj\Debug\Tests.dll
 C:\Users\xsitin\Game\Tests\obj\Debug\Tests.pdb
+C:\Users\xsitin\Documents\GitHub\Game\Tests\bin\Debug\Image\cont.png
+C:\Users\xsitin\Documents\GitHub\Game\Tests\bin\Debug\Image\load.png
+C:\Users\xsitin\Documents\GitHub\Game\Tests\bin\Debug\Image\newGame.png
+C:\Users\xsitin\Documents\GitHub\Game\Tests\bin\Debug\Image\StartGameArt.jpg
