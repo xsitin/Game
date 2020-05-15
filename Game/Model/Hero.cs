@@ -10,7 +10,7 @@ namespace Game.Model
         private int _exp;
         public List<Skill> Skills = new List<Skill>();
         public Position Position { get; set; }
-        public ReadOnlyDictionary<Characteristics, int> StandardChars { get; }
+        public ReadOnlyDictionary<Characteristics, int> StandardChars { get; set; }
 
         public Hero(string name, Dictionary<Characteristics, int> characteristics, Inventory inventory,
             Specialization specialization, Position position, Location location) : base(name, characteristics,
@@ -23,6 +23,10 @@ namespace Game.Model
             Skills.Add(new Skill(0,
                 new[] {(Model.Characteristics.Health, StandardChars[Model.Characteristics.PhysicalDamage])},
                 SkillRange.Single, "Base Hit", null));
+        }
+        public Hero(Specialization spec) : base(Helper.GetName(), new Dictionary<Characteristics, int>(),
+            new Inventory(), spec, Location.SomeLocation)
+        {
         }
         public Hero(string name, Dictionary<Characteristics, int> characteristics, Inventory inventory,
             Specialization specialization, Location location) : base(name, characteristics,

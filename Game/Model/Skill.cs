@@ -28,8 +28,8 @@ namespace Game.Model
             for (var i = 0; i < Effect.Length; i++)
                 Effect[i].value = (int) (Effect[i].value * 1.2);
             if (Buff != null)
-                for (var i = 0; i < Buff._buffs.Length; i++)
-                    Buff._buffs[i].value = (int) (Buff._buffs[i].value * 1.2);
+                for (var i = 0; i < Buff.Buffs.Length; i++)
+                    Buff.Buffs[i].value = (int) (Buff.Buffs[i].value * 1.2);
         }
     }
 

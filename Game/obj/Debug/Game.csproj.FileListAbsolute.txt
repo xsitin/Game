@@ -233,3 +233,8 @@ C:\Users\xsitin\Documents\GitHub\Game\Game\bin\Debug\Image\load.png
 C:\Users\xsitin\Documents\GitHub\Game\Game\bin\Debug\Image\newGame.png
 C:\Users\xsitin\Documents\GitHub\Game\Game\bin\Debug\Image\StartGameArt.jpg
 C:\Users\xsitin\Documents\GitHub\Game\Game\obj\Debug\Game.Form1.resources
+C:\Users\Loliconshik\Documents\GitHub\Game\Game\bin\Debug\Image\cont.png
+C:\Users\Loliconshik\Documents\GitHub\Game\Game\bin\Debug\Image\load.png
+C:\Users\Loliconshik\Documents\GitHub\Game\Game\bin\Debug\Image\newGame.png
+C:\Users\Loliconshik\Documents\GitHub\Game\Game\bin\Debug\Image\StartGameArt.jpg
+C:\Users\Loliconshik\Documents\GitHub\Game\Game\obj\Debug\Game.Form1.resources

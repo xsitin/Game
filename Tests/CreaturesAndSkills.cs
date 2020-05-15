@@ -92,13 +92,13 @@ namespace Tests
             Assert.AreEqual(-10, Enemy1.Skills[1].Effect[0].value);
             Assert.AreEqual(10, Enemy1.Skills[1].ManaCost);
             Assert.AreEqual(Characteristics.Health, Enemy1.Skills[1].Effect[0].characteristic);
-            Assert.AreEqual(-100, Enemy1.Skills[1].Buff._buffs[0].value);
-            Assert.AreEqual(Characteristics.Initiative, Enemy1.Skills[1].Buff._buffs[0].characteristic);
+            Assert.AreEqual(-100, Enemy1.Skills[1].Buff.Buffs[0].value);
+            Assert.AreEqual(Characteristics.Initiative, Enemy1.Skills[1].Buff.Buffs[0].characteristic);
             Enemy1.Skills[1].Upgrade();
             Assert.AreEqual(-12, Enemy1.Skills[1].Effect[0].value);
             Assert.AreEqual(Characteristics.Health, Enemy1.Skills[1].Effect[0].characteristic);
-            Assert.AreEqual(-120, Enemy1.Skills[1].Buff._buffs[0].value);
-            Assert.AreEqual(Characteristics.Initiative, Enemy1.Skills[1].Buff._buffs[0].characteristic);
+            Assert.AreEqual(-120, Enemy1.Skills[1].Buff.Buffs[0].value);
+            Assert.AreEqual(Characteristics.Initiative, Enemy1.Skills[1].Buff.Buffs[0].characteristic);
             Assert.AreEqual(12, Enemy1.Skills[1].ManaCost);
         }
 

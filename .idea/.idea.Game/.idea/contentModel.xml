@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\xsitin\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\xsitin\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_Game.43876633.00" t="ExcludeRecursive" />
-    <e p="C:\Users\xsitin\AppData\Roaming\JetBrains\Rider2020.1\scratches" t="IncludeRecursive" />
-    <e p="C:\Users\xsitin\Documents\GitHub\Game" t="IncludeFlat">
+    <e p="C:\Users\Loliconshik\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Loliconshik\.Rider2019.3\system\resharper-host\Local\Transient\ReSharperHost\v193\SolutionCaches\_Game.-1559802761.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Loliconshik\Documents\GitHub\Game" t="IncludeFlat">
       <e p="Game" t="IncludeRecursive">
         <e p="App.config" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
-        <e p="Controls" t="Include" />
+        <e p="Control" t="Include">
+          <e p="MercenariesControle.cs" t="Include" />
+        </e>
         <e p="Game.csproj" t="IncludeRecursive" />
         <e p="Image" t="Include">
           <e p="cont.png" t="Include" />
@@ -46,6 +47,16 @@
           <e p="Resources.resx" t="Include" />
           <e p="Settings.Designer.cs" t="Include" />
           <e p="Settings.settings" t="Include" />
+        </e>
+        <e p="Resources" t="Include">
+          <e p="Archer.png" t="Include" />
+          <e p="barrack.png" t="Include" />
+          <e p="DarkForest.png" t="Include" />
+          <e p="HeroCard.png" t="Include" />
+          <e p="Shop.png" t="Include" />
+          <e p="Warrior.png" t="Include" />
+          <e p="Wizard.png" t="Include" />
+          <e p="бой.png" t="Include" />
         </e>
         <e p="View" t="Include">
           <e p="Form1.cs" t="Include" />

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
@@ -17,6 +18,13 @@ namespace Game.Model
             {Specialization.Archer, Position.Range}
         };
 
+        public static readonly Dictionary<Specialization, Image> ImageTransfer = new Dictionary<Specialization, Image>
+        {
+            {Specialization.Wizard, Properties.Resources.Wizard},
+            {Specialization.Warrior, Properties.Resources.Warrior},
+            {Specialization.Archer, Properties.Resources.Archer}
+        };
+        
         public static Dictionary<Specialization, List<Skill>> BasicSkills = new Dictionary<Specialization, List<Skill>>
         {
             {
@@ -52,11 +60,8 @@ namespace Game.Model
 
         public static string GetName()
         {
-            var w = Directory.GetParent(Path.GetFullPath(Assembly.GetExecutingAssembly().Location)).Parent.Parent.Parent
-                .FullName + @"\Game\Properties\Names.txt";
-            var Names = File.ReadAllLines(w);
+            var Names = Properties.Resources.Names.Split(new string[]{"\r\n"}, StringSplitOptions.RemoveEmptyEntries);
             var r = new Random();
-
             var val = r.Next(0, Names.Length - 1);
             while (val == previous)
                 val = r.Next(0, Names.Length - 1);
@@ -67,17 +72,25 @@ namespace Game.Model
         public static void SaveGame(Player player)
         {
             var serialized = JsonConvert.SerializeObject(player);
-            File.WriteAllText(Directory.GetParent(Path.GetFullPath(Assembly.GetExecutingAssembly().Location)).Parent
-                .Parent.Parent
-                .FullName + @"\Game\Saves", serialized);
+            var way = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            way = Path.Combine(way, "Game");
+            var sw = File.CreateText(Path.Combine(way,player.PlayerName));
+            sw.Write(serialized);
+            sw.Close();
         }
 
         public static Player LoadGame(string playerName)
         {
-            var text = File.ReadAllText(Directory.GetParent(Path.GetFullPath(Assembly.GetExecutingAssembly().Location))
-                .Parent.Parent.Parent
-                .FullName + @"\Game\Saves");
-            return JsonConvert.DeserializeObject<Player>(text);
+            var way = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            way = Path.Combine(way, "Game");
+            way =Path.Combine(way,playerName);
+            if (File.Exists(way))
+            {
+                var text = File.ReadAllText(way);
+                return JsonConvert.DeserializeObject<Player>(text);
+            }
+
+            return null;
         }
     }
 }

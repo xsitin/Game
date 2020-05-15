@@ -102,6 +102,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Control\MercenariesControle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Model\BasicCreature.cs" />
     <Compile Include="Model\Bot.cs" />
     <Compile Include="Model\Buff.cs" />
@@ -172,10 +175,16 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Properties\Names.txt" />
+    <None Include="Resources\HeroCard.png" />
+    <None Include="Resources\Archer.png" />
+    <None Include="Resources\Wizard.png" />
+    <None Include="Resources\Warrior.png" />
+    <None Include="Resources\Shop.png" />
+    <None Include="Resources\DarkForest.png" />
+    <None Include="Resources\бой.png" />
+    <None Include="Resources\barrack.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controls" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

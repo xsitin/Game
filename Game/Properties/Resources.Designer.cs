@@ -63,9 +63,49 @@ namespace Game.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap Archer {
+            get {
+                object obj = ResourceManager.GetObject("Archer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap barrack {
+            get {
+                object obj = ResourceManager.GetObject("barrack", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap cont {
             get {
                 object obj = ResourceManager.GetObject("cont", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap DarkForest {
+            get {
+                object obj = ResourceManager.GetObject("DarkForest", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap HeroCard {
+            get {
+                object obj = ResourceManager.GetObject("HeroCard", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -81,11 +121,82 @@ namespace Game.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Laamash
+        ///Choanzuer
+        ///Beatenal
+        ///Taolerd
+        ///Leboers
+        ///Zaschisch
+        ///Lodostmo
+        ///Labadesh
+        ///Kazonaef
+        ///Pyakobsol
+        ///Deyugbule
+        ///Gaemaryuz
+        ///Mezhilnus
+        ///Zuveschke
+        ///Vagyuluma
+        ///Vabamvemi
+        ///Beimamur
+        ///Naetvavne
+        ///Bayumafit
+        ///Kemagsus
+        ///Keechuzh
+        ///Zhoruzhe
+        ///Nuil
+        ///Siogeyult
+        ///Bezamasno
+        ///Nylavvup
+        ///Beaank
+        ///Veamzevfa
+        ///Vinalyust
+        ///Daoplyaf
+        ///Vaopabul
+        ///Laavaschl
+        ///Meatalasc
+        ///Mam
+        ///Zetivtig
+        ///Calyulor
+        ///Benaraing
+        ///Hekamayun
+        ///Tivavsche
+        ///Maavektzu
+        ///Kagesheuf
+        ///Kaasoz
+        ///Loenatef
+        ///Zaaner
+        ///Katasoelz
+        ///Vum
+        ///Vinaal
+        ///Damadokir
+        ///Suay
+        ///Kaasdic
+        ///Vaez
+        ///Laoklahda
+        ///P [остаток строки не уместился]&quot;;.
+        /// </summary>
+        public static string Names {
+            get {
+                return ResourceManager.GetString("Names", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
         public static System.Drawing.Bitmap newGame {
             get {
                 object obj = ResourceManager.GetObject("newGame", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Shop {
+            get {
+                object obj = ResourceManager.GetObject("Shop", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -106,6 +217,26 @@ namespace Game.Properties {
         public static System.Drawing.Bitmap Village {
             get {
                 object obj = ResourceManager.GetObject("Village", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Warrior {
+            get {
+                object obj = ResourceManager.GetObject("Warrior", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Wizard {
+            get {
+                object obj = ResourceManager.GetObject("Wizard", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
