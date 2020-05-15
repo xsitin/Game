@@ -160,11 +160,11 @@
         <WCFMetadata Include="Connected Services\" />
     </ItemGroup>
     <ItemGroup>
-        <Content Include="Properties\cont.png" />
-        <Content Include="Properties\load.png" />
+        <Content Include="Image\cont.png" />
+        <Content Include="Image\load.png" />
+        <Content Include="Image\newGame.png" />
+        <Content Include="Image\StartGameArt.jpg" />
         <Content Include="Properties\Names.txt" />
-        <Content Include="Properties\newGame.png" />
-        <Content Include="Properties\StartGameArt.jpg" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

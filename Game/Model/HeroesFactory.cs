@@ -14,22 +14,10 @@ namespace Game.Model
             Player = player;
             _level = (player.Heroes.Max(x => x.Level) / 5) * 5;
         }
-
-<<<<<<< HEAD
+        
         public void Update() => _level = (Player.Heroes.Max(x => x.Level) / 5) * 5;
 
         public Hero GetRandomHero() => GetHero((Specialization) new Random().Next(0, 2));
-=======
-        public void Update()
-        {
-            _level = (Player.Heroes.Max(x => x.Level) / 5) * 5;
-        }
-
-        public Hero GetRandomHero()
-        {
-            return GetHero((Specialization) new Random().Next(0, 2));
-        }
->>>>>>> bdf420c4ee1903752c032a2acc9834aafad878bd
 
         private Hero GetHero(Specialization spec)
         {

@@ -223,3 +223,4 @@ C:\Users\xsitin\Game\Game\obj\Debug\Game.csproj.CopyComplete
 C:\Users\xsitin\Game\Game\obj\Debug\Game.exe
 C:\Users\xsitin\Game\Game\obj\Debug\Game.pdb
 C:\Users\xsitin\Game\Game\obj\Debug\Game.Form1.resources
+C:\Users\walue\OneDrive\Документы\GitHub\Game\Game\obj\Debug\Game.Form1.resources
