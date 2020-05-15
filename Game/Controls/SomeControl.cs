@@ -9,10 +9,10 @@ namespace Game.Controls
         private bool clicked;
         protected override void OnPaint(PaintEventArgs e)
         {
-            var exePath = AppDomain.CurrentDomain.BaseDirectory.Replace("bin\\Debug\\", "Image\\");
+            var pathToImage = AppDomain.CurrentDomain.BaseDirectory + "Image\\";
             var g = e.Graphics;
-            var c = new TextureBrush(new Bitmap(exePath + "StartGameArt.jpg"));
-            g.DrawImage(Image.FromFile(@exePath + "StartGameArt.jpg"), new Point(0, 0));
+            var c = new TextureBrush(new Bitmap(pathToImage + "StartGameArt.jpg"));
+            g.DrawImage(Image.FromFile(pathToImage + "StartGameArt.jpg"), new Point(0, 0));
             if(clicked)
                 g.DrawString("clicked", new Font(FontFamily.GenericMonospace, 10),
                     new SolidBrush(Color.Brown) , 20, 20);

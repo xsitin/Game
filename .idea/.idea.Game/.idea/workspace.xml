@@ -27,32 +27,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f51531c-d592-4864-9987-5dbb2ad7efa7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Game/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/Controls/SomeControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Game/Controls/SomeControl.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/Game.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Game/Game.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/Model/HeroesFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Game/Model/HeroesFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/Properties/StartGameArt.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Game/Image/StartGameArt.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/Properties/cont.png" beforeDir="false" afterPath="$PROJECT_DIR$/Game/Image/cont.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/Properties/load.png" beforeDir="false" afterPath="$PROJECT_DIR$/Game/Image/load.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/Properties/newGame.png" beforeDir="false" afterPath="$PROJECT_DIR$/Game/Image/newGame.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/View/Form1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Game/View/Form1.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/bin/Debug/Game.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Game/bin/Debug/Game.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/bin/Debug/Game.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Game/bin/Debug/Game.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/obj/Debug/Game.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Game/obj/Debug/Game.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/obj/Debug/Game.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Game/obj/Debug/Game.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/obj/Debug/Game.csproj.GenerateResource.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Game/obj/Debug/Game.csproj.GenerateResource.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/obj/Debug/Game.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Game/obj/Debug/Game.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/obj/Debug/Game.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Game/obj/Debug/Game.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/obj/Debug/Game.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Game/obj/Debug/Game.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/bin/Debug/Game.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/bin/Debug/Game.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/bin/Debug/Game.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/bin/Debug/Game.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/bin/Debug/Tests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/bin/Debug/Tests.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/bin/Debug/Tests.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/bin/Debug/Tests.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/obj/Debug/Tests.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/obj/Debug/Tests.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/obj/Debug/Tests.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/obj/Debug/Tests.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/obj/Debug/Tests.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/obj/Debug/Tests.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/obj/Debug/Tests.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/obj/Debug/Tests.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,8 +138,8 @@
         <option value="$PROJECT_DIR$/Game/Model/Helper.cs" />
         <option value="$PROJECT_DIR$/Game/View/Form1.Designer.cs" />
         <option value="$PROJECT_DIR$/Game/Model/HeroesFactory.cs" />
-        <option value="$PROJECT_DIR$/Game/View/Form1.cs" />
         <option value="$PROJECT_DIR$/Game/Controls/SomeControl.cs" />
+        <option value="$PROJECT_DIR$/Game/View/Form1.cs" />
       </list>
     </option>
   </component>
@@ -232,6 +211,7 @@
       <workItem from="1589540637161" duration="442000" />
       <workItem from="1589541530365" duration="1183000" />
       <workItem from="1589543061216" duration="698000" />
+      <workItem from="1589543841840" duration="294000" />
     </task>
     <servers />
   </component>

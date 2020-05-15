@@ -26,8 +26,7 @@ namespace Game
 
         public void ShowMenu()
         {
-            var exePath = AppDomain.CurrentDomain.BaseDirectory;
-            exePath = exePath.Replace("\\bin\\Debug", "");
+            var directoryWithImages = AppDomain.CurrentDomain.BaseDirectory;
             Table.RowStyles.Clear();
             Table.ColumnStyles.Clear();
             Table.Controls.Clear();
@@ -38,13 +37,13 @@ namespace Game
             var menu = new TableLayoutPanel();
             Table.BackColor = Color.Transparent;
             var newGame = new Button(){Dock = DockStyle.Fill,Margin = new Padding(20)};
-            newGame.BackgroundImage = new Bitmap(exePath + "Image\\newGame.png");
+            newGame.BackgroundImage = new Bitmap(directoryWithImages + "Image\\newGame.png");
             newGame.BackgroundImageLayout = ImageLayout.Stretch;
             var loadGame = new Button(){Dock = DockStyle.Fill,Margin = new Padding(20)};
-            loadGame.BackgroundImage = new Bitmap(exePath + "Image\\load.png");
+            loadGame.BackgroundImage = new Bitmap(directoryWithImages + "Image\\load.png");
             loadGame.BackgroundImageLayout = ImageLayout.Stretch;
             var continueGame = new Button(){Dock = DockStyle.Fill,Margin = new Padding(20)};
-            continueGame.BackgroundImage = new Bitmap(exePath + "Image\\cont.png");
+            continueGame.BackgroundImage = new Bitmap(directoryWithImages + "Image\\cont.png");
             continueGame.BackgroundImageLayout = ImageLayout.Stretch;
             menu.Dock = DockStyle.Fill;
             menu.RowStyles.Add(new RowStyle(SizeType.Percent, 30));
@@ -55,7 +54,7 @@ namespace Game
             menu.Controls.Add(continueGame, 0, 1);
             menu.Controls.Add(loadGame, 0, 2);
             Table.Controls.Add(menu, 0, 0);
-            BackgroundImage = new Bitmap(exePath + "Image\\StartGameArt.jpg");
+            BackgroundImage = new Bitmap(directoryWithImages + "Image\\StartGameArt.jpg");
             Table.BackColor = Color.Transparent;
             Table.Controls.Add(new SomeControl(){Dock = DockStyle.Fill}, 1, 0);
             Table.Controls.Add(new Panel(), 1, 1);

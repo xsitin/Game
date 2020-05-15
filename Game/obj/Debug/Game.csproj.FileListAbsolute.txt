@@ -224,3 +224,7 @@ C:\Users\xsitin\Game\Game\obj\Debug\Game.exe
 C:\Users\xsitin\Game\Game\obj\Debug\Game.pdb
 C:\Users\xsitin\Game\Game\obj\Debug\Game.Form1.resources
 C:\Users\walue\OneDrive\Документы\GitHub\Game\Game\obj\Debug\Game.Form1.resources
+C:\Users\walue\OneDrive\Документы\GitHub\Game\Game\bin\Debug\Image\cont.png
+C:\Users\walue\OneDrive\Документы\GitHub\Game\Game\bin\Debug\Image\load.png
+C:\Users\walue\OneDrive\Документы\GitHub\Game\Game\bin\Debug\Image\newGame.png
+C:\Users\walue\OneDrive\Документы\GitHub\Game\Game\bin\Debug\Image\StartGameArt.jpg
