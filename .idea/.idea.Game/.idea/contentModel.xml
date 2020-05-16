@@ -14,8 +14,12 @@
           <e p="BarrackHeroControl.cs" t="Include" />
           <e p="EnemyButton.cs" t="Include" />
           <e p="EnemyButton.Designer.cs" t="Include" />
+          <e p="EnemyButton.resx" t="Include" />
+          <e p="enemyHitBar.cs" t="Include" />
+          <e p="enemyHitBar.Designer.cs" t="Include" />
           <e p="FieldControl.cs" t="Include" />
           <e p="FieldControl.Designer.cs" t="Include" />
+          <e p="FieldControl.resx" t="Include" />
           <e p="GoldControle.cs" t="Include" />
           <e p="HeroInventoryControl.cs" t="Include" />
           <e p="HeroUpgradeControl.cs" t="Include" />

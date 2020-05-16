@@ -42,9 +42,12 @@ namespace Game.Control
             int dy = 0;
             foreach (var skill in _game.CurrentCreature.Skills)
             {
-                e.Graphics.DrawString(skill.Name,  new Font(FontFamily.GenericSerif, 12), new SolidBrush(Color.Coral), 200, 10 + dy);
-                e.Graphics.DrawString("ManaCost: " + skill.ManaCost.ToString(),  new Font(FontFamily.GenericSerif, 12), new SolidBrush(Color.Coral), 400, 10 + dy);
-                e.Graphics.DrawString("Range: " + skill.Range.ToString(),  new Font(FontFamily.GenericSerif, 12), new SolidBrush(Color.Coral), 550, 10 + dy);
+                e.Graphics.DrawString(skill.Name, new Font(FontFamily.GenericSerif, 12), new SolidBrush(Color.Coral),
+                    200, 10 + dy);
+                e.Graphics.DrawString("ManaCost: " + skill.ManaCost.ToString(), new Font(FontFamily.GenericSerif, 12),
+                    new SolidBrush(Color.Coral), 400, 10 + dy);
+                e.Graphics.DrawString("Range: " + skill.Range.ToString(), new Font(FontFamily.GenericSerif, 12),
+                    new SolidBrush(Color.Coral), 550, 10 + dy);
                 e.Graphics.DrawRectangle(new Pen(Color.Black, 3), new Rectangle(190, 10 + dy, 500, 20));
                 var skillButton = new Button
                 {
@@ -75,6 +78,7 @@ namespace Game.Control
                                     _game.CurrentCreature.UseSkill(skill, _creatures[i1][j1]);
                                     _game.NextStep();
                                     Parent.Controls["HitPoints"].Refresh();
+                                    Parent.Controls["EnemyHitPoints"].Refresh();
                                     Parent.Controls["Field"].Refresh();
                                     Refresh();
                                 };
@@ -86,7 +90,6 @@ namespace Game.Control
                 Controls.Add(skillButton);
                 dy += 50;
             }
-            
         }
     }
 }

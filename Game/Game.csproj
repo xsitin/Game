@@ -104,6 +104,12 @@
   <ItemGroup>
     <Compile Include="Control\ActiveTeam.cs" />
     <Compile Include="Control\BarrackHeroControl.cs" />
+    <Compile Include="Control\EnemyHitBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\EnemyHitBar.Designer.cs">
+      <DependentUpon>EnemyHitBar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Control\HeroInventoryControl.cs" />
     <Compile Include="Control\HeroUpgradeControl.cs" />
     <Compile Include="Control\InventoryControl.cs" />
@@ -181,6 +187,12 @@
     <Compile Include="View\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Control\EnemyButton.resx">
+      <DependentUpon>EnemyButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\FieldControl.resx">
+      <DependentUpon>FieldControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Control\MpPotionControl.resx">
       <DependentUpon>MpPotionControl.cs</DependentUpon>
     </EmbeddedResource>

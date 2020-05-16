@@ -23,16 +23,12 @@ namespace Game.Control
             var dy = 0;
             foreach (var hero in heroes)
             {
-                if (hero.Characteristics[Characteristics.Health] > 0)
-                {
-                    e.Graphics.DrawString(hero.Name, new Font(FontFamily.GenericSerif, 12),
-                        new SolidBrush(Color.Cornsilk), 10 + dx, 10 + dy);
-                    e.Graphics.DrawString("HP: " + hero.Characteristics[Characteristics.Health].ToString(),
-                        new Font(FontFamily.GenericSerif, 12), new SolidBrush(Color.Cornsilk), 100 + dx, 5 + dy);
-                    e.Graphics.DrawString("MP: " + hero.Characteristics[Characteristics.Mana].ToString(),
-                        new Font(FontFamily.GenericSerif, 12), new SolidBrush(Color.Cornsilk), 100 + dx, 25 + dy);
-                    dy += 50;
-                }
+                e.Graphics.DrawString(hero.Name, new Font(FontFamily.GenericSerif, 12), new SolidBrush(Color.Cornsilk), 10 + dx, 10 + dy);
+                e.Graphics.DrawString("HP: " + hero.Characteristics[Characteristics.Health].ToString(),
+                    new Font(FontFamily.GenericSerif, 12), new SolidBrush(Color.Cornsilk), 100 + dx, 5 + dy);
+                e.Graphics.DrawString("MP: " + hero.Characteristics[Characteristics.Mana].ToString(),
+                 new Font(FontFamily.GenericSerif, 12), new SolidBrush(Color.Cornsilk), 100 + dx, 25 + dy);
+                dy += 50;
             }
             
         }

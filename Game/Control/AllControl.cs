@@ -13,6 +13,7 @@ namespace Game.Control
         private FieldControl _fieldControl;
         private HitPointBar _hitControl;
         private InterfaceControl _skillControl;
+        private EnemyHitBar _enemyHitControl;
 
         public AllControl(Model.Game game, Player player)
         {
@@ -23,6 +24,8 @@ namespace Game.Control
             _fieldControl.Size = new Size(1366, 150);
             _hitControl = new HitPointBar(_player.ActiveTeam.GetTeamList()) {Name = "HitPoints"};
             _hitControl.Location = new Point(0, 170);
+            _enemyHitControl = new EnemyHitBar(_game.Enemy.GetTeamList()) {Name = "EnemyHitPoints"};
+            _enemyHitControl.Location = new Point(1366, 170);
             var _skillControl = new InterfaceControl(_game);
             _skillControl.Location = new Point(0, 0);
             _skillControl.Size = new Size(1920, 170);
@@ -30,6 +33,7 @@ namespace Game.Control
             BackColor = Color.Transparent;
             Controls.Add(_skillControl);
             Controls.Add(_hitControl);
+            Controls.Add(_enemyHitControl);
             Controls.Add(_fieldControl);
         }
     }
