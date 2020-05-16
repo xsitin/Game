@@ -36,6 +36,7 @@ namespace Game.Control
                         {
                             sk.Upgrade();
                         }
+                        _hero.Characteristics[_ch] = (int) (_hero.Characteristics[_ch] * 1.2);
                     }
                 }
                 else if (_ch != Characteristics.Evasion && _ch != Characteristics.MagicalProtection &&

@@ -243,3 +243,4 @@ C:\Users\Loliconshik\Documents\GitHub\Game\Game\obj\Debug\Game.Control.MpPotionC
 C:\Users\walue\OneDrive\Документы\GitHub\Game\Game\obj\Debug\Game.Control.MpPotionControl.resources
 C:\Users\walue\OneDrive\Документы\GitHub\Game\Game\obj\Debug\Game.Control.HpPotionControl.resources
 C:\Users\walue\OneDrive\Документы\GitHub\Game\Game\obj\Debug\Game.Control.PersonControl.resources
+C:\Users\Loliconshik\Documents\GitHub\Game\Game\obj\Debug\Game.Control.PersonControl.resources
