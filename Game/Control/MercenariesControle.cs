@@ -19,7 +19,7 @@ namespace Game.Control
             {
                 BackColor = Color.Transparent,
                 FlatStyle = FlatStyle.Flat,
-                Bounds = new Rectangle(42,194,230,34),
+                Bounds = new Rectangle(42,194,230,34)
             };
             buy.FlatAppearance.BorderSize = 0;
             buy.FlatAppearance.MouseDownBackColor = Color.Transparent;
@@ -32,6 +32,7 @@ namespace Game.Control
                     player.Gold -= _hero.Level * 100;
                     player.Mercenaries.Remove(_hero);
                     player.Heroes.Add(_hero);
+                    Parent.Parent.Controls["GoldBag"].Refresh();
                     Dispose();
                 }
             };

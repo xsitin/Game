@@ -102,10 +102,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Control\GoldControle.cs" />
+    <Compile Include="Control\ActiveTeam.cs" />
+    <Compile Include="Control\BarrackHeroControl.cs" />
+    <Compile Include="Control\GoldControle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\HeroInventoryControl.cs" />
+    <Compile Include="Control\HeroUpgradeControl.cs" />
+    <Compile Include="Control\InventoryControl.cs" />
     <Compile Include="Control\MercenariesControle.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Control\MpPotionControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\HpPotionsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\UpgradeChar.cs" />
+    <Compile Include="Control\UpgradeSkill.cs" />
     <Compile Include="Model\BasicCreature.cs" />
     <Compile Include="Model\Bot.cs" />
     <Compile Include="Model\Buff.cs" />
@@ -132,6 +147,12 @@
     <Compile Include="View\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Control\MpPotionControl.resx">
+      <DependentUpon>MpPotionControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\HpPotionsControl.resx">
+      <DependentUpon>HpPotionsControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -176,6 +197,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Properties\Names.txt" />
+    <None Include="Resources\MPpotion.png" />
+    <None Include="Resources\HPpotion.png" />
     <None Include="Resources\GoldBack.png" />
     <None Include="Resources\HeroCard.png" />
     <None Include="Resources\Archer.png" />

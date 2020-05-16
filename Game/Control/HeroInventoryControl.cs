@@ -1,0 +1,92 @@
+﻿using System.Drawing;
+using System.Linq;
+using System.Windows.Forms;
+using Game.Model;
+
+namespace Game.Control
+{
+    public sealed class HeroInventoryControl : UserControl
+    {
+        private readonly Hero _hero;
+        private readonly Player _player;
+        private readonly Size _size = new Size(420,390);
+        public HeroInventoryControl(Hero hero, Player player)
+        {
+            _hero = hero;
+            MinimumSize = _size;
+            _player = player;
+            Name = "HeroUpgrade";
+            foreach (var item in hero.Inventory.Heap)
+            {
+                var remove = new Button()
+                {
+                    FlatStyle = FlatStyle.Flat,
+                    Size = new Size(100,100)
+                };
+                remove.Click += (sender, args) =>
+                {
+                    hero.Inventory.Heap.Remove(item);
+                    player.Storage.Add(item);
+                };
+                Parent.Parent.Controls["Inventory"].Controls.Add(remove);
+                Parent.Parent.Controls["Inventory"].Refresh();
+            }
+            foreach (var item in player.Storage)
+            {
+                var add = new Button()
+                {
+                    FlatStyle = FlatStyle.Flat,
+                    Size = new Size(100,100)
+                };
+                add.Click += (sender, args) =>
+                {
+                    hero.Inventory.Heap.Add(item);
+                    player.Storage.Remove(item);
+                };
+                Parent.Parent.Controls["Storage"].Controls.Add(add);
+            }
+            
+            var back = new Button()
+            {
+                BackColor = Color.Transparent,
+                FlatStyle = FlatStyle.Flat,
+                Bounds = new Rectangle(31,191,245,34)
+            };
+            back.Click += (sender, args) =>
+            {
+                if(player.Heroes.Contains(_hero))
+                    Parent.Parent.Controls["MerHero"].Controls.Add(new BarrackHeroControl(_hero,player));
+                else 
+                    Parent.Parent.Controls["Active"].Controls.Add(new ActiveTeam(_hero,player));
+                Dispose();
+            };
+            Controls.Add(back);
+        }
+
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            var brush = new SolidBrush(Color.Brown);
+            var brush1 = new SolidBrush(Color.Gray);
+            e.Graphics.DrawImage(Properties.Resources.HeroCard, new Rectangle(0,0,_size.Width, _size.Height));
+            e.Graphics.DrawString(_hero.Name.ToString(),new Font(FontFamily.GenericSerif, 12),brush,270,34);
+            e.Graphics.DrawString(_hero.Specialization.ToString() +"|"+ _hero.Position.ToString(),new Font(FontFamily.GenericSerif, 12),brush,270,64);
+            e.Graphics.DrawString(_hero.Characteristics[Characteristics.Health].ToString(),new Font(FontFamily.GenericSerif, 12),brush,333,135);
+            e.Graphics.DrawString(_hero.Characteristics[Characteristics.Mana].ToString(),new Font(FontFamily.GenericSerif, 12),brush,333,172);
+            e.Graphics.DrawString(_hero.Characteristics[Characteristics.Initiative].ToString(),new Font(FontFamily.GenericSerif, 12),brush,355,199);
+            e.Graphics.DrawString(_hero.Characteristics[Characteristics.PhysicalDamage].ToString(),new Font(FontFamily.GenericSerif, 12),brush,333,305);
+            e.Graphics.DrawString(_hero.Characteristics[Characteristics.MagicalProtection].ToString(),new Font(FontFamily.GenericSerif, 12),brush,179,293);
+            e.Graphics.DrawString(_hero.Characteristics[Characteristics.PhysicalProtection].ToString(),new Font(FontFamily.GenericSerif, 12),brush,179,275);
+            e.Graphics.DrawString(_hero.Characteristics[Characteristics.Evasion].ToString(),new Font(FontFamily.GenericSerif, 12),brush,179,256);
+            e.Graphics.DrawImage(Helper.ImageTransfer[_hero.Specialization], 105,70);
+            var dy = 0;
+            foreach (var skill in _hero.Skills.Skip(1))
+            {
+                e.Graphics.DrawString(skill.Name,new Font(FontFamily.GenericSerif, 12),brush,79,256 + dy);
+                e.Graphics.DrawString(skill.Level.ToString(),new Font(FontFamily.GenericSerif, 12),brush,49,256 + dy);
+                dy += 19;
+            }
+            e.Graphics.FillRectangle(brush1, new RectangleF(31,191,245,34));
+            e.Graphics.DrawString("Закончить",new Font(FontFamily.GenericSerif, 15),brush,100,195);
+        }
+    }
+}

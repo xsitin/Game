@@ -6,8 +6,8 @@ namespace Game.Model
 {
     public class Team<T> where T: BasicCreature
     {
-        public List<T> FirstLine { get; private set; }
-        public List<T> SecondLine { get; private set; }
+        public List<T> FirstLine { get;  set; }
+        public List<T> SecondLine { get;  set; }
 
         public Team(List<T> firstLine, List<T> secondLine)
         {
@@ -18,6 +18,12 @@ namespace Game.Model
             FirstLine = firstLine;
             SecondLine = secondLine;
             MakeStepForward();
+        }
+
+        public Team()
+        {
+            FirstLine = new List<T>();
+            SecondLine = new List<T>();
         }
 
         public List<BasicCreature> GetTeamList() => FirstLine.Concat(SecondLine).Cast<BasicCreature>().ToList();

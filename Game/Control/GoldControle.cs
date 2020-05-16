@@ -11,6 +11,7 @@ namespace Game.Control
         {
             Player = player;
             BackColor = Color.Transparent;
+            Size = new Size(400,400);
         }
         
         protected override void OnPaint(PaintEventArgs e)

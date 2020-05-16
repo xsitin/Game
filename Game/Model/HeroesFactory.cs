@@ -20,9 +20,9 @@ namespace Game.Model
         private Specialization last = Specialization.Wizard;
         public Hero GetRandomHero()
         {
-            var spec = (Specialization) new Random().Next(0, 2);
+            var spec = (Specialization) new Random().Next(0, 3);
             while(spec==last)
-                spec = (Specialization) new Random().Next(0, 2);
+                spec = (Specialization) new Random().Next(0, 3);
             last = spec;
             return GetHero(spec);
         }

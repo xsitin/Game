@@ -39,7 +39,7 @@ namespace Game.Model
         {
         }
 
-        public int UpgradePoints { get; private set; }
+        public int UpgradePoints { get; set; }
         
 
         public int Exp

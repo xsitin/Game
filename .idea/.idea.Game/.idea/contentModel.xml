@@ -8,8 +8,19 @@
         <e p="App.config" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Control" t="Include">
+          <e p="ActiveTeam.cs" t="Include" />
+          <e p="BarrackHeroControl.cs" t="Include" />
           <e p="GoldControle.cs" t="Include" />
+          <e p="HeroInventoryControl.cs" t="Include" />
+          <e p="HeroUpgradeControl.cs" t="Include" />
+          <e p="HpPotionsControl.cs" t="Include" />
+          <e p="HpPotionsControl.resx" t="Include" />
+          <e p="InventoryControl.cs" t="Include" />
           <e p="MercenariesControle.cs" t="Include" />
+          <e p="MpPotionControl.cs" t="Include" />
+          <e p="MpPotionControl.resx" t="Include" />
+          <e p="UpgradeChar.cs" t="Include" />
+          <e p="UpgradeSkill.cs" t="Include" />
         </e>
         <e p="Game.csproj" t="IncludeRecursive" />
         <e p="Image" t="Include">
@@ -55,6 +66,8 @@
           <e p="DarkForest.png" t="Include" />
           <e p="GoldBack.png" t="Include" />
           <e p="HeroCard.png" t="Include" />
+          <e p="HPpotion.png" t="Include" />
+          <e p="MPpotion.png" t="Include" />
           <e p="Shop.png" t="Include" />
           <e p="Warrior.png" t="Include" />
           <e p="Wizard.png" t="Include" />

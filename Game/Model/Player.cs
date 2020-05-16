@@ -10,5 +10,7 @@ namespace Game.Model
         public List<Hero> Mercenaries { get; set; }
         public List<ActiveItem> Storage { get; set; }
         public List<ActiveItem> Shop { get; set; }
+        
+        public Team<Hero> ActiveTeam { get; set; } = new Team<Hero>();
     }
 }

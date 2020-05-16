@@ -149,6 +149,56 @@ namespace Game
                 Controls.Clear();
                 BackgroundImage = Properties.Resources.barrack;
                 BackToVillage();
+                var merHero = new FlowLayoutPanel()
+                {
+                    AutoScroll = true,
+                    BackColor = Color.Transparent,
+                    Size = new Size(420, 900),
+                    Location = new Point(1120, 0),
+                    Name = "MerHero"
+                };
+                foreach (var hero in Player.Heroes)
+                {
+                    merHero.Controls.Add(new BarrackHeroControl(hero,Player));
+                }
+                var activeHero = new FlowLayoutPanel()
+                {
+                    AutoScroll = true,
+                    BackColor = Color.Transparent,
+                    Size = new Size(420, 900),
+                    Location = new Point(0, 0),
+                    Name = "Active"
+                };
+                foreach (var hero in Player.ActiveTeam.GetTeamList())
+                {
+                    activeHero.Controls.Add(new ActiveTeam(hero as Hero, Player));
+                }
+                var upgrade = new Panel()
+                {
+                    BackColor = Color.Transparent,
+                    MinimumSize = new Size(420,390),
+                    Location = new Point(560,0),
+                    Name = "Upgrade"
+                };
+                var invent = new FlowLayoutPanel()
+                {
+                    AutoScroll = true,
+                    Size = new Size(420,390),
+                    Location =new Point(3000, 3000),
+                    Name = "Storage"
+                };
+                var herInvent = new FlowLayoutPanel()
+                {
+                    AutoScroll = true,
+                    MinimumSize = new Size(420, 390),
+                    Location = new Point(560, 500),
+                    Name = "Inventory"
+                };
+                Controls.Add(upgrade);
+                Controls.Add(activeHero);
+                Controls.Add(merHero);
+                Controls.Add(invent);
+                Controls.Add(herInvent);
             };
             var store = new Button()
             {
@@ -178,7 +228,16 @@ namespace Game
                 }
                 Controls.Add(new GoldControl(Player)
                 {
-                    Location = new Point(0,745)
+                    Location = new Point(0,745),
+                    Name = "GoldBag"
+                });
+                Controls.Add(new MpPotionControl(Player)
+                {
+                    Location = new Point(750, 0)
+                });
+                Controls.Add(new HpPotionControl(Player)
+                {
+                    Location = new Point(950, 0)
                 });
                 Controls.Add(floatPanel);
             };
@@ -231,6 +290,24 @@ namespace Game
             Table.RowStyles.Clear();
             Table.Controls.Clear();
             Table.ColumnStyles.Clear();
+        }
+
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // Form1
+            // 
+            this.ClientSize = new System.Drawing.Size(282, 258);
+            this.Name = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            this.ResumeLayout(false);
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
