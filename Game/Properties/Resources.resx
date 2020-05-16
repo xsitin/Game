@@ -130,6 +130,9 @@
   <data name="DarkForest" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DarkForest.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="GoldBack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GoldBack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="HeroCard" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\HeroCard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
