@@ -50,31 +50,7 @@ namespace Game
             loadGame.Click += (sender, args) =>
             {
                 CleanForm();
-                var flowPanel = new FlowLayoutPanel()
-                {
-                    AutoScroll = true,
-                    BackColor = Color.Transparent,
-                    Size = new Size(420, 900),
-                    Location = new Point(550, 250)
-                };
-                var savesNames = GetSaveNames();
-                foreach (var saveName in savesNames)
-                {
-                    var save = new Button()
-                    {
-                        Text = saveName,
-                        Size = new Size(400, 50)
-                    };
-                    save.Click += (o, eventArgs) =>
-                    {
-                        Player = Helper.LoadGame(saveName);
-                        File.SetLastAccessTime(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\Game\" + saveName, DateTime.Now);
-                        CleanForm();
-                        VillageControls();
-                    };
-                    flowPanel.Controls.Add(save);
-                }
-                Controls.Add(flowPanel);
+                LoadScreen();
             };
             var continueGame = new Button() {Dock = DockStyle.Fill, Margin = new Padding(20)};
             continueGame.BackgroundImage = Properties.Resources.cont;
@@ -101,6 +77,37 @@ namespace Game
             Table.Controls.Add(new Panel(), 1, 1);
             Table.Controls.Add(new Panel(), 0, 1);
             WindowState = FormWindowState.Maximized;
+        }
+
+        private void LoadScreen()
+        {
+            var flowPanel = new FlowLayoutPanel()
+            {
+                AutoScroll = true,
+                BackColor = Color.Transparent,
+                Size = new Size(420, 900),
+                Location = new Point(550, 250)
+            };
+            var savesNames = GetSaveNames();
+            foreach (var saveName in savesNames)
+            {
+                var save = new Button()
+                {
+                    Text = saveName,
+                    Size = new Size(400, 50)
+                };
+                save.Click += (o, eventArgs) =>
+                {
+                    Player = Helper.LoadGame(saveName);
+                    File.SetLastAccessTime(
+                        Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\Game\" + saveName, DateTime.Now);
+                    CleanForm();
+                    VillageControls();
+                };
+                flowPanel.Controls.Add(save);
+            }
+
+            Controls.Add(flowPanel);
         }
 
         private static List<string> GetSaveNames()
@@ -143,14 +150,15 @@ namespace Game
             name.MouseClick += (a, e) => { ((TextBox) a).Text = ""; };
             name.AcceptsReturn = true;
             name.Margin = new Padding(name.Width / 10);
-            var groupClasses = new GroupBox();
-            var warriorButton = new RadioButton {Location = new Point(0, 100), Text = "Warrior"};
-            var archerButton = new RadioButton {Location = new Point(10, 100), Text = "Archer"};
-            var wizardButton = new RadioButton {Location = new Point(20, 100), Text = "Wizard"};
+            var groupClasses = new Panel();
+            var warriorButton = new RadioButton {Bounds =  new Rectangle(60,10,100,50), Text = "Warrior"};
+            var archerButton = new RadioButton {Bounds =  new Rectangle(160,10,100,50), Text = "Archer"};
+            var wizardButton = new RadioButton {Bounds =  new Rectangle(260,10,100,50), Text = "Wizard"};
             groupClasses.Controls.Add(warriorButton);
             groupClasses.Controls.Add(archerButton);
             groupClasses.Controls.Add(wizardButton);
             groupClasses.BackColor = Color.Transparent;
+            groupClasses.Bounds = new Rectangle(0,0,500,100);
             var choice = "";
             warriorButton.Click += (sender, args) => { choice = warriorButton.Text; }; 
             archerButton.Click += (sender, args) => { choice = archerButton.Text; }; 
@@ -158,8 +166,7 @@ namespace Game
             // persClass.Items.AddRange(Enum.GetNames(typeof(Model.Specialization)));
             // persClass.MinimumSize = new Size(300, 50);
             // persClass.Dock = DockStyle.Top;
-            var apply = new Button();
-            apply.Text = "Подтвердить";
+            var apply = new Button {Text = "Подтвердить",Bounds = new Rectangle(0,0,100,40),Margin = new Padding(150,20,0,0)};
             apply.Click += (b, e) =>
             {
                 var pl = new Player()
