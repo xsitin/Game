@@ -177,7 +177,6 @@ namespace Game
                     {
                         new Hero((Specialization) Enum.Parse(typeof(Specialization), choice))
                     },
-                    ActiveCommand = new Team<Hero>(),
                     Mercenaries = new List<Hero>(), Shop = new List<ActiveItem>(), Storage = new List<ActiveItem>()
                 };
                 var hf = new HeroesFactory(pl);
@@ -321,10 +320,9 @@ namespace Game
             GoHunt.Click += (sender, args) =>
             {
                 Controls.Clear();
-                Game = new Model.Game(new Team<Hero>(Player.Heroes, new List<Hero>()), Model.Location.SomeLocation);
+                Game = new Model.Game(Player.ActiveTeam, Model.Location.SomeLocation);
                 BackgroundImage = Properties.Resources.DarkForest;
                 Controls.Add(new AllControl(Game, Player));
-                
             };
             Controls.Add(GoHunt);
             Controls.Add(store);

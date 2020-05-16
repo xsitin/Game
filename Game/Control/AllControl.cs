@@ -21,7 +21,7 @@ namespace Game.Control
             _fieldControl = new FieldControl(_game.Heroes, _game.Enemy) {Name = "Field"};
             _fieldControl.Location = new Point(200, 1024);
             _fieldControl.Size = new Size(1366, 150);
-            _hitControl = new HitPointBar(player.Heroes.Cast<BasicCreature>().ToList()) {Name = "HitPoints"};
+            _hitControl = new HitPointBar(_player.ActiveTeam.GetTeamList()) {Name = "HitPoints"};
             _hitControl.Location = new Point(0, 170);
             var _skillControl = new InterfaceControl(_game);
             _skillControl.Location = new Point(0, 0);

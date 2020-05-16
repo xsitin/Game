@@ -187,6 +187,9 @@
     <EmbeddedResource Include="Control\HpPotionsControl.resx">
       <DependentUpon>HpPotionsControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Control\PersonControl.resx">
+      <DependentUpon>PersonControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

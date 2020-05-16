@@ -240,3 +240,6 @@ C:\Users\Loliconshik\Documents\GitHub\Game\Game\bin\Debug\Image\StartGameArt.jpg
 C:\Users\Loliconshik\Documents\GitHub\Game\Game\obj\Debug\Game.Form1.resources
 C:\Users\Loliconshik\Documents\GitHub\Game\Game\obj\Debug\Game.Control.HpPotionControl.resources
 C:\Users\Loliconshik\Documents\GitHub\Game\Game\obj\Debug\Game.Control.MpPotionControl.resources
+C:\Users\walue\OneDrive\Документы\GitHub\Game\Game\obj\Debug\Game.Control.MpPotionControl.resources
+C:\Users\walue\OneDrive\Документы\GitHub\Game\Game\obj\Debug\Game.Control.HpPotionControl.resources
+C:\Users\walue\OneDrive\Документы\GitHub\Game\Game\obj\Debug\Game.Control.PersonControl.resources
