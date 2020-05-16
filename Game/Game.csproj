@@ -104,15 +104,9 @@
   <ItemGroup>
     <Compile Include="Control\ActiveTeam.cs" />
     <Compile Include="Control\BarrackHeroControl.cs" />
-    <Compile Include="Control\GoldControle.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Include="Control\HeroInventoryControl.cs" />
     <Compile Include="Control\HeroUpgradeControl.cs" />
     <Compile Include="Control\InventoryControl.cs" />
-    <Compile Include="Control\MercenariesControle.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Include="Control\MpPotionControl.cs">
       <SubType>UserControl</SubType>
     </Compile>

@@ -248,6 +248,7 @@ namespace Game
                 var invent = new FlowLayoutPanel()
                 {
                     AutoScroll = true,
+                    BackColor = Color.Transparent,
                     Size = new Size(420,390),
                     Location =new Point(3000, 3000),
                     Name = "Storage"
@@ -255,6 +256,7 @@ namespace Game
                 var herInvent = new FlowLayoutPanel()
                 {
                     AutoScroll = true,
+                    BackColor = Color.Transparent,
                     MinimumSize = new Size(420, 390),
                     Location = new Point(560, 500),
                     Name = "Inventory"
