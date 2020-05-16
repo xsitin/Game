@@ -54,6 +54,7 @@ namespace Game.Model
         {
             Name = name;
             Characteristics = characteristics;
+            Level = 1;
             if (Characteristics.Count != 7)
                 FillDictionary();
             Inventory = inventory;

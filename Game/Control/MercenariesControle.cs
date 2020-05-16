@@ -36,6 +36,7 @@ namespace Game.Control
                 dy += 19;
             }
             e.Graphics.DrawImage(Helper.ImageTransfer[_hero.Specialization], 105,70);
+            e.Graphics.DrawString((_hero.Level * 100).ToString(),new Font(FontFamily.GenericSerif, 30),brush,80,100);
         }
     }
 }

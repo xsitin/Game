@@ -12,10 +12,10 @@ namespace Game.Model
         public HeroesFactory(Player player)
         {
             Player = player;
-            _level = (player.Heroes.Max(x => x.Level) / 5) * 5;
+            _level = (player.Heroes.Max(x => x.Level) / 5) * 5 < 1 ? 1 : (player.Heroes.Max(x => x.Level) / 5) * 5 ;
         }
         
-        public void Update() => _level = (Player.Heroes.Max(x => x.Level) / 5) * 5;
+        public void Update() =>  _level = (Player.Heroes.Max(x => x.Level) / 5) * 5 < 1 ? 1 : (Player.Heroes.Max(x => x.Level) / 5) * 5 ;
 
         private Specialization last = Specialization.Wizard;
         public Hero GetRandomHero()
