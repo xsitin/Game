@@ -25,14 +25,16 @@ namespace Game.Model
             _counter = 0;
         }
 
+        private Team<EnemyHero> _enemy;
         public Team<EnemyHero> Enemy
         {
-            get => Enemy;
+            get => _enemy;
             set
             {
                 if (value == null) throw new ArgumentNullException(nameof(value));
                 _counter = 0;
-                Queue = new GameQueue(Heroes.GetTeamList().Concat(Enemy.GetTeamList()).ToList());
+                _enemy = value;
+                Queue = new GameQueue(Heroes.GetTeamList().Concat(_enemy.GetTeamList()).ToList());
             }
         }
 

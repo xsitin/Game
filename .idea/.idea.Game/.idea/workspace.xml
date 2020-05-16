@@ -37,6 +37,7 @@
       <change afterPath="$PROJECT_DIR$/Game/Control/UpgradeChar.cs" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Game/Control/UpgradeSkill.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Game/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Game/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game/.idea/projectSettingsUpdater.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.vs/Game/v16/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/Game/v16/.suo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/Control/GoldControle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Game/Control/GoldControle.cs" afterDir="false" />
@@ -60,7 +61,6 @@
       <change beforePath="$PROJECT_DIR$/Game/obj/Debug/Game.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Game/obj/Debug/Game.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/obj/Debug/Game.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Game/obj/Debug/Game.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/obj/Debug/Game.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Game/obj/Debug/Game.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Game/obj/Debug/TempPE/Properties.Resources.Designer.cs.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Game/obj/Debug/TempPE/Properties.Resources.Designer.cs.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/obj/Debug/Tests.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/obj/Debug/Tests.csprojAssemblyReference.cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -89,11 +89,11 @@
     <setting file="file://$PROJECT_DIR$/Game/Model/Position.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Game/Model/Inventory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Game/Model/Buff.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Properties/Resources.resx" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Properties/Resources.Designer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Model/Bot.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Properties/AssemblyInfo.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Model/Item.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/Inventory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/Position.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/GameQueue.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/Field.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Control/FieldControl.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Game/Model/Hero.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Game/Control/ActiveTeam.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Game/Model/Player.cs" root0="FORCE_HIGHLIGHTING" />
@@ -196,13 +196,15 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34994584" />
-    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.30010834" />
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.5102599" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.3002736" />
     <property name="Rider.SolutionExplorerActivator" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="TWShift.3" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="XThreadsFramesViewSplitterKey" value="0.34362417" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
   </component>
   <component name="RunManager">
@@ -221,7 +223,7 @@
       <option name="PROJECT_KIND" value="Console" />
       <option name="PROJECT_TFM" value=".NETFramework,Version=v4.8" />
       <method v="2">
-        <option name="Build" enabled="true" />
+        <option name="Build" />
       </method>
     </configuration>
     <configuration default="true" type="DotNetProject" factoryName=".NET Project">
@@ -239,7 +241,7 @@
       <option name="PROJECT_KIND" value="Console" />
       <option name="PROJECT_TFM" value=".NETFramework,Version=v4.8" />
       <method v="2">
-        <option name="Build" enabled="true" />
+        <option name="Build" />
       </method>
     </configuration>
   </component>
@@ -292,7 +294,7 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="UnitTestsCoverage.Settings">
     <option name="coveragePercentColumnWidth" value="150" />
@@ -328,12 +330,12 @@
                   </entry>
                 </map>
               </option>
-              <option name="COLUMN_ORDER" />
             </State>
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
@@ -507,15 +509,16 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="254" y="118" width="1110" height="598" key="dock-window-1/0.0.1536.864@0.0.1536.864" timestamp="1589582753005" />
-    <state x="425" y="196" key="run.anything.popup" timestamp="1589578548025">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1589668216662">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1589491314555" />
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1589668216662" />
     <state x="425" y="196" key="run.anything.popup/0.0.1536.864@0.0.1536.864" timestamp="1589578548025" />
-    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1589636332288">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state x="431" y="173" width="672" height="648" key="search.everywhere.popup" timestamp="1589639933008">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1589636332288" />
+    <state x="431" y="173" width="672" height="648" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1589639933008" />
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1588969486983" />
     <state x="539" y="218" width="840" height="817" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1589483246216" />
   </component>
   <component name="XDebuggerManager">
@@ -550,6 +553,7 @@
     </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
+        <PinnedItemInfo typeName="System.IO.FileInfo" fieldName="Directory" />
         <PinnedItemInfo typeName="System.Text.Json.Serialization.ConverterList" fieldName="Count" />
       </pinned-members>
     </pin-to-top-manager>

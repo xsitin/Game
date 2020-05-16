@@ -121,6 +121,46 @@
     </Compile>
     <Compile Include="Control\UpgradeChar.cs" />
     <Compile Include="Control\UpgradeSkill.cs" />
+    <Compile Include="Control\AllControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\AllControl.Designer.cs">
+      <DependentUpon>AllControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\EnemyButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\EnemyButton.Designer.cs">
+      <DependentUpon>EnemyButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\FieldControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\FieldControl.Designer.cs">
+      <DependentUpon>FieldControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\GoldControle.cs" />
+    <Compile Include="Control\HitPointBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\HitPointBar.Designer.cs">
+      <DependentUpon>HitPointBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\InterfaceControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\InterfaceControl.Designer.cs">
+      <DependentUpon>InterfaceControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\MercenariesControle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\PersonControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\PersonControl.Designer.cs">
+      <DependentUpon>PersonControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\BasicCreature.cs" />
     <Compile Include="Model\Bot.cs" />
     <Compile Include="Model\Buff.cs" />

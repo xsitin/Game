@@ -17,6 +17,7 @@ namespace Game
 {
     public partial class Form1 : Form
     {
+        public Model.Game Game;
         public Player Player;
         public TableLayoutPanel Table;
 
@@ -30,7 +31,7 @@ namespace Game
 
         public void ShowMenu()
         {
-            var directoryWithImages = AppDomain.CurrentDomain.BaseDirectory;
+            GetSaveNames();
             Table.RowStyles.Clear();
             Table.ColumnStyles.Clear();
             Table.Controls.Clear();
@@ -49,12 +50,18 @@ namespace Game
             loadGame.BackgroundImageLayout = ImageLayout.Stretch;
             loadGame.Click += (sender, args) =>
             {
-                Player = Helper.LoadGame("Староста лох");
-                VillageControls();
+                CleanForm();
+                LoadScreen();
             };
             var continueGame = new Button() {Dock = DockStyle.Fill, Margin = new Padding(20)};
             continueGame.BackgroundImage = Properties.Resources.cont;
             continueGame.BackgroundImageLayout = ImageLayout.Stretch;
+            continueGame.Click += (sender, args) =>
+            {
+                CleanForm();
+                Player = Helper.LoadGame(GetSaveNames().First());
+                VillageControls();
+            };
             menu.Dock = DockStyle.Fill;
             menu.RowStyles.Add(new RowStyle(SizeType.Percent, 30));
             menu.RowStyles.Add(new RowStyle(SizeType.Percent, 30));
@@ -73,6 +80,51 @@ namespace Game
             WindowState = FormWindowState.Maximized;
         }
 
+        private void LoadScreen()
+        {
+            var flowPanel = new FlowLayoutPanel()
+            {
+                AutoScroll = true,
+                BackColor = Color.Transparent,
+                Size = new Size(420, 900),
+                Location = new Point(550, 250)
+            };
+            var savesNames = GetSaveNames();
+            foreach (var saveName in savesNames)
+            {
+                var save = new Button()
+                {
+                    Text = saveName,
+                    Size = new Size(400, 50)
+                };
+                save.Click += (o, eventArgs) =>
+                {
+                    Player = Helper.LoadGame(saveName);
+                    File.SetLastAccessTime(
+                        Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\Game\" + saveName, DateTime.Now);
+                    CleanForm();
+                    VillageControls();
+                };
+                flowPanel.Controls.Add(save);
+            }
+
+            Controls.Add(flowPanel);
+        }
+
+        private static List<string> GetSaveNames()
+        {
+            var folderWithSaves = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            folderWithSaves = Path.Combine(folderWithSaves, "Game");
+            var dirInfo = new DirectoryInfo(folderWithSaves);
+            var files = dirInfo.GetFiles();
+            Array.Sort(files,
+                new Comparison<FileInfo>((f, f2) => f2.LastAccessTime.CompareTo(f.LastAccessTime))
+            );
+            return files
+                .Select(f => Path.GetFileName(f.Name))
+                .ToList();;
+        }
+
         public void CreateNewGameScreen()
         {
             ClearTable();
@@ -89,6 +141,7 @@ namespace Game
             playMenu.RowStyles.Add(new RowStyle(SizeType.Percent, 30));
             playMenu.RowStyles.Add(new RowStyle(SizeType.Percent, 30));
             playMenu.RowStyles.Add(new RowStyle(SizeType.Percent, 30));
+            playMenu.RowStyles.Add(new RowStyle(SizeType.Percent, 30));
             playMenu.ColumnStyles.Add(new ColumnStyle());
             var name = new TextBox();
             name.TextAlign = HorizontalAlignment.Center;
@@ -98,12 +151,23 @@ namespace Game
             name.MouseClick += (a, e) => { ((TextBox) a).Text = ""; };
             name.AcceptsReturn = true;
             name.Margin = new Padding(name.Width / 10);
-            var persClass = new ComboBox();
-            persClass.Items.AddRange(Enum.GetNames(typeof(Model.Specialization)));
-            persClass.MinimumSize = new Size(300, 50);
-            persClass.Dock = DockStyle.Top;
-            var apply = new Button();
-            apply.Text = "Подтвердить";
+            var groupClasses = new Panel();
+            var warriorButton = new RadioButton {Bounds =  new Rectangle(60,10,100,50), Text = "Warrior"};
+            var archerButton = new RadioButton {Bounds =  new Rectangle(160,10,100,50), Text = "Archer"};
+            var wizardButton = new RadioButton {Bounds =  new Rectangle(260,10,100,50), Text = "Wizard"};
+            groupClasses.Controls.Add(warriorButton);
+            groupClasses.Controls.Add(archerButton);
+            groupClasses.Controls.Add(wizardButton);
+            groupClasses.BackColor = Color.Transparent;
+            groupClasses.Bounds = new Rectangle(0,0,500,100);
+            var choice = "";
+            warriorButton.Click += (sender, args) => { choice = warriorButton.Text; }; 
+            archerButton.Click += (sender, args) => { choice = archerButton.Text; }; 
+            wizardButton.Click += (sender, args) => { choice = wizardButton.Text; };
+            // persClass.Items.AddRange(Enum.GetNames(typeof(Model.Specialization)));
+            // persClass.MinimumSize = new Size(300, 50);
+            // persClass.Dock = DockStyle.Top;
+            var apply = new Button {Text = "Подтвердить",Bounds = new Rectangle(0,0,100,40),Margin = new Padding(150,20,0,0)};
             apply.Click += (b, e) =>
             {
                 var pl = new Player()
@@ -111,8 +175,9 @@ namespace Game
                     PlayerName = name.Text, Gold = 100,
                     Heroes = new List<Hero>()
                     {
-                        new Hero((Specialization) Enum.Parse(typeof(Specialization), (string) persClass.SelectedItem))
+                        new Hero((Specialization) Enum.Parse(typeof(Specialization), choice))
                     },
+                    ActiveCommand = new Team<Hero>(),
                     Mercenaries = new List<Hero>(), Shop = new List<ActiveItem>(), Storage = new List<ActiveItem>()
                 };
                 var hf = new HeroesFactory(pl);
@@ -123,7 +188,7 @@ namespace Game
                 VillageControls();
             };
             playMenu.Controls.Add(name, 0, 0);
-            playMenu.Controls.Add(persClass, 0, 1);
+            playMenu.Controls.Add(groupClasses, 0, 1);
             playMenu.Controls.Add(apply, 0, 2);
             Table.Controls.Add(playMenu, 0, 0);
             playMenu.ResumeLayout();
@@ -254,8 +319,10 @@ namespace Game
             GoHunt.Click += (sender, args) =>
             {
                 Controls.Clear();
+                Game = new Model.Game(new Team<Hero>(Player.Heroes, new List<Hero>()), Model.Location.SomeLocation);
                 BackgroundImage = Properties.Resources.DarkForest;
-                BackToVillage();
+                Controls.Add(new AllControl(Game, Player));
+                
             };
             Controls.Add(GoHunt);
             Controls.Add(store);
