@@ -102,6 +102,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Control\GoldControle.cs" />
     <Compile Include="Control\MercenariesControle.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -175,6 +176,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Properties\Names.txt" />
+    <None Include="Resources\GoldBack.png" />
     <None Include="Resources\HeroCard.png" />
     <None Include="Resources\Archer.png" />
     <None Include="Resources\Wizard.png" />

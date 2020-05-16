@@ -212,7 +212,6 @@ namespace Game
                 FlatStyle = FlatStyle.Flat,
                 Bounds = new Rectangle(0, 250, 235, 500),
             };
-
             store.FlatAppearance.BorderSize = 0;
             store.FlatAppearance.MouseDownBackColor = Color.Transparent;
             store.FlatAppearance.MouseOverBackColor = Color.Transparent;
@@ -231,9 +230,12 @@ namespace Game
                 };
                 foreach (var mercenary in Player.Mercenaries)
                 {
-                    floatPanel.Controls.Add(new MercenariesControle(mercenary));
+                    floatPanel.Controls.Add(new MercenariesControle(mercenary,Player));
                 }
-
+                Controls.Add(new GoldControl(Player)
+                {
+                    Location = new Point(0,745)
+                });
                 Controls.Add(floatPanel);
             };
             var GoHunt = new Button()

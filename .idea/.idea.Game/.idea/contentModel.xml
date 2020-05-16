@@ -8,6 +8,7 @@
         <e p="App.config" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Control" t="Include">
+          <e p="GoldControle.cs" t="Include" />
           <e p="MercenariesControle.cs" t="Include" />
         </e>
         <e p="Game.csproj" t="IncludeRecursive" />
@@ -52,6 +53,7 @@
           <e p="Archer.png" t="Include" />
           <e p="barrack.png" t="Include" />
           <e p="DarkForest.png" t="Include" />
+          <e p="GoldBack.png" t="Include" />
           <e p="HeroCard.png" t="Include" />
           <e p="Shop.png" t="Include" />
           <e p="Warrior.png" t="Include" />
