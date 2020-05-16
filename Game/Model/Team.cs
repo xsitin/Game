@@ -20,6 +20,12 @@ namespace Game.Model
             MakeStepForward();
         }
 
+        public Team()
+        {
+            FirstLine = new List<T>();
+            SecondLine = new List<T>();
+        }
+
         public List<BasicCreature> GetTeamList() => FirstLine.Concat(SecondLine).Cast<BasicCreature>().ToList();
 
         public void MakeStepForward() {

@@ -32,6 +32,7 @@ namespace Game.Control
                     player.Gold -= _hero.Level * 100;
                     player.Mercenaries.Remove(_hero);
                     player.Heroes.Add(_hero);
+                    Helper.SaveGame(player);
                     Dispose();
                 }
             };

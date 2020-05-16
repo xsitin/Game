@@ -8,11 +8,6 @@ namespace Game.Model
     {
         private int _count;
         public List<BasicCreature> Queue;
-        public void GetQueue(List<BasicCreature> creatures)
-        {
-            Queue = creatures.OrderByDescending(x =>
-                x.Characteristics[Characteristics.Initiative]).ToList();
-        }
 
         public GameQueue(List<BasicCreature> creatures)
         {
