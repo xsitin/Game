@@ -9,8 +9,9 @@ namespace Game.Model
         public int ManaCost { get; private set; }
         public SkillRange Range;
         public (Characteristics characteristic , int value)[] Effect { get; }
+        public bool IsMagic;
 
-        public Buff Buff { get; }
+        public Buff Buff { get; set; }
         public Skill(int manaCost, (Characteristics characteristic, int value)[] effect, SkillRange range, string name, Buff buff)
         {
             ManaCost = manaCost;

@@ -20,9 +20,11 @@ namespace Tests
                 var factory = new EnemyFactory(team,Location.SomeLocation);
                 var enemyTeam = factory.GetEnemyTeam();
                 var basic = BasicCreature.BaseCharacteristics;
-                var counter = 
-                    (from enemy in enemyTeam.GetTeamList() from chars in basic.Keys where
-                        enemy.Characteristics[chars] != basic[chars] select enemy).Count();
+                var counter = (enemyTeam.GetTeamList()
+                    .SelectMany(enemy => basic.Keys, (enemy, chars) => new {enemy, chars})
+                    .Where(t => t.enemy.Characteristics[t.chars] != basic[t.chars]||t.enemy.Skills.Any(x=>x.Level!=1))
+                    .Select(t => t.enemy)).Count();
+
                 if( team.GetTeamList().Any(x => ((Hero) x).Level > 1) && counter == 0)
                     Assert.Fail();
                 else  if( !team.GetTeamList().Any(x => ((Hero) x).Level > 1) && counter != 0 )

@@ -10,6 +10,8 @@ namespace Game.Model
         public Location Location;
         public Team<Hero> Heroes;
         public int Counter;
+        private Queue<int> last = new Queue<int>(6);
+        private Random _random = new Random();
 
         public EnemyFactory(Team<Hero> heroes, Location location)
         {
@@ -20,12 +22,11 @@ namespace Game.Model
 
         public Team<EnemyHero> GetEnemyTeam()
         {
-            var random = new Random();
             var listHero = Heroes.GetTeamList();
-            var minLevel = listHero.Min(x => ((Hero) x).Level) + Counter/4;
-            var maxLevel = listHero.Max(x => ((Hero) x).Level) + Counter/4;
+            var minLevel = listHero.Min(x => ((Hero) x).Level) + Counter / 4;
+            var maxLevel = listHero.Max(x => ((Hero) x).Level) + Counter / 4;
             var heroCount = listHero.Count + Counter > 8 ? 8 : listHero.Count + Counter;
-            var enemyCount = random.Next(Counter >= heroCount ? heroCount - 2 : Counter, heroCount);
+            var enemyCount = GetRandom(Counter >= heroCount ? heroCount - 2 : Counter, heroCount);
             var firstLine = new List<EnemyHero>();
             var secondLine = new List<EnemyHero>();
             for (var i = 0; i < enemyCount; i++)
@@ -35,7 +36,6 @@ namespace Game.Model
                     secondLine.Add(enemy);
                 else
                     firstLine.Add(enemy);
-                Thread.Sleep(10);
             }
 
             if (!firstLine.Any())
@@ -49,8 +49,7 @@ namespace Game.Model
 
         private EnemyHero GetRandomEnemy(int minLevel, int maxLevel)
         {
-            var random = new Random();
-            var specialization = (Specialization) random.Next(0, Enum.GetValues(typeof(Specialization)).Length - 1);
+            var specialization = (Specialization) GetRandom(0, Enum.GetValues(typeof(Specialization)).Length - 1);
             return GetEnemy(maxLevel, maxLevel, specialization);
         }
 
@@ -59,12 +58,11 @@ namespace Game.Model
             var random = new Random();
             var enemy = new EnemyHero(Helper.GetName(), new Dictionary<Characteristics, int>(), new Inventory(),
                 specialization, Location);
-            var points = random.Next(minLevel, maxLevel) - 1;
-            Thread.Sleep(10);
+            var points = GetRandom(minLevel, maxLevel) - 1;
             while (enemy.Skills.Count < 2)
             {
                 var skill = Helper.BasicSkills[specialization][
-                    random.Next(0, Helper.BasicSkills[specialization].Count)];
+                    GetRandom(0, Helper.BasicSkills[specialization].Count)];
                 if (enemy.Skills.All(x => x.Name != skill.Name))
                     enemy.Skills.Add(skill);
             }
@@ -74,7 +72,7 @@ namespace Game.Model
                 if (random.Next(0, 2) == 1)
                 {
                     var character =
-                        (Characteristics) random.Next(0, Enum.GetValues(typeof(Characteristics)).Length - 1);
+                        (Characteristics) GetRandom(0, Enum.GetValues(typeof(Characteristics)).Length - 1);
                     if (((character == Characteristics.Evasion || character == Characteristics.MagicalProtection ||
                           character == Characteristics.PhysicalProtection) &&
                          (int) (enemy.Characteristics[character] * 1.2) > 100) ||
@@ -84,13 +82,26 @@ namespace Game.Model
                         j--;
                         continue;
                     }
+
                     enemy.Characteristics[character] = (int) (enemy.Characteristics[character] * 1.2);
                 }
                 else
-                    enemy.Skills[random.Next(0, enemy.Skills.Count - 1)].Upgrade();
+                    enemy.Skills[GetRandom(0, enemy.Skills.Count - 1)].Upgrade();
             }
 
             return enemy;
+        }
+
+        private int GetRandom(int from, int to)
+        {
+            if (from - to < 2 || Enumerable.Range(from, to).All(x => last.Contains(x)))
+                return _random.Next(from, to);
+            var res = _random.Next(from, to);
+            while (last.Contains(res))
+                res = _random.Next(from, to);
+            last.Enqueue(res);
+            if (last.Count > 3) last.Dequeue();
+            return res;
         }
     }
 }

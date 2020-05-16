@@ -25,11 +25,11 @@ namespace Tests
             Enemy1.Characteristics[Characteristics.Evasion] = 100;
             Enemy1.Characteristics[Characteristics.Mana] = 100;
             Enemy1.Skills.Add(new Skill(10, new[] {(Characteristics.Health, -10)},
-                SkillRange.Single, "skillName", new Buff(5, "debuff", (Characteristics.Initiative, -100))));
+                SkillRange.Single, "skillName", new Buff(5, "debuff", (Characteristics.Initiative, -100))){IsMagic = true});
             Enemy2 = new EnemyHero("very enemy", new Dictionary<Characteristics, int> {{Characteristics.Health, 100}},
                 new Inventory(), Specialization.Warrior, Position.Melee, Location.SomeLocation);
             Mage.Skills.Add(new Skill(50, new[] {(Characteristics.Health, -100)}, SkillRange.Enemies, "shpuf",
-                new Buff(3, "shpuf debuff", (Characteristics.Evasion, -10))));
+                new Buff(3, "shpuf debuff", (Characteristics.Evasion, -10))){IsMagic = true});
         }
 
         private Hero Archer;
@@ -108,7 +108,7 @@ namespace Tests
         {
             Assert.AreEqual(Enemy2.Characteristics[Characteristics.Health], 100);
             Enemy1.UseSkill(Enemy1.Skills[1], Enemy2);
-            Assert.AreEqual(Enemy2.Characteristics[Characteristics.Health], 90);
+            Assert.AreEqual(90, Enemy2.Characteristics[Characteristics.Health]);
             Assert.AreEqual(Enemy2.Characteristics[Characteristics.Initiative], -70);
             Assert.IsNotEmpty(Enemy2.Buffs);
             Enemy2.Buffs.Clear();

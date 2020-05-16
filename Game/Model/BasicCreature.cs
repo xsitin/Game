@@ -11,6 +11,8 @@ namespace Game.Model
         public int Level { get; set; }
         public Location Location { get; set; }
         public Specialization Specialization { get; set; }
+        public List<Skill> Skills { get; set; }
+        public Position Position { get; set; }
 
         public BasicCreature(string name, Dictionary<Characteristics, int> characteristics, Inventory inventory,
             Specialization specialization, Location location)
@@ -23,6 +25,10 @@ namespace Game.Model
             Specialization = specialization;
             Level = 1;
             Location = location;
+            Skills = new List<Skill>();
+            Skills.Add(new Skill(0,
+                new[] {(Model.Characteristics.Health, -Characteristics[Model.Characteristics.PhysicalDamage])},
+                SkillRange.Single, "Base Hit", null));
         }
 
         public BasicCreature()
@@ -63,6 +69,21 @@ namespace Game.Model
                     change * (1 - Characteristics[Model.Characteristics.PhysicalProtection] / 100);
         }
         
+        public void UseSkill(Skill action, params BasicCreature[] targets)
+        {
+            if (action.ManaCost <= Characteristics[Model.Characteristics.Mana])
+                foreach (var target in targets)
+                {
+                    foreach ((var characteristic, var value) in action.Effect)
+                        if(characteristic==Model.Characteristics.Health)
+                            target.HpChange(value,action.IsMagic);
+                        else
+                            target.Characteristics[characteristic] += value;
+                    if (action.Buff != null)
+                        target.Buffs.Add(action.Buff.ToTarget(target));
+                }
+        }
+        
         private void FillDictionary()
         {
             for (var i = 0; i < 7; i++)
@@ -71,6 +92,10 @@ namespace Game.Model
                 if (!Characteristics.ContainsKey(ability))
                     Characteristics[ability] = BaseCharacteristics[ability];
             }
+        }
+        public override string ToString()
+        {
+            return Name;
         }
     }
 }

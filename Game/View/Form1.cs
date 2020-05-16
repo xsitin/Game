@@ -17,9 +17,9 @@ namespace Game
 {
     public partial class Form1 : Form
     {
-
         public Player Player;
         public TableLayoutPanel Table;
+
         public Form1()
         {
             DoubleBuffered = true;
@@ -40,19 +40,19 @@ namespace Game
             Table.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 70));
             var menu = new TableLayoutPanel();
             Table.BackColor = Color.Transparent;
-            var newGame = new Button(){Dock = DockStyle.Fill,Margin = new Padding(20)};
+            var newGame = new Button() {Dock = DockStyle.Fill, Margin = new Padding(20)};
             newGame.BackgroundImage = Properties.Resources.newGame;
             newGame.BackgroundImageLayout = ImageLayout.Stretch;
             newGame.Click += (a, b) => { CreateNewGameScreen(); };
-            var loadGame = new Button(){Dock = DockStyle.Fill,Margin = new Padding(20)};
+            var loadGame = new Button() {Dock = DockStyle.Fill, Margin = new Padding(20)};
             loadGame.BackgroundImage = Properties.Resources.load;
             loadGame.BackgroundImageLayout = ImageLayout.Stretch;
             loadGame.Click += (sender, args) =>
             {
                 Player = Helper.LoadGame("Староста лох");
                 VillageControls();
-            }; 
-            var continueGame = new Button(){Dock = DockStyle.Fill,Margin = new Padding(20)};
+            };
+            var continueGame = new Button() {Dock = DockStyle.Fill, Margin = new Padding(20)};
             continueGame.BackgroundImage = Properties.Resources.cont;
             continueGame.BackgroundImageLayout = ImageLayout.Stretch;
             menu.Dock = DockStyle.Fill;
@@ -72,7 +72,7 @@ namespace Game
             Table.Controls.Add(new Panel(), 0, 1);
             WindowState = FormWindowState.Maximized;
         }
-        
+
         public void CreateNewGameScreen()
         {
             ClearTable();
@@ -156,7 +156,7 @@ namespace Game
                 FlatStyle = FlatStyle.Flat,
                 Bounds = new Rectangle(0, 250, 235, 500),
             };
-            
+
             store.FlatAppearance.BorderSize = 0;
             store.FlatAppearance.MouseDownBackColor = Color.Transparent;
             store.FlatAppearance.MouseOverBackColor = Color.Transparent;
@@ -170,13 +170,14 @@ namespace Game
                 {
                     AutoScroll = true,
                     BackColor = Color.Transparent,
-                    Size = new Size(420,900),
-                    Location = new Point(1120,0)
+                    Size = new Size(420, 900),
+                    Location = new Point(1120, 0)
                 };
                 foreach (var mercenary in Player.Mercenaries)
                 {
                     floatPanel.Controls.Add(new MercenariesControle(mercenary));
                 }
+
                 Controls.Add(floatPanel);
             };
             var GoHunt = new Button()
@@ -199,22 +200,22 @@ namespace Game
             Controls.Add(store);
             Controls.Add(barrack);
         }
-        
+
         public void BackToVillage()
         {
             var back = new Button()
             {
                 Text = "Back to Village",
-                Bounds = new Rectangle(0,0, 100, 40)
+                Bounds = new Rectangle(0, 0, 100, 40)
             };
             back.Click += (sender, args) =>
             {
                 CleanForm();
-                VillageControls();  
+                VillageControls();
             };
             Controls.Add(back);
         }
-        
+
         public void CleanForm()
         {
             Controls.Clear();
@@ -222,6 +223,7 @@ namespace Game
             Table.Controls.Clear();
             Table.ColumnStyles.Clear();
         }
+
         public void ClearTable()
         {
             Table.RowStyles.Clear();

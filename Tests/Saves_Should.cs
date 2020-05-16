@@ -25,9 +25,9 @@ namespace Tests
                 PlayerName = "Player1",
                 Gold = 100,
                 Heroes = new List<Hero> {heroWarrior, heroArcher},
-                Mercenaries = new List<Hero>(){heroWarrior,heroArcher}
-                //Shop = new List<ActiveItem>(),
-                //Storage = new List<ActiveItem>() { healingPotion },
+                Mercenaries = new List<Hero>(){heroWarrior,heroArcher},
+                Shop = new List<ActiveItem>(),
+                Storage = new List<ActiveItem>() { healingPotion },
             };
 
             Helper.SaveGame(player);
@@ -73,27 +73,27 @@ namespace Tests
 
             Assert.Pass();
         }
-        //
-        // [Test]
-        // public void Test_CompareShops() {
-        //     for (int i = 0; i < player.Shop.Count; i++) {
-        //         var hero = player.Shop[i];
-        //         var loadedHero = loadedPlayer.Shop[i];
-        //         if (!hero.Equals(loadedHero))
-        //             Assert.Fail();
-        //     }
-        //     Assert.Pass();
-        // }
-        //
-        // [Test]
-        // public void Test_CompareStorage() {
-        //     for (int i = 0; i < player.Storage.Count; i++) {
-        //         var hero = player.Storage[i];
-        //         var loadedHero = loadedPlayer.Storage[i];
-        //         if (!hero.Equals(loadedHero))
-        //             Assert.Fail();
-        //     }
-        //     Assert.Pass();
-        // }
+        
+        [Test]
+        public void Test_CompareShops() {
+            for (int i = 0; i < player.Shop.Count; i++) {
+                var hero = player.Shop[i];
+                var loadedHero = loadedPlayer.Shop[i];
+                if (!hero.Equals(loadedHero))
+                    Assert.Fail();
+            }
+            Assert.Pass();
+        }
+        
+        [Test]
+        public void Test_CompareStorage() {
+            for (int i = 0; i < player.Storage.Count; i++) {
+                var hero = player.Storage[i];
+                var loadedHero = loadedPlayer.Storage[i];
+                if (!hero.Equals(loadedHero))
+                    Assert.Fail();
+            }
+            Assert.Pass();
+        }
     }
 }

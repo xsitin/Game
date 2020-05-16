@@ -13,7 +13,7 @@ namespace Game.Model
         {
         }
 
-        public string Name { get; }
+        public string Name { get; set; }
     }
 
     public class ActiveItem : Item
@@ -29,7 +29,7 @@ namespace Game.Model
         {
         }
 
-        public (Characteristics characteristic, int value)[] Actions { get; }
+        public (Characteristics characteristic, int value)[] Actions { get; set; }
         public Buff Buff { get; }
 
         public Action<BasicCreature> Action { get; set; }
@@ -48,7 +48,11 @@ namespace Game.Model
         public override bool Equals(object obj)
         {
             if (!(obj is ActiveItem item)) return false;
-            return Name == item.Name && Actions == item.Actions;
+            bool equalActions = Actions.Length==item.Actions.Length;
+            if (equalActions)
+                for (var i = 0; i < Actions.Length; i++)
+                    equalActions &= Actions[i] == item.Actions[i];
+            return Name == item.Name && equalActions;
         }
 
         public override int GetHashCode()
