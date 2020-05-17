@@ -40,8 +40,8 @@ namespace Game.Model
                 new List<Skill>
                 {
                     new Skill(20, new[] {(Characteristics.Health, -30)}, SkillRange.Single, "Fire Boll",
-                        new Buff(2, "Burning", (Characteristics.Initiative, -10))) {IsMagic = true},
-                    new Skill(60, new[] {(Characteristics.Health, -30)}, SkillRange.Enemies, "Magical Arrows", null) {IsMagic = true}
+                        new Buff(2, "Burning", (Characteristics.Initiative, -10))),
+                    new Skill(60, new[] {(Characteristics.Health, -30)}, SkillRange.Enemies, "Magical Arrows", null)
                 }
             },
             {

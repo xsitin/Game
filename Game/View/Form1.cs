@@ -320,16 +320,9 @@ namespace Game
             GoHunt.Click += (sender, args) =>
             {
                 Controls.Clear();
-                if (Player.ActiveTeam.FirstLine.Count == 0)
-                {
-                    MessageBox.Show("Нужно выбрать активную команду перед боем.", "", MessageBoxButtons.OK);
-                }
-                else
-                {
-                    Game = new Model.Game(Player.ActiveTeam, Model.Location.SomeLocation);
-                    BackgroundImage = Properties.Resources.DarkForest;
-                    Controls.Add(new AllControl(Game, Player, this));
-                }
+                Game = new Model.Game(Player.ActiveTeam, Model.Location.SomeLocation);
+                BackgroundImage = Properties.Resources.DarkForest;
+                Controls.Add(new AllControl(Game, Player));
             };
             Controls.Add(GoHunt);
             Controls.Add(store);

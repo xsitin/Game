@@ -25,20 +25,14 @@ namespace Game.Control
 
         #region Component Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
+        /// <summary> 
+        /// Required method for Designer support - do not modify 
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // HitPointBar
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Name = "HitPointBar";
-            this.ResumeLayout(false);
         }
 
         #endregion

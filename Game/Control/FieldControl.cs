@@ -46,13 +46,13 @@ namespace Game.Control
         protected override void OnPaint(PaintEventArgs e)
         {
             for (int i = 0; i < _creatures.Length; i++)
-                for (int j = 0; j < _creatures[i].Count; j++)
-                {
-                    if (_creatures[i][j].Characteristics[Characteristics.Health] > 0)
-                        e.Graphics.DrawImage(Helper.ImageTransfer[_creatures[i][j].Specialization], _points[i][j]);
-                    else
-                        _creatures[i].RemoveAt(j);
-                }
+            for (int j = 0; j < _creatures[i].Count; j++)
+            {
+                if (_creatures[i][j].Characteristics[Characteristics.Health] > 0)
+                    e.Graphics.DrawImage(Helper.ImageTransfer[_creatures[i][j].Specialization], _points[i][j]);
+                else
+                    _creatures[i].RemoveAt(j);
+            }
         }
     }
 }

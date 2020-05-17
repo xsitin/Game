@@ -245,6 +245,3 @@ C:\Users\walue\OneDrive\Документы\GitHub\Game\Game\obj\Debug\Game.Contr
 C:\Users\walue\OneDrive\Документы\GitHub\Game\Game\obj\Debug\Game.Control.PersonControl.resources
 C:\Users\walue\OneDrive\Документы\GitHub\Game\Game\obj\Debug\Game.Control.EnemyButton.resources
 C:\Users\walue\OneDrive\Документы\GitHub\Game\Game\obj\Debug\Game.Control.FieldControl.resources
-C:\Users\walue\OneDrive\Документы\GitHub\Game\Game\obj\Debug\Game.Control.HitPointBar.resources
-C:\Users\walue\OneDrive\Документы\GitHub\Game\Game\obj\Debug\Game.Control.EnemyHitBar.resources
-C:\Users\walue\OneDrive\Документы\GitHub\Game\Game\obj\Debug\Game.Control.AllControl.resources

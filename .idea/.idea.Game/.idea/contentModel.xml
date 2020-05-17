@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\walue\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\walue\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_Game.-1566221964.00" t="ExcludeRecursive" />
-    <e p="C:\Users\walue\OneDrive\Документы\GitHub\Game" t="IncludeFlat">
+    <e p="C:\Users\Loliconshik\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Loliconshik\.Rider2019.3\system\resharper-host\Local\Transient\ReSharperHost\v193\SolutionCaches\_Game.-1559802761.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Loliconshik\Documents\GitHub\Game" t="IncludeFlat">
       <e p="Game" t="IncludeRecursive">
         <e p="App.config" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
@@ -11,14 +11,12 @@
           <e p="ActiveTeam.cs" t="Include" />
           <e p="AllControl.cs" t="Include" />
           <e p="AllControl.Designer.cs" t="Include" />
-          <e p="AllControl.resx" t="Include" />
           <e p="BarrackHeroControl.cs" t="Include" />
           <e p="EnemyButton.cs" t="Include" />
           <e p="EnemyButton.Designer.cs" t="Include" />
           <e p="EnemyButton.resx" t="Include" />
           <e p="enemyHitBar.cs" t="Include" />
           <e p="enemyHitBar.Designer.cs" t="Include" />
-          <e p="EnemyHitBar.resx" t="Include" />
           <e p="FieldControl.cs" t="Include" />
           <e p="FieldControl.Designer.cs" t="Include" />
           <e p="FieldControl.resx" t="Include" />
@@ -27,7 +25,6 @@
           <e p="HeroUpgradeControl.cs" t="Include" />
           <e p="HitPointBar.cs" t="Include" />
           <e p="HitPointBar.Designer.cs" t="Include" />
-          <e p="HitPointBar.resx" t="Include" />
           <e p="HpPotionsControl.cs" t="Include" />
           <e p="HpPotionsControl.resx" t="Include" />
           <e p="InterfaceControl.cs" t="Include" />
