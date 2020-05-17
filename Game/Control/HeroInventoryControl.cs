@@ -9,68 +9,56 @@ namespace Game.Control
     {
         private readonly Hero _hero;
         private readonly Player _player;
-        private Form1 _form1;
         private readonly Size _size = new Size(420,390);
-        public HeroInventoryControl(Hero hero, Player player,Form1 form1)
+        public HeroInventoryControl(Hero hero, Player player)
         {
             _hero = hero;
             MinimumSize = _size;
             _player = player;
-            _form1 = form1;
+            Name = "HeroUpgrade";
+            foreach (var item in hero.Inventory.Heap)
+            {
+                var remove = new Button()
+                {
+                    FlatStyle = FlatStyle.Flat,
+                    Size = new Size(100,100)
+                };
+                remove.Click += (sender, args) =>
+                {
+                    hero.Inventory.Heap.Remove(item);
+                    player.Storage.Add(item);
+                };
+                Parent.Parent.Controls["Inventory"].Controls.Add(remove);
+                Parent.Parent.Controls["Inventory"].Refresh();
+            }
+            foreach (var item in player.Storage)
+            {
+                var add = new Button()
+                {
+                    FlatStyle = FlatStyle.Flat,
+                    Size = new Size(100,100)
+                };
+                add.Click += (sender, args) =>
+                {
+                    hero.Inventory.Heap.Add(item);
+                    player.Storage.Remove(item);
+                };
+                Parent.Parent.Controls["Storage"].Controls.Add(add);
+            }
+            
             var back = new Button()
             {
                 BackColor = Color.Transparent,
                 FlatStyle = FlatStyle.Flat,
                 Bounds = new Rectangle(31,191,245,34)
             };
-            foreach (var item in _player.Storage)
-            {
-                var add = new Button()
-                {
-                    BackColor = Color.Gray,
-                    FlatStyle = FlatStyle.Flat,
-                    Bounds = new Rectangle(31,191,245,34),
-                    Text = item.Name,
-                };
-                add.Click += (sender, eventArgs) =>
-                {
-                    _hero.Inventory.Heap.Add(item);
-                    _player.Storage.Remove(item);
-                    Refresh();
-                };
-                form1.Controls["Storage"].Controls.Add(add);
-            }
-            foreach (var item in _hero.Inventory.Heap)
-            {
-                var remove = new Button()
-                {
-                    BackColor = Color.Gray,
-                    FlatStyle = FlatStyle.Flat,
-                    Bounds = new Rectangle(31,191,245,34),
-                    Text = item.Name,
-                };
-                remove.Click += (sender, eventArgs) =>
-                {
-                    _hero.Inventory.Heap.Remove(item);
-                    _player.Storage.Add(item);
-                    Refresh();
-                };
-                form1.Controls["Inventory"].Controls.Add(remove);
-            }
             back.Click += (sender, args) =>
             {
                 if(player.Heroes.Contains(_hero))
-                    Parent.Parent.Controls["MerHero"].Controls.Add(new BarrackHeroControl(_hero,player,form1));
+                    Parent.Parent.Controls["MerHero"].Controls.Add(new BarrackHeroControl(_hero,player));
                 else 
-                    Parent.Parent.Controls["Active"].Controls.Add(new ActiveTeam(_hero,player,form1));
+                    Parent.Parent.Controls["Active"].Controls.Add(new ActiveTeam(_hero,player));
                 Dispose();
-            };
-            back.Click += (sender, args) =>
-            {
-                form1.Controls["Inventory"].Controls.Clear();
-                form1.Controls["Inventory"].Refresh();
-                form1.Controls["Storage"].Controls.Clear();
-                form1.Controls["Storage"].Refresh();
             };
             Controls.Add(back);
         }
@@ -99,51 +87,6 @@ namespace Game.Control
             }
             e.Graphics.FillRectangle(brush1, new RectangleF(31,191,245,34));
             e.Graphics.DrawString("Закончить",new Font(FontFamily.GenericSerif, 15),brush,100,195);
-        }
-
-        public override void Refresh()
-        {
-            _form1.Controls["Inventory"].Controls.Clear();
-            _form1.Controls["Storage"].Controls.Clear();
-            foreach (var item in _player.Storage)
-            {
-                var add = new Button()
-                {
-                    BackColor = Color.Gray,
-                    FlatStyle = FlatStyle.Flat,
-                    Bounds = new Rectangle(31,191,245,34),
-                    Text = item.Name,
-                };
-                add.Click += (sender, eventArgs) =>
-                {
-                    _hero.Inventory.Heap.Add(item);
-                    _player.Storage.Remove(item);
-                    _form1.Controls["Inventory"].Refresh();
-                    _form1.Controls["Storage"].Refresh();
-                    _form1.Invalidate();
-                };
-                _form1.Controls["Storage"].Controls.Add(add);
-            }
-            foreach (var item in _hero.Inventory.Heap)
-            {
-                var remove = new Button()
-                {
-                    BackColor = Color.Gray,
-                    FlatStyle = FlatStyle.Flat,
-                    Bounds = new Rectangle(31,191,245,34),
-                    Text = item.Name,
-                };
-                remove.Click += (sender, eventArgs) =>
-                {
-                    _hero.Inventory.Heap.Remove(item);
-                    _player.Storage.Add(item);
-                    _form1.Controls["Storage"].Refresh();
-                    _form1.Controls["Inventory"].Refresh();
-                    _form1.Invalidate();
-                };
-                _form1.Controls["Inventory"].Controls.Add(remove);
-            }
-            base.Refresh();
         }
     }
 }
