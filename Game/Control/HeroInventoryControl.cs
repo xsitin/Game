@@ -118,7 +118,9 @@ namespace Game.Control
                 {
                     _hero.Inventory.Heap.Add(item);
                     _player.Storage.Remove(item);
-                    Refresh();
+                    _form1.Controls["Inventory"].Refresh();
+                    _form1.Controls["Storage"].Refresh();
+                    _form1.Invalidate();
                 };
                 _form1.Controls["Storage"].Controls.Add(add);
             }
@@ -135,8 +137,9 @@ namespace Game.Control
                 {
                     _hero.Inventory.Heap.Remove(item);
                     _player.Storage.Add(item);
-                    Refresh();
-
+                    _form1.Controls["Storage"].Refresh();
+                    _form1.Controls["Inventory"].Refresh();
+                    _form1.Invalidate();
                 };
                 _form1.Controls["Inventory"].Controls.Add(remove);
             }
