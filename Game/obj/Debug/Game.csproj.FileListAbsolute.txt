@@ -245,6 +245,12 @@ C:\Users\walue\OneDrive\Документы\GitHub\Game\Game\obj\Debug\Game.Contr
 C:\Users\walue\OneDrive\Документы\GitHub\Game\Game\obj\Debug\Game.Control.PersonControl.resources
 C:\Users\walue\OneDrive\Документы\GitHub\Game\Game\obj\Debug\Game.Control.EnemyButton.resources
 C:\Users\walue\OneDrive\Документы\GitHub\Game\Game\obj\Debug\Game.Control.FieldControl.resources
+<<<<<<< HEAD
 C:\Users\walue\OneDrive\Документы\GitHub\Game\Game\obj\Debug\Game.Control.HitPointBar.resources
 C:\Users\walue\OneDrive\Документы\GitHub\Game\Game\obj\Debug\Game.Control.EnemyHitBar.resources
 C:\Users\walue\OneDrive\Документы\GitHub\Game\Game\obj\Debug\Game.Control.AllControl.resources
+=======
+C:\Users\Loliconshik\Documents\GitHub\Game\Game\obj\Debug\Game.Control.EnemyButton.resources
+C:\Users\Loliconshik\Documents\GitHub\Game\Game\obj\Debug\Game.Control.FieldControl.resources
+C:\Users\Loliconshik\Documents\GitHub\Game\Game\obj\Debug\Game.Control.PersonControl.resources
+>>>>>>> 26b96293f726c262fa431a592e40f4fa1744364c

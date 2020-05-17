@@ -10,12 +10,10 @@ namespace Game.Control
         private readonly Hero _hero;
         private Size _size = new Size(420,390);
         private readonly Player _player;
-        private Form1 form;
-        public BarrackHeroControl(Hero hero, Player player, Form1 form)
+        public BarrackHeroControl(Hero hero, Player player, Form1 form1)
         {
             _hero = hero;
             _player = player;
-            this.form = form;
             BackColor = Color.Transparent;
             MinimumSize = _size;
             var toFirstLine = new Button()
@@ -31,7 +29,7 @@ namespace Game.Control
                     hero.Position = Position.Melee;
                     player.ActiveTeam.FirstLine.Add(hero);
                     player.Heroes.Remove(hero);
-                    Parent.Parent.Controls["Active"].Controls.Add(new ActiveTeam(hero,player));
+                    Parent.Parent.Controls["Active"].Controls.Add(new ActiveTeam(hero,player, form1));
                     Parent.Parent.Controls["Active"].Refresh();
                     Dispose();
                 }
@@ -50,7 +48,7 @@ namespace Game.Control
                     hero.Position = Position.Range;
                     player.ActiveTeam.SecondLine.Add(hero);
                     player.Heroes.Remove(hero);
-                    Parent.Parent.Controls["Active"].Controls.Add(new ActiveTeam(hero,player));
+                    Parent.Parent.Controls["Active"].Controls.Add(new ActiveTeam(hero,player, form1));
                     Parent.Parent.Controls["Active"].Refresh();
                     Dispose();
                 }
@@ -64,7 +62,7 @@ namespace Game.Control
             upgrade.Click += (sender, args) =>
             {
                 if (Parent.Parent.Controls["Upgrade"].Controls.Count == 1) return;
-                Parent.Parent.Controls["Upgrade"].Controls.Add(new HeroUpgradeControl(hero,player, form));
+                Parent.Parent.Controls["Upgrade"].Controls.Add(new HeroUpgradeControl(hero,player,form1));
                 Dispose();
             };
             if(hero.UpgradePoints > 0)
@@ -78,7 +76,8 @@ namespace Game.Control
             inventory.Click += (sender, args) =>
             {
                 if (Parent.Parent.Controls["Upgrade"].Controls.Count == 1) return;
-                Parent.Parent.Controls["Upgrade"].Controls.Add(new HeroInventoryControl(hero, player, form));
+                Parent.Parent.Controls["Upgrade"].Controls.Add(new HeroInventoryControl(hero,player,form1));
+                
                 Dispose();
             };
             Controls.Add(inventory);
