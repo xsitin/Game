@@ -79,25 +79,25 @@ namespace Game.Model
 
         public static void SaveGame(Player player)
         {
-            // var serialized = JsonConvert.SerializeObject(player);
-            // var way = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            // way = Path.Combine(way, "Game");
-            // var sw = File.CreateText(Path.Combine(way,player.PlayerName));
-            // sw.Write(serialized);
-            // sw.Close();
+            var serialized = JsonConvert.SerializeObject(player);
+            var way = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            way = Path.Combine(way, "Game");
+            var sw = File.CreateText(Path.Combine(way,player.PlayerName));
+            sw.Write(serialized);
+            sw.Close();
         }
 
         public static Player LoadGame(string playerName)
         {
-            // var way = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            // way = Path.Combine(way, "Game");
-            // way = Path.Combine(way, playerName);
-            // if (File.Exists(way))
-            // {
-            //     var text = File.ReadAllText(way);
-            //     return
-            //         JsonConvert.DeserializeObject<Player>()
-            // }
+            var way = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            way = Path.Combine(way, "Game");
+            way = Path.Combine(way, playerName);
+            if (File.Exists(way))
+            {
+                var text = File.ReadAllText(way);
+                return
+                    JsonConvert.DeserializeObject<Player>(text);
+            }
 
             return new Player();
         }

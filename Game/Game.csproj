@@ -108,19 +108,10 @@
     <Compile Include="Control\BarrackHeroControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Control\EnemyHitBar.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Control\EnemyHitBar.Designer.cs">
-      <DependentUpon>EnemyHitBar.cs</DependentUpon>
-    </Compile>
     <Compile Include="Control\HeroInventoryControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Control\HeroUpgradeControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Control\InventoryControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Control\MpPotionControl.cs">
@@ -203,14 +194,20 @@
     <Compile Include="View\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Control\AllControl.resx">
+      <DependentUpon>AllControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Control\EnemyButton.resx">
       <DependentUpon>EnemyButton.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Control\EnemyHitBar.resx">
-      <DependentUpon>EnemyHitBar.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Control\FieldControl.resx">
       <DependentUpon>FieldControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\HitPointBar.resx">
+      <DependentUpon>HitPointBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\InterfaceControl.resx">
+      <DependentUpon>InterfaceControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Control\MpPotionControl.resx">
       <DependentUpon>MpPotionControl.cs</DependentUpon>

@@ -10,7 +10,7 @@ namespace Game
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            var form = new Form1();
+            var form = new Form1(){Name = "Main"};
             form.ShowMenu();
             Application.Run(form);
         }

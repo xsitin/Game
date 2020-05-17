@@ -73,6 +73,8 @@ namespace Game.Model
         public void UseSkill(Skill action, params BasicCreature[] targets)
         {
             if (action.ManaCost <= Characteristics[Model.Characteristics.Mana])
+            {
+                Characteristics[Model.Characteristics.Mana] -= action.ManaCost;
                 foreach (var target in targets)
                 {
                     foreach ((var characteristic, var value) in action.Effect)
@@ -83,6 +85,7 @@ namespace Game.Model
                     if (action.Buff != null)
                         target.Buffs.Add(action.Buff.ToTarget(target));
                 }
+            }
         }
         
         private void FillDictionary()

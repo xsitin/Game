@@ -66,19 +66,23 @@ namespace Game.Model
             GC.WaitForPendingFinalizers();
             if (!Heroes.GetTeamList().Any())
             {
-                //console.log('poshel naxui');
+                MessageBox.Show("You lose!");
+                IsEnd = true;
+                return;
             }
 
             if (!Enemy.GetTeamList().Any())
             {
-                var res = MessageBox.Show("Хотите продолжить?");
+                var res = MessageBox.Show("Хотите продолжить?","",MessageBoxButtons.YesNo);
                 var heroes = Heroes.GetTeamList();
-                var level = heroes.Sum(x => (x as Hero).Level) / heroes.Count();
-                _reward.exp += (int) Math.Round(100 + level * 100 + 300 * Math.Pow(level, 0.5)) / 4;
+                var level = heroes.Sum(x => ((Hero) x).Level) / heroes.Count();
+                _reward.exp += (int) Math.Round(100 + level * 100 + 300 * Math.Pow(level, 0.5)) / 3;
                 _reward.money += level * 200;
                 if (res == DialogResult.Yes)
                 {
                     Enemy = _enemyFactory.GetEnemyTeam();
+                    _counter++;
+                    Application.OpenForms["Main"]?.Controls["MainCntrl"].Refresh();
                     return;
                 }
 

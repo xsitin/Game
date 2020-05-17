@@ -253,4 +253,6 @@ C:\Users\xsitin\Documents\GitHub\Game\Game\obj\Debug\Game.Control.FieldControl.r
 C:\Users\xsitin\Documents\GitHub\Game\Game\obj\Debug\Game.Control.MpPotionControl.resources
 C:\Users\xsitin\Documents\GitHub\Game\Game\obj\Debug\Game.Control.HpPotionControl.resources
 C:\Users\xsitin\Documents\GitHub\Game\Game\obj\Debug\Game.Control.PersonControl.resources
-C:\Users\xsitin\Documents\GitHub\Game\Game\obj\Debug\Game.Control.EnemyHitBar.resources
+C:\Users\xsitin\Documents\GitHub\Game\Game\obj\Debug\Game.Control.AllControl.resources
+C:\Users\xsitin\Documents\GitHub\Game\Game\obj\Debug\Game.Control.HitPointBar.resources
+C:\Users\xsitin\Documents\GitHub\Game\Game\obj\Debug\Game.Control.InterfaceControl.resources

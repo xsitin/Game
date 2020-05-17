@@ -11,14 +11,15 @@ namespace Game.Control
     {
         private Point[][] _points = new Point[4][] {new Point[4], new Point[4], new Point[4], new Point[4]};
         private List<BasicCreature>[] _creatures;
-        private List<Hero> _firstLine;
-        private List<Hero> _secondLine;
+        private List<BasicCreature> _heroes;
+        private List<BasicCreature> _enemies;
+
 
         public FieldControl(Team<Hero> heroes, Team<EnemyHero> enemies)
         {
+            _heroes = heroes.GetTeamList();
+            _enemies = enemies.GetTeamList();
             BackColor = Color.Transparent;
-            Dock = DockStyle.Fill;
-            Size = new Size(1366, 200);
             _creatures = new[]
             {
                 heroes.FirstLine.Cast<BasicCreature>().ToList(),

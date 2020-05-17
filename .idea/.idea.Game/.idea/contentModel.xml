@@ -12,13 +12,11 @@
           <e p="ActiveTeam.cs" t="Include" />
           <e p="AllControl.cs" t="Include" />
           <e p="AllControl.Designer.cs" t="Include" />
+          <e p="AllControl.resx" t="Include" />
           <e p="BarrackHeroControl.cs" t="Include" />
           <e p="EnemyButton.cs" t="Include" />
           <e p="EnemyButton.Designer.cs" t="Include" />
           <e p="EnemyButton.resx" t="Include" />
-          <e p="enemyHitBar.cs" t="Include" />
-          <e p="enemyHitBar.Designer.cs" t="Include" />
-          <e p="EnemyHitBar.resx" t="Include" />
           <e p="FieldControl.cs" t="Include" />
           <e p="FieldControl.Designer.cs" t="Include" />
           <e p="FieldControl.resx" t="Include" />
@@ -27,11 +25,12 @@
           <e p="HeroUpgradeControl.cs" t="Include" />
           <e p="HitPointBar.cs" t="Include" />
           <e p="HitPointBar.Designer.cs" t="Include" />
+          <e p="HitPointBar.resx" t="Include" />
           <e p="HpPotionsControl.cs" t="Include" />
           <e p="HpPotionsControl.resx" t="Include" />
           <e p="InterfaceControl.cs" t="Include" />
           <e p="InterfaceControl.Designer.cs" t="Include" />
-          <e p="InventoryControl.cs" t="Include" />
+          <e p="InterfaceControl.resx" t="Include" />
           <e p="MercenariesControle.cs" t="Include" />
           <e p="MpPotionControl.cs" t="Include" />
           <e p="MpPotionControl.resx" t="Include" />

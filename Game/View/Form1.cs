@@ -173,14 +173,15 @@ namespace Game
                 var spec = (Specialization) Enum.Parse(typeof(Specialization), choice);
                 var h = new Hero(spec);
                 h.Skills.AddRange(Helper.BasicSkills[spec]);
+                h.Characteristics[Characteristics.Evasion] = 100;
+                h.Characteristics[Characteristics.MagicalProtection] = 100;
                 var pl = new Player()
                 {
                     PlayerName = name.Text, Gold = 10000,
                     Heroes = new List<Hero>()
-                    {
-                        h
-                    },
-                    Mercenaries = new List<Hero>(), Shop = new List<ActiveItem>(), Storage = new List<ActiveItem>()
+                        {},
+                    Mercenaries = new List<Hero>(), Shop = new List<ActiveItem>(), Storage = new List<ActiveItem>(),
+                    ActiveTeam= new Team<Hero>(new List<Hero>(){h},new List<Hero>() )
                 };
                 var hf = new HeroesFactory(pl);
                 pl.Mercenaries.AddRange(new[]
@@ -312,6 +313,7 @@ namespace Game
             };
             var GoHunt = new Button()
             {
+                Name = "Hunt",
                 BackColor = Color.Transparent,
                 FlatStyle = FlatStyle.Flat,
                 Bounds = new Rectangle(250, 500, 235, 200),
@@ -325,7 +327,7 @@ namespace Game
                 Controls.Clear();
                 Game = new Model.Game(Player.ActiveTeam, Model.Location.SomeLocation);
                 BackgroundImage = Properties.Resources.DarkForest;
-                Controls.Add(new AllControl(Game, Player));
+                Controls.Add(new AllControl(Game, Player){Name = "MainCntrl"});
             };
             Controls.Add(GoHunt);
             Controls.Add(store);
@@ -372,7 +374,7 @@ namespace Game
             // 
             // Form1
             // 
-            this.ClientSize = new System.Drawing.Size(282, 253);
+            this.ClientSize = new System.Drawing.Size(284, 261);
             this.Name = "Form1";
             this.ResumeLayout(false);
         }

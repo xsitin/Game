@@ -7,15 +7,19 @@ namespace Game.Model
     public class HeroesFactory
     {
         private int _level;
-        private Player Player;
-
+        private Player _player;
         public HeroesFactory(Player player)
         {
-            Player = player;
-            _level = (player.Heroes.Max(x => x.Level) / 5) * 5 < 1 ? 1 : (player.Heroes.Max(x => x.Level) / 5) * 5 ;
+            _player = player;
+            var heroes = _player.Heroes.Concat(player.ActiveTeam.GetTeamList()).ToList();
+            _level = (heroes.Max(x => x.Level) / 5) * 5 < 1 ? 1 : (heroes.Max(x => x.Level) / 5) * 5 ;
         }
         
-        public void Update() =>  _level = (Player.Heroes.Max(x => x.Level) / 5) * 5 < 1 ? 1 : (Player.Heroes.Max(x => x.Level) / 5) * 5 ;
+        public void Update()
+        {
+            var heroes = _player.Heroes.Concat(_player.ActiveTeam.GetTeamList()).ToList();
+            _level = (heroes.Max(x => x.Level) / 5) * 5 < 1 ? 1 : (heroes.Max(x => x.Level) / 5) * 5 ;
+        }
 
         private Specialization last = Specialization.Wizard;
         public Hero GetRandomHero()
