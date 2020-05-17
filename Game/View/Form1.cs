@@ -223,7 +223,7 @@ namespace Game
                 };
                 foreach (var hero in Player.Heroes)
                 {
-                    merHero.Controls.Add(new BarrackHeroControl(hero,Player,this));
+                    merHero.Controls.Add(new BarrackHeroControl(hero,Player, this));
                 }
                 var activeHero = new FlowLayoutPanel()
                 {
@@ -235,7 +235,7 @@ namespace Game
                 };
                 foreach (var hero in Player.ActiveTeam.GetTeamList())
                 {
-                    activeHero.Controls.Add(new ActiveTeam(hero as Hero, Player,this));
+                    activeHero.Controls.Add(new ActiveTeam(hero as Hero, Player));
                 }
                 var upgrade = new Panel()
                 {
@@ -248,23 +248,23 @@ namespace Game
                 {
                     AutoScroll = true,
                     BackColor = Color.Transparent,
-                    Size = new Size(320,390),
-                    Location =new Point(430, 500),
+                    Size = new Size(420,390),
+                    Location =new Point(3000, 3000),
                     Name = "Storage"
                 };
                 var herInvent = new FlowLayoutPanel()
                 {
                     AutoScroll = true,
                     BackColor = Color.Transparent,
-                    MinimumSize = new Size(320, 390),
-                    Location = new Point(780, 500),
+                    MinimumSize = new Size(420, 390),
+                    Location = new Point(560, 500),
                     Name = "Inventory"
                 };
-                Controls.Add(herInvent);
-                Controls.Add(invent);
                 Controls.Add(upgrade);
                 Controls.Add(activeHero);
                 Controls.Add(merHero);
+                Controls.Add(invent);
+                Controls.Add(herInvent);
             };
             var store = new Button()
             {
@@ -384,11 +384,6 @@ namespace Game
         private void Form1_Load(object sender, EventArgs e)
         {
 
-        }
-
-        private void Form1_Load_1(object sender, EventArgs e)
-        {
-            throw new System.NotImplementedException();
         }
     }
 }
