@@ -27,10 +27,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0f51531c-d592-4864-9987-5dbb2ad7efa7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Game/Control/BasicHeroCardControle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Game/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Game/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/Control/BarrackHeroControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Game/Control/BarrackHeroControl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/Control/EnemyButton.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Game/Control/EnemyButton.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/Control/EnemyHitBar.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Game/Control/EnemyHitBar.Designer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/Control/HeroInventoryControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Game/Control/HeroInventoryControl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/Game.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Game/Game.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/bin/Debug/Game.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Game/bin/Debug/Game.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/bin/Debug/Game.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Game/bin/Debug/Game.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/obj/Debug/Game.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Game/obj/Debug/Game.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/obj/Debug/Game.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Game/obj/Debug/Game.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Game/obj/Debug/Game.csproj.GenerateResource.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Game/obj/Debug/Game.csproj.GenerateResource.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/obj/Debug/Game.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Game/obj/Debug/Game.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Game/obj/Debug/Game.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Game/obj/Debug/Game.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/obj/Debug/Tests.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/obj/Debug/Tests.csprojAssemblyReference.cache" afterDir="false" />
@@ -104,6 +113,7 @@
     <setting file="file://$PROJECT_DIR$/Game/Model/Team.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Game/packages.config" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Tests/Properties/AssemblyInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Control/BasicHeroCardControle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/21BBF68D-61D6-4A2A-A5C3-E180E6B6706D/5b/a6434a62/Enumerable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Tests/Items_Should.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Game/Control/MercenariesControle.cs" root0="FORCE_HIGHLIGHTING" />
@@ -119,9 +129,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Game/Properties/Names.txt" />
-        <option value="$PROJECT_DIR$/Tests/DatabaseTests.cs" />
-        <option value="$PROJECT_DIR$/Game/Model/Bot.cs" />
         <option value="$PROJECT_DIR$/Game/Properties/Name.Designer.cs" />
         <option value="$PROJECT_DIR$/Game/Properties/Name.resx" />
         <option value="$PROJECT_DIR$/Game/Model/database.cs" />
@@ -167,9 +174,12 @@
         <option value="$PROJECT_DIR$/Game/View/Form1.Designer.cs" />
         <option value="$PROJECT_DIR$/Game/Control/ActiveTeam.cs" />
         <option value="$PROJECT_DIR$/Game/View/Form1.cs" />
-        <option value="$PROJECT_DIR$/Game/Control/BarrackHeroControl.cs" />
         <option value="$PROJECT_DIR$/Game/Control/HeroUpgradeControl.cs" />
+        <option value="$PROJECT_DIR$/Game/Control/BasicHeroCardControle.Designer.cs" />
+        <option value="$PROJECT_DIR$/Game/Control/BasicUserControle.cs" />
+        <option value="$PROJECT_DIR$/Game/Control/BasicHeroCardControle.cs" />
         <option value="$PROJECT_DIR$/Game/Control/HeroInventoryControl.cs" />
+        <option value="$PROJECT_DIR$/Game/Control/BarrackHeroControl.cs" />
       </list>
     </option>
   </component>
@@ -280,6 +290,7 @@
       <workItem from="1589670256013" duration="157000" />
       <workItem from="1589702656564" duration="7428000" />
       <workItem from="1589710150777" duration="174000" />
+      <workItem from="1589712848078" duration="3982000" />
     </task>
     <servers />
   </component>
@@ -357,29 +368,29 @@
     </state>
     <state width="515" height="527" key="DebuggerActiveHint/0.0.1536.864@0.0.1536.864" timestamp="1589705571483" />
     <state width="644" height="635" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1589628526021" />
-    <state width="746" height="223" key="GridCell.Tab.0.bottom" timestamp="1589710324556">
+    <state width="746" height="223" key="GridCell.Tab.0.bottom" timestamp="1589737534717">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1493" height="288" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1589672182043" />
-    <state width="746" height="223" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1589710324556" />
+    <state width="746" height="223" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1589737534717" />
     <state width="1877" height="375" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589629597984" />
-    <state width="746" height="223" key="GridCell.Tab.0.center" timestamp="1589710324556">
+    <state width="746" height="223" key="GridCell.Tab.0.center" timestamp="1589737534717">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1493" height="288" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1589672182043" />
-    <state width="746" height="223" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1589710324556" />
+    <state width="746" height="223" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1589737534717" />
     <state width="1877" height="375" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589629597980" />
-    <state width="746" height="223" key="GridCell.Tab.0.left" timestamp="1589710324556">
+    <state width="746" height="223" key="GridCell.Tab.0.left" timestamp="1589737534717">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1493" height="288" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1589672182043" />
-    <state width="746" height="223" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1589710324556" />
+    <state width="746" height="223" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1589737534717" />
     <state width="1877" height="375" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589629597980" />
-    <state width="746" height="223" key="GridCell.Tab.0.right" timestamp="1589710324556">
+    <state width="746" height="223" key="GridCell.Tab.0.right" timestamp="1589737534717">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1493" height="288" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1589672182043" />
-    <state width="746" height="223" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1589710324556" />
+    <state width="746" height="223" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1589737534717" />
     <state width="1877" height="375" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589629597984" />
     <state width="1298" height="277" key="GridCell.Tab.1.bottom" timestamp="1589710090193">
       <screen x="0" y="0" width="1536" height="864" />
