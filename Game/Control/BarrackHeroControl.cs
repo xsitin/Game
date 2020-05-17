@@ -40,7 +40,10 @@ namespace Game.Control
             MinimumSize = _size;
             var toSecondLine = new Button()
             {
-                BackColor = Color.Transparent,
+                BackColor = Color.Gray,
+                Text = "Вторая Линия",
+                Font = new Font(FontFamily.GenericSerif, 12),
+                ForeColor = Color.DarkRed,
                 FlatStyle = FlatStyle.Flat,
                 Bounds = new Rectangle(153,193,120,34)
             };
@@ -58,7 +61,10 @@ namespace Game.Control
             };
             var upgrade = new Button()
             {
-                BackColor = Color.Transparent,
+                BackColor = Color.Goldenrod,
+                Text = "Прокачка" + $"[{hero.UpgradePoints}]",
+                ForeColor = Color.DarkRed,
+                Font = new Font(FontFamily.GenericSerif, 12),
                 FlatStyle = FlatStyle.Flat,
                 Bounds = new Rectangle(31, 35, 120, 34)
             };
@@ -73,7 +79,7 @@ namespace Game.Control
             var inventory = new Button()
             {
                 BackColor = Color.Goldenrod,
-                Text = "ИНВЕНТАРЬ",
+                Text = "Инвентарь",
                 Font = new Font(FontFamily.GenericSerif, 12) ,
                 ForeColor = Color.DarkRed,
                 FlatStyle = FlatStyle.Flat,
@@ -89,19 +95,6 @@ namespace Game.Control
             Controls.Add(toSecondLine);
             Controls.Add(toFirstLine);
             Controls.Add(new BasicHeroCardControl(_hero,_player));
-        }
-        
-        protected override void OnPaint(PaintEventArgs e)
-        {
-            var brush = new SolidBrush(Color.Brown);
-            var brush1 = new SolidBrush(Color.Black);
-            if (_hero.UpgradePoints > 0)
-            {
-                e.Graphics.FillRectangle(new SolidBrush(Color.Goldenrod),new RectangleF(31,35 ,120,34));
-                e.Graphics.DrawString("Прокачка", new Font(FontFamily.GenericSerif, 14), brush, 44, 39);
-            }
-            e.Graphics.FillRectangle(new SolidBrush(Color.Gray), new RectangleF(153,193,120,34));
-            e.Graphics.DrawString("Во Вторую\n  Линию",new Font(FontFamily.GenericSerif, 11),brush,178,193);
         }
     }
 }

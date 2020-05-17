@@ -6,13 +6,13 @@ namespace Game.Control
 {
     public sealed class UpgradeSkill : UserControl
     {
-        private Size _size = new Size(20,20);
+        private Size _size = new Size(22,22);
         private Skill _skill;
         private Hero _hero;
 
         public UpgradeSkill(Hero hero, Skill skill, int x, int y)
         {
-            MinimumSize = _size;
+            MaximumSize = _size;
             _hero = hero;
             _skill = skill;
             Location = new Point(x,y);

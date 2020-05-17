@@ -290,7 +290,7 @@ namespace Game
                 };
                 foreach (var mercenary in Player.Mercenaries)
                 {
-                    floatPanel.Controls.Add(new MercenariesControle(mercenary,Player));
+                    floatPanel.Controls.Add(new MercenariesControl(mercenary,Player));
                 }
                 Controls.Add(new GoldControl(Player)
                 {

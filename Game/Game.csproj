@@ -113,7 +113,6 @@
     </Compile>
     <Compile Include="Control\HeroInventoryControl.cs" />
     <Compile Include="Control\HeroUpgradeControl.cs" />
-    <Compile Include="Control\InventoryControl.cs" />
     <Compile Include="Control\MpPotionControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -153,7 +152,7 @@
     <Compile Include="Control\InterfaceControl.Designer.cs">
       <DependentUpon>InterfaceControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Control\MercenariesControle.cs">
+    <Compile Include="Control\MercenariesControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Control\PersonControl.cs">

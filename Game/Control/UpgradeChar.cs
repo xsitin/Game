@@ -7,20 +7,21 @@ namespace Game.Control
 {
     public sealed class UpgradeChar : UserControl
     {
-        private Size _size = new Size(20,20);
         private Characteristics _ch;
         private Hero _hero;
+        private Size _size = new Size(22,22);
+
         public UpgradeChar(Characteristics characteristic, Hero hero,int x, int y)
         {
-            MinimumSize = _size;
+            MaximumSize = _size;
             _hero = hero;
             _ch = characteristic;
             Location = new Point(x,y);
             var up = new Button()
             {
+                MaximumSize = _size,
                 BackColor = Color.Transparent,
                 FlatStyle = FlatStyle.Flat,
-                Bounds = new Rectangle(1, 0, 20, 20)
             };
             up.Click += (sender, args) =>
             {
@@ -33,9 +34,7 @@ namespace Game.Control
                     foreach (var sk in _hero.Skills)
                     {
                         if (sk.Name == "Base Hit")
-                        {
                             sk.Upgrade();
-                        }
                         _hero.Characteristics[_ch] = (int) (_hero.Characteristics[_ch] * 1.2);
                     }
                 }
@@ -47,7 +46,6 @@ namespace Game.Control
             };
             Controls.Add(up);
         }
-
         protected override void OnPaint(PaintEventArgs e)
         {
             var brush = new SolidBrush(Color.Gold);

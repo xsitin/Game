@@ -31,8 +31,7 @@
           <e p="HpPotionsControl.resx" t="Include" />
           <e p="InterfaceControl.cs" t="Include" />
           <e p="InterfaceControl.Designer.cs" t="Include" />
-          <e p="InventoryControl.cs" t="Include" />
-          <e p="MercenariesControle.cs" t="Include" />
+          <e p="MercenariesControl.cs" t="Include" />
           <e p="MpPotionControl.cs" t="Include" />
           <e p="MpPotionControl.resx" t="Include" />
           <e p="PersonControl.cs" t="Include" />

@@ -19,7 +19,10 @@ namespace Game.Control
             _form1 = form1;
             var back = new Button()
             {
-                BackColor = Color.Transparent,
+                Text = "Закончить",
+                Font = new Font(FontFamily.GenericSerif, 14),
+                ForeColor = Color.DarkRed,
+                BackColor = Color.Gray,
                 FlatStyle = FlatStyle.Flat,
                 Bounds = new Rectangle(31,191,245,34)
             };
@@ -67,40 +70,15 @@ namespace Game.Control
             };
             back.Click += (sender, args) =>
             {
-                form1.Controls["Inventory"].Controls.Clear();
-                form1.Controls["Inventory"].Refresh();
-                form1.Controls["Storage"].Controls.Clear();
-                form1.Controls["Storage"].Refresh();
+                _form1.Controls["Inventory"].Controls.Clear();
+                _form1.Controls["Inventory"].Refresh();
+                _form1.Controls["Storage"].Controls.Clear();
+                _form1.Controls["Storage"].Refresh();
             };
             Controls.Add(back);
+            Controls.Add(new BasicHeroCardControl(_hero,_player));
         }
-
-        protected override void OnPaint(PaintEventArgs e)
-        {
-            var brush = new SolidBrush(Color.Brown);
-            var brush1 = new SolidBrush(Color.Gray);
-            e.Graphics.DrawImage(Properties.Resources.HeroCard, new Rectangle(0,0,_size.Width, _size.Height));
-            e.Graphics.DrawString(_hero.Name.ToString(),new Font(FontFamily.GenericSerif, 12),brush,270,34);
-            e.Graphics.DrawString(_hero.Specialization.ToString(),new Font(FontFamily.GenericSerif, 12),brush,270,64);
-            e.Graphics.DrawString(_hero.Characteristics[Characteristics.Health].ToString(),new Font(FontFamily.GenericSerif, 12),brush,333,135);
-            e.Graphics.DrawString(_hero.Characteristics[Characteristics.Mana].ToString(),new Font(FontFamily.GenericSerif, 12),brush,333,172);
-            e.Graphics.DrawString(_hero.Characteristics[Characteristics.Initiative].ToString(),new Font(FontFamily.GenericSerif, 12),brush,355,199);
-            e.Graphics.DrawString(_hero.Characteristics[Characteristics.PhysicalDamage].ToString(),new Font(FontFamily.GenericSerif, 12),brush,333,305);
-            e.Graphics.DrawString(_hero.Characteristics[Characteristics.MagicalProtection].ToString(),new Font(FontFamily.GenericSerif, 12),brush,179,293);
-            e.Graphics.DrawString(_hero.Characteristics[Characteristics.PhysicalProtection].ToString(),new Font(FontFamily.GenericSerif, 12),brush,179,275);
-            e.Graphics.DrawString(_hero.Characteristics[Characteristics.Evasion].ToString(),new Font(FontFamily.GenericSerif, 12),brush,179,256);
-            e.Graphics.DrawImage(Helper.ImageTransfer[_hero.Specialization], 105,70);
-            var dy = 0;
-            foreach (var skill in _hero.Skills.Skip(1))
-            {
-                e.Graphics.DrawString(skill.Name,new Font(FontFamily.GenericSerif, 12),brush,79,256 + dy);
-                e.Graphics.DrawString(skill.Level.ToString(),new Font(FontFamily.GenericSerif, 12),brush,49,256 + dy);
-                dy += 19;
-            }
-            e.Graphics.FillRectangle(brush1, new RectangleF(31,191,245,34));
-            e.Graphics.DrawString("Закончить",new Font(FontFamily.GenericSerif, 15),brush,100,195);
-        }
-
+        
         public override void Refresh()
         {
             _form1.Controls["Inventory"].Controls.Clear();
@@ -136,7 +114,6 @@ namespace Game.Control
                     _hero.Inventory.Heap.Remove(item);
                     _player.Storage.Add(item);
                     Refresh();
-
                 };
                 _form1.Controls["Inventory"].Controls.Add(remove);
             }

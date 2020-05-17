@@ -18,7 +18,10 @@ namespace Game.Control
             MinimumSize = _size;
             var exile = new Button()
             {
-                BackColor = Color.Transparent,
+                Text = "Убрать из команды",
+                Font = new Font(FontFamily.GenericSerif, 15),
+                ForeColor = Color.DarkRed,
+                BackColor = Color.Gray,
                 FlatStyle = FlatStyle.Flat,
                 Bounds = new Rectangle(38,191,235,34),
             };
@@ -28,6 +31,7 @@ namespace Game.Control
                     player.ActiveTeam.FirstLine.Remove(hero);
                 else
                     player.ActiveTeam.SecondLine.Remove(hero);
+                _hero.Position = _hero.Specialization == Specialization.Warrior ? Position.Melee : Position.Range;
                 player.Heroes.Add(hero);
                 Parent.Parent.Controls["MerHero"].Controls.Add(new BarrackHeroControl(hero,player,form1));
                 Parent.Parent.Controls["MerHero"].Refresh();
@@ -35,7 +39,10 @@ namespace Game.Control
             };
             var upgrade = new Button()
             {
-                BackColor = Color.Transparent,
+                BackColor = Color.Goldenrod,
+                Text = "Прокачка" + $"[{hero.UpgradePoints}]",
+                ForeColor = Color.DarkRed,
+                Font = new Font(FontFamily.GenericSerif, 12),
                 FlatStyle = FlatStyle.Flat,
                 Bounds = new Rectangle(31, 35, 120, 34)
             };
@@ -49,7 +56,10 @@ namespace Game.Control
                 Controls.Add(upgrade);
             var inventory = new Button()
             {
-                BackColor = Color.Transparent,
+                BackColor = Color.Goldenrod,
+                Text = "Инвентарь",
+                Font = new Font(FontFamily.GenericSerif, 12) ,
+                ForeColor = Color.DarkRed,
                 FlatStyle = FlatStyle.Flat,
                 Bounds =new Rectangle(153,35 ,110,34)
             };
@@ -61,38 +71,7 @@ namespace Game.Control
             };
             Controls.Add(inventory);
             Controls.Add(exile);
-        }
-        
-        protected override void OnPaint(PaintEventArgs e)
-        {
-            var brush = new SolidBrush(Color.Brown);
-            e.Graphics.DrawImage(Properties.Resources.HeroCard, new Rectangle(0,0,_size.Width, _size.Height));
-            e.Graphics.DrawString(_hero.Name.ToString(),new Font(FontFamily.GenericSerif, 12),brush,270,34);
-            e.Graphics.DrawString(_hero.Specialization.ToString() +"|"+ _hero.Position.ToString(),new Font(FontFamily.GenericSerif, 12),brush,270,64);
-            e.Graphics.DrawString(_hero.Characteristics[Characteristics.Health].ToString(),new Font(FontFamily.GenericSerif, 12),brush,333,135);
-            e.Graphics.DrawString(_hero.Characteristics[Characteristics.Mana].ToString(),new Font(FontFamily.GenericSerif, 12),brush,333,172);
-            e.Graphics.DrawString(_hero.Characteristics[Characteristics.Initiative].ToString(),new Font(FontFamily.GenericSerif, 12),brush,355,199);
-            e.Graphics.DrawString(_hero.Characteristics[Characteristics.PhysicalDamage].ToString(),new Font(FontFamily.GenericSerif, 12),brush,333,305);
-            e.Graphics.DrawString(_hero.Characteristics[Characteristics.MagicalProtection].ToString(),new Font(FontFamily.GenericSerif, 12),brush,179,293);
-            e.Graphics.DrawString(_hero.Characteristics[Characteristics.PhysicalProtection].ToString(),new Font(FontFamily.GenericSerif, 12),brush,179,275);
-            e.Graphics.DrawString(_hero.Characteristics[Characteristics.Evasion].ToString(),new Font(FontFamily.GenericSerif, 12),brush,179,256);
-            var dy = 0;
-            foreach (var skill in _hero.Skills.Skip(1))
-            {
-                e.Graphics.DrawString(skill.Name,new Font(FontFamily.GenericSerif, 12),brush,79,256 + dy);
-                e.Graphics.DrawString(skill.Level.ToString(),new Font(FontFamily.GenericSerif, 12),brush,49,256 + dy);
-                dy += 19;
-            }
-            if (_hero.UpgradePoints > 0)
-            {
-                e.Graphics.FillRectangle(new SolidBrush(Color.Goldenrod),new RectangleF(31,35 ,120,34));
-                e.Graphics.DrawString("Прокачка", new Font(FontFamily.GenericSerif, 14), brush, 44, 39);
-            }
-            e.Graphics.FillRectangle(new SolidBrush(Color.Goldenrod),new RectangleF(153,35 ,110,34));
-            e.Graphics.DrawString("Инвентарь", new Font(FontFamily.GenericSerif, 14), brush, 158, 39);
-            e.Graphics.DrawImage(Helper.ImageTransfer[_hero.Specialization], 105,70);
-            e.Graphics.FillRectangle(new SolidBrush(Color.Gray), new Rectangle(38,191,235,34));
-            e.Graphics.DrawString("Убрать из команды",new Font(FontFamily.GenericSerif, 15),brush,72,195);
+            Controls.Add(new BasicHeroCardControl(_hero,_player));
         }
     }
 }

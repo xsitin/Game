@@ -13,13 +13,17 @@ namespace Game.Control
         private Size _size = new Size(420,390);
         public HeroUpgradeControl(Hero hero, Player player, Form1 form1)
         {
+            var dy = 0;
             _hero = hero;
             MinimumSize = _size;
             this.player = player;
             Name = "HeroUpgrade";
             var back = new Button()
             {
-                BackColor = Color.Transparent,
+                Text = "Закончить прокачку",
+                Font = new Font(FontFamily.GenericSerif, 14),
+                ForeColor = Color.DarkRed,
+                BackColor = Color.Gray,
                 FlatStyle = FlatStyle.Flat,
                 Bounds = new Rectangle(31, 193, 240, 34)
             };
@@ -32,7 +36,6 @@ namespace Game.Control
                 Dispose();
             };
             Controls.Add(back);
-            var dy = 0;
             Controls.Add(new UpgradeChar(Characteristics.PhysicalDamage, _hero, 363, 305));
             Controls.Add(new UpgradeChar(Characteristics.MagicalProtection, _hero, 280, 293));
             Controls.Add(new UpgradeChar(Characteristics.PhysicalProtection, _hero, 280, 275));
@@ -45,41 +48,7 @@ namespace Game.Control
                 Controls.Add(new UpgradeSkill(hero, skill, 145, 256 + dy));
                 dy += 19;
             }
-        }
-
-        protected override void OnPaint(PaintEventArgs e)
-        {
-            var brush = new SolidBrush(Color.Brown);
-            var brush1 = new SolidBrush(Color.Black);
-            e.Graphics.DrawImage(Properties.Resources.HeroCard, new Rectangle(0, 0, _size.Width, _size.Height));
-            e.Graphics.DrawString(_hero.Name.ToString(), new Font(FontFamily.GenericSerif, 12), brush, 270, 34);
-            e.Graphics.DrawString(_hero.Specialization.ToString(), new Font(FontFamily.GenericSerif, 12), brush, 270,
-                64);
-            e.Graphics.DrawString(_hero.Characteristics[Characteristics.Health].ToString(),
-                new Font(FontFamily.GenericSerif, 12), brush, 333, 135);
-            e.Graphics.DrawString(_hero.Characteristics[Characteristics.Mana].ToString(),
-                new Font(FontFamily.GenericSerif, 12), brush, 333, 172);
-            e.Graphics.DrawString(_hero.Characteristics[Characteristics.Initiative].ToString(),
-                new Font(FontFamily.GenericSerif, 12), brush, 355, 199);
-            e.Graphics.DrawString(_hero.Characteristics[Characteristics.PhysicalDamage].ToString(),
-                new Font(FontFamily.GenericSerif, 12), brush, 333, 305);
-            e.Graphics.DrawString(_hero.Characteristics[Characteristics.MagicalProtection].ToString(),
-                new Font(FontFamily.GenericSerif, 12), brush, 179, 293);
-            e.Graphics.DrawString(_hero.Characteristics[Characteristics.PhysicalProtection].ToString(),
-                new Font(FontFamily.GenericSerif, 12), brush, 179, 275);
-            e.Graphics.DrawString(_hero.Characteristics[Characteristics.Evasion].ToString(),
-                new Font(FontFamily.GenericSerif, 12), brush, 179, 256);
-            var dy = 0;
-            foreach (var skill in _hero.Skills.Skip(1))
-            {
-                e.Graphics.DrawString(skill.Name, new Font(FontFamily.GenericSerif, 12), brush, 79, 256 + dy);
-                e.Graphics.DrawString(skill.Level.ToString(), new Font(FontFamily.GenericSerif, 12), brush, 49,
-                    256 + dy);
-                dy += 19;
-            }
-            e.Graphics.DrawImage(Helper.ImageTransfer[_hero.Specialization], 105, 70);
-            e.Graphics.FillRectangle(new SolidBrush(Color.Gray), new RectangleF(31, 193, 240, 34));
-            e.Graphics.DrawString("Закончить Прокачку", new Font(FontFamily.GenericSerif, 18), brush, 38, 195);
+            Controls.Add(new BasicHeroCardControl(_hero, player));
         }
 
         public override void Refresh()
@@ -89,7 +58,10 @@ namespace Game.Control
                 Controls.Clear();
                 var back = new Button()
                 {
-                    BackColor = Color.Transparent,
+                    Text = "Закончить прокачку",
+                    Font = new Font(FontFamily.GenericSerif, 14),
+                    ForeColor = Color.DarkRed,
+                    BackColor = Color.Gray,
                     FlatStyle = FlatStyle.Flat,
                     Bounds = new Rectangle(31, 193, 240, 34)
                 };
@@ -102,6 +74,7 @@ namespace Game.Control
                     Dispose();
                 };
                 Controls.Add(back);
+                Controls.Add(new BasicHeroCardControl(_hero, player));
             }
             base.Refresh();
         }
