@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Windows.Forms;
 
 namespace Game.Model
 {
@@ -70,13 +71,12 @@ namespace Game.Model
 
             if (!Enemy.GetTeamList().Any())
             {
-                //ask
+                var res = MessageBox.Show("Хотите продолжить?");
                 var heroes = Heroes.GetTeamList();
                 var level = heroes.Sum(x => (x as Hero).Level) / heroes.Count();
                 _reward.exp += (int) Math.Round(100 + level * 100 + 300 * Math.Pow(level, 0.5)) / 4;
                 _reward.money += level * 200;
-                var ask = new Random().Next(0, 2) == 1;
-                if (ask)
+                if (res == DialogResult.Yes)
                 {
                     Enemy = _enemyFactory.GetEnemyTeam();
                     return;

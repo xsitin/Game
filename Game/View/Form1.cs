@@ -170,12 +170,15 @@ namespace Game
             var apply = new Button {Text = "Подтвердить",Bounds = new Rectangle(0,0,100,40),Margin = new Padding(150,20,0,0)};
             apply.Click += (b, e) =>
             {
+                var spec = (Specialization) Enum.Parse(typeof(Specialization), choice);
+                var h = new Hero(spec);
+                h.Skills.AddRange(Helper.BasicSkills[spec]);
                 var pl = new Player()
                 {
-                    PlayerName = name.Text, Gold = 100,
+                    PlayerName = name.Text, Gold = 10000,
                     Heroes = new List<Hero>()
                     {
-                        new Hero((Specialization) Enum.Parse(typeof(Specialization), choice))
+                        h
                     },
                     Mercenaries = new List<Hero>(), Shop = new List<ActiveItem>(), Storage = new List<ActiveItem>()
                 };

@@ -5,6 +5,7 @@ using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
 using Newtonsoft.Json;
+using NUnit.Framework.Constraints;
 
 namespace Game.Model
 {
@@ -25,6 +26,13 @@ namespace Game.Model
             {Specialization.Archer, Properties.Resources.Archer}
         };
         
+        public static readonly Dictionary<Specialization, Image> EnemyImageTransfer = new Dictionary<Specialization, Image>
+        {
+            {Specialization.Wizard, Properties.Resources.EnemyWizard},
+            {Specialization.Warrior, Properties.Resources.EnemyWarrior},
+            {Specialization.Archer, Properties.Resources.EnemyArcher}
+        };
+
         public static Dictionary<Specialization, List<Skill>> BasicSkills = new Dictionary<Specialization, List<Skill>>
         {
             {
@@ -48,9 +56,9 @@ namespace Game.Model
                 Specialization.Warrior,
                 new List<Skill>
                 {
-                    new Skill(20, new[] {(Characteristics.Health, -20)}, SkillRange.Single, "OraOraOraOra",
+                    new Skill(20, new[] {(Characteristics.Health, -20)}, SkillRange.Single, "OraOra",
                         new Buff(2, "Stan", (Characteristics.Initiative, -100))),
-                    new Skill(50, new[] {(Characteristics.Health, -40)}, SkillRange.Enemies, "OraOraOraOra OnTeam",
+                    new Skill(50, new[] {(Characteristics.Health, -40)}, SkillRange.Enemies, "OraOra OnTeam",
                         null)
                 }
             }
@@ -60,7 +68,7 @@ namespace Game.Model
 
         public static string GetName()
         {
-            var Names = Properties.Resources.Names.Split(new string[]{"\r\n"}, StringSplitOptions.RemoveEmptyEntries);
+            var Names = Properties.Resources.Names.Split(new string[] {"\r\n"}, StringSplitOptions.RemoveEmptyEntries);
             var r = new Random();
             var val = r.Next(0, Names.Length - 1);
             while (val == previous)
@@ -71,26 +79,28 @@ namespace Game.Model
 
         public static void SaveGame(Player player)
         {
-            var serialized = JsonConvert.SerializeObject(player);
-            var way = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            way = Path.Combine(way, "Game");
-            var sw = File.CreateText(Path.Combine(way,player.PlayerName));
-            sw.Write(serialized);
-            sw.Close();
+            // var serialized = JsonConvert.SerializeObject(player);
+            // var way = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            // way = Path.Combine(way, "Game");
+            // var sw = File.CreateText(Path.Combine(way,player.PlayerName));
+            // sw.Write(serialized);
+            // sw.Close();
         }
 
         public static Player LoadGame(string playerName)
         {
-            var way = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            way = Path.Combine(way, "Game");
-            way =Path.Combine(way,playerName);
-            if (File.Exists(way))
-            {
-                var text = File.ReadAllText(way);
-                return JsonConvert.DeserializeObject<Player>(text);
-            }
+            // var way = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            // way = Path.Combine(way, "Game");
+            // way = Path.Combine(way, playerName);
+            // if (File.Exists(way))
+            // {
+            //     var text = File.ReadAllText(way);
+            //     return
+            //         JsonConvert.DeserializeObject<Player>()
+            // }
 
-            return null;
+            return new Player();
         }
+        //private string Save = @"{"Gold":100,"PlayerName":"Player1","Heroes":[{"Inventory":{"Heap":[],"Size":0},"Buffs":[],"StandardChars":{"Health":200,"Mana":100,"Initiative":30,"PhysicalDamage":15,"PhysicalProtection":20,"Evasion":10,"MagicalProtection":10},"UpgradePoints":0,"Exp":0,"Name":"Lyur","Characteristics":{"Health":200,"Mana":100,"Initiative":30,"PhysicalDamage":15,"PhysicalProtection":20,"Evasion":10,"MagicalProtection":10},"Level":1,"Location":0,"Specialization":1,"Skills":[{"Range":3,"IsMagic":false,"Name":"Base Hit","Level":1,"ManaCost":0,"Effect":[{"Item1":0,"Item2":-15}],"Buff":null}],"Position":0},{"Inventory":{"Heap":[],"Size":0},"Buffs":[],"StandardChars":{"Health":200,"Mana":100,"Initiative":30,"PhysicalDamage":15,"PhysicalProtection":20,"Evasion":10,"MagicalProtection":10},"UpgradePoints":0,"Exp":0,"Name":"Soks","Characteristics":{"Health":200,"Mana":100,"Initiative":30,"PhysicalDamage":15,"PhysicalProtection":20,"Evasion":10,"MagicalProtection":10},"Level":1,"Location":0,"Specialization":2,"Skills":[{"Range":3,"IsMagic":false,"Name":"Base Hit","Level":1,"ManaCost":0,"Effect":[{"Item1":0,"Item2":-15}],"Buff":null}],"Position":1}],"Mercenaries":[{"Inventory":{"Heap":[],"Size":0},"Buffs":[],"StandardChars":{"Health":200,"Mana":100,"Initiative":30,"PhysicalDamage":15,"PhysicalProtection":20,"Evasion":10,"MagicalProtection":10},"UpgradePoints":0,"Exp":0,"Name":"Lyur","Characteristics":{"Health":200,"Mana":100,"Initiative":30,"PhysicalDamage":15,"PhysicalProtection":20,"Evasion":10,"MagicalProtection":10},"Level":1,"Location":0,"Specialization":1,"Skills":[{"Range":3,"IsMagic":false,"Name":"Base Hit","Level":1,"ManaCost":0,"Effect":[{"Item1":0,"Item2":-15}],"Buff":null}],"Position":0},{"Inventory":{"Heap":[],"Size":0},"Buffs":[],"StandardChars":{"Health":200,"Mana":100,"Initiative":30,"PhysicalDamage":15,"PhysicalProtection":20,"Evasion":10,"MagicalProtection":10},"UpgradePoints":0,"Exp":0,"Name":"Soks","Characteristics":{"Health":200,"Mana":100,"Initiative":30,"PhysicalDamage":15,"PhysicalProtection":20,"Evasion":10,"MagicalProtection":10},"Level":1,"Location":0,"Specialization":2,"Skills":[{"Range":3,"IsMagic":false,"Name":"Base Hit","Level":1,"ManaCost":0,"Effect":[{"Item1":0,"Item2":-15}],"Buff":null}],"Position":1}],"Storage":[{"Actions":[{"Item1":0,"Item2":20}],"Buff":null,"Action":null,"Name":"heal"}],"Shop":[]}";
     }
 }

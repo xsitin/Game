@@ -9,10 +9,11 @@ namespace Game.Control
 {
     public partial class FieldControl : UserControl
     {
-        private Point[][] _points = new Point[4][] { new Point[4], new Point[4], new Point[4], new Point[4] };
+        private Point[][] _points = new Point[4][] {new Point[4], new Point[4], new Point[4], new Point[4]};
         private List<BasicCreature>[] _creatures;
         private List<Hero> _firstLine;
         private List<Hero> _secondLine;
+
         public FieldControl(Team<Hero> heroes, Team<EnemyHero> enemies)
         {
             BackColor = Color.Transparent;
@@ -49,7 +50,10 @@ namespace Game.Control
             for (int j = 0; j < _creatures[i].Count; j++)
             {
                 if (_creatures[i][j].Characteristics[Characteristics.Health] > 0)
-                    e.Graphics.DrawImage(Helper.ImageTransfer[_creatures[i][j].Specialization], _points[i][j]);
+                    e.Graphics.DrawImage(
+                        _creatures[i][j] is Hero
+                            ? Helper.ImageTransfer[_creatures[i][j].Specialization]
+                            : Helper.EnemyImageTransfer[_creatures[i][j].Specialization], _points[i][j]);
                 else
                     _creatures[i].RemoveAt(j);
             }

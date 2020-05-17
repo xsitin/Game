@@ -24,12 +24,7 @@ namespace Game.Control
                 _game.Enemy.SecondLine.Cast<BasicCreature>().ToList()
             };
         }
-
-        public override void Refresh()
-        {
-            
-            base.Refresh();
-        }
+        
 
         protected override void OnPaint(PaintEventArgs e)
         {
@@ -76,6 +71,7 @@ namespace Game.Control
                                 butt.Click += (o, eventArgs) =>
                                 {
                                     _game.CurrentCreature.UseSkill(skill, _creatures[i1][j1]);
+                                    Controls.Clear();
                                     _game.NextStep();
                                     Parent.Controls["HitPoints"].Refresh();
                                     Parent.Controls["EnemyHitPoints"].Refresh();

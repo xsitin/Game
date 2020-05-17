@@ -102,25 +102,39 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Control\ActiveTeam.cs" />
-    <Compile Include="Control\BarrackHeroControl.cs" />
+    <Compile Include="Control\ActiveTeam.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\BarrackHeroControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Control\EnemyHitBar.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Control\EnemyHitBar.Designer.cs">
       <DependentUpon>EnemyHitBar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Control\HeroInventoryControl.cs" />
-    <Compile Include="Control\HeroUpgradeControl.cs" />
-    <Compile Include="Control\InventoryControl.cs" />
+    <Compile Include="Control\HeroInventoryControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\HeroUpgradeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\InventoryControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Control\MpPotionControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Control\HpPotionsControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Control\UpgradeChar.cs" />
-    <Compile Include="Control\UpgradeSkill.cs" />
+    <Compile Include="Control\UpgradeChar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\UpgradeSkill.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Control\AllControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -139,7 +153,9 @@
     <Compile Include="Control\FieldControl.Designer.cs">
       <DependentUpon>FieldControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Control\GoldControle.cs" />
+    <Compile Include="Control\GoldControle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Control\HitPointBar.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -189,6 +205,9 @@
     </Compile>
     <EmbeddedResource Include="Control\EnemyButton.resx">
       <DependentUpon>EnemyButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\EnemyHitBar.resx">
+      <DependentUpon>EnemyHitBar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Control\FieldControl.resx">
       <DependentUpon>FieldControl.cs</DependentUpon>
@@ -246,6 +265,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Properties\Names.txt" />
+    <None Include="Resources\EnemyWizard.png" />
+    <None Include="Resources\EnemyWarrior.png" />
+    <None Include="Resources\EnemyArcher.png" />
     <None Include="Resources\MPpotion.png" />
     <None Include="Resources\HPpotion.png" />
     <None Include="Resources\GoldBack.png" />

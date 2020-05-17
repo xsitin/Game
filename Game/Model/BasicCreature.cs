@@ -65,7 +65,7 @@ namespace Game.Model
             if (isMagic)
                 Characteristics[Model.Characteristics.Health] +=
                     change * (1 - Characteristics[Model.Characteristics.MagicalProtection] / 100);
-            else if ((new Random()).Next(0, 100) < Characteristics[Model.Characteristics.Evasion])
+            else if ((new Random()).Next(0, 100) > Characteristics[Model.Characteristics.Evasion])
                 Characteristics[Model.Characteristics.Health] +=
                     change * (1 - Characteristics[Model.Characteristics.PhysicalProtection] / 100);
         }
