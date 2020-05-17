@@ -39,7 +39,6 @@ namespace Game.Model
                         targets.Add(game.Enemy.GetTeamList()
                             .OrderBy(x => x.Characteristics[Characteristics.Health])
                             .First(x => x.Characteristics[Characteristics.Health] > 0));
-
                     break;
             }
 

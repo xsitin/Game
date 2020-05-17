@@ -187,11 +187,20 @@
     <Compile Include="View\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Control\AllControl.resx">
+      <DependentUpon>AllControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Control\EnemyButton.resx">
       <DependentUpon>EnemyButton.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Control\EnemyHitBar.resx">
+      <DependentUpon>EnemyHitBar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Control\FieldControl.resx">
       <DependentUpon>FieldControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\HitPointBar.resx">
+      <DependentUpon>HitPointBar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Control\MpPotionControl.resx">
       <DependentUpon>MpPotionControl.cs</DependentUpon>

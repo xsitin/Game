@@ -14,11 +14,13 @@ namespace Game.Control
         private HitPointBar _hitControl;
         private InterfaceControl _skillControl;
         private EnemyHitBar _enemyHitControl;
+        private Form1 _form;
 
-        public AllControl(Model.Game game, Player player)
+        public AllControl(Model.Game game, Player player, Form1 form)
         {
             _game = game;
             _player = player;
+            _form = form;
             _fieldControl = new FieldControl(_game.Heroes, _game.Enemy) {Name = "Field"};
             _fieldControl.Location = new Point(200, 1024);
             _fieldControl.Size = new Size(1366, 150);
@@ -26,7 +28,7 @@ namespace Game.Control
             _hitControl.Location = new Point(0, 170);
             _enemyHitControl = new EnemyHitBar(_game.Enemy.GetTeamList()) {Name = "EnemyHitPoints"};
             _enemyHitControl.Location = new Point(1366, 170);
-            var _skillControl = new InterfaceControl(_game);
+            _skillControl = new InterfaceControl(_game);
             _skillControl.Location = new Point(0, 0);
             _skillControl.Size = new Size(1920, 170);
             Dock = DockStyle.Fill;
@@ -35,6 +37,51 @@ namespace Game.Control
             Controls.Add(_hitControl);
             Controls.Add(_enemyHitControl);
             Controls.Add(_fieldControl);
+        }
+
+        public override void Refresh()
+        {
+            _fieldControl = new FieldControl(_game.Heroes, _game.Enemy) {Name = "Field"};
+            _fieldControl.Location = new Point(200, 1024);
+            _fieldControl.Size = new Size(1366, 150);
+            _hitControl = new HitPointBar(_player.ActiveTeam.GetTeamList()) {Name = "HitPoints"};
+            _hitControl.Location = new Point(0, 170);
+            _enemyHitControl = new EnemyHitBar(_game.Enemy.GetTeamList()) {Name = "EnemyHitPoints"};
+            _enemyHitControl.Location = new Point(1366, 170);
+            _skillControl = new InterfaceControl(_game);
+            _skillControl.Location = new Point(0, 0);
+            _skillControl.Size = new Size(1920, 170);
+            if (_game.IsEnd)
+            {
+                if (!_game.Heroes.GetTeamList().Any(p => p.Characteristics[Characteristics.Health] > 0))
+                {
+                    var result = MessageBox.Show("Вернуться в деревню?", "", MessageBoxButtons.YesNo);
+                    if (result == DialogResult.Yes)
+                    {
+                        Controls.Clear();
+                        _form.VillageControls();
+                    }
+                    else
+                    {
+                        _game.NextStep(true);
+                    }
+                }
+
+                if (!_game.Enemy.GetTeamList().Any(p => p.Characteristics[Characteristics.Health] > 0))
+                {
+                    var result = MessageBox.Show("Вернуться в деревню?", "", MessageBoxButtons.YesNo);
+                    if (result == DialogResult.Yes)
+                    {
+                        Controls.Clear();
+                        _form.VillageControls();
+                    }
+                    else
+                    {
+                        _game.NextStep(true);
+                    }
+                }
+            }
+            base.Refresh();
         }
     }
 }
