@@ -223,3 +223,7 @@ C:\Users\Loliconshik\Documents\GitHub\Game\Tests\bin\Debug\Image\cont.png
 C:\Users\Loliconshik\Documents\GitHub\Game\Tests\bin\Debug\Image\load.png
 C:\Users\Loliconshik\Documents\GitHub\Game\Tests\bin\Debug\Image\newGame.png
 C:\Users\Loliconshik\Documents\GitHub\Game\Tests\bin\Debug\Image\StartGameArt.jpg
+C:\Users\walue\OneDrive\Документы\GitHub\Game\Tests\bin\Debug\Image\cont.png
+C:\Users\walue\OneDrive\Документы\GitHub\Game\Tests\bin\Debug\Image\load.png
+C:\Users\walue\OneDrive\Документы\GitHub\Game\Tests\bin\Debug\Image\newGame.png
+C:\Users\walue\OneDrive\Документы\GitHub\Game\Tests\bin\Debug\Image\StartGameArt.jpg

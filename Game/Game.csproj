@@ -255,6 +255,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Properties\Names.txt" />
+    <None Include="Resources\Skroll.png" />
     <None Include="Resources\MPpotion.png" />
     <None Include="Resources\HPpotion.png" />
     <None Include="Resources\GoldBack.png" />

@@ -7,11 +7,14 @@ using System.IO;
 using System.Linq;
 using System.Numerics;
 using System.Runtime.Remoting.Channels;
+using System.Security.AccessControl;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Game.Control;
 using Game.Model;
+using Game.Properties;
 
 namespace Game
 {
@@ -24,40 +27,48 @@ namespace Game
         public Form1()
         {
             DoubleBuffered = true;
-            Table = new TableLayoutPanel();
-            Table.Dock = DockStyle.Fill;
-            Controls.Add(Table);
+            Table = new TableLayoutPanel {Dock = DockStyle.Fill};
         }
 
         public void ShowMenu()
         {
-            GetSaveNames();
-            Table.RowStyles.Clear();
-            Table.ColumnStyles.Clear();
-            Table.Controls.Clear();
+            //ClearTable();
             Table.RowStyles.Add(new RowStyle(SizeType.Percent, 50));
             Table.RowStyles.Add(new RowStyle(SizeType.Percent, 50));
             Table.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 30));
             Table.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 70));
             var menu = new TableLayoutPanel();
             Table.BackColor = Color.Transparent;
-            var newGame = new Button() {Dock = DockStyle.Fill, Margin = new Padding(20)};
-            newGame.BackgroundImage = Properties.Resources.newGame;
-            newGame.BackgroundImageLayout = ImageLayout.Stretch;
+            var newGame = new Button
+            {
+                Dock = DockStyle.Fill,
+                Margin = new Padding(20),
+                BackgroundImage = Properties.Resources.newGame,
+                BackgroundImageLayout = ImageLayout.Stretch
+            };
             newGame.Click += (a, b) => { CreateNewGameScreen(); };
-            var loadGame = new Button() {Dock = DockStyle.Fill, Margin = new Padding(20)};
-            loadGame.BackgroundImage = Properties.Resources.load;
-            loadGame.BackgroundImageLayout = ImageLayout.Stretch;
+            var loadGame = new Button
+            {
+                Dock = DockStyle.Fill,
+                Margin = new Padding(20),
+                BackgroundImage = Properties.Resources.load,
+                BackgroundImageLayout = ImageLayout.Stretch
+            };
             loadGame.Click += (sender, args) =>
             {
                 CleanForm();
                 LoadScreen();
             };
-            var continueGame = new Button() {Dock = DockStyle.Fill, Margin = new Padding(20)};
-            continueGame.BackgroundImage = Properties.Resources.cont;
-            continueGame.BackgroundImageLayout = ImageLayout.Stretch;
+            var continueGame = new Button
+            {
+                Dock = DockStyle.Fill,
+                Margin = new Padding(20),
+                BackgroundImage = Properties.Resources.cont,
+                BackgroundImageLayout = ImageLayout.Stretch
+            };
             continueGame.Click += (sender, args) =>
             {
+                Invalidate();
                 CleanForm();
                 Player = Helper.LoadGame(GetSaveNames().First());
                 VillageControls();
@@ -78,6 +89,7 @@ namespace Game
             Table.Controls.Add(new Panel(), 1, 1);
             Table.Controls.Add(new Panel(), 0, 1);
             WindowState = FormWindowState.Maximized;
+            Controls.Add(Table);
         }
 
         private void LoadScreen()
@@ -86,16 +98,18 @@ namespace Game
             {
                 AutoScroll = true,
                 BackColor = Color.Transparent,
-                Size = new Size(420, 900),
-                Location = new Point(550, 250)
+                Bounds = new Rectangle(550, 250, 500, 600),
+                BackgroundImage = Resources.Skroll,
+                BackgroundImageLayout = ImageLayout.Stretch
             };
+            flowPanel.Controls.Add(new Label() {Text = "Загрузить игру"});
             var savesNames = GetSaveNames();
             foreach (var saveName in savesNames)
             {
                 var save = new Button()
                 {
                     Text = saveName,
-                    Size = new Size(400, 50)
+                    Bounds = new Rectangle(200, 10, 400, 50)
                 };
                 save.Click += (o, eventArgs) =>
                 {
@@ -108,6 +122,16 @@ namespace Game
                 flowPanel.Controls.Add(save);
             }
 
+            var back = new Button {
+                Text = "Вернуться",
+                Size = new Size(200, 50),
+            };
+            back.Click += (sender, args) =>
+            {
+                CleanForm();
+                ShowMenu();
+            };
+            flowPanel.Controls.Add(back);
             Controls.Add(flowPanel);
         }
 
@@ -127,47 +151,61 @@ namespace Game
 
         public void CreateNewGameScreen()
         {
-            ClearTable();
-            Table.RowStyles.Add(new RowStyle(SizeType.Percent, 50));
-            Table.RowStyles.Add(new RowStyle(SizeType.Percent, 50));
-            Table.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 30));
-            Table.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 70));
-            var playMenu = new TableLayoutPanel() {Dock = DockStyle.Fill};
-            Table.SuspendLayout();
-            playMenu.SuspendLayout();
-            Table.Controls.Add(new Panel(), 0, 1);
-            Table.Controls.Add(new Panel(), 1, 0);
-            Table.Controls.Add(new Panel(), 1, 1);
-            playMenu.RowStyles.Add(new RowStyle(SizeType.Percent, 30));
-            playMenu.RowStyles.Add(new RowStyle(SizeType.Percent, 30));
-            playMenu.RowStyles.Add(new RowStyle(SizeType.Percent, 30));
-            playMenu.RowStyles.Add(new RowStyle(SizeType.Percent, 30));
-            playMenu.ColumnStyles.Add(new ColumnStyle());
-            var name = new TextBox();
-            name.TextAlign = HorizontalAlignment.Center;
-            name.Dock = DockStyle.None;
-            name.Size = new Size(Width / 5, Height / 5);
-            name.Text = "Your name";
+            CleanForm();
+            var playMenu = new Panel
+            {
+                Bounds = new Rectangle(500, 180, 500, 400),
+                BackColor = Color.Transparent,
+                BackgroundImage = Resources.Skroll,
+                BackgroundImageLayout = ImageLayout.Stretch
+            };
+            var message = new Label()
+            {
+                Text = "Создание Вашего персонажа", 
+                Bounds = new Rectangle(160, 30, 300, 20),
+                Font = new Font(FontFamily.GenericSerif, 12)
+            };
+            var message2 = new Label() { 
+                Text = "Введите Ваше имя", 
+                Bounds = new Rectangle(190, 80, 300, 20),
+                Font = new Font(FontFamily.GenericSerif, 12)
+            };
+            var message3 = new Label()
+            {
+                Text = "Выберите класс", 
+                Bounds = new Rectangle(205, 125, 300, 20),
+                Font = new Font(FontFamily.GenericSerif, 12)
+            };
+            var name = new TextBox
+            {
+                TextAlign = HorizontalAlignment.Center,
+                Location = new Point(110, 100),
+                Dock = DockStyle.None,
+                Size = new Size(300, 10),
+            };
             name.MouseClick += (a, e) => { ((TextBox) a).Text = ""; };
             name.AcceptsReturn = true;
             name.Margin = new Padding(name.Width / 10);
-            var groupClasses = new Panel();
-            var warriorButton = new RadioButton {Bounds =  new Rectangle(60,10,100,50), Text = "Warrior"};
-            var archerButton = new RadioButton {Bounds =  new Rectangle(160,10,100,50), Text = "Archer"};
-            var wizardButton = new RadioButton {Bounds =  new Rectangle(260,10,100,50), Text = "Wizard"};
+            var groupClasses = new Panel()
+            {
+                Bounds = new Rectangle(115, 130, 500, 50),
+                BackColor = Color.Transparent
+            };
+            var warriorButton = new RadioButton {Bounds = new Rectangle(35,0,70,50), Text = "Воин"};
+            var archerButton = new RadioButton {Bounds =  new Rectangle(115,0,70,50), Text = "Лучник"};
+            var wizardButton = new RadioButton {Bounds =  new Rectangle(205,0,70,50), Text = "Маг"};
             groupClasses.Controls.Add(warriorButton);
             groupClasses.Controls.Add(archerButton);
             groupClasses.Controls.Add(wizardButton);
-            groupClasses.BackColor = Color.Transparent;
-            groupClasses.Bounds = new Rectangle(0,0,500,100);
             var choice = "";
-            warriorButton.Click += (sender, args) => { choice = warriorButton.Text; }; 
-            archerButton.Click += (sender, args) => { choice = archerButton.Text; }; 
-            wizardButton.Click += (sender, args) => { choice = wizardButton.Text; };
-            // persClass.Items.AddRange(Enum.GetNames(typeof(Model.Specialization)));
-            // persClass.MinimumSize = new Size(300, 50);
-            // persClass.Dock = DockStyle.Top;
-            var apply = new Button {Text = "Подтвердить",Bounds = new Rectangle(0,0,100,40),Margin = new Padding(150,20,0,0)};
+            warriorButton.Click += (sender, args) => { choice = "Warrior"; }; 
+            archerButton.Click += (sender, args) => { choice = "Archer"; }; 
+            wizardButton.Click += (sender, args) => { choice = "Wizard"; };
+            var apply = new Button
+            {
+                Text = "Подтвердить",
+                Bounds = new Rectangle(300,290,100,40),
+            };
             apply.Click += (b, e) =>
             {
                 var pl = new Player()
@@ -186,12 +224,24 @@ namespace Game
                 Player = pl;
                 VillageControls();
             };
-            playMenu.Controls.Add(name, 0, 0);
-            playMenu.Controls.Add(groupClasses, 0, 1);
-            playMenu.Controls.Add(apply, 0, 2);
-            Table.Controls.Add(playMenu, 0, 0);
-            playMenu.ResumeLayout();
-            Table.ResumeLayout();
+            var back = new Button()
+            {
+                Text = "Отмена",
+                Bounds = new Rectangle(100, 290, 100, 40)
+            };
+            back.Click += (sender, args) =>
+            {
+                CleanForm();
+                ShowMenu();
+            };
+            playMenu.Controls.Add(message);
+            playMenu.Controls.Add(message2);
+            playMenu.Controls.Add(message3);
+            playMenu.Controls.Add(name);
+            playMenu.Controls.Add(groupClasses);
+            playMenu.Controls.Add(apply);
+            playMenu.Controls.Add(back);
+            Controls.Add(playMenu);
         }
 
         public void VillageControls()
@@ -354,9 +404,7 @@ namespace Game
         public void CleanForm()
         {
             Controls.Clear();
-            Table.RowStyles.Clear();
-            Table.Controls.Clear();
-            Table.ColumnStyles.Clear();
+            ClearTable();
         }
 
         public void ClearTable()
@@ -379,11 +427,6 @@ namespace Game
             this.ClientSize = new System.Drawing.Size(282, 253);
             this.Name = "Form1";
             this.ResumeLayout(false);
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
