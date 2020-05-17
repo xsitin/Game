@@ -34,7 +34,7 @@ namespace Game.Model
         private Hero GetHero(Specialization spec)
         {
             var random = new Random();
-            var hero = new Hero(Helper.GetName(), new Dictionary<Characteristics, int>(), new Inventory(), spec,
+            var hero = new Hero(Helper.GetName(), new Dictionary<Characteristics, int>(), new List<ActiveItem>(), spec,
                 Location.SomeLocation);
 
             while (hero.Skills.Count < 2)

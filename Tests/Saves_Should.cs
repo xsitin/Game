@@ -17,9 +17,9 @@ namespace Tests
         {
             healingPotion = new ActiveItem("heal", new[] { (Characteristics.Health, 20) });            
             heroWarrior = new Hero(Helper.GetName(), new Dictionary<Characteristics, int> {[Characteristics.Health] = 200},
-                new Inventory(), Specialization.Warrior, Position.Melee, Location.SomeLocation);
+                new List<ActiveItem>(), Specialization.Warrior, Position.Melee, Location.SomeLocation);
             heroArcher = new Hero(Helper.GetName(), new Dictionary<Characteristics, int> {[Characteristics.Health] = 200},
-                new Inventory(), Specialization.Archer, Position.Range, Location.SomeLocation);
+                new List<ActiveItem>(), Specialization.Archer, Position.Range, Location.SomeLocation);
             player = new Player
             {
                 PlayerName = "Player1",

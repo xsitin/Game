@@ -31,11 +31,62 @@ namespace Game.Control
         {
             while (_game.CurrentCreature == null)
                 _game.NextStep();
+            var HpPotions = _game.CurrentCreature.Inventory.Where(x => x.Name == "HP Potion").ToList();
+            var MpPotions = _game.CurrentCreature.Inventory.Where(x => x.Name == "MP Potion").ToList();
             e.Graphics.DrawImage(Helper.ImageTransfer[_game.CurrentCreature.Specialization], new Point(20, 20));
             e.Graphics.DrawString(_game.CurrentCreature.Name, new Font(FontFamily.GenericSerif, 12),
                 new SolidBrush(Color.Coral), new Point(20, 120));
             e.Graphics.FillRectangle(new SolidBrush(Color.Gray), new RectangleF(175, 5, 1375, 165));
             e.Graphics.DrawRectangle(new Pen(Color.Black, 5), new Rectangle(170, 0, 1380, 170));
+            if (HpPotions.Any())
+            {
+                e.Graphics.DrawImage(Properties.Resources.HPpotion, new Point(890, 10));
+                if (!Controls.Find("HpPotion", true).Any())
+                {
+                    var hp = new Button()
+                        {Name = "HpPotion", BackColor = Color.Transparent, FlatStyle = FlatStyle.Flat};
+                    hp.FlatAppearance.BorderSize = 0;
+                    hp.FlatAppearance.CheckedBackColor = Color.Transparent;
+                    hp.FlatAppearance.MouseDownBackColor = Color.Transparent;
+                    hp.FlatAppearance.MouseOverBackColor = Color.Transparent;
+                    hp.Bounds = new Rectangle(890, 10, 50, 60);
+                    hp.Click += (a, b) =>
+                    {
+                        _game.CurrentCreature.HpChange(
+                            HpPotions.First().Actions.First(x => x.characteristic == Characteristics.Health).value,
+                            true);
+                        _game.CurrentCreature.Inventory.Remove(HpPotions.First());
+                        HpPotions.Remove(HpPotions.First());
+                        Parent.Refresh();
+                    };
+                    Controls.Add(hp);
+                }
+            }
+
+            if (MpPotions.Any())
+            {
+                e.Graphics.DrawImage(Properties.Resources.MPpotion, new Point(990, 10));
+                if (!Controls.Find("MpPotion", true).Any())
+                {
+                    var mp = new Button()
+                        {Name = "MpPotion", BackColor = Color.Transparent, FlatStyle = FlatStyle.Flat};
+                    mp.FlatAppearance.BorderSize = 0;
+                    mp.FlatAppearance.CheckedBackColor = Color.Transparent;
+                    mp.FlatAppearance.MouseDownBackColor = Color.Transparent;
+                    mp.FlatAppearance.MouseOverBackColor = Color.Transparent;
+                    mp.Bounds = new Rectangle(990, 10, 50, 60);
+                    mp.Click += (a, b) =>
+                    {
+                        _game.CurrentCreature.Characteristics[Characteristics.Mana] +=
+                            MpPotions.First().Actions.First(x => x.characteristic == Characteristics.Mana).value;
+                        _game.CurrentCreature.Inventory.Remove(MpPotions.First());
+                        MpPotions.Remove(MpPotions.First());
+                        Parent.Refresh();
+                    };
+                    Controls.Add(mp);
+                }
+            }
+
             int dy = 0;
             if (_game.CurrentCreature is Hero)
                 for (var k = 0; k < _game.CurrentCreature.Skills.Count; k++)
@@ -126,6 +177,7 @@ namespace Game.Control
                                 Parent.Controls["EnemyHitPoints"].Refresh();
                                 Parent.Controls["Interface"].Refresh();
                             }
+
                             Controls.Clear();
                             Refresh();
                         }

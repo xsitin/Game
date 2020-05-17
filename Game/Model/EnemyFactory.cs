@@ -56,7 +56,7 @@ namespace Game.Model
         private EnemyHero GetEnemy(int minLevel, int maxLevel, Specialization specialization)
         {
             var random = new Random();
-            var enemy = new EnemyHero(Helper.GetName(), new Dictionary<Characteristics, int>(), new Inventory(),
+            var enemy = new EnemyHero(Helper.GetName(), new Dictionary<Characteristics, int>(), new List<ActiveItem>(),
                 specialization, Location);
             var points = GetRandom(minLevel, maxLevel) - 1;
             while (enemy.Skills.Count < 2)

@@ -168,7 +168,7 @@ namespace Tests
                     {Characteristics.MagicalProtection, 5},
                     {Characteristics.PhysicalDamage, 5},
                     {Characteristics.PhysicalProtection, 5}
-                }, new Inventory(), Specialization.Warrior, Position.Melee, Location.SomeLocation));
+                }, new List<ActiveItem>(), Specialization.Warrior, Position.Melee, Location.SomeLocation));
             for (var i = 0; i < enemyCount; i++)
                 list.Add(new EnemyHero($"EnemyNum{i}", new Dictionary<Characteristics, int>
                 {
@@ -179,7 +179,7 @@ namespace Tests
                     {Characteristics.MagicalProtection, 5},
                     {Characteristics.PhysicalDamage, 5},
                     {Characteristics.PhysicalProtection, 5}
-                }, new Inventory(), Specialization.Archer, Position.Melee, Location.SomeLocation));
+                }, new List<ActiveItem>(), Specialization.Archer, Position.Melee, Location.SomeLocation));
             return new GameQueue(list);
         }
     }

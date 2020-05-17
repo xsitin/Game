@@ -32,9 +32,8 @@ namespace Game.Model
             get => _enemy;
             set
             {
-                if (value == null) throw new ArgumentNullException(nameof(value));
                 _counter = 0;
-                _enemy = value;
+                _enemy = value ?? throw new ArgumentNullException(nameof(value));
                 Queue = new GameQueue(Heroes.GetTeamList().Concat(_enemy.GetTeamList()).ToList());
             }
         }
@@ -68,6 +67,7 @@ namespace Game.Model
             {
                 MessageBox.Show("You lose!");
                 IsEnd = true;
+                Application.OpenForms["Main"]?.Controls["MainCntrl"].Refresh();
                 return;
             }
 
@@ -85,9 +85,11 @@ namespace Game.Model
                     Application.OpenForms["Main"]?.Controls["MainCntrl"].Refresh();
                     return;
                 }
-
                 foreach (var h in Heroes.GetTeamList()) ((Hero) h).Exp += _reward.exp;
                 IsEnd = true;
+                Application.OpenForms["Main"]?.Controls["MainCntrl"].Refresh();
+                return;
+
             }
 
             if ((CurrentCreature is EnemyHero) && CurrentCreature.Characteristics[Characteristics.Health] > 0)

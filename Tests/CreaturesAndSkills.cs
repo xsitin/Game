@@ -12,22 +12,22 @@ namespace Tests
         public void SetUp()
         {
             Archer = new Hero("ker", new Dictionary<Characteristics, int> {{Characteristics.Health, 100}},
-                new Inventory(), Specialization.Archer, Position.Range, Location.SomeLocation);
+                new List<ActiveItem>(), Specialization.Archer, Position.Range, Location.SomeLocation);
             Archer.Characteristics[Characteristics.Health] = 100;
             Mage = new Hero("gfkrf", new Dictionary<Characteristics, int>
                 {
                     {Characteristics.Health, 100}, {Characteristics.Mana, 200}
                 },
-                new Inventory(), Specialization.Wizard, Position.Range, Location.SomeLocation);
+                new List<ActiveItem>(), Specialization.Wizard, Position.Range, Location.SomeLocation);
             Enemy1 = new EnemyHero("pes", new Dictionary<Characteristics, int>(),
-                new Inventory(), Specialization.Wizard, Position.Melee, Location.SomeLocation);
+                new List<ActiveItem>(), Specialization.Wizard, Position.Melee, Location.SomeLocation);
             Enemy1.Characteristics[Characteristics.Health] = 50;
             Enemy1.Characteristics[Characteristics.Evasion] = 100;
             Enemy1.Characteristics[Characteristics.Mana] = 100;
             Enemy1.Skills.Add(new Skill(10, new[] {(Characteristics.Health, -10)},
                 SkillRange.Single, "skillName", new Buff(5, "debuff", (Characteristics.Initiative, -100))){IsMagic = true});
             Enemy2 = new EnemyHero("very enemy", new Dictionary<Characteristics, int> {{Characteristics.Health, 100}},
-                new Inventory(), Specialization.Warrior, Position.Melee, Location.SomeLocation);
+                new List<ActiveItem>(), Specialization.Warrior, Position.Melee, Location.SomeLocation);
             Mage.Skills.Add(new Skill(50, new[] {(Characteristics.Health, -100)}, SkillRange.Enemies, "shpuf",
                 new Buff(3, "shpuf debuff", (Characteristics.Evasion, -10))){IsMagic = true});
         }
@@ -78,9 +78,9 @@ namespace Tests
         [Test]
         public void CorrectEnemyConstructorWithoutPistion()
         {
-            var range = new EnemyHero(Helper.GetName(), new Dictionary<Characteristics, int>(), new Inventory(),
+            var range = new EnemyHero(Helper.GetName(), new Dictionary<Characteristics, int>(), new List<ActiveItem>(),
                 Specialization.Archer, Location.SomeLocation);
-            var melee = new EnemyHero(Helper.GetName(), new Dictionary<Characteristics, int>(), new Inventory(),
+            var melee = new EnemyHero(Helper.GetName(), new Dictionary<Characteristics, int>(), new List<ActiveItem>(),
                 Specialization.Warrior, Location.SomeLocation);
             Assert.AreEqual(Position.Melee, melee.Position);
             Assert.AreEqual(Position.Range, range.Position);

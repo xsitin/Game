@@ -43,6 +43,7 @@ namespace Game.Control
             _points[3][1] = new Point(1300, 500);
             _points[3][2] = new Point(1300, 400);
             _points[3][3] = new Point(1300, 300);
+            Refresh();
         }
 
         protected override void OnPaint(PaintEventArgs e)
@@ -54,7 +55,7 @@ namespace Game.Control
                     e.Graphics.DrawImage(
                         _creatures[i][j] is Hero
                             ? Helper.ImageTransfer[_creatures[i][j].Specialization]
-                            : Helper.EnemyImageTransfer[_creatures[i][j].Specialization], _points[i][j]);
+                            : Helper.EnemyImageTransfer[_creatures[i][j].Specialization],new Rectangle(_points[i][j],new Size(130,200)));
                 else
                     _creatures[i].RemoveAt(j);
             }

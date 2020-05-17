@@ -16,7 +16,7 @@ namespace Game.Control
             _hero = hero;
             MinimumSize = _size;
             _player = player;
-            _form1 = form1;
+            _form1 = (Form1) Application.OpenForms["Main"];
             var back = new Button()
             {
                 BackColor = Color.Transparent,
@@ -34,13 +34,13 @@ namespace Game.Control
                 };
                 add.Click += (sender, eventArgs) =>
                 {
-                    _hero.Inventory.Heap.Add(item);
+                    _hero.Inventory.Add(item);
                     _player.Storage.Remove(item);
                     Refresh();
                 };
                 form1.Controls["Storage"].Controls.Add(add);
             }
-            foreach (var item in _hero.Inventory.Heap)
+            foreach (var item in _hero.Inventory)
             {
                 var remove = new Button()
                 {
@@ -51,7 +51,7 @@ namespace Game.Control
                 };
                 remove.Click += (sender, eventArgs) =>
                 {
-                    _hero.Inventory.Heap.Remove(item);
+                    _hero.Inventory.Remove(item);
                     _player.Storage.Add(item);
                     Refresh();
                 };
@@ -116,13 +116,13 @@ namespace Game.Control
                 };
                 add.Click += (sender, eventArgs) =>
                 {
-                    _hero.Inventory.Heap.Add(item);
+                    _hero.Inventory.Add(item);
                     _player.Storage.Remove(item);
                     Refresh();
                 };
                 _form1.Controls["Storage"].Controls.Add(add);
             }
-            foreach (var item in _hero.Inventory.Heap)
+            foreach (var item in _hero.Inventory)
             {
                 var remove = new Button()
                 {
@@ -133,7 +133,7 @@ namespace Game.Control
                 };
                 remove.Click += (sender, eventArgs) =>
                 {
-                    _hero.Inventory.Heap.Remove(item);
+                    _hero.Inventory.Remove(item);
                     _player.Storage.Add(item);
                     Refresh();
 

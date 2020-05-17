@@ -5,8 +5,8 @@ namespace Game.Model
 {
     public class Inventory
     {
-        public List<ActiveItem> Heap { get; private set; }
-        public int Size { get; private set; }
+        public List<ActiveItem> Heap { get;  set; }
+        public int Size { get;  set; }
 
         public Inventory(List<ActiveItem> heap = null, int size = 0) {
             Heap = heap ?? new List<ActiveItem>();

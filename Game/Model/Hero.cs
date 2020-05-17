@@ -8,30 +8,48 @@ namespace Game.Model
     public class Hero : BasicCreature
     {
         private int _exp;
-        
+
         public ReadOnlyDictionary<Characteristics, int> StandardChars { get; set; }
 
-        public Hero(string name, Dictionary<Characteristics, int> characteristics, Inventory inventory,
+        public Hero(string name, Dictionary<Characteristics, int> characteristics, List<ActiveItem> inventory,
             Specialization specialization, Position position, Location location) : base(name, characteristics,
             inventory, specialization, location)
         {
             Exp = 0;
             StandardChars = new ReadOnlyDictionary<Characteristics, int>
                 (characteristics.ToDictionary(x => x.Key, y => y.Value));
+            if (StandardChars == null || StandardChars.Count < 7)
+                FillStandart();
             Position = position;
-            
         }
-        public Hero(Specialization spec) : base(Helper.GetName(), new Dictionary<Characteristics, int>(),
-            new Inventory(), spec, Location.SomeLocation)
+
+        private void FillStandart()
         {
+            if (StandardChars == null)
+                StandardChars = new ReadOnlyDictionary<Characteristics, int>(Characteristics);
+            var b = new Dictionary<Characteristics, int>(StandardChars);
+            for (var i = 0; i < 7; i++)
+                if (!b.ContainsKey((Characteristics) i))
+                    b[(Characteristics) i] = BaseCharacteristics[(Characteristics) i];
+            StandardChars = new ReadOnlyDictionary<Characteristics, int>(b);
         }
-        public Hero(string name, Dictionary<Characteristics, int> characteristics, Inventory inventory,
+
+        public Hero(Specialization spec) : base(Helper.GetName(), new Dictionary<Characteristics, int>(),
+            new List<ActiveItem>(), spec, Location.SomeLocation)
+        {
+            if (StandardChars == null || StandardChars.Count < 7)
+                FillStandart();
+        }
+
+        public Hero(string name, Dictionary<Characteristics, int> characteristics, List<ActiveItem> inventory,
             Specialization specialization, Location location) : base(name, characteristics,
             inventory, specialization, location)
         {
             Exp = 0;
             StandardChars = new ReadOnlyDictionary<Characteristics, int>
                 (characteristics.ToDictionary(x => x.Key, y => y.Value));
+            if (StandardChars.Count < 7)
+                FillStandart();
             Position = Helper.Transfer[specialization];
         }
 
@@ -40,7 +58,7 @@ namespace Game.Model
         }
 
         public int UpgradePoints { get; set; }
-        
+
 
         public int Exp
         {

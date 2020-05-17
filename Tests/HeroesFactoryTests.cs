@@ -44,7 +44,7 @@ namespace Tests
                         {Characteristics.MagicalProtection, 5},
                         {Characteristics.PhysicalDamage, 5},
                         {Characteristics.PhysicalProtection, 5}
-                    }, new Inventory(), Specialization.Warrior, Position.Melee, Location.SomeLocation);
+                    }, new List<ActiveItem>(), Specialization.Warrior, Position.Melee, Location.SomeLocation);
                     hero.Exp += expDifference;
                     first.Add(hero);
                 }
@@ -59,7 +59,7 @@ namespace Tests
                         {Characteristics.MagicalProtection, 5},
                         {Characteristics.PhysicalDamage, 5},
                         {Characteristics.PhysicalProtection, 5}
-                    }, new Inventory(), Specialization.Wizard, Position.Range, Location.SomeLocation);
+                    }, new List<ActiveItem>(), Specialization.Wizard, Position.Range, Location.SomeLocation);
                     hero.Exp += expDifference;
                     second.Add(hero);
                 }
