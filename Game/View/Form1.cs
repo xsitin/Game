@@ -321,7 +321,7 @@ namespace Game
                 };
                 foreach (var hero in Player.Heroes)
                 {
-                    merHero.Controls.Add(new BarrackHeroControl(hero,Player));
+                    merHero.Controls.Add(new BarrackHeroControl(hero,Player,this));
                 }
                 var activeHero = new FlowLayoutPanel()
                 {
@@ -333,7 +333,7 @@ namespace Game
                 };
                 foreach (var hero in Player.ActiveTeam.GetTeamList())
                 {
-                    activeHero.Controls.Add(new ActiveTeam(hero as Hero, Player));
+                    activeHero.Controls.Add(new ActiveTeam(hero as Hero, Player,this));
                 }
                 var upgrade = new Panel()
                 {
