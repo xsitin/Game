@@ -27,6 +27,7 @@
           <e p="HeroUpgradeControl.cs" t="Include" />
           <e p="HitPointBar.cs" t="Include" />
           <e p="HitPointBar.Designer.cs" t="Include" />
+          <e p="HitPointBar.resx" t="Include" />
           <e p="HpPotionsControl.cs" t="Include" />
           <e p="HpPotionsControl.resx" t="Include" />
           <e p="InterfaceControl.cs" t="Include" />

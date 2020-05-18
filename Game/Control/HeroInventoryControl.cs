@@ -11,12 +11,38 @@ namespace Game.Control
         private readonly Player _player;
         private Form1 _form1;
         private readonly Size _size = new Size(420,390);
+        
         public HeroInventoryControl(Hero hero, Player player,Form1 form1)
         {
             _hero = hero;
             MinimumSize = _size;
             _player = player;
             _form1 = form1;
+            DoubleBuffered = true;
+            var inventory = new Label()
+            {
+                Text = "Инвентарь Героя",
+                Name = "LabelInventory",
+                Font = new Font(FontFamily.GenericSerif, 15),
+                ForeColor = Color.DarkRed,
+                BackColor = Color.Gray,
+                FlatStyle = FlatStyle.Flat,
+                TextAlign = ContentAlignment.TopCenter,
+                Bounds = new Rectangle(840,450,245,34),
+            };
+            var storage = new Label()
+            {
+                Text = "Склад",
+                Name = "LabelStore",
+                Font = new Font(FontFamily.GenericSerif, 15),
+                ForeColor = Color.DarkRed,
+                BackColor = Color.Gray,
+                FlatStyle = FlatStyle.Flat,
+                TextAlign = ContentAlignment.TopCenter,
+                Bounds = new Rectangle(430,450,245,34),
+            };
+            form1.Controls.Add(storage);
+            form1.Controls.Add(inventory);
             var back = new Button()
             {
                 Text = "Закончить",
@@ -66,6 +92,8 @@ namespace Game.Control
                     Parent.Parent.Controls["MerHero"].Controls.Add(new BarrackHeroControl(_hero,player,form1));
                 else 
                     Parent.Parent.Controls["Active"].Controls.Add(new ActiveTeam(_hero,player,form1));
+                Parent.Parent.Controls["LabelStore"].Dispose();
+                Parent.Parent.Controls["LabelInventory"].Dispose();
                 Dispose();
             };
             back.Click += (sender, args) =>

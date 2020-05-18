@@ -12,6 +12,7 @@ namespace Game.Control
         
         public MercenariesControl(Hero hero, Player player)
         {
+            DoubleBuffered = true;
             _hero = hero;
             MinimumSize = _size;
             BackColor = Color.Transparent;

@@ -8,12 +8,11 @@ namespace Game.Control
     {
         private Size _size = new Size(22,22);
         private Skill _skill;
-        private Hero _hero;
 
         public UpgradeSkill(Hero hero, Skill skill, int x, int y)
         {
             MaximumSize = _size;
-            _hero = hero;
+            DoubleBuffered = true;
             _skill = skill;
             Location = new Point(x,y);
             var up = new Button()
@@ -30,7 +29,7 @@ namespace Game.Control
                         skill.Upgrade();
                 }
                 hero.UpgradePoints--;
-                Parent.Parent.Controls["HeroUpgrade"].Refresh();
+                ParentForm.Controls["Upgrade"].Controls["HeroUpgrade"].Refresh();
             };
             Controls.Add(up);
         }

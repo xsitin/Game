@@ -11,6 +11,7 @@ namespace Game.Control
         {
             _player = player;
             BackColor = Color.Transparent;
+            DoubleBuffered = true;
             var buy = new Button()
             {
                 BackColor = Color.Gray,

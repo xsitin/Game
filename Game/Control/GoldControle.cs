@@ -9,6 +9,7 @@ namespace Game.Control
         private readonly Player Player;
         public GoldControl(Player player)
         {
+            DoubleBuffered = true;
             Player = player;
             BackColor = Color.Transparent;
             Size = new Size(400,400);

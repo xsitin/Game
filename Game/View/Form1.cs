@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Numerics;
@@ -248,7 +249,7 @@ namespace Game
                 {
                     AutoScroll = true,
                     BackColor = Color.Transparent,
-                    Size = new Size(320,390),
+                    Size = new Size(260,390),
                     Location =new Point(430, 500),
                     Name = "Storage"
                 };
@@ -256,8 +257,8 @@ namespace Game
                 {
                     AutoScroll = true,
                     BackColor = Color.Transparent,
-                    MinimumSize = new Size(320, 390),
-                    Location = new Point(780, 500),
+                    MinimumSize = new Size(260, 390),
+                    Location = new Point(840, 500),
                     Name = "Inventory"
                 };
                 Controls.Add(herInvent);

@@ -13,6 +13,7 @@ namespace Game.Control
 
         public UpgradeChar(Characteristics characteristic, Hero hero,int x, int y)
         {
+            DoubleBuffered = true;
             MaximumSize = _size;
             _hero = hero;
             _ch = characteristic;
@@ -42,7 +43,8 @@ namespace Game.Control
                          _ch != Characteristics.PhysicalProtection)
                     _hero.Characteristics[_ch] = (int)(_hero.Characteristics[_ch]*1.2);
                 _hero.UpgradePoints--;
-                Parent.Parent.Controls["HeroUpgrade"].Refresh();
+                var b = ParentForm;
+                ParentForm.Controls["Upgrade"].Controls["HeroUpgrade"].Refresh();
             };
             Controls.Add(up);
         }

@@ -196,6 +196,9 @@
     <EmbeddedResource Include="Control\FieldControl.resx">
       <DependentUpon>FieldControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Control\HitPointBar.resx">
+      <DependentUpon>HitPointBar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Control\MpPotionControl.resx">
       <DependentUpon>MpPotionControl.cs</DependentUpon>
     </EmbeddedResource>

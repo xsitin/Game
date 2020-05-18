@@ -12,6 +12,7 @@ namespace Game.Control
         private readonly Player _player;
         public BasicHeroCardControl(Hero hero, Player player)
         {
+            DoubleBuffered = true;
             _hero = hero;
             _player = player;
             MinimumSize = _size;
