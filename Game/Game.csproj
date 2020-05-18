@@ -17,6 +17,22 @@
     <Deterministic>true</Deterministic>
     <LangVersion>8</LangVersion>
     <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Games\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -36,6 +52,18 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>6C454A2D65B967B601E721472FBF24A21DBFD861</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Game_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="FluentAssertions, Version=5.10.3.0, Culture=neutral, PublicKeyToken=33f2691a05b67b6a">
@@ -108,8 +136,11 @@
     <Compile Include="Control\EnemyHitBar.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Control\EnemyHitBar.Designer.cs">
-      <DependentUpon>EnemyHitBar.cs</DependentUpon>
+    <Compile Include="Control\HeroInventoryControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\HeroUpgradeControl.cs">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Control\HeroInventoryControl.cs" />
     <Compile Include="Control\HeroUpgradeControl.cs" />
@@ -119,8 +150,13 @@
     <Compile Include="Control\HpPotionsControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Control\UpgradeChar.cs" />
-    <Compile Include="Control\UpgradeSkill.cs" />
+    <Compile Include="Control\TargetFiller.cs" />
+    <Compile Include="Control\UpgradeChar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\UpgradeSkill.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Control\AllControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -139,7 +175,9 @@
     <Compile Include="Control\FieldControl.Designer.cs">
       <DependentUpon>FieldControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Control\GoldControle.cs" />
+    <Compile Include="Control\GoldControle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Control\HitPointBar.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -202,6 +240,9 @@
     <EmbeddedResource Include="Control\HitPointBar.resx">
       <DependentUpon>HitPointBar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Control\InterfaceControl.resx">
+      <DependentUpon>InterfaceControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Control\MpPotionControl.resx">
       <DependentUpon>MpPotionControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -224,6 +265,7 @@
     <EmbeddedResource Include="View\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Game_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -256,6 +298,21 @@
     </Content>
     <Content Include="Properties\Names.txt" />
     <None Include="Resources\Skroll.png" />
+    <None Include="Resources\WizarAttack.png" />
+    <None Include="Resources\WarriorAttack.png" />
+    <None Include="Resources\EnemyWizardAttack.png" />
+    <None Include="Resources\EnemyWarrirAttack.png" />
+    <None Include="Resources\EnemyArcherAttack.png" />
+    <None Include="Resources\DeadWarrior.png" />
+    <None Include="Resources\DeadMag.png" />
+    <None Include="Resources\DeadEnemyWarrior.png" />
+    <None Include="Resources\DeadEnemyMag.png" />
+    <None Include="Resources\DeadEnemyArcher.png" />
+    <None Include="Resources\DeadArcher.png" />
+    <None Include="Resources\ArcherAttack.png" />
+    <None Include="Resources\EnemyWizard.png" />
+    <None Include="Resources\EnemyWarrior.png" />
+    <None Include="Resources\EnemyArcher.png" />
     <None Include="Resources\MPpotion.png" />
     <None Include="Resources\HPpotion.png" />
     <None Include="Resources\GoldBack.png" />
@@ -268,7 +325,18 @@
     <None Include="Resources\бой.png" />
     <None Include="Resources\barrack.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

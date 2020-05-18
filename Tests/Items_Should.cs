@@ -20,19 +20,19 @@ namespace Tests
         public void SetUp()
         {
             heroWarrior = new Hero("Герой", new Dictionary<Characteristics, int> {[Characteristics.Health] = 200},
-                new Inventory(), Specialization.Warrior, Position.Melee, Location.SomeLocation);
+                new List<ActiveItem>(), Specialization.Warrior, Position.Melee, Location.SomeLocation);
             heroArcher = new Hero("Герой", new Dictionary<Characteristics, int> {[Characteristics.Health] = 200},
-                new Inventory(), Specialization.Archer, Position.Range, Location.SomeLocation);
+                new List<ActiveItem>(), Specialization.Archer, Position.Range, Location.SomeLocation);
             enemyWizard = new EnemyHero("Злодей", new Dictionary<Characteristics, int> {[Characteristics.Health] = 200},
-                new Inventory(), Specialization.Wizard, Position.Range, Location.SomeLocation);
+                new List<ActiveItem>(), Specialization.Wizard, Position.Range, Location.SomeLocation);
             enemyArcher = new EnemyHero("Злодей", new Dictionary<Characteristics, int> {[Characteristics.Health] = 200},
-                new Inventory(), Specialization.Archer, Position.Range, Location.SomeLocation);
+                new List<ActiveItem>(), Specialization.Archer, Position.Range, Location.SomeLocation);
             enemyWarrior1 = new EnemyHero("Злодей",
                 new Dictionary<Characteristics, int> {[Characteristics.Health] = 200},
-                new Inventory(), Specialization.Warrior, Position.Range, Location.SomeLocation);
+                new List<ActiveItem>(), Specialization.Warrior, Position.Range, Location.SomeLocation);
             enemyWarrior2 = new EnemyHero("Злодей",
                 new Dictionary<Characteristics, int> {[Characteristics.Health] = 200},
-                new Inventory(), Specialization.Warrior, Position.Range, Location.SomeLocation);
+                new List<ActiveItem>(), Specialization.Warrior, Position.Range, Location.SomeLocation);
 
             var heroMelee = new List<Hero> {heroWarrior};
             var heroRangers = new List<Hero> {heroArcher};

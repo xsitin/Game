@@ -11,7 +11,8 @@ namespace Game.Model
 
         public GameQueue(List<BasicCreature> creatures)
         {
-            if(!creatures.Any()) throw new FormatException("Чел ты даун?");
+            _count = -1;
+            if (!creatures.Any()) throw new FormatException("Чел ты даун?");
             Queue = creatures.OrderByDescending(x =>
                 x.Characteristics[Characteristics.Initiative]).ToList();
         }
@@ -19,17 +20,23 @@ namespace Game.Model
         public void Update()
         {
             var count = Queue.Take(_count).Count(x =>
-                ((x is null)) || x.Characteristics[Characteristics.Health] <= 0 || x.Characteristics[Characteristics.Initiative] <= 0);
+                ((x is null)) || x.Characteristics[Characteristics.Health] <= 0 ||
+                x.Characteristics[Characteristics.Initiative] <= 0);
             Queue = Queue.Where(x =>
-                (!(x is null))&&x.Characteristics[Characteristics.Health] > 0).ToList();
-            _count -= count;
+                (!(x is null)) && x.Characteristics[Characteristics.Health] > 0).ToList();
+                while (_count>-1&&_count < Queue.Count && Queue[_count].Characteristics[Characteristics.Initiative] <= 0) _count++;
         }
 
         public BasicCreature GetNextPerson()
         {
-            Update();
             _count++;
-            if (_count >= Queue.Count) _count = 0;
+            Update();
+            if (_count >= Queue.Count)
+            {
+                _count = 0;
+                Queue = Queue.OrderByDescending(x=>x.Characteristics[Characteristics.Initiative]).ToList();
+            }
+            Update();
             return Queue[_count];
         }
     }

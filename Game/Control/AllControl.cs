@@ -12,26 +12,27 @@ namespace Game.Control
         private Player _player;
         private FieldControl _fieldControl;
         private HitPointBar _hitControl;
-        private InterfaceControl _skillControl;
-        private EnemyHitBar _enemyHitControl;
+        private InterfaceControl _interfaceControl;
+        private HitPointBar _enemyHitControl;
 
         public AllControl(Model.Game game, Player player)
         {
+            DoubleBuffered = true;
             _game = game;
             _player = player;
             _fieldControl = new FieldControl(_game.Heroes, _game.Enemy) {Name = "Field"};
-            _fieldControl.Location = new Point(200, 1024);
-            _fieldControl.Size = new Size(1366, 150);
+            _fieldControl.Location = new Point(250, 200);
+            _fieldControl.Size = new Size(1920, 800);
             _hitControl = new HitPointBar(_player.ActiveTeam.GetTeamList()) {Name = "HitPoints"};
             _hitControl.Location = new Point(0, 170);
-            _enemyHitControl = new EnemyHitBar(_game.Enemy.GetTeamList()) {Name = "EnemyHitPoints"};
-            _enemyHitControl.Location = new Point(1366, 170);
-            _skillControl = new InterfaceControl(_game);
-            _skillControl.Location = new Point(0, 0);
-            _skillControl.Size = new Size(1920, 170);
+            _enemyHitControl = new HitPointBar(_game.Enemy.GetTeamList()) {Name = "EnemyHitPoints"};
+            _enemyHitControl.Location = new Point(1736, 170);
+            _interfaceControl = new InterfaceControl(_game) {Name = "Interface"};
+            _interfaceControl.Location = new Point(0, 0);
+            _interfaceControl.Size = new Size(1920, 170);
             Dock = DockStyle.Fill;
             BackColor = Color.Transparent;
-            Controls.Add(_skillControl);
+            Controls.Add(_interfaceControl);
             Controls.Add(_hitControl);
             Controls.Add(_enemyHitControl);
             Controls.Add(_fieldControl);
@@ -39,46 +40,36 @@ namespace Game.Control
 
         public override void Refresh()
         {
-            _fieldControl = new FieldControl(_game.Heroes, _game.Enemy) {Name = "Field"};
-            _fieldControl.Location = new Point(200, 1024);
-            _fieldControl.Size = new Size(1366, 150);
-            _hitControl = new HitPointBar(_player.ActiveTeam.GetTeamList()) {Name = "HitPoints"};
-            _hitControl.Location = new Point(0, 170);
-            _enemyHitControl = new EnemyHitBar(_game.Enemy.GetTeamList()) {Name = "EnemyHitPoints"};
-            _enemyHitControl.Location = new Point(1366, 170);
-            _skillControl = new InterfaceControl(_game);
-            _skillControl.Location = new Point(0, 0);
-            _skillControl.Size = new Size(1920, 170);
             if (_game.IsEnd)
             {
-                if (!_game.Heroes.GetTeamList().Any(p => p.Characteristics[Characteristics.Health] > 0))
-                {
-                    var result = MessageBox.Show("Вернуться в деревню?", "", MessageBoxButtons.YesNo);
-                    if (result == DialogResult.Yes)
-                    {
-                        Controls.Clear();
-                        //VillageControls();
-                    }
-                    else
-                    {
-                        _game.NextStep(true);
-                    }
-                }
-
-                if (!_game.Enemy.GetTeamList().Any(p => p.Characteristics[Characteristics.Health] > 0))
-                {
-                    var result = MessageBox.Show("Вернуться в деревню?", "", MessageBoxButtons.YesNo);
-                    if (result == DialogResult.Yes)
-                    {
-                        Controls.Clear();
-                        //VillageControls();
-                    }
-                    else
-                    {
-                        _game.NextStep(true);
-                    }
-                }
+                foreach (var hero in _player.ActiveTeam.FirstLine)
+                    if (hero.StandardChars != null)
+                        foreach (var key in hero.StandardChars.Keys)
+                            hero.Characteristics[key] = hero.StandardChars[key];
+                _player.Gold += _game._reward.money;
+                ((Form1) Application.OpenForms["Main"]).VillageControls();
+                Dispose();
+                return;
             }
+
+            Controls.Clear();
+            if(!_fieldControl._enemies.Any(x=>x.Characteristics[Characteristics.Health]>0))
+                _fieldControl = new FieldControl(_game.Heroes, _game.Enemy) {Name = "Field"};
+            _fieldControl.Location = new Point(250, 200);
+            _fieldControl.Size = new Size(1920, 800);
+            _hitControl = new HitPointBar(_player.ActiveTeam.GetTeamList()) {Name = "HitPoints"};
+            _hitControl.Location = new Point(0, 170);
+            _enemyHitControl = new HitPointBar(_game.Enemy.GetTeamList()) {Name = "EnemyHitPoints"};
+            _enemyHitControl.Location = new Point(1736, 170);
+            _interfaceControl = new InterfaceControl(_game) {Name = "Interface"};
+            _interfaceControl.Location = new Point(0, 0);
+            _interfaceControl.Size = new Size(1920, 170);
+            Dock = DockStyle.Fill;
+            BackColor = Color.Transparent;
+            Controls.Add(_interfaceControl);
+            Controls.Add(_hitControl);
+            Controls.Add(_enemyHitControl);
+            Controls.Add(_fieldControl);
             base.Refresh();
         }
     }

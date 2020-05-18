@@ -10,6 +10,7 @@ namespace Game.Control
         private List<BasicCreature> heroes;
         public HitPointBar(List<BasicCreature> heroes)
         {
+            DoubleBuffered = true;
             this.heroes = heroes;
             BackColor = Color.Transparent;
             Bounds = new Rectangle(0, 0, 170, heroes.Count * 55);

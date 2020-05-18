@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Linq;
-using NUnit.Framework;
+using System.Windows.Forms;
 
 namespace Game.Model
 {
@@ -32,14 +32,13 @@ namespace Game.Model
             get => _enemy;
             set
             {
-                if (value == null) throw new ArgumentNullException(nameof(value));
                 _counter = 0;
-                _enemy = value;
+                _enemy = value ?? throw new ArgumentNullException(nameof(value));
                 Queue = new GameQueue(Heroes.GetTeamList().Concat(_enemy.GetTeamList()).ToList());
             }
         }
 
-        public void NextStep(bool ask = false)
+        public void NextStep()
         {
             Heroes.Update();
             Enemy.Update();
@@ -66,28 +65,39 @@ namespace Game.Model
             GC.WaitForPendingFinalizers();
             if (!Heroes.GetTeamList().Any())
             {
+                MessageBox.Show("You lose!");
                 IsEnd = true;
+                Application.OpenForms["Main"]?.Controls["MainCntrl"].Refresh();
+                return;
             }
 
             if (!Enemy.GetTeamList().Any())
             {
-                //ask
+                var res = MessageBox.Show("Хотите продолжить?","",MessageBoxButtons.YesNo);
                 var heroes = Heroes.GetTeamList();
-                var level = heroes.Sum(x => (x as Hero).Level) / heroes.Count();
-                _reward.exp += (int) Math.Round(100 + level * 100 + 300 * Math.Pow(level, 0.5)) / 4;
+                var level = heroes.Sum(x => ((Hero) x).Level) / heroes.Count();
+                _reward.exp += (int) Math.Round(100 + level * 100 + 300 * Math.Pow(level, 0.5)) / 3;
                 _reward.money += level * 200;
-                if (ask)
+                if (res == DialogResult.Yes)
                 {
                     Enemy = _enemyFactory.GetEnemyTeam();
+                    _counter++;
+                    Application.OpenForms["Main"]?.Controls["MainCntrl"].Refresh();
                     return;
                 }
-
                 foreach (var h in Heroes.GetTeamList()) ((Hero) h).Exp += _reward.exp;
                 IsEnd = true;
+                Application.OpenForms["Main"]?.Controls["MainCntrl"].Refresh();
+                return;
+
             }
 
-            if ((CurrentCreature is EnemyHero) && CurrentCreature.Characteristics[Characteristics.Health] > 0 && !IsEnd)
+            if ((CurrentCreature is EnemyHero) && CurrentCreature.Characteristics[Characteristics.Health] > 0)
+            {
                 Bot.MakeAMove(this);
+                NextStep();
+            }
+
             //Todo give step to player
         }
     }

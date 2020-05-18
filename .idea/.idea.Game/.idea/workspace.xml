@@ -54,73 +54,88 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Game/Control/UpgradeSkill.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Tests/Inventory_Should.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Tests/Saves_Should.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Control/UpgradeChar.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Control/HeroUpgradeControl.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Tests/EnemyFactoryTests.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Tests/packages.config" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Model/Skill.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Model/Characteristics.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Model/Position.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Model/Inventory.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Model/Buff.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Control/AllControl.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Properties/Resources.resx" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Control/HitPointBar.Designer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Model/Bot.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Control/InterfaceControl.Designer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Properties/Resources.Designer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Control/EnemyButton.Designer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Properties/AssemblyInfo.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Control/PersonControl.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Model/Item.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Control/FieldControl.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Control/AllControl.Designer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Model/Hero.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Control/InterfaceControl.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Control/EnemyButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BD1B6EA4-F54D-4146-A29C-2A12CD6EC436/0a/77276e29/__Error.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Game/Control/ActiveTeam.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Control/PersonControl.Designer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Model/Player.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Control/HitPointBar.Designer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Game/Control/HitPointBar.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Control/FieldControl.Designer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Control/EnemyHitBar.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/View/Form1.Designer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Control/BarrackHeroControl.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/View/Form1.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Tests/HeroesFactoryTests.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Tests/DatabaseTests.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/App.config" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Program.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Model/HeroesFactory.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Model/BasicCreature.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Model/Helper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Control/FieldControl.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Game/Control/MpPotionControl.resx" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Model/Game.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Control/MpPotionControl.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Control/GoldControle.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Control/HpPotionsControl.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Model/EnemyHero.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Model/Field.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Model/GameQueue.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Model/EnemyFactory.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Model/Team.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/packages.config" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6FF151C8-A24F-45E5-B6E3-6BC715719162/4c/88a93ec6/Button.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Control/UpgradeSkill.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Control/InterfaceControl.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/21BBF68D-61D6-4A2A-A5C3-E180E6B6706D/17/547c7f00/Enumerable.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Control/EnemyButton.Designer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Tests/Properties/AssemblyInfo.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Control/BasicHeroCardControle.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/21BBF68D-61D6-4A2A-A5C3-E180E6B6706D/5b/a6434a62/Enumerable.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Tests/Items_Should.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Control/MercenariesControl.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Tests/GameQueueTests.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Tests/Team_Should.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Tests/CreaturesAndSkills.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Control/EnemyHitBar.Designer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Game/Control/HeroInventoryControl.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Tests/Tests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Control/AllControl.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Control/EnemyButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BD1B6EA4-F54D-4146-A29C-2A12CD6EC436/f4/4a68760d/Random.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Control/BarrackHeroControl.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BD1B6EA4-F54D-4146-A29C-2A12CD6EC436/a0/da1ebf19/Dictionary`2.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/Hero.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/Inventory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/BasicCreature.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/EnemyFactoryTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/Team.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/HeroesFactoryTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/EnemyFactory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/Player.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/Buff.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/Game.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Control/HitPointBar.resx" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/Position.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/Characteristics.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/GameQueue.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BD1B6EA4-F54D-4146-A29C-2A12CD6EC436/30/de52c21e/GC.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/EnemyHero.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/Field.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/Bot.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Game/View/Form1.resx" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/Skill.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/Helper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/View/Form1.Designer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/Item.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/View/Form1.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Control/GoldControle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6FF151C8-A24F-45E5-B6E3-6BC715719162/fe/e8c0a9a9/Application.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Control/MercenariesControle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Model/HeroesFactory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6FF151C8-A24F-45E5-B6E3-6BC715719162/a4/8267fcb3/NativeWindow.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Control/TargetFiller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Properties/AssemblyInfo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Properties/Resources.resx" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Properties/Resources.Designer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/DatabaseTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/Tests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6FF151C8-A24F-45E5-B6E3-6BC715719162/71/4eea2336/UserControl.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/Inventory_Should.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/packages.config" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/GameQueueTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6FF151C8-A24F-45E5-B6E3-6BC715719162/0c/cb19fff5/ContainerControl.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/Items_Should.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BD1B6EA4-F54D-4146-A29C-2A12CD6EC436/7e/f92c553e/ThrowHelper.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/App.config" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/Team_Should.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/packages.config" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6FF151C8-A24F-45E5-B6E3-6BC715719162/ef/66be5d8e/ScrollableControl.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/Saves_Should.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/CreaturesAndSkills.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6FF151C8-A24F-45E5-B6E3-6BC715719162/13/c2d3c029/Control.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Control/FieldControl.Designer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Control/UpgradeChar.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2676A2DA-6EDC-420E-890E-D28AA4572EE5/ce/e19a584a/JsonSerializerInternalReader.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Control/HpPotionsControl.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Control/InterfaceControl.Designer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Control/PersonControl.Designer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Control/HeroUpgradeControl.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Control/HeroInventoryControl.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BD1B6EA4-F54D-4146-A29C-2A12CD6EC436/b6/8fbf8aeb/Enum.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Control/AllControl.Designer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Control/MpPotionControl.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Game/Control/PersonControl.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -133,19 +148,10 @@
         <option value="$PROJECT_DIR$/Tests/HeroesFactoryTests.cs" />
         <option value="$PROJECT_DIR$/Game/Controls/SomeControl.cs" />
         <option value="$PROJECT_DIR$/Game/Control/Barracks.cs" />
-        <option value="$PROJECT_DIR$/Game/Program.cs" />
         <option value="$PROJECT_DIR$/Game/Model/Buff.cs" />
-        <option value="$PROJECT_DIR$/Game/Model/Helper.cs" />
-        <option value="$PROJECT_DIR$/Game/Model/EnemyHero.cs" />
-        <option value="$PROJECT_DIR$/Tests/CreaturesAndSkills.cs" />
         <option value="$PROJECT_DIR$/Game/Model/Skill.cs" />
-        <option value="$PROJECT_DIR$/Tests/Saves_Should.cs" />
-        <option value="$PROJECT_DIR$/Tests/Saves_Should.cs" />
         <option value="$PROJECT_DIR$/Game/Model/Item.cs" />
         <option value="$PROJECT_DIR$/Game/Model/EnemyFactory.cs" />
-        <option value="$PROJECT_DIR$/Game/Model/EnemyFactory.cs" />
-        <option value="$PROJECT_DIR$/Tests/EnemyFactoryTests.cs" />
-        <option value="$PROJECT_DIR$/Game/Model/BasicCreature.cs" />
         <option value="$PROJECT_DIR$/Game/Control/PotionsControle.cs" />
         <option value="$PROJECT_DIR$/Game/Control/BarrackHeroControle.cs" />
         <option value="$PROJECT_DIR$/Game/Model/Team.cs" />
@@ -154,28 +160,41 @@
         <option value="$PROJECT_DIR$/Game/Control/UpgradeControle.cs" />
         <option value="$PROJECT_DIR$/Game/Control/InventoryControl.cs" />
         <option value="$PROJECT_DIR$/Game/Model/Player.cs" />
-        <option value="$PROJECT_DIR$/Game/Control/InterfaceControl.cs" />
         <option value="$PROJECT_DIR$/Game/Control/enemyHitBar.cs" />
         <option value="$PROJECT_DIR$/Game/Control/enemyHitBar.Designer.cs" />
         <option value="$PROJECT_DIR$/Game/Control/EnemyHitBar.cs" />
-        <option value="$PROJECT_DIR$/Game/Control/AllControl.cs" />
-        <option value="$PROJECT_DIR$/Game/Control/BasicHeroCardControle.Designer.cs" />
-        <option value="$PROJECT_DIR$/Game/Control/BasicUserControle.cs" />
-        <option value="$PROJECT_DIR$/Game/Control/MercenariesControle.cs" />
-        <option value="$PROJECT_DIR$/Game/Control/UpgradeChar.cs" />
-        <option value="$PROJECT_DIR$/Game/Control/UpgradeSkill.cs" />
-        <option value="$PROJECT_DIR$/Game/Control/HeroUpgradeControl.cs" />
-        <option value="$PROJECT_DIR$/Game/Control/BarrackHeroControl.cs" />
-        <option value="$PROJECT_DIR$/Game/Control/HitPointBar.cs" />
-        <option value="$PROJECT_DIR$/Game/Control/MpPotionControl.cs" />
-        <option value="$PROJECT_DIR$/Game/Control/MercenariesControl.cs" />
-        <option value="$PROJECT_DIR$/Game/Control/HpPotionsControl.cs" />
-        <option value="$PROJECT_DIR$/Game/Control/GoldControle.cs" />
-        <option value="$PROJECT_DIR$/Game/Control/BasicHeroCardControle.cs" />
-        <option value="$PROJECT_DIR$/Game/Control/ActiveTeam.cs" />
         <option value="$PROJECT_DIR$/Game/View/Form1.Designer.cs" />
+        <option value="$PROJECT_DIR$/Game/Control/ActiveTeam.cs" />
+        <option value="$PROJECT_DIR$/Game/Control/BarrackHeroControl.cs" />
+        <option value="$PROJECT_DIR$/Game/Control/HeroUpgradeControl.cs" />
+        <option value="$PROJECT_DIR$/Game/Control/SkillsControl.cs" />
+        <option value="$PROJECT_DIR$/Game/Model/Inventory.cs" />
+        <option value="$PROJECT_DIR$/Game/Model/BasicCreature.cs" />
+        <option value="$PROJECT_DIR$/Game/Model/EnemyHero.cs" />
+        <option value="$PROJECT_DIR$/Game/Model/EnemyFactory.cs" />
+        <option value="$PROJECT_DIR$/Tests/CreaturesAndSkills.cs" />
+        <option value="$PROJECT_DIR$/Tests/EnemyFactoryTests.cs" />
+        <option value="$PROJECT_DIR$/Tests/HeroesFactoryTests.cs" />
+        <option value="$PROJECT_DIR$/Tests/Items_Should.cs" />
+        <option value="$PROJECT_DIR$/Tests/Saves_Should.cs" />
+        <option value="$PROJECT_DIR$/Tests/Saves_Should.cs" />
+        <option value="$PROJECT_DIR$/Tests/Team_Should.cs" />
+        <option value="$PROJECT_DIR$/Game/Model/Hero.cs" />
         <option value="$PROJECT_DIR$/Game/Control/HeroInventoryControl.cs" />
+        <option value="$PROJECT_DIR$/Game/Model/Helper.cs" />
+        <option value="$PROJECT_DIR$/Game/Control/TargetFiller.cs" />
+        <option value="$PROJECT_DIR$/Game/Model/Bot.cs" />
+        <option value="$PROJECT_DIR$/Game/Model/Game.cs" />
+        <option value="$PROJECT_DIR$/Game/Control/EnemyButton.cs" />
+        <option value="$PROJECT_DIR$/Game/Program.cs" />
+        <option value="$PROJECT_DIR$/Game/Control/HitPointBar.cs" />
         <option value="$PROJECT_DIR$/Game/View/Form1.cs" />
+        <option value="$PROJECT_DIR$/Game/Model/HeroesFactory.cs" />
+        <option value="$PROJECT_DIR$/Game/Model/GameQueue.cs" />
+        <option value="$PROJECT_DIR$/Tests/GameQueueTests.cs" />
+        <option value="$PROJECT_DIR$/Game/Control/InterfaceControl.cs" />
+        <option value="$PROJECT_DIR$/Game/Control/FieldControl.cs" />
+        <option value="$PROJECT_DIR$/Game/Control/AllControl.cs" />
       </list>
     </option>
   </component>
@@ -190,17 +209,16 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.5102599" />
-    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.3002736" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.51029253" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.30010834" />
     <property name="Rider.SolutionExplorerActivator" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="TWShift.3" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="XThreadsFramesViewSplitterKey" value="0.34362417" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected=".NET Project.Game">
     <configuration name="Game" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/Game/bin/Debug/Game.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -216,7 +234,7 @@
       <option name="PROJECT_KIND" value="Console" />
       <option name="PROJECT_TFM" value=".NETFramework,Version=v4.8" />
       <method v="2">
-        <option name="Build" enabled="true" />
+        <option name="Build" />
       </method>
     </configuration>
     <configuration default="true" type="DotNetProject" factoryName=".NET Project">
@@ -234,7 +252,7 @@
       <option name="PROJECT_KIND" value="Console" />
       <option name="PROJECT_TFM" value=".NETFramework,Version=v4.8" />
       <method v="2">
-        <option name="Build" enabled="true" />
+        <option name="Build" />
       </method>
     </configuration>
   </component>
@@ -330,12 +348,12 @@
                   </entry>
                 </map>
               </option>
-              <option name="COLUMN_ORDER" />
             </State>
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
@@ -362,8 +380,8 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="587" y="89" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1589113969241" />
-    <state width="515" height="527" key="DebuggerActiveHint" timestamp="1589705571483">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state width="644" height="635" key="DebuggerActiveHint" timestamp="1589806627576">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="515" height="527" key="DebuggerActiveHint/0.0.1536.864@0.0.1536.864" timestamp="1589705571483" />
     <state width="644" height="635" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1589628526021" />
@@ -541,26 +559,13 @@
           <line>93</line>
           <properties documentPath="$PROJECT_DIR$/Tests/Saves_Should.cs" initialLine="93">
             <startOffsets>
-              <option value="3094" />
+              <option value="3108" />
             </startOffsets>
             <endOffsets>
-              <option value="3108" />
+              <option value="3122" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Game/Control/EnemyHitBar.cs</url>
-          <line>25</line>
-          <properties documentPath="$PROJECT_DIR$/Game/Control/EnemyHitBar.cs" initialLine="25">
-            <startOffsets>
-              <option value="881" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1025" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="22" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

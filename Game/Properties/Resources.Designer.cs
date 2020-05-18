@@ -73,6 +73,16 @@ namespace Game.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap ArcherAttack {
+            get {
+                object obj = ResourceManager.GetObject("ArcherAttack", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap barrack {
             get {
                 object obj = ResourceManager.GetObject("barrack", resourceCulture);
@@ -96,6 +106,126 @@ namespace Game.Properties {
         public static System.Drawing.Bitmap DarkForest {
             get {
                 object obj = ResourceManager.GetObject("DarkForest", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap DeadArcher {
+            get {
+                object obj = ResourceManager.GetObject("DeadArcher", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap DeadEnemyArcher {
+            get {
+                object obj = ResourceManager.GetObject("DeadEnemyArcher", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap DeadEnemyMag {
+            get {
+                object obj = ResourceManager.GetObject("DeadEnemyMag", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap DeadEnemyWarrior {
+            get {
+                object obj = ResourceManager.GetObject("DeadEnemyWarrior", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap DeadMag {
+            get {
+                object obj = ResourceManager.GetObject("DeadMag", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap DeadWarrior {
+            get {
+                object obj = ResourceManager.GetObject("DeadWarrior", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap EnemyArcher {
+            get {
+                object obj = ResourceManager.GetObject("EnemyArcher", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap EnemyArcherAttack {
+            get {
+                object obj = ResourceManager.GetObject("EnemyArcherAttack", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap EnemyWarrior {
+            get {
+                object obj = ResourceManager.GetObject("EnemyWarrior", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap EnemyWarrirAttack {
+            get {
+                object obj = ResourceManager.GetObject("EnemyWarrirAttack", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap EnemyWizard {
+            get {
+                object obj = ResourceManager.GetObject("EnemyWizard", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap EnemyWizardAttack {
+            get {
+                object obj = ResourceManager.GetObject("EnemyWizardAttack", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -267,6 +397,26 @@ namespace Game.Properties {
         public static System.Drawing.Bitmap Warrior {
             get {
                 object obj = ResourceManager.GetObject("Warrior", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap WarriorAttack {
+            get {
+                object obj = ResourceManager.GetObject("WarriorAttack", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap WizarAttack {
+            get {
+                object obj = ResourceManager.GetObject("WizarAttack", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

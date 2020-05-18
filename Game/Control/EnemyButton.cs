@@ -7,10 +7,10 @@ namespace Game.Control
 {
     public partial class EnemyButton : UserControl
     {
-        private BasicCreature _enemyHero;
+        public BasicCreature EnemyHero;
         public EnemyButton(BasicCreature enemyHero)
         {
-            _enemyHero = enemyHero;
+            EnemyHero = enemyHero;
             Size = new Size(35, 35);
         }
 

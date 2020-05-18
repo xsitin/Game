@@ -7,14 +7,14 @@ namespace Game.Model
     {
         public string Name { get; set; }
         public  Dictionary<Characteristics, int> Characteristics { get; set; }
-        public Inventory Inventory;
+        public List<ActiveItem> Inventory;
         public int Level { get; set; }
         public Location Location { get; set; }
         public Specialization Specialization { get; set; }
         public List<Skill> Skills { get; set; }
         public Position Position { get; set; }
 
-        public BasicCreature(string name, Dictionary<Characteristics, int> characteristics, Inventory inventory,
+        public BasicCreature(string name, Dictionary<Characteristics, int> characteristics, List<ActiveItem> inventory,
             Specialization specialization, Location location)
         {
             Name = name;
@@ -50,7 +50,7 @@ namespace Game.Model
 
         public readonly List<Buff> Buffs = new List<Buff>();
 
-        public BasicCreature(string name, Dictionary<Characteristics, int> characteristics, Inventory inventory)
+        public BasicCreature(string name, Dictionary<Characteristics, int> characteristics, List<ActiveItem> inventory)
         {
             Name = name;
             Characteristics = characteristics;
@@ -65,7 +65,7 @@ namespace Game.Model
             if (isMagic)
                 Characteristics[Model.Characteristics.Health] +=
                     change * (1 - Characteristics[Model.Characteristics.MagicalProtection] / 100);
-            else if ((new Random()).Next(0, 100) < Characteristics[Model.Characteristics.Evasion])
+            else if ((new Random()).Next(0, 100) > Characteristics[Model.Characteristics.Evasion])
                 Characteristics[Model.Characteristics.Health] +=
                     change * (1 - Characteristics[Model.Characteristics.PhysicalProtection] / 100);
         }

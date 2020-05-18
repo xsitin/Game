@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Loliconshik\.Rider2019.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Loliconshik\.Rider2019.3\system\resharper-host\Local\Transient\ReSharperHost\v193\SolutionCaches\_Game.-1559802761.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Loliconshik\Documents\GitHub\Game" t="IncludeFlat">
+    <e p="C:\Users\xsitin\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\xsitin\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_Game.43876633.00" t="ExcludeRecursive" />
+    <e p="C:\Users\xsitin\AppData\Roaming\JetBrains\Rider2020.1\scratches" t="IncludeRecursive" />
+    <e p="C:\Users\xsitin\Documents\GitHub\Game" t="IncludeFlat">
       <e p="Game" t="IncludeRecursive">
         <e p="App.config" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
@@ -33,16 +34,19 @@
           <e p="HpPotionsControl.resx" t="Include" />
           <e p="InterfaceControl.cs" t="Include" />
           <e p="InterfaceControl.Designer.cs" t="Include" />
-          <e p="MercenariesControl.cs" t="Include" />
+          <e p="InterfaceControl.resx" t="Include" />
+          <e p="MercenariesControle.cs" t="Include" />
           <e p="MpPotionControl.cs" t="Include" />
           <e p="MpPotionControl.resx" t="Include" />
           <e p="PersonControl.cs" t="Include" />
           <e p="PersonControl.Designer.cs" t="Include" />
           <e p="PersonControl.resx" t="Include" />
+          <e p="TargetFiller.cs" t="Include" />
           <e p="UpgradeChar.cs" t="Include" />
           <e p="UpgradeSkill.cs" t="Include" />
         </e>
         <e p="Game.csproj" t="IncludeRecursive" />
+        <e p="Game_TemporaryKey.pfx" t="Include" />
         <e p="Image" t="Include">
           <e p="cont.png" t="Include" />
           <e p="load.png" t="Include" />
@@ -82,8 +86,21 @@
         </e>
         <e p="Resources" t="Include">
           <e p="Archer.png" t="Include" />
+          <e p="ArcherAttack.png" t="Include" />
           <e p="barrack.png" t="Include" />
           <e p="DarkForest.png" t="Include" />
+          <e p="DeadArcher.png" t="Include" />
+          <e p="DeadEnemyArcher.png" t="Include" />
+          <e p="DeadEnemyMag.png" t="Include" />
+          <e p="DeadEnemyWarrior.png" t="Include" />
+          <e p="DeadMag.png" t="Include" />
+          <e p="DeadWarrior.png" t="Include" />
+          <e p="EnemyArcher.png" t="Include" />
+          <e p="EnemyArcherAttack.png" t="Include" />
+          <e p="EnemyWarrior.png" t="Include" />
+          <e p="EnemyWarrirAttack.png" t="Include" />
+          <e p="EnemyWizard.png" t="Include" />
+          <e p="EnemyWizardAttack.png" t="Include" />
           <e p="GoldBack.png" t="Include" />
           <e p="HeroCard.png" t="Include" />
           <e p="HPpotion.png" t="Include" />
@@ -91,6 +108,8 @@
           <e p="Shop.png" t="Include" />
           <e p="Skroll.png" t="Include" />
           <e p="Warrior.png" t="Include" />
+          <e p="WarriorAttack.png" t="Include" />
+          <e p="WizarAttack.png" t="Include" />
           <e p="Wizard.png" t="Include" />
           <e p="бой.png" t="Include" />
         </e>

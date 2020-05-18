@@ -256,14 +256,18 @@ namespace Game
             };
             apply.Click += (b, e) =>
             {
+                var spec = (Specialization) Enum.Parse(typeof(Specialization), choice);
+                var h = new Hero(spec);
+                h.Skills.AddRange(Helper.BasicSkills[spec]);
+                h.Characteristics[Characteristics.Evasion] = 100;
+                h.Characteristics[Characteristics.MagicalProtection] = 100;
                 var pl = new Player()
                 {
-                    PlayerName = name.Text, Gold = 100,
+                    PlayerName = name.Text, Gold = 10000,
                     Heroes = new List<Hero>()
-                    {
-                        new Hero((Specialization) Enum.Parse(typeof(Specialization), choice))
-                    },
-                    Mercenaries = new List<Hero>(), Shop = new List<ActiveItem>(), Storage = new List<ActiveItem>()
+                        {},
+                    Mercenaries = new List<Hero>(), Shop = new List<ActiveItem>(), Storage = new List<ActiveItem>(),
+                    ActiveTeam= new Team<Hero>(new List<Hero>(){h},new List<Hero>() )
                 };
                 var hf = new HeroesFactory(pl);
                 pl.Mercenaries.AddRange(new[]
@@ -407,6 +411,7 @@ namespace Game
             };
             var goHunt = new Button()
             {
+                Name = "Hunt",
                 BackColor = Color.Transparent,
                 FlatStyle = FlatStyle.Flat,
                 Bounds = new Rectangle(250, 500, 235, 200),

@@ -16,13 +16,13 @@ namespace Tests {
         [SetUp]
         public void SetUp() {
             heroWarrior = new Hero("Герой", new Dictionary<Characteristics, int>() { [Characteristics.Health] = 200 },
-               new Inventory(), Specialization.Warrior, Position.Melee, Location.SomeLocation);
+               new List<ActiveItem>(), Specialization.Warrior, Position.Melee, Location.SomeLocation);
             heroArcher = new Hero("Герой", new Dictionary<Characteristics, int>() { [Characteristics.Health] = 200 },
-              new Inventory(), Specialization.Archer, Position.Range, Location.SomeLocation);
+              new List<ActiveItem>(), Specialization.Archer, Position.Range, Location.SomeLocation);
             enemyWarrior = new EnemyHero("Злодей", new Dictionary<Characteristics, int>() { [Characteristics.Health] = 200 },
-               new Inventory(), Specialization.Warrior, Position.Melee, Location.SomeLocation);
+               new List<ActiveItem>(), Specialization.Warrior, Position.Melee, Location.SomeLocation);
             enemyWizard = new EnemyHero("Злодей", new Dictionary<Characteristics, int>() { [Characteristics.Health] = 200 },
-               new Inventory(), Specialization.Warrior, Position.Range, Location.SomeLocation);
+               new List<ActiveItem>(), Specialization.Warrior, Position.Range, Location.SomeLocation);
         }
 
         [Test]
