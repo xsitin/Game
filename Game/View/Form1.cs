@@ -80,9 +80,9 @@ namespace Game
             if (GetSaveNames().Count != 0)
                 menu.Controls.Add(continueGame, 0, i++);
             menu.Controls.Add(newGame, 0, i++);
-            menu.Controls.Add(loadGame, 0, i++);
+            menu.Controls.Add(loadGame, 0, i);
             if (GetSaveNames().Count == 0)
-                menu.Controls.Add(new Panel(), 0, i);
+                menu.Controls.Add(new Panel(), 0, 2);
             Table.Controls.Add(menu, 0, 0);
             BackgroundImage = Properties.Resources.StartGameArt;
             BackgroundImageLayout = ImageLayout.Stretch;
