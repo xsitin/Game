@@ -6,7 +6,7 @@ namespace Game.Model
     public abstract class BasicCreature
     {
         public string Name { get; set; }
-        public  Dictionary<Characteristics, int> Characteristics { get; set; }
+        public Dictionary<Characteristics, int> Characteristics { get; set; }
         public List<ActiveItem> Inventory;
         public int Level { get; set; }
         public Location Location { get; set; }
@@ -34,7 +34,7 @@ namespace Game.Model
         public BasicCreature()
         {
         }
-        
+
         //TODO move some methods from heroes there and add effect from characters
         public static readonly Dictionary<Characteristics, int> BaseCharacteristics =
             new Dictionary<Characteristics, int>
@@ -63,13 +63,13 @@ namespace Game.Model
         public void HpChange(int change, bool isMagic)
         {
             if (isMagic)
-                Characteristics[Model.Characteristics.Health] +=
-                    change * (1 - Characteristics[Model.Characteristics.MagicalProtection] / 100);
+                Characteristics[Model.Characteristics.Health] += (int) (
+                    change * (1 - ((double) Characteristics[Model.Characteristics.MagicalProtection] / 100)));
             else if ((new Random()).Next(0, 100) > Characteristics[Model.Characteristics.Evasion])
                 Characteristics[Model.Characteristics.Health] +=
-                    change * (1 - Characteristics[Model.Characteristics.PhysicalProtection] / 100);
+                    (int) (change * (1 - ((double) Characteristics[Model.Characteristics.PhysicalProtection] / 100)));
         }
-        
+
         public void UseSkill(Skill action, params BasicCreature[] targets)
         {
             if (action.ManaCost <= Characteristics[Model.Characteristics.Mana])
@@ -79,15 +79,19 @@ namespace Game.Model
                 {
                     foreach ((var characteristic, var value) in action.Effect)
                         if (characteristic == Model.Characteristics.Health)
-                            target.HpChange(value, action.IsMagic);
+                            if (action.Name == "BaseHit")
+                                target.HpChange(Characteristics[Model.Characteristics.PhysicalDamage], false);
+                            else
+                                target.HpChange(value, action.IsMagic);
                         else
                             target.Characteristics[characteristic] += value;
+
                     if (action.Buff != null)
                         target.Buffs.Add(action.Buff.ToTarget(target));
                 }
             }
         }
-        
+
         private void FillDictionary()
         {
             for (var i = 0; i < 7; i++)
@@ -97,6 +101,7 @@ namespace Game.Model
                     Characteristics[ability] = BaseCharacteristics[ability];
             }
         }
+
         public override string ToString()
         {
             return Name;

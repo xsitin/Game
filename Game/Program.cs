@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
+using Game.Model;
 using Game.Properties;
 
 namespace Game
@@ -13,8 +14,12 @@ namespace Game
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            var form = new Form1(){Name = "Main"};
-            
+            var form = new Form1() {Name = "Main"};
+            Application.ApplicationExit += (a, e) =>
+            {
+                if (form.Player != null)
+                    Helper.SaveGame(form.Player);
+            };
             form.ShowMenu();
             Application.Run(form);
         }

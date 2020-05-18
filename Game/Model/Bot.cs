@@ -10,7 +10,7 @@ namespace Game.Model
         {
             var current = (EnemyHero) game.CurrentCreature;
             var random = new Random();
-            var skill = current.Skills[random.Next(0, current.Skills.Count - 1)];
+            var skill = current.Skills[random.Next(0, current.Skills.Count)];
             var targets = new List<BasicCreature>();
             if (game.Heroes.GetTeamList().Any())
                 switch (skill.Range)

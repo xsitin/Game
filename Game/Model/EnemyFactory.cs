@@ -59,7 +59,7 @@ namespace Game.Model
             var enemy = new EnemyHero(Helper.GetName(), new Dictionary<Characteristics, int>(), new List<ActiveItem>(),
                 specialization, Location);
             var points = GetRandom(minLevel, maxLevel) - 1;
-            while (enemy.Skills.Count < 2)
+            while (enemy.Skills.Count < 3)
             {
                 var skill = Helper.BasicSkills[specialization][
                     GetRandom(0, Helper.BasicSkills[specialization].Count)];
