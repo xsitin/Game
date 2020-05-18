@@ -14,77 +14,68 @@ namespace Game
     {
         public Model.Game Game;
         public Player Player;
+        public TableLayoutPanel Table;
 
         public Form1()
         {
             DoubleBuffered = true;
-            BackgroundImage = Resources.StartGameArt;
+            Table = new TableLayoutPanel() {Dock = DockStyle.Fill};
         }
 
         
-        // public void ShowMenu1()
-        // {
-        //     //ClearTable();
-        //     Table.RowStyles.Add(new RowStyle(SizeType.Percent, 50));
-        //     Table.RowStyles.Add(new RowStyle(SizeType.Percent, 50));
-        //     Table.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 30));
-        //     Table.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 70));
-        //     var menu = new TableLayoutPanel();
-        //     Table.BackColor = Color.Transparent;
-        //     var newGame = new Button
-        //     {
-        //         Dock = DockStyle.Fill,
-        //         Margin = new Padding(20),
-        //         BackgroundImage = Properties.Resources.newGame,
-        //         BackgroundImageLayout = ImageLayout.Stretch
-        //     };
-        //     newGame.Click += (a, b) => { CreateNewGameScreen(); };
-        //     var loadGame = new Button
-        //     {
-        //         Dock = DockStyle.Fill,
-        //         Margin = new Padding(20),
-        //         BackgroundImage = Properties.Resources.load,
-        //         BackgroundImageLayout = ImageLayout.Stretch
-        //     };
-        //     loadGame.Click += (sender, args) =>
-        //     {
-        //         CleanForm();
-        //         LoadScreen();
-        //     };
-        //     var continueGame = new Button
-        //     {
-        //         Dock = DockStyle.Fill,
-        //         Margin = new Padding(20),
-        //         BackgroundImage = Properties.Resources.cont,
-        //         BackgroundImageLayout = ImageLayout.Stretch
-        //     };
-        //     continueGame.Click += (sender, args) =>
-        //     {
-        //         Invalidate();
-        //         CleanForm();
-        //         Player = Helper.LoadGame(GetSaveNames().First());
-        //         VillageControls();
-        //     };
-        //     menu.Dock = DockStyle.Fill;
-        //     menu.RowStyles.Add(new RowStyle(SizeType.Percent, 30));
-        //     menu.RowStyles.Add(new RowStyle(SizeType.Percent, 30));
-        //     menu.RowStyles.Add(new RowStyle(SizeType.Percent, 30));
-        //     menu.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100));
-        //     menu.Controls.Add(newGame, 0, 0);
-        //     menu.Controls.Add(continueGame, 0, 1);
-        //     menu.Controls.Add(loadGame, 0, 2);
-        //     Table.Controls.Add(menu, 0, 0);
-        //     BackgroundImage = Properties.Resources.StartGameArt;
-        //     BackgroundImageLayout = ImageLayout.Stretch;
-        //     Table.BackColor = Color.Transparent;
-        //     Table.Controls.Add(new Panel(), 1, 0);
-        //     Table.Controls.Add(new Panel(), 1, 1);
-        //     Table.Controls.Add(new Panel(), 0, 1);
-        //     WindowState = FormWindowState.Maximized;
-        //     Controls.Add(Table);
-        // }
+         public void ShowMenu()
+        {
+            GetSaveNames();
+            Table.RowStyles.Clear();
+            Table.ColumnStyles.Clear();
+            Table.Controls.Clear();
+            Table.RowStyles.Add(new RowStyle(SizeType.Percent, 50));
+            Table.RowStyles.Add(new RowStyle(SizeType.Percent, 50));
+            Table.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 30));
+            Table.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 70));
+            var menu = new TableLayoutPanel();
+            Table.BackColor = Color.Transparent;
+            var newGame = new Button() {Dock = DockStyle.Fill, Margin = new Padding(20)};
+            newGame.BackgroundImage = Properties.Resources.newGame;
+            newGame.BackgroundImageLayout = ImageLayout.Stretch;
+            newGame.Click += (a, b) => { CreateNewGameScreen(); };
+            var loadGame = new Button() {Dock = DockStyle.Fill, Margin = new Padding(20)};
+            loadGame.BackgroundImage = Properties.Resources.load;
+            loadGame.BackgroundImageLayout = ImageLayout.Stretch;
+            loadGame.Click += (sender, args) =>
+            {
+                CleanForm();
+                LoadScreen();
+            };
+            var continueGame = new Button() {Dock = DockStyle.Fill, Margin = new Padding(20)};
+            continueGame.BackgroundImage = Properties.Resources.cont;
+            continueGame.BackgroundImageLayout = ImageLayout.Stretch;
+            continueGame.Click += (sender, args) =>
+            {
+                CleanForm();
+                Player = Helper.LoadGame(GetSaveNames().First());
+                VillageControls();
+            };
+            menu.Dock = DockStyle.Fill;
+            menu.RowStyles.Add(new RowStyle(SizeType.Percent, 30));
+            menu.RowStyles.Add(new RowStyle(SizeType.Percent, 30));
+            menu.RowStyles.Add(new RowStyle(SizeType.Percent, 30));
+            menu.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100));
+            menu.Controls.Add(newGame, 0, 0);
+            menu.Controls.Add(continueGame, 0, 1);
+            menu.Controls.Add(loadGame, 0, 2);
+            Table.Controls.Add(menu, 0, 0);
+            BackgroundImage = Properties.Resources.StartGameArt;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            Table.BackColor = Color.Transparent;
+            Table.Controls.Add(new Panel(), 1, 0);
+            Table.Controls.Add(new Panel(), 1, 1);
+            Table.Controls.Add(new Panel(), 0, 1);
+            WindowState = FormWindowState.Maximized; 
+            Controls.Add(Table);
+        }
 
-        public void ShowMenu()
+        public void ShowMenu1()
         {
             var menu = new Panel
             {
@@ -455,6 +446,21 @@ namespace Game
                 VillageControls();
             };
             Controls.Add(back);
+        }
+        
+        public void CleanForm()
+        {
+            Controls.Clear();
+            Table.RowStyles.Clear();
+            Table.Controls.Clear();
+            Table.ColumnStyles.Clear();
+        }
+
+        public void ClearTable()
+        {
+            Table.RowStyles.Clear();
+            Table.Controls.Clear();
+            Table.ColumnStyles.Clear();
         }
     }
 }
