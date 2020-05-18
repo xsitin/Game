@@ -69,7 +69,7 @@ namespace Game.Model
                     hero.Skills[random.Next(0, hero.Skills.Count - 1)].Upgrade();
 
             hero.StandardChars =
-                new ReadOnlyDictionary<Characteristics, int>(
+                new Dictionary<Characteristics, int>(
                     hero.Characteristics.ToDictionary(x => x.Key, x => x.Value));
             hero.Level = _level;
             return hero;
