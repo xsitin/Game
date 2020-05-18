@@ -21,10 +21,12 @@ namespace Game
         {
             DoubleBuffered = true;
             Table = new TableLayoutPanel() {Dock = DockStyle.Fill};
+            if (!Directory.Exists(Environment.GetFolderPath(Environment.SpecialFolder.Personal) + @"\Game"))
+                Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.Personal) + @"\Game");
         }
 
         
-         public void ShowMenu()
+        public void ShowMenu()
         {
             GetSaveNames();
             Table.RowStyles.Clear();
@@ -134,20 +136,20 @@ namespace Game
             var panel = new Panel
             {
                 BackColor = Color.Transparent,
-                Bounds = new Rectangle(500, 150, 500, 500),
+                Bounds = new Rectangle(650, 160, 600, 700),
                 BackgroundImage = Resources.Skroll,
                 BackgroundImageLayout = ImageLayout.Stretch
             };
             panel.Controls.Add(new Label()
             {
-                Text = "Загрузить игру", Font = new Font(FontFamily.GenericSansSerif, 13),
-                Bounds = new Rectangle(190, 35, 150, 30)
+                Text = "Загрузить игру", Font = new Font(FontFamily.GenericSansSerif, 16),
+                Bounds = new Rectangle(220, 50, 300, 30)
             });
             var subPanel = new Panel
             {
                 AutoScroll = true,
                 BackColor = Color.Transparent,
-                Bounds = new Rectangle(100, 100, 350, 200),
+                Bounds = new Rectangle(160, 140, 350, 350),
             };
             var savesNames = GetSaveNames();
             var dy = 0;
@@ -156,7 +158,8 @@ namespace Game
                 var save = new Button
                 {
                     Text = saveName,
-                    Bounds = new Rectangle(0, 50 + dy, 300, 50)
+                    Bounds = new Rectangle(0, 50 + dy, 300, 50),
+                    Font = new Font(FontFamily.GenericSansSerif, 16),
                 };
                 save.Click += (o, eventArgs) =>
                 {
@@ -172,7 +175,8 @@ namespace Game
             panel.Controls.Add(subPanel);
             var back = new Button {
                 Text = "Вернуться",
-                Bounds = new Rectangle(150, 350, 200, 50),
+                Font = new Font(FontFamily.GenericSansSerif, 16),
+                Bounds = new Rectangle(210, 510, 200, 50),
             };
             back.Click += (sender, args) =>
             {
@@ -202,46 +206,47 @@ namespace Game
             Controls.Clear();
             var playMenu = new Panel
             {
-                Bounds = new Rectangle(500, 180, 500, 400),
+                Bounds = new Rectangle(650, 160, 600, 700),
                 BackColor = Color.Transparent,
                 BackgroundImage = Resources.Skroll,
                 BackgroundImageLayout = ImageLayout.Stretch
             };
-            var message = new Label()
+            var message = new Label
             {
                 Text = "Создание Вашего персонажа", 
-                Bounds = new Rectangle(160, 30, 300, 20),
-                Font = new Font(FontFamily.GenericSerif, 12)
+                Bounds = new Rectangle(170, 50, 300, 30),
+                Font = new Font(FontFamily.GenericSerif, 16)
             };
             var message2 = new Label() { 
                 Text = "Введите Ваше имя", 
-                Bounds = new Rectangle(190, 80, 300, 20),
-                Font = new Font(FontFamily.GenericSerif, 12)
+                Bounds = new Rectangle(210, 130, 300, 30),
+                Font = new Font(FontFamily.GenericSerif, 16)
             };
             var message3 = new Label()
             {
                 Text = "Выберите класс", 
-                Bounds = new Rectangle(205, 125, 300, 20),
-                Font = new Font(FontFamily.GenericSerif, 12)
+                Bounds = new Rectangle(225, 235, 300, 30),
+                Font = new Font(FontFamily.GenericSerif, 16)
             };
             var name = new TextBox
             {
                 TextAlign = HorizontalAlignment.Center,
-                Location = new Point(110, 100),
+                Location = new Point(150, 170),
+                Font = new Font(FontFamily.GenericSansSerif, 15),
                 Dock = DockStyle.None,
-                Size = new Size(300, 10),
+                Size = new Size(300, 50),
             };
             name.MouseClick += (a, e) => { ((TextBox) a).Text = ""; };
             name.AcceptsReturn = true;
             name.Margin = new Padding(name.Width / 10);
             var groupClasses = new Panel()
             {
-                Bounds = new Rectangle(115, 130, 500, 50),
+                Bounds = new Rectangle(135, 270, 500, 50),
                 BackColor = Color.Transparent
             };
-            var warriorButton = new RadioButton {Bounds = new Rectangle(35,0,70,50), Text = "Воин"};
-            var archerButton = new RadioButton {Bounds =  new Rectangle(115,0,70,50), Text = "Лучник"};
-            var wizardButton = new RadioButton {Bounds =  new Rectangle(205,0,70,50), Text = "Маг"};
+            var warriorButton = new RadioButton {Bounds = new Rectangle(35,0,70,50), Text = "Воин", Font = new Font(FontFamily.GenericSansSerif, 13),};
+            var archerButton = new RadioButton {Bounds =  new Rectangle(135,0,90,50), Text = "Лучник", Font = new Font(FontFamily.GenericSansSerif, 13),};
+            var wizardButton = new RadioButton {Bounds =  new Rectangle(245,0,90,50), Text = "Маг", Font = new Font(FontFamily.GenericSansSerif, 13),};
             groupClasses.Controls.Add(warriorButton);
             groupClasses.Controls.Add(archerButton);
             groupClasses.Controls.Add(wizardButton);
@@ -252,7 +257,8 @@ namespace Game
             var apply = new Button
             {
                 Text = "Подтвердить",
-                Bounds = new Rectangle(300,290,100,40),
+                Bounds = new Rectangle(320,500,200,60),
+                Font = new Font(FontFamily.GenericSansSerif, 16)
             };
             apply.Click += (b, e) =>
             {
@@ -279,7 +285,8 @@ namespace Game
             var back = new Button()
             {
                 Text = "Отмена",
-                Bounds = new Rectangle(100, 290, 100, 40)
+                Bounds = new Rectangle(100, 500, 200, 60),
+                Font = new Font(FontFamily.GenericSansSerif, 16)
             };
             back.Click += (sender, args) =>
             {
