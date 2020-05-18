@@ -38,21 +38,33 @@ namespace Game
             Table.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 70));
             var menu = new TableLayoutPanel();
             Table.BackColor = Color.Transparent;
-            var newGame = new Button() {Dock = DockStyle.Fill, Margin = new Padding(20)};
-            newGame.BackgroundImage = Properties.Resources.newGame;
-            newGame.BackgroundImageLayout = ImageLayout.Stretch;
+            var newGame = new Button
+            {
+                Dock = DockStyle.Fill,
+                Margin = new Padding(20),
+                BackgroundImage = Properties.Resources.newGame,
+                BackgroundImageLayout = ImageLayout.Stretch
+            };
             newGame.Click += (a, b) => { CreateNewGameScreen(); };
-            var loadGame = new Button() {Dock = DockStyle.Fill, Margin = new Padding(20)};
-            loadGame.BackgroundImage = Properties.Resources.load;
-            loadGame.BackgroundImageLayout = ImageLayout.Stretch;
+            var loadGame = new Button
+            {
+                Dock = DockStyle.Fill,
+                Margin = new Padding(20),
+                BackgroundImage = Properties.Resources.load,
+                BackgroundImageLayout = ImageLayout.Stretch
+            };
             loadGame.Click += (sender, args) =>
             {
                 CleanForm();
                 LoadScreen();
             };
-            var continueGame = new Button() {Dock = DockStyle.Fill, Margin = new Padding(20)};
-            continueGame.BackgroundImage = Properties.Resources.cont;
-            continueGame.BackgroundImageLayout = ImageLayout.Stretch;
+            var continueGame = new Button
+            {
+                Dock = DockStyle.Fill,
+                Margin = new Padding(20),
+                BackgroundImage = Properties.Resources.cont,
+                BackgroundImageLayout = ImageLayout.Stretch
+            };
             continueGame.Click += (sender, args) =>
             {
                 CleanForm();
@@ -64,9 +76,13 @@ namespace Game
             menu.RowStyles.Add(new RowStyle(SizeType.Percent, 30));
             menu.RowStyles.Add(new RowStyle(SizeType.Percent, 30));
             menu.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100));
-            menu.Controls.Add(newGame, 0, 0);
-            menu.Controls.Add(continueGame, 0, 1);
-            menu.Controls.Add(loadGame, 0, 2);
+            var i = 0;
+            if (GetSaveNames().Count != 0)
+                menu.Controls.Add(continueGame, 0, i++);
+            menu.Controls.Add(newGame, 0, i++);
+            menu.Controls.Add(loadGame, 0, i++);
+            if (GetSaveNames().Count == 0)
+                menu.Controls.Add(new Panel(), 0, i);
             Table.Controls.Add(menu, 0, 0);
             BackgroundImage = Properties.Resources.StartGameArt;
             BackgroundImageLayout = ImageLayout.Stretch;
@@ -77,60 +93,7 @@ namespace Game
             WindowState = FormWindowState.Maximized; 
             Controls.Add(Table);
         }
-
-        public void ShowMenu1()
-        {
-            var menu = new Panel
-            {
-                BackColor = Color.Transparent,
-                BackgroundImage = Resources.Skroll,
-                BackgroundImageLayout = ImageLayout.Stretch,
-                Bounds = new Rectangle(500, 100, 500, 600)
-            };
-            var message = new Label
-            {
-                Bounds = new Rectangle(190, 50, 300, 50),
-                Text = "Главное меню",
-                Font = new Font(FontFamily.GenericMonospace, 15),
-            };
-            var newGame = new Button
-            {
-                Bounds = new Rectangle(95, 250, 330, 100),
-                BackgroundImage = Properties.Resources.newGame,
-                BackgroundImageLayout = ImageLayout.Stretch
-            };
-            newGame.Click += (a, b) => { CreateNewGameScreen(); };
-            var loadGame = new Button
-            {
-                Bounds = new Rectangle(95, 350, 330, 100),
-                BackgroundImage = Properties.Resources.load,
-                BackgroundImageLayout = ImageLayout.Stretch
-            };
-            loadGame.Click += (sender, args) =>
-            {
-                Controls.Clear();
-                LoadScreen();
-            };
-            var continueGame = new Button
-            {
-                Bounds = new Rectangle(95, 150, 330, 100),
-                BackgroundImage = Properties.Resources.cont,
-                BackgroundImageLayout = ImageLayout.Stretch
-            };
-            continueGame.Click += (sender, args) =>
-            {
-                Invalidate();
-                Controls.Clear();
-                Player = Helper.LoadGame(GetSaveNames().First());
-                VillageControls();
-            };
-            menu.Controls.Add(message);
-            menu.Controls.Add(continueGame);
-            menu.Controls.Add(newGame);
-            menu.Controls.Add(loadGame);
-            Controls.Add(menu);
-        }
-
+        
         private void LoadScreen()
         {
             var panel = new Panel
