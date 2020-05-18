@@ -35,11 +35,9 @@ namespace Game.Control
             // 
             // HitPointBar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "HitPointBar";
-            this.Size = new System.Drawing.Size(150, 188);
             this.ResumeLayout(false);
         }
 

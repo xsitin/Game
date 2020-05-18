@@ -234,6 +234,16 @@ namespace Game.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        public static System.Drawing.Bitmap Skroll {
+            get {
+                object obj = ResourceManager.GetObject("Skroll", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         public static System.Drawing.Bitmap StartGameArt {
             get {
                 object obj = ResourceManager.GetObject("StartGameArt", resourceCulture);

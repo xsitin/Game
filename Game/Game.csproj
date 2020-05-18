@@ -187,6 +187,9 @@
     <Compile Include="View\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Control\AllControl.resx">
+      <DependentUpon>AllControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Control\EnemyButton.resx">
       <DependentUpon>EnemyButton.cs</DependentUpon>
     </EmbeddedResource>
@@ -252,6 +255,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Properties\Names.txt" />
+    <None Include="Resources\Skroll.png" />
     <None Include="Resources\MPpotion.png" />
     <None Include="Resources\HPpotion.png" />
     <None Include="Resources\GoldBack.png" />

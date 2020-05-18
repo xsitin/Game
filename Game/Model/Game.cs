@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using NUnit.Framework;
 
 namespace Game.Model
 {
@@ -38,7 +39,7 @@ namespace Game.Model
             }
         }
 
-        public void NextStep()
+        public void NextStep(bool ask = false)
         {
             Heroes.Update();
             Enemy.Update();
@@ -65,7 +66,7 @@ namespace Game.Model
             GC.WaitForPendingFinalizers();
             if (!Heroes.GetTeamList().Any())
             {
-                //console.log('poshel naxui');
+                IsEnd = true;
             }
 
             if (!Enemy.GetTeamList().Any())
@@ -75,7 +76,6 @@ namespace Game.Model
                 var level = heroes.Sum(x => (x as Hero).Level) / heroes.Count();
                 _reward.exp += (int) Math.Round(100 + level * 100 + 300 * Math.Pow(level, 0.5)) / 4;
                 _reward.money += level * 200;
-                var ask = new Random().Next(0, 2) == 1;
                 if (ask)
                 {
                     Enemy = _enemyFactory.GetEnemyTeam();
@@ -86,7 +86,7 @@ namespace Game.Model
                 IsEnd = true;
             }
 
-            if ((CurrentCreature is EnemyHero) && CurrentCreature.Characteristics[Characteristics.Health] > 0)
+            if ((CurrentCreature is EnemyHero) && CurrentCreature.Characteristics[Characteristics.Health] > 0 && !IsEnd)
                 Bot.MakeAMove(this);
             //Todo give step to player
         }
