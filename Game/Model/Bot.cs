@@ -49,7 +49,6 @@ namespace Game.Model
                 }
 
             current.UseSkill(skill, targets.ToArray());
-            game.NextStep();
         }
     }
 }

@@ -121,6 +121,9 @@
   <data name="Archer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Archer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ArcherAttack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ArcherAttack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="barrack" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\barrack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -130,14 +133,41 @@
   <data name="DarkForest" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\DarkForest.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="DeadArcher" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DeadArcher.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DeadEnemyArcher" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DeadEnemyArcher.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DeadEnemyMag" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DeadEnemyMag.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DeadEnemyWarrior" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DeadEnemyWarrior.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DeadMag" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DeadMag.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DeadWarrior" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\DeadWarrior.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="EnemyArcher" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\EnemyArcher.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EnemyArcherAttack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EnemyArcherAttack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="EnemyWarrior" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\EnemyWarrior.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="EnemyWarrirAttack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EnemyWarrirAttack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="EnemyWizard" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\EnemyWizard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EnemyWizardAttack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EnemyWizardAttack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="GoldBack" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\GoldBack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -171,6 +201,12 @@
   </data>
   <data name="Warrior" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Warrior.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WarriorAttack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WarriorAttack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WizarAttack" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WizarAttack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Wizard" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Wizard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

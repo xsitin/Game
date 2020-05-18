@@ -52,7 +52,7 @@ namespace Tests
             {
                 var queue = TestHelper.GetQueue(heroCount, enemyCount);
                 var expectation = queue.Queue[expect - 1].Name;
-                for (var i = 0; i < current - 1; i++)
+                for (var i = 0; i < current ; i++)
                     queue.GetNextPerson();
                 var real = queue.GetNextPerson().Name;
                 Assert.AreEqual(expectation, real);
@@ -86,6 +86,7 @@ namespace Tests
             {
                 var queue = TestHelper.GetQueue(3, 4);
                 var expectation = queue.Queue[6].Name;
+                queue.Queue[0].Characteristics[Characteristics.Health] = 0;
                 queue.Queue[1].Characteristics[Characteristics.Health] = 0;
                 queue.Queue[2].Characteristics[Characteristics.Health] = 0;
                 queue.Queue[3].Characteristics[Characteristics.Health] = 0;
@@ -99,7 +100,6 @@ namespace Tests
             {
                 var queue = TestHelper.GetQueue(2, 2);
                 var expectation = queue.Queue[0].Name;
-                queue.GetNextPerson();
                 queue.Queue[2].Characteristics[Characteristics.Health] = 0;
                 queue.Queue[3].Characteristics[Characteristics.Health] = 0;
                 var real = queue.GetNextPerson().Name;

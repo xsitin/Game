@@ -93,7 +93,11 @@ namespace Game.Model
             }
 
             if ((CurrentCreature is EnemyHero) && CurrentCreature.Characteristics[Characteristics.Health] > 0)
+            {
                 Bot.MakeAMove(this);
+                NextStep();
+            }
+
             //Todo give step to player
         }
     }

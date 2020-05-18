@@ -37,10 +37,12 @@
           <e p="PersonControl.cs" t="Include" />
           <e p="PersonControl.Designer.cs" t="Include" />
           <e p="PersonControl.resx" t="Include" />
+          <e p="TargetFiller.cs" t="Include" />
           <e p="UpgradeChar.cs" t="Include" />
           <e p="UpgradeSkill.cs" t="Include" />
         </e>
         <e p="Game.csproj" t="IncludeRecursive" />
+        <e p="Game_TemporaryKey.pfx" t="Include" />
         <e p="Image" t="Include">
           <e p="cont.png" t="Include" />
           <e p="load.png" t="Include" />
@@ -80,17 +82,29 @@
         </e>
         <e p="Resources" t="Include">
           <e p="Archer.png" t="Include" />
+          <e p="ArcherAttack.png" t="Include" />
           <e p="barrack.png" t="Include" />
           <e p="DarkForest.png" t="Include" />
+          <e p="DeadArcher.png" t="Include" />
+          <e p="DeadEnemyArcher.png" t="Include" />
+          <e p="DeadEnemyMag.png" t="Include" />
+          <e p="DeadEnemyWarrior.png" t="Include" />
+          <e p="DeadMag.png" t="Include" />
+          <e p="DeadWarrior.png" t="Include" />
           <e p="EnemyArcher.png" t="Include" />
+          <e p="EnemyArcherAttack.png" t="Include" />
           <e p="EnemyWarrior.png" t="Include" />
+          <e p="EnemyWarrirAttack.png" t="Include" />
           <e p="EnemyWizard.png" t="Include" />
+          <e p="EnemyWizardAttack.png" t="Include" />
           <e p="GoldBack.png" t="Include" />
           <e p="HeroCard.png" t="Include" />
           <e p="HPpotion.png" t="Include" />
           <e p="MPpotion.png" t="Include" />
           <e p="Shop.png" t="Include" />
           <e p="Warrior.png" t="Include" />
+          <e p="WarriorAttack.png" t="Include" />
+          <e p="WizarAttack.png" t="Include" />
           <e p="Wizard.png" t="Include" />
           <e p="бой.png" t="Include" />
         </e>

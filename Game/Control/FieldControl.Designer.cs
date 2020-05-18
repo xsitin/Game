@@ -2,7 +2,7 @@
 
 namespace Game.Control
 {
-    partial class FieldControl
+    sealed partial class FieldControl
     {
         /// <summary> 
         /// Required designer variable.

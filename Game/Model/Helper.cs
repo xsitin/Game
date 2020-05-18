@@ -32,6 +32,19 @@ namespace Game.Model
             {Specialization.Warrior, Properties.Resources.EnemyWarrior},
             {Specialization.Archer, Properties.Resources.EnemyArcher}
         };
+        public static readonly Dictionary<Specialization, Image> DeadImageTransfer = new Dictionary<Specialization, Image>
+        {
+            {Specialization.Wizard, Properties.Resources.DeadMag},
+            {Specialization.Warrior, Properties.Resources.DeadWarrior},
+            {Specialization.Archer, Properties.Resources.DeadArcher}
+        };
+        
+        public static readonly Dictionary<Specialization, Image> DeadEnemyImageTransfer = new Dictionary<Specialization, Image>
+        {
+            {Specialization.Wizard, Properties.Resources.DeadEnemyMag},
+            {Specialization.Warrior, Properties.Resources.DeadEnemyWarrior},
+            {Specialization.Archer, Properties.Resources.DeadEnemyArcher}
+        };
 
         public static Dictionary<Specialization, List<Skill>> BasicSkills = new Dictionary<Specialization, List<Skill>>
         {

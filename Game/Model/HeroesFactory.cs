@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 
 namespace Game.Model
@@ -8,24 +9,26 @@ namespace Game.Model
     {
         private int _level;
         private Player _player;
+
         public HeroesFactory(Player player)
         {
             _player = player;
             var heroes = _player.Heroes.Concat(player.ActiveTeam.GetTeamList()).ToList();
-            _level = (heroes.Max(x => x.Level) / 5) * 5 < 1 ? 1 : (heroes.Max(x => x.Level) / 5) * 5 ;
+            _level = (heroes.Max(x => x.Level) / 5) * 5 < 1 ? 1 : (heroes.Max(x => x.Level) / 5) * 5;
         }
-        
+
         public void Update()
         {
             var heroes = _player.Heroes.Concat(_player.ActiveTeam.GetTeamList()).ToList();
-            _level = (heroes.Max(x => x.Level) / 5) * 5 < 1 ? 1 : (heroes.Max(x => x.Level) / 5) * 5 ;
+            _level = (heroes.Max(x => x.Level) / 5) * 5 < 1 ? 1 : (heroes.Max(x => x.Level) / 5) * 5;
         }
 
         private Specialization last = Specialization.Wizard;
+
         public Hero GetRandomHero()
         {
             var spec = (Specialization) new Random().Next(0, 3);
-            while(spec==last)
+            while (spec == last)
                 spec = (Specialization) new Random().Next(0, 3);
             last = spec;
             return GetHero(spec);
@@ -37,7 +40,7 @@ namespace Game.Model
             var hero = new Hero(Helper.GetName(), new Dictionary<Characteristics, int>(), new List<ActiveItem>(), spec,
                 Location.SomeLocation);
 
-            while (hero.Skills.Count < 2)
+            while (hero.Skills.Count < 3)
             {
                 var skill = Helper.BasicSkills[spec][
                     random.Next(0, Helper.BasicSkills[spec].Count)];
@@ -65,6 +68,9 @@ namespace Game.Model
                 else
                     hero.Skills[random.Next(0, hero.Skills.Count - 1)].Upgrade();
 
+            hero.StandardChars =
+                new ReadOnlyDictionary<Characteristics, int>(
+                    hero.Characteristics.ToDictionary(x => x.Key, x => x.Value));
             hero.Level = _level;
             return hero;
         }

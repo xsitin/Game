@@ -15,7 +15,8 @@ namespace Game.Control
 
         public InterfaceControl(Model.Game game)
         {
-            _game = game;
+            DoubleBuffered = true;
+            _game = game; 
             Controls.Add(_panel);
             _creatures = new[]
             {
@@ -87,7 +88,7 @@ namespace Game.Control
                 }
             }
 
-            int dy = 0;
+            var dy = 0;
             if (_game.CurrentCreature is Hero)
                 for (var k = 0; k < _game.CurrentCreature.Skills.Count; k++)
                 {
@@ -119,7 +120,7 @@ namespace Game.Control
                         {
                             if (!Controls.Find("Targets", true).Any())
                                 Controls.Add(_panel);
-                            for (var i = 0; i < _creatures.Length; i++)
+                            for (var i = 0; i < _creatures.Length-(_game.CurrentCreature.Position==Position.Melee?1:0); i++)
                             for (var j = 0; j < _creatures[i].Count; j++)
                             {
                                 if (_creatures[i][j].Characteristics[Characteristics.Health] < 0)
@@ -127,7 +128,6 @@ namespace Game.Control
                                     _creatures[i].RemoveAt(j);
                                     continue;
                                 }
-
                                 var i1 = i;
                                 var j1 = j;
                                 var cr = _creatures[i1][j1];
@@ -143,8 +143,8 @@ namespace Game.Control
                                         Parent.Controls["HitPoints"].Refresh();
                                         Parent.Controls["EnemyHitPoints"].Refresh();
                                         Parent.Controls["Interface"].Refresh();
+                                        Parent.Refresh();
                                     }
-
                                     Controls.Clear();
                                     _panel.Controls.Clear();
                                     Refresh();
