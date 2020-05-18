@@ -14,13 +14,11 @@ namespace Game.Control
         private HitPointBar _hitControl;
         private InterfaceControl _skillControl;
         private EnemyHitBar _enemyHitControl;
-        private Form1 _form;
 
-        public AllControl(Model.Game game, Player player, Form1 form)
+        public AllControl(Model.Game game, Player player)
         {
             _game = game;
             _player = player;
-            _form = form;
             _fieldControl = new FieldControl(_game.Heroes, _game.Enemy) {Name = "Field"};
             _fieldControl.Location = new Point(200, 1024);
             _fieldControl.Size = new Size(1366, 150);
@@ -59,7 +57,7 @@ namespace Game.Control
                     if (result == DialogResult.Yes)
                     {
                         Controls.Clear();
-                        _form.VillageControls();
+                        //VillageControls();
                     }
                     else
                     {
@@ -73,7 +71,7 @@ namespace Game.Control
                     if (result == DialogResult.Yes)
                     {
                         Controls.Clear();
-                        _form.VillageControls();
+                        //VillageControls();
                     }
                     else
                     {

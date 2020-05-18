@@ -10,13 +10,11 @@ namespace Game.Control
         private readonly Hero _hero;
         private readonly Player _player;
         private readonly Size _size = new Size(420,390);
-        private Form1 _form1;
-        public HeroInventoryControl(Hero hero, Player player, Form1 form)
+        public HeroInventoryControl(Hero hero, Player player)
         {
             _hero = hero;
             MinimumSize = _size;
             _player = player;
-            _form1 = form;
             Name = "HeroUpgrade";
             foreach (var item in hero.Inventory.Heap)
             {
@@ -57,7 +55,7 @@ namespace Game.Control
             back.Click += (sender, args) =>
             {
                 if(player.Heroes.Contains(_hero))
-                    Parent.Parent.Controls["MerHero"].Controls.Add(new BarrackHeroControl(_hero, player, form));
+                    Parent.Parent.Controls["MerHero"].Controls.Add(new BarrackHeroControl(_hero, player));
                 else 
                     Parent.Parent.Controls["Active"].Controls.Add(new ActiveTeam(_hero,player));
                 Dispose();
@@ -93,8 +91,8 @@ namespace Game.Control
 
         public override void Refresh()
         {
-            _form1.Controls["Inventory"].Controls.Clear();
-            _form1.Controls["Storage"].Controls.Clear();
+            Controls["Inventory"].Controls.Clear();
+            Controls["Storage"].Controls.Clear();
             foreach (var item in _player.Storage)
             {
                 var add = new Button()
@@ -110,7 +108,7 @@ namespace Game.Control
                     _player.Storage.Remove(item);
                     Refresh();
                 };
-                _form1.Controls["Storage"].Controls.Add(add);
+                Controls["Storage"].Controls.Add(add);
             }
             foreach (var item in _hero.Inventory.Heap)
             {
@@ -128,7 +126,7 @@ namespace Game.Control
                     Refresh();
 
                 };
-                _form1.Controls["Inventory"].Controls.Add(remove);
+                Controls["Inventory"].Controls.Add(remove);
             }
             base.Refresh();
         }

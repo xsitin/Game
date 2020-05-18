@@ -11,7 +11,7 @@ namespace Game.Control
         private Size _size = new Size(420,390);
         private readonly Player _player;
         private Form1 form;
-        public BarrackHeroControl(Hero hero, Player player, Form1 form)
+        public BarrackHeroControl(Hero hero, Player player)
         {
             _hero = hero;
             _player = player;
@@ -64,7 +64,7 @@ namespace Game.Control
             upgrade.Click += (sender, args) =>
             {
                 if (Parent.Parent.Controls["Upgrade"].Controls.Count == 1) return;
-                Parent.Parent.Controls["Upgrade"].Controls.Add(new HeroUpgradeControl(hero,player, form));
+                Parent.Parent.Controls["Upgrade"].Controls.Add(new HeroUpgradeControl(hero,player));
                 Dispose();
             };
             if(hero.UpgradePoints > 0)
@@ -78,7 +78,7 @@ namespace Game.Control
             inventory.Click += (sender, args) =>
             {
                 if (Parent.Parent.Controls["Upgrade"].Controls.Count == 1) return;
-                Parent.Parent.Controls["Upgrade"].Controls.Add(new HeroInventoryControl(hero, player, form));
+                Parent.Parent.Controls["Upgrade"].Controls.Add(new HeroInventoryControl(hero, player));
                 Dispose();
             };
             Controls.Add(inventory);

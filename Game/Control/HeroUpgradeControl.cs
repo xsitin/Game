@@ -8,12 +8,10 @@ namespace Game.Control
     public sealed class HeroUpgradeControl : UserControl
     {
         private readonly Hero _hero;
-        private Form1 form1;
         private readonly Player player;
         private Size _size = new Size(420,390);
-        public HeroUpgradeControl(Hero hero, Player player, Form1 form1)
+        public HeroUpgradeControl(Hero hero, Player player)
         {
-            this.form1 = form1;
             _hero = hero;
             MinimumSize = _size;
             this.player = player;
@@ -28,7 +26,7 @@ namespace Game.Control
             {
                 if(player.Heroes.Contains(_hero))
                 {
-                    Parent.Parent.Controls["MerHero"].Controls.Add(new BarrackHeroControl(_hero, player, form1));
+                    Parent.Parent.Controls["MerHero"].Controls.Add(new BarrackHeroControl(_hero, player));
                 }
                 else 
                     Parent.Parent.Controls["Active"].Controls.Add(new ActiveTeam(_hero,player));
@@ -99,7 +97,7 @@ namespace Game.Control
                 back.Click += (sender, args) =>
                 {
                     if(player.Heroes.Contains(_hero))
-                        Parent.Parent.Controls["MerHero"].Controls.Add(new BarrackHeroControl(_hero,player, form1));
+                        Parent.Parent.Controls["MerHero"].Controls.Add(new BarrackHeroControl(_hero,player));
                     else 
                         Parent.Parent.Controls["Active"].Controls.Add(new ActiveTeam(_hero,player));
                     Dispose();

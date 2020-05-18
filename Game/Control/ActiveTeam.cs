@@ -10,7 +10,6 @@ namespace Game.Control
          private readonly Hero _hero;
         private Size _size = new Size(420,390);
         private readonly Player _player;
-        private Form1 _form1;
 
         public ActiveTeam(Hero hero, Player player)
         {
@@ -31,7 +30,7 @@ namespace Game.Control
                 else
                     player.ActiveTeam.SecondLine.Remove(hero);
                 player.Heroes.Add(hero);
-                Parent.Parent.Controls["MerHero"].Controls.Add(new BarrackHeroControl(hero, player, _form1));
+                Parent.Parent.Controls["MerHero"].Controls.Add(new BarrackHeroControl(hero, player));
                 Parent.Parent.Controls["MerHero"].Refresh();
                 Dispose();
             };
@@ -44,7 +43,7 @@ namespace Game.Control
             upgrade.Click += (sender, args) =>
             {
                 if (Parent.Parent.Controls["Upgrade"].Controls.Count == 1) return;
-                Parent.Parent.Controls["Upgrade"].Controls.Add(new HeroUpgradeControl(hero,player, _form1));
+                Parent.Parent.Controls["Upgrade"].Controls.Add(new HeroUpgradeControl(hero, player));
                 Dispose();
             };
             if(hero.UpgradePoints > 0)
@@ -58,7 +57,7 @@ namespace Game.Control
             inventory.Click += (sender, args) =>
             {
                 if (Parent.Parent.Controls["Upgrade"].Controls.Count == 1) return;
-                Parent.Parent.Controls["Upgrade"].Controls.Add(new HeroInventoryControl(hero,player, _form1));
+                Parent.Parent.Controls["Upgrade"].Controls.Add(new HeroInventoryControl(hero,player));
                 Dispose();
             };
             Controls.Add(inventory);
