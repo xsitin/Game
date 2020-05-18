@@ -9,14 +9,14 @@ namespace Game.Model
     {
         private int _exp;
 
-        public ReadOnlyDictionary<Characteristics, int> StandardChars { get; set; }
+        public  Dictionary<Characteristics, int> StandardChars { get; set; }
 
         public Hero(string name, Dictionary<Characteristics, int> characteristics, List<ActiveItem> inventory,
             Specialization specialization, Position position, Location location) : base(name, characteristics,
             inventory, specialization, location)
         {
             Exp = 0;
-            StandardChars = new ReadOnlyDictionary<Characteristics, int>
+            StandardChars = new Dictionary<Characteristics, int>
                 (characteristics.ToDictionary(x => x.Key, y => y.Value));
             if (StandardChars == null || StandardChars.Count < 7)
                 FillStandart();
@@ -26,12 +26,12 @@ namespace Game.Model
         private void FillStandart()
         {
             if (StandardChars == null)
-                StandardChars = new ReadOnlyDictionary<Characteristics, int>(Characteristics);
+                StandardChars = new Dictionary<Characteristics, int>(Characteristics);
             var b = new Dictionary<Characteristics, int>(StandardChars);
             for (var i = 0; i < 7; i++)
                 if (!b.ContainsKey((Characteristics) i))
                     b[(Characteristics) i] = BaseCharacteristics[(Characteristics) i];
-            StandardChars = new ReadOnlyDictionary<Characteristics, int>(b);
+            StandardChars = new Dictionary<Characteristics, int>(b);
         }
 
         public Hero(Specialization spec) : base(Helper.GetName(), new Dictionary<Characteristics, int>(),
@@ -46,7 +46,7 @@ namespace Game.Model
             inventory, specialization, location)
         {
             Exp = 0;
-            StandardChars = new ReadOnlyDictionary<Characteristics, int>
+            StandardChars = new Dictionary<Characteristics, int>
                 (characteristics.ToDictionary(x => x.Key, y => y.Value));
             if (StandardChars.Count < 7)
                 FillStandart();

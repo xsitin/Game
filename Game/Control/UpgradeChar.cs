@@ -29,7 +29,10 @@ namespace Game.Control
                 if ((_ch == Characteristics.Evasion || _ch == Characteristics.PhysicalProtection ||
                      _ch == Characteristics.MagicalProtection)
                     && _hero.Characteristics[_ch] * 1.2 < 100)
+                {
                     _hero.Characteristics[_ch] = (int)(_hero.Characteristics[_ch] * 1.2);
+                    _hero.StandardChars[_ch] = (int)(_hero.Characteristics[_ch] * 1.2);
+                }
                 else if (_ch == Characteristics.PhysicalDamage)
                 {
                     foreach (var sk in _hero.Skills)
@@ -37,13 +40,13 @@ namespace Game.Control
                         if (sk.Name == "Base Hit")
                             sk.Upgrade();
                         _hero.Characteristics[_ch] = (int) (_hero.Characteristics[_ch] * 1.2);
+                        _hero.StandardChars[_ch] = (int) (_hero.Characteristics[_ch] * 1.2);
                     }
                 }
                 else if (_ch != Characteristics.Evasion && _ch != Characteristics.MagicalProtection &&
                          _ch != Characteristics.PhysicalProtection)
                     _hero.Characteristics[_ch] = (int)(_hero.Characteristics[_ch]*1.2);
                 _hero.UpgradePoints--;
-                var b = ParentForm;
                 ParentForm.Controls["Upgrade"].Controls["HeroUpgrade"].Refresh();
             };
             Controls.Add(up);
