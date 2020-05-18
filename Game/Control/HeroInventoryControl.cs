@@ -23,23 +23,23 @@ namespace Game.Control
             {
                 Text = "Инвентарь Героя",
                 Name = "LabelInventory",
-                Font = new Font(FontFamily.GenericSerif, 15),
+                Font = new Font(FontFamily.GenericSerif, 25),
                 ForeColor = Color.DarkRed,
                 BackColor = Color.Gray,
                 FlatStyle = FlatStyle.Flat,
-                TextAlign = ContentAlignment.TopCenter,
-                Bounds = new Rectangle(840,450,245,34),
+                TextAlign = ContentAlignment.MiddleCenter,
+                Bounds = new Rectangle(1000,450,490,68),
             };
             var storage = new Label()
             {
                 Text = "Склад",
                 Name = "LabelStore",
-                Font = new Font(FontFamily.GenericSerif, 15),
+                Font = new Font(FontFamily.GenericSerif, 25),
                 ForeColor = Color.DarkRed,
                 BackColor = Color.Gray,
                 FlatStyle = FlatStyle.Flat,
-                TextAlign = ContentAlignment.TopCenter,
-                Bounds = new Rectangle(430,450,245,34),
+                TextAlign = ContentAlignment.MiddleCenter,
+                Bounds = new Rectangle(430,450,490,68),
             };
             form1.Controls.Add(storage);
             form1.Controls.Add(inventory);
@@ -58,7 +58,7 @@ namespace Game.Control
                 {
                     BackColor = Color.Gray,
                     FlatStyle = FlatStyle.Flat,
-                    Bounds = new Rectangle(31,191,245,34),
+                    Bounds = new Rectangle(31,191,490,34),
                     Text = item.Name,
                 };
                 add.Click += (sender, eventArgs) =>
@@ -75,7 +75,7 @@ namespace Game.Control
                 {
                     BackColor = Color.Gray,
                     FlatStyle = FlatStyle.Flat,
-                    Bounds = new Rectangle(31,191,245,34),
+                    Bounds = new Rectangle(31,191,490,34),
                     Text = item.Name,
                 };
                 remove.Click += (sender, eventArgs) =>
@@ -117,7 +117,7 @@ namespace Game.Control
                 {
                     BackColor = Color.Gray,
                     FlatStyle = FlatStyle.Flat,
-                    Bounds = new Rectangle(31,191,245,34),
+                    Bounds = new Rectangle(31,191,490,34),
                     Text = item.Name,
                 };
                 add.Click += (sender, eventArgs) =>
@@ -134,7 +134,7 @@ namespace Game.Control
                 {
                     BackColor = Color.Gray,
                     FlatStyle = FlatStyle.Flat,
-                    Bounds = new Rectangle(31,191,245,34),
+                    Bounds = new Rectangle(31,191,490,34),
                     Text = item.Name,
                 };
                 remove.Click += (sender, eventArgs) =>

@@ -304,7 +304,7 @@ namespace Game
             {
                 BackColor = Color.Transparent,
                 FlatStyle = FlatStyle.Flat,
-                Bounds = new Rectangle(730, 450, 500, 300),
+                Bounds = new Rectangle(900, 525, 650, 400),
             };
             barrack.FlatAppearance.BorderSize = 0;
             barrack.FlatAppearance.MouseDownBackColor = Color.Transparent;
@@ -313,15 +313,15 @@ namespace Game
             barrack.Click += (a, b) =>
             {
                 Controls.Clear();
-                BackgroundImage = Properties.Resources.barrack;
+                BackgroundImage = Properties.Resources.barrack;        
                 BackToVillage();
                 var merHero = new FlowLayoutPanel()
                 {
                     AutoScroll = true,
                     BackColor = Color.Transparent,
-                    Size = new Size(420, 900),
-                    Location = new Point(1120, 0),
-                    Name = "MerHero"
+                    Size = new Size(420, 1080),
+                    Location = new Point(1500, 0),
+                    Name = "MerHero",
                 };
                 foreach (var hero in Player.Heroes)
                 {
@@ -331,7 +331,7 @@ namespace Game
                 {
                     AutoScroll = true,
                     BackColor = Color.Transparent,
-                    Size = new Size(420, 900),
+                    Size = new Size(420, 1080),
                     Location = new Point(0, 0),
                     Name = "Active"
                 };
@@ -343,23 +343,23 @@ namespace Game
                 {
                     BackColor = Color.Transparent,
                     MinimumSize = new Size(420,390),
-                    Location = new Point(560,0),
+                    Location = new Point(760,0),
                     Name = "Upgrade"
                 };
                 var invent = new FlowLayoutPanel()
                 {
-                    AutoScroll = true,
                     BackColor = Color.Transparent,
-                    Size = new Size(260,390),
-                    Location =new Point(430, 500),
-                    Name = "Storage"
+                    Size = new Size(490,580),
+                    Location =new Point(430, 520),
+                    Name = "Storage",
+                   AutoScroll = true
                 };
                 var herInvent = new FlowLayoutPanel()
                 {
                     AutoScroll = true,
                     BackColor = Color.Transparent,
-                    MinimumSize = new Size(260, 390),
-                    Location = new Point(840, 500),
+                    MinimumSize = new Size(490, 580),
+                    Location = new Point(1000, 520),
                     Name = "Inventory"
                 };
                 Controls.Add(upgrade);
@@ -367,12 +367,12 @@ namespace Game
                 Controls.Add(merHero);
                 Controls.Add(invent);
                 Controls.Add(herInvent);
-            };
+            };                                
             var store = new Button()
             {
                 BackColor = Color.Transparent,
                 FlatStyle = FlatStyle.Flat,
-                Bounds = new Rectangle(0, 250, 235, 500),
+                Bounds = new Rectangle(0, 300, 250, 600),
             };
             store.FlatAppearance.BorderSize = 0;
             store.FlatAppearance.MouseDownBackColor = Color.Transparent;
@@ -387,8 +387,8 @@ namespace Game
                 {
                     AutoScroll = true,
                     BackColor = Color.Transparent,
-                    Size = new Size(420, 900),
-                    Location = new Point(1120, 0)
+                    Size = new Size(420, 1080),
+                    Location = new Point(1500, 0)
                 };
                 foreach (var mercenary in Player.Mercenaries)
                 {
@@ -396,25 +396,25 @@ namespace Game
                 }
                 Controls.Add(new GoldControl(Player)
                 {
-                    Location = new Point(0,745),
+                    Location = new Point(0,955),
                     Name = "GoldBag"
                 });
                 Controls.Add(new MpPotionControl(Player)
                 {
-                    Location = new Point(750, 0)
+                    Location = new Point(1150, 0)
                 });
                 Controls.Add(new HpPotionControl(Player)
                 {
-                    Location = new Point(950, 0)
+                    Location = new Point(1350,0)
                 });
                 Controls.Add(floatPanel);
-            };
+            };                                            
             var goHunt = new Button()
             {
                 Name = "Hunt",
                 BackColor = Color.Transparent,
                 FlatStyle = FlatStyle.Flat,
-                Bounds = new Rectangle(250, 500, 235, 200),
+                Bounds = new Rectangle(300, 650, 235, 200),
             };
             goHunt.FlatAppearance.BorderSize = 0;
             goHunt.FlatAppearance.MouseDownBackColor = Color.Transparent;
