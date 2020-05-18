@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Loliconshik\.Rider2019.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Loliconshik\.Rider2019.3\system\resharper-host\Local\Transient\ReSharperHost\v193\SolutionCaches\_Game.-1559802761.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Loliconshik\Documents\GitHub\Game" t="IncludeFlat">
+    <e p="C:\Users\xsitin\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\xsitin\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_Game.43876633.00" t="ExcludeRecursive" />
+    <e p="C:\Users\xsitin\AppData\Roaming\JetBrains\Rider2020.1\scratches" t="IncludeRecursive" />
+    <e p="C:\Users\xsitin\Documents\GitHub\Game" t="IncludeFlat">
       <e p="Game" t="IncludeRecursive">
         <e p="App.config" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
@@ -103,6 +104,7 @@
           <e p="MPpotion.png" t="Include" />
           <e p="Shop.png" t="Include" />
           <e p="Skroll.png" t="Include" />
+          <e p="upload.png" t="Include" />
           <e p="Warrior.png" t="Include" />
           <e p="WarriorAttack.png" t="Include" />
           <e p="WizarAttack.png" t="Include" />

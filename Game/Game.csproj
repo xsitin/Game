@@ -285,6 +285,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Properties\Names.txt" />
+    <None Include="Resources\upload.png" />
     <None Include="Resources\Skroll.png" />
     <None Include="Resources\WizarAttack.png" />
     <None Include="Resources\WarriorAttack.png" />

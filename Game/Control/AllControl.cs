@@ -47,6 +47,10 @@ namespace Game.Control
                         foreach (var key in hero.StandardChars.Keys)
                             hero.Characteristics[key] = hero.StandardChars[key];
                 _player.Gold += _game._reward.money;
+                var mers = new List<Hero>();
+                var fac = new HeroesFactory(_player);
+                for (int i = 0; i < 4; i++) mers.Add(fac.GetRandomHero());
+                _player.Mercenaries = mers;
                 ((Form1) Application.OpenForms["Main"]).VillageControls();
                 Dispose();
                 return;

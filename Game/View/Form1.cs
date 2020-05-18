@@ -264,7 +264,7 @@ namespace Game
             {
                 var spec = (Specialization) Enum.Parse(typeof(Specialization), choice);
                 var h = new Hero(spec);
-                h.Skills.AddRange(Helper.BasicSkills[spec]);
+                h.Skills.AddRange(Helper.BasicSkills[spec].Take(2));
                 h.Characteristics[Characteristics.Evasion] = 100;
                 h.Characteristics[Characteristics.MagicalProtection] = 100;
                 var pl = new Player()
@@ -445,10 +445,62 @@ namespace Game
                     Refresh();
                 }
             };
+            var menuButton = new Button() {FlatStyle = FlatStyle.Flat};
+            menuButton.FlatAppearance.BorderSize = 0;
+            menuButton.FlatAppearance.CheckedBackColor = Color.Transparent;
+            menuButton.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            menuButton.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            menuButton.BackColor = Color.Transparent;
+            menuButton.BackgroundImage = Resources.upload;
+            menuButton.Size = new Size(100, 100);
+            menuButton.Location = new Point(1700, 900);
+            menuButton.BackgroundImageLayout = ImageLayout.Stretch;
+            menuButton.Click += (a, b) => { ShowGameMenu(); };
+            Controls.Add(menuButton);
             Controls.Add(goHunt);
             Controls.Add(store);
             Controls.Add(barrack);
         }
+        
+        public void ShowGameMenu()
+        {
+            Controls.Clear();
+            var saveGame = new Button() {Bounds = new Rectangle(20, 20, 360, 100),Font = new Font(FontFamily.GenericMonospace,20),
+                ForeColor = Color.White, Text = "Save Game"};
+            saveGame.Click += (a, b) => { Helper.SaveGame(Player); };
+            var backToMain = new Button()
+            {
+                Font = new Font(FontFamily.GenericMonospace,20),
+                ForeColor = Color.White,
+            };
+            backToMain.Text = "Main Menu";
+            backToMain.Bounds = new Rectangle(20, 130, 360, 100);
+            backToMain.Click += (btn, e) =>
+            {
+                Controls.Clear();
+                ShowMenu();
+            };
+            var backToVillage = new Button()
+            {
+                Text = "Back to Village",
+                Font = new Font(FontFamily.GenericMonospace,20),
+                ForeColor = Color.White,
+                Bounds = new Rectangle(20, 240, 360, 100)
+            };
+            backToVillage.Click += (sender, args) =>
+            {
+                Controls.Clear();
+                VillageControls();
+            };
+            var group = new Panel();
+            group.Bounds = new Rectangle(760,300,400,360);
+            group.Controls.Add(backToVillage);
+            group.Controls.Add(saveGame);
+            group.Controls.Add(backToMain);
+            group.BackColor = Color.FromArgb(133, 45, 34);
+            Controls.Add(group);
+        }
+
 
         public void BackToVillage()
         {

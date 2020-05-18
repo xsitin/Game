@@ -176,6 +176,7 @@ namespace Game.Control
                                 Parent.Controls["HitPoints"].Refresh();
                                 Parent.Controls["EnemyHitPoints"].Refresh();
                                 Parent.Controls["Interface"].Refresh();
+                                Parent.Refresh();
                             }
 
                             Controls.Clear();

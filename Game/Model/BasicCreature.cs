@@ -63,11 +63,10 @@ namespace Game.Model
         public void HpChange(int change, bool isMagic)
         {
             if (isMagic)
-                Characteristics[Model.Characteristics.Health] +=
-                    change * (1 - Characteristics[Model.Characteristics.MagicalProtection] / 100);
+                Characteristics[Model.Characteristics.Health] +=(int)(
+                    change * (1 - ((double)Characteristics[Model.Characteristics.MagicalProtection] / 100)));
             else if ((new Random()).Next(0, 100) > Characteristics[Model.Characteristics.Evasion])
-                Characteristics[Model.Characteristics.Health] +=
-                    change * (1 - Characteristics[Model.Characteristics.PhysicalProtection] / 100);
+                Characteristics[Model.Characteristics.Health] +=(int)( change * (1 - ((double)Characteristics[Model.Characteristics.PhysicalProtection] / 100)));
         }
         
         public void UseSkill(Skill action, params BasicCreature[] targets)
