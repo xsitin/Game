@@ -14,8 +14,12 @@ namespace Game
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            var form = new Form1(){Name = "Main"};
-            Application.ApplicationExit += (a,e) => {Helper.SaveGame(form.Player); };
+            var form = new Form1() {Name = "Main"};
+            Application.ApplicationExit += (a, e) =>
+            {
+                if (form.Player != null)
+                    Helper.SaveGame(form.Player);
+            };
             form.ShowMenu();
             Application.Run(form);
         }
