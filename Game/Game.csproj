@@ -133,15 +133,6 @@
     <Compile Include="Control\ActiveTeam.cs" />
     <Compile Include="Control\BarrackHeroControl.cs" />
     <Compile Include="Control\BasicHeroCardControle.cs" />
-    <Compile Include="Control\EnemyHitBar.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Control\HeroInventoryControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Control\HeroUpgradeControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Include="Control\HeroInventoryControl.cs" />
     <Compile Include="Control\HeroUpgradeControl.cs" />
     <Compile Include="Control\MpPotionControl.cs">
@@ -230,9 +221,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Control\EnemyButton.resx">
       <DependentUpon>EnemyButton.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Control\EnemyHitBar.resx">
-      <DependentUpon>EnemyHitBar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Control\FieldControl.resx">
       <DependentUpon>FieldControl.cs</DependentUpon>

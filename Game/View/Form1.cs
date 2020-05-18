@@ -431,7 +431,11 @@ namespace Game
                 {
                     Game = new Model.Game(Player.ActiveTeam, Model.Location.SomeLocation);
                     BackgroundImage = Properties.Resources.DarkForest;
-                    Controls.Add(new AllControl(Game, Player));
+                    Controls.Add(new AllControl(Game, Player)
+                    {
+                        Name = "MainCntrl"
+                    });
+                    Refresh();
                 }
             };
             Controls.Add(goHunt);
