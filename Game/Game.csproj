@@ -30,17 +30,18 @@
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <Nullable>enable</Nullable>
+    <Nullable>disable</Nullable>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
+    <Optimize>true</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -58,10 +59,19 @@
     <ManifestKeyFile>Game_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <GenerateManifests>true</GenerateManifests>
+    <GenerateManifests>false</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Game.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />
@@ -84,18 +94,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Control\ActiveTeam.cs" />
-    <Compile Include="Control\BarrackHeroControl.cs" />
-    <Compile Include="Control\BasicHeroCardControle.cs" />
-    <Compile Include="Control\HeroInventoryControl.cs" />
-    <Compile Include="Control\HeroUpgradeControl.cs" />
+    <Compile Include="Control\ActiveTeam.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\BarrackHeroControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\BasicHeroCardControle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\HeroInventoryControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\HeroUpgradeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Control\MpPotionControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Control\HpPotionsControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Control\TargetFiller.cs" />
+    <Compile Include="Control\TargetFiller.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Control\UpgradeChar.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -208,6 +230,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Game_TemporaryKey.pfx" />
+    <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
