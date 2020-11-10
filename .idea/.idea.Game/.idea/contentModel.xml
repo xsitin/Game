@@ -1,10 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\xsitin\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\xsitin\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_Game.43876633.00" t="ExcludeRecursive" />
-    <e p="C:\Users\xsitin\AppData\Roaming\JetBrains\Rider2020.1\scratches" t="IncludeRecursive" />
-    <e p="C:\Users\xsitin\Documents\GitHub\Game" t="IncludeFlat">
+    <e p="C:\Users\xsitin\.nuget\packages\mstest.testadapter\2.1.1\build\_common\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll" t="Include" />
+    <e p="C:\Users\xsitin\.nuget\packages\mstest.testadapter\2.1.1\build\_common\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll" t="Include" />
+    <e p="C:\Users\xsitin\.nuget\packages\mstest.testadapter\2.1.1\build\_common\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll" t="Include" />
+    <e p="C:\Users\xsitin\.nuget\packages\mstest.testadapter\2.1.1\build\_common\ru" t="Include">
+      <e p="Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll" t="Include" />
+      <e p="Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll" t="Include" />
+      <e p="Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll" t="Include" />
+    </e>
+    <e p="C:\Users\xsitin\.nuget\packages\nunit3testadapter\3.16.1\build\net35\nunit.engine.api.dll" t="Include" />
+    <e p="C:\Users\xsitin\.nuget\packages\nunit3testadapter\3.16.1\build\net35\nunit.engine.dll" t="Include" />
+    <e p="C:\Users\xsitin\.nuget\packages\nunit3testadapter\3.16.1\build\net35\NUnit3.TestAdapter.dll" t="Include" />
+    <e p="C:\Users\xsitin\.nuget\packages\nunit3testadapter\3.16.1\build\net35\NUnit3.TestAdapter.pdb" t="Include" />
+    <e p="C:\Users\xsitin\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\xsitin\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_Game.-715153422.00" t="ExcludeRecursive" />
+    <e p="C:\Users\xsitin\Desktop\c#\Game" t="IncludeFlat">
       <e p="Game" t="IncludeRecursive">
         <e p="App.config" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
@@ -71,7 +82,6 @@
           <e p="Team.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive" />
-        <e p="packages.config" t="Include" />
         <e p="Program.cs" t="Include" />
         <e p="Properties" t="Include">
           <e p="AssemblyInfo.cs" t="Include" />

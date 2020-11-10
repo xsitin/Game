@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "TSBw1tL+49ZeOXWoS7d0b73qapozpDh+zKqyfaBp4DUNB/R3gudzXHLKE4nSQJ8JvVbPrb8BGh23wbw5cliAcg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Xsitin\\Desktop\\c#\\Game\\Game\\Game.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Xsitin\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
