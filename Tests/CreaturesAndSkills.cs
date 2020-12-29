@@ -25,11 +25,12 @@ namespace Tests
             Enemy1.Characteristics[Characteristics.Evasion] = 100;
             Enemy1.Characteristics[Characteristics.Mana] = 100;
             Enemy1.Skills.Add(new Skill(10, new[] {(Characteristics.Health, -10)},
-                SkillRange.Single, "skillName", new Buff(5, "debuff", (Characteristics.Initiative, -100))){IsMagic = true});
+                    SkillRange.Single, "skillName", new Buff(5, "debuff", (Characteristics.Initiative, -100)))
+                {IsMagic = true});
             Enemy2 = new EnemyHero("very enemy", new Dictionary<Characteristics, int> {{Characteristics.Health, 100}},
                 new List<ActiveItem>(), Specialization.Warrior, Position.Melee, Location.SomeLocation);
             Mage.Skills.Add(new Skill(50, new[] {(Characteristics.Health, -100)}, SkillRange.Enemies, "shpuf",
-                new Buff(3, "shpuf debuff", (Characteristics.Evasion, -10))){IsMagic = true});
+                new Buff(3, "shpuf debuff", (Characteristics.Evasion, -10))) {IsMagic = true});
         }
 
         private Hero Archer;

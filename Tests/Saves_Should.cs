@@ -15,19 +15,21 @@ namespace Tests
         [SetUp]
         public void SetUp()
         {
-            healingPotion = new ActiveItem("heal", new[] { (Characteristics.Health, 20) });            
-            heroWarrior = new Hero(Helper.GetName(), new Dictionary<Characteristics, int> {[Characteristics.Health] = 200},
+            healingPotion = new ActiveItem("heal", new[] {(Characteristics.Health, 20)});
+            heroWarrior = new Hero(Helper.GetName(),
+                new Dictionary<Characteristics, int> {[Characteristics.Health] = 200},
                 new List<ActiveItem>(), Specialization.Warrior, Position.Melee, Location.SomeLocation);
-            heroArcher = new Hero(Helper.GetName(), new Dictionary<Characteristics, int> {[Characteristics.Health] = 200},
+            heroArcher = new Hero(Helper.GetName(),
+                new Dictionary<Characteristics, int> {[Characteristics.Health] = 200},
                 new List<ActiveItem>(), Specialization.Archer, Position.Range, Location.SomeLocation);
             player = new Player
             {
                 PlayerName = "Player1",
                 Gold = 100,
                 Heroes = new List<Hero> {heroWarrior, heroArcher},
-                Mercenaries = new List<Hero>(){heroWarrior,heroArcher},
+                Mercenaries = new List<Hero> {heroWarrior, heroArcher},
                 Shop = new List<ActiveItem>(),
-                Storage = new List<ActiveItem>() { healingPotion },
+                Storage = new List<ActiveItem> {healingPotion}
             };
 
             Helper.SaveGame(player);
@@ -73,26 +75,32 @@ namespace Tests
 
             Assert.Pass();
         }
-        
+
         [Test]
-        public void Test_CompareShops() {
-            for (int i = 0; i < player.Shop.Count; i++) {
+        public void Test_CompareShops()
+        {
+            for (var i = 0; i < player.Shop.Count; i++)
+            {
                 var hero = player.Shop[i];
                 var loadedHero = loadedPlayer.Shop[i];
                 if (!hero.Equals(loadedHero))
                     Assert.Fail();
             }
+
             Assert.Pass();
         }
-        
+
         [Test]
-        public void Test_CompareStorage() {
-            for (int i = 0; i < player.Storage.Count; i++) {
+        public void Test_CompareStorage()
+        {
+            for (var i = 0; i < player.Storage.Count; i++)
+            {
                 var hero = player.Storage[i];
                 var loadedHero = loadedPlayer.Storage[i];
                 if (!hero.Equals(loadedHero))
                     Assert.Fail();
             }
+
             Assert.Pass();
         }
     }

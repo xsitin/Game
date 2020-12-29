@@ -161,7 +161,7 @@ namespace Game
             );
             return files
                 .Select(f => Path.GetFileName(f.Name))
-                .ToList();;
+                .ToList();
         }
 
         public void CreateNewGameScreen()

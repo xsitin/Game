@@ -9,23 +9,24 @@ namespace Tests
     [TestFixture]
     public class HeroesFactoryTests
     {
-        private HeroesFactory Factory;
-        private Player Pl;
-
         [SetUp]
         public void SetUp()
         {
             Pl = new Player();
             Pl.Heroes = new List<Hero>();
-            Pl.Heroes.AddRange(Helper.GetHeroTeam(3,3,10000000).GetTeamList().Cast<Hero>());
+            Pl.Heroes.AddRange(Helper.GetHeroTeam(3, 3, 10000000).GetTeamList().Cast<Hero>());
             Factory = new HeroesFactory(Pl);
         }
+
+        private HeroesFactory Factory;
+        private Player Pl;
 
         [Test]
         public void MagicTest()
         {
-            Assert.AreEqual((Pl.Heroes.Max(x=>x.Level)/5)*5, Factory.GetRandomHero().Level);
+            Assert.AreEqual(Pl.Heroes.Max(x => x.Level) / 5 * 5, Factory.GetRandomHero().Level);
         }
+
         private static class Helper
         {
             public static Team<Hero> GetHeroTeam(int firstLine, int secondLine, int expDifference)
@@ -48,6 +49,7 @@ namespace Tests
                     hero.Exp += expDifference;
                     first.Add(hero);
                 }
+
                 for (var i = 0; i < secondLine; i++)
                 {
                     var hero = new Hero($"Ranger{i}", new Dictionary<Characteristics, int>
@@ -63,7 +65,8 @@ namespace Tests
                     hero.Exp += expDifference;
                     second.Add(hero);
                 }
-                return new Team<Hero>(first,second);
+
+                return new Team<Hero>(first, second);
             }
         }
     }

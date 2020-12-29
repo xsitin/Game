@@ -1,4 +1,4 @@
-﻿﻿using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using Game.Model;
@@ -52,7 +52,7 @@ namespace Tests
             {
                 var queue = TestHelper.GetQueue(heroCount, enemyCount);
                 var expectation = queue.Queue[expect - 1].Name;
-                for (var i = 0; i < current ; i++)
+                for (var i = 0; i < current; i++)
                     queue.GetNextPerson();
                 var real = queue.GetNextPerson().Name;
                 Assert.AreEqual(expectation, real);
