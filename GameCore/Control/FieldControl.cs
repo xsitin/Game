@@ -2,23 +2,23 @@
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using Game.Model;
+using GameCore.Model;
 
-namespace Game.Control
+namespace GameCore.Control
 {
     public sealed partial class FieldControl : UserControl
     {
         private readonly List<BasicCreature>[] _creatures;
-        public List<BasicCreature> _enemies;
-        public List<BasicCreature> _heroes;
+        public List<BasicCreature> Enemies;
+        public List<BasicCreature> Heroes;
         private readonly Point[][] _points = new Point[4][] {new Point[4], new Point[4], new Point[4], new Point[4]};
 
 
         public FieldControl(Team<Hero> heroes, Team<EnemyHero> enemies)
         {
             DoubleBuffered = true;
-            _heroes = heroes.GetTeamList();
-            _enemies = enemies.GetTeamList();
+            Heroes = heroes.GetTeamList();
+            Enemies = enemies.GetTeamList();
             BackColor = Color.Transparent;
             _creatures = new[]
             {

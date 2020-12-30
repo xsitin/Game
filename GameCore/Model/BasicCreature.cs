@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Game.Model
+namespace GameCore.Model
 {
     public abstract class BasicCreature
     {
         //TODO move some methods from heroes there and add effect from characters
-        public static readonly Dictionary<Characteristics, int> BaseCharacteristics =
+        protected static readonly Dictionary<Characteristics, int> BaseCharacteristics =
             new()
             {
                 {Model.Characteristics.Health, 100},
@@ -20,6 +20,20 @@ namespace Game.Model
 
         public readonly List<Buff> Buffs = new();
         public List<ActiveItem>? Inventory;
+
+        public string? Name { get; set; }
+
+        public Dictionary<Characteristics, int> Characteristics { get; set; }
+
+        public int Level { get; set; }
+
+        public Location Location { get; set; }
+
+        public Specialization Specialization { get; set; }
+
+        public List<Skill>? Skills { get; set; }
+
+        public Position Position { get; set; }
 
         public BasicCreature(string name, Dictionary<Characteristics, int> characteristics, List<ActiveItem> inventory,
             Specialization specialization, Location location)
@@ -38,38 +52,14 @@ namespace Game.Model
                 SkillRange.Single, "Base Hit", null));
         }
 
-        protected BasicCreature()
-        {
-        }
-
-        public BasicCreature(string name, Dictionary<Characteristics, int> characteristics, List<ActiveItem> inventory)
-        {
-            Name = name;
-            Characteristics = characteristics;
-            Level = 1;
-            if (Characteristics.Count != 7)
-                FillDictionary();
-            Inventory = inventory;
-        }
-
-        public string? Name { get; set; }
-        public Dictionary<Characteristics, int>? Characteristics { get; set; }
-        public int Level { get; set; }
-        public Location Location { get; set; }
-        public Specialization Specialization { get; set; }
-        public List<Skill>? Skills { get; set; }
-        public Position Position { get; set; }
-
         public void HpChange(int change, bool isMagic)
         {
             if (isMagic)
             {
-                if (Characteristics != null)
-                    Characteristics[Model.Characteristics.Health] += (int) (
-                        change * (1 - (double) Characteristics[Model.Characteristics.MagicalProtection] / 100));
+                Characteristics[Model.Characteristics.Health] += (int) (
+                    change * (1 - (double) Characteristics[Model.Characteristics.MagicalProtection] / 100));
             }
-            else if (Characteristics != null &&
-                     new Random().Next(0, 100) > Characteristics[Model.Characteristics.Evasion])
+            else if (new Random().Next(0, 100) > Characteristics[Model.Characteristics.Evasion])
             {
                 Characteristics[Model.Characteristics.Health] +=
                     (int) (change * (1 - (double) Characteristics[Model.Characteristics.PhysicalProtection] / 100));
@@ -78,7 +68,7 @@ namespace Game.Model
 
         public void UseSkill(Skill action, params BasicCreature[] targets)
         {
-            if (Characteristics == null || action.ManaCost > Characteristics[Model.Characteristics.Mana]) return;
+            if (action.ManaCost > Characteristics[Model.Characteristics.Mana]) return;
             Characteristics[Model.Characteristics.Mana] -= action.ManaCost;
             foreach (var target in targets)
             {

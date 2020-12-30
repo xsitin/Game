@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Game.Model
+namespace GameCore.Model
 {
     public abstract class Item
     {

@@ -1,4 +1,4 @@
-﻿namespace Game.Model
+﻿namespace GameCore.Model
 {
     public class Buff
     {
@@ -10,7 +10,7 @@
         }
 
         public (Characteristics characteristic, int value)[]? Buffs { get; set; }
-        public BasicCreature? _target { get; set; }
+        public BasicCreature? target;
 
 /*
         public Buff()
@@ -33,11 +33,11 @@
 
         public BasicCreature? Target
         {
-            get => _target;
+            get => target;
             init
             {
-                _target = value;
-                if (_target == null || Buffs == null) return;
+                target = value;
+                if (target == null || Buffs == null) return;
                 foreach (var (characteristic, val) in Buffs)
                     if (Target?.Characteristics != null)
                         Target.Characteristics[characteristic] += val;
@@ -48,20 +48,20 @@
 
         ~Buff()
         {
-            if (_target == null || Buffs == null) return;
+            if (target == null || Buffs == null) return;
             foreach (var (characteristic, value) in Buffs)
-                if (_target.Characteristics != null)
-                    _target.Characteristics[characteristic] -= value;
+                if (target.Characteristics != null)
+                    target.Characteristics[characteristic] -= value;
         }
 
         public Buff ToTarget(BasicCreature target)
         {
             var buff = new Buff(Duration, Name, Buffs);
-            buff._target = target;
-            if (Buffs != null)
-                foreach (var (characteristic, value) in Buffs)
-                    if (buff._target.Characteristics != null)
-                        buff._target.Characteristics[characteristic] += value;
+            buff.target = target;
+            if (Buffs == null) return buff;
+            foreach (var (characteristic, value) in Buffs)
+                if (buff.target.Characteristics != null)
+                    buff.target.Characteristics[characteristic] += value;
             return buff;
         }
     }

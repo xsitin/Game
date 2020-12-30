@@ -1,9 +1,9 @@
 ﻿using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using Game.Model;
+using GameCore.Model;
 
-namespace Game.Control
+namespace GameCore.Control
 {
     public sealed class HeroUpgradeControl : UserControl
     {
@@ -32,9 +32,9 @@ namespace Game.Control
             {
                 if (player.Heroes.Contains(_hero))
                     ParentForm.Controls["MerHero"].Controls
-                        .Add(new BarrackHeroControl(_hero, player, ParentForm as Form1));
+                        .Add(new BarrackHeroControl(_hero, player, ParentForm as View.Form1));
                 else
-                    ParentForm.Controls["Active"].Controls.Add(new ActiveTeam(_hero, player, ParentForm as Form1));
+                    ParentForm.Controls["Active"].Controls.Add(new ActiveTeam(_hero, player, ParentForm as View.Form1));
                 Dispose();
             };
             Controls.Add(back);
@@ -72,9 +72,9 @@ namespace Game.Control
                 {
                     if (_player.Heroes.Contains(_hero))
                         ParentForm.Controls["MerHero"].Controls
-                            .Add(new BarrackHeroControl(_hero, _player, ParentForm as Form1));
+                            .Add(new BarrackHeroControl(_hero, _player, ParentForm as View.Form1));
                     else
-                        ParentForm.Controls["Active"].Controls.Add(new ActiveTeam(_hero, _player, ParentForm as Form1));
+                        ParentForm.Controls["Active"].Controls.Add(new ActiveTeam(_hero, _player, ParentForm as View.Form1));
                     Dispose();
                 };
                 Controls.Add(back);

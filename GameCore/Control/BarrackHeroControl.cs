@@ -1,17 +1,17 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
-using Game.Model;
+using GameCore.Model;
 
-namespace Game.Control
+namespace GameCore.Control
 {
     public sealed class BarrackHeroControl : UserControl
     {
         private readonly Hero _hero;
         private readonly Player _player;
-        private Form1 _form1;
+        private View.Form1 _form1;
         private readonly Size _size = new(420, 390);
 
-        public BarrackHeroControl(Hero hero, Player player, Form1 form1)
+        public BarrackHeroControl(Hero hero, Player player, View.Form1 form1)
         {
             _form1 = form1;
             _hero = hero;
@@ -92,7 +92,7 @@ namespace Game.Control
             {
                 if (ParentForm.Controls["Upgrade"].Controls.Count == 1) return;
                 ParentForm.Controls["Upgrade"].Controls
-                    .Add(new HeroInventoryControl(hero, player, ParentForm as Form1));
+                    .Add(new HeroInventoryControl(hero, player, ParentForm as View.Form1));
                 Dispose();
             };
             Controls.Add(inventory);

@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Game.Model
+namespace GameCore.Model
 {
     public class EnemyFactory
     {
         private readonly Random _random = new();
         public int Counter;
         public Team<Hero> Heroes;
-        private readonly Queue<int> last = new(6);
+        private readonly Queue<int> _last = new(6);
         public Location Location;
 
         public EnemyFactory(Team<Hero> heroes, Location location)
@@ -90,13 +90,13 @@ namespace Game.Model
 
         private int GetRandom(int from, int to)
         {
-            if (from - to < 2 || Enumerable.Range(from, to).All(x => last.Contains(x)))
+            if (from - to < 2 || Enumerable.Range(from, to).All(x => _last.Contains(x)))
                 return _random.Next(from, to);
             var res = _random.Next(from, to);
-            while (last.Contains(res))
+            while (_last.Contains(res))
                 res = _random.Next(from, to);
-            last.Enqueue(res);
-            if (last.Count > 3) last.Dequeue();
+            _last.Enqueue(res);
+            if (_last.Count > 3) _last.Dequeue();
             return res;
         }
     }

@@ -1,8 +1,8 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
-using Game.Model;
+using GameCore.Model;
 
-namespace Game.Control
+namespace GameCore.Control
 {
     public partial class EnemyButton : UserControl
     {

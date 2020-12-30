@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Game.Model
+namespace GameCore.Model
 {
     public class Hero : BasicCreature
     {
@@ -16,7 +16,7 @@ namespace Game.Model
             StandardChars = new Dictionary<Characteristics, int>
                 (characteristics.ToDictionary(x => x.Key, y => y.Value));
             if (StandardChars == null || StandardChars.Count < 7)
-                FillStandart();
+                FillStandard();
             Position = position;
         }
 
@@ -24,7 +24,7 @@ namespace Game.Model
             new List<ActiveItem>(), spec, Location.SomeLocation)
         {
             if (StandardChars == null || StandardChars.Count < 7)
-                FillStandart();
+                FillStandard();
         }
 
         public Hero(string name, Dictionary<Characteristics, int> characteristics, List<ActiveItem> inventory,
@@ -35,15 +35,12 @@ namespace Game.Model
             StandardChars = new Dictionary<Characteristics, int>
                 (characteristics.ToDictionary(x => x.Key, y => y.Value));
             if (StandardChars.Count < 7)
-                FillStandart();
+                FillStandard();
             Position = Helper.Transfer[specialization];
         }
+       
 
-        public Hero()
-        {
-        }
-
-        public Dictionary<Characteristics, int> StandardChars { get; set; }
+        public Dictionary<Characteristics, int>? StandardChars { get; set; }
 
         public int UpgradePoints { get; set; }
 
@@ -65,10 +62,9 @@ namespace Game.Model
             }
         }
 
-        private void FillStandart()
+        private void FillStandard()
         {
-            if (StandardChars == null)
-                StandardChars = new Dictionary<Characteristics, int>(Characteristics);
+            StandardChars ??= new Dictionary<Characteristics, int>(Characteristics);
             var b = new Dictionary<Characteristics, int>(StandardChars);
             for (var i = 0; i < 7; i++)
                 if (!b.ContainsKey((Characteristics) i))
@@ -83,9 +79,14 @@ namespace Game.Model
             return Exp == hero.Exp && Name == hero.Name;
         }
 
+        protected bool Equals(Hero other)
+        {
+            return _exp == other._exp && Equals(StandardChars, other.StandardChars) && UpgradePoints == other.UpgradePoints;
+        }
+
         public override int GetHashCode()
         {
-            return base.GetHashCode();
+            return HashCode.Combine(_exp, StandardChars, UpgradePoints);
         }
     }
 

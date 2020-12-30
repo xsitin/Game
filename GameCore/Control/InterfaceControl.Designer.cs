@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace Game.Control
+namespace GameCore.Control
 {
     partial class InterfaceControl
     {

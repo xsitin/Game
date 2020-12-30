@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Game.Model
+namespace GameCore.Model
 {
     public class HeroesFactory
     {
         private int _level;
         private readonly Player _player;
 
-        private Specialization last = Specialization.Wizard;
+        private Specialization _last = Specialization.Wizard;
 
         public HeroesFactory(Player player)
         {
@@ -27,9 +27,9 @@ namespace Game.Model
         public Hero GetRandomHero()
         {
             var spec = (Specialization) new Random().Next(0, 3);
-            while (spec == last)
+            while (spec == _last)
                 spec = (Specialization) new Random().Next(0, 3);
-            last = spec;
+            _last = spec;
             return GetHero(spec);
         }
 

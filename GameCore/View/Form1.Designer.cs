@@ -1,4 +1,4 @@
-﻿namespace Game
+﻿namespace GameCore.View
 {
     sealed partial class Form1
     {

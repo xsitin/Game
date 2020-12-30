@@ -2,10 +2,10 @@
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using Game.Model;
+using GameCore.Model;
 using GameCore.Resources;
 
-namespace Game.Control
+namespace GameCore.Control
 {
     public partial class InterfaceControl : UserControl
     {
@@ -34,14 +34,14 @@ namespace Game.Control
         {
             while (_game.CurrentCreature == null)
                 _game.NextStep();
-            var HpPotions = _game.CurrentCreature.Inventory.Where(x => x.Name == "HP Potion").ToList();
-            var MpPotions = _game.CurrentCreature.Inventory.Where(x => x.Name == "MP Potion").ToList();
+            var hpPotions = _game.CurrentCreature.Inventory.Where(x => x.Name == "HP Potion").ToList();
+            var mpPotions = _game.CurrentCreature.Inventory.Where(x => x.Name == "MP Potion").ToList();
             e.Graphics.DrawImage(Helper.ImageTransfer[_game.CurrentCreature.Specialization], new Point(20, 20));
             e.Graphics.DrawString(_game.CurrentCreature.Name, new Font(FontFamily.GenericSerif, 12),
                 new SolidBrush(Color.Coral), new Point(20, 120));
             e.Graphics.FillRectangle(new SolidBrush(Color.Gray), new RectangleF(175, 5, 1375, 165));
             e.Graphics.DrawRectangle(new Pen(Color.Black, 5), new Rectangle(170, 0, 1380, 170));
-            if (HpPotions.Any())
+            if (hpPotions.Any())
             {
                 e.Graphics.DrawImage(Resource.HPpotion, new Point(890, 10));
                 if (!Controls.Find("HpPotion", true).Any())
@@ -55,17 +55,17 @@ namespace Game.Control
                     hp.Click += (a, b) =>
                     {
                         _game.CurrentCreature.HpChange(
-                            HpPotions.First().Actions.First(x => x.characteristic == Characteristics.Health).value,
+                            hpPotions.First().Actions.First(x => x.characteristic == Characteristics.Health).value,
                             true);
-                        _game.CurrentCreature.Inventory.Remove(HpPotions.First());
-                        HpPotions.Remove(HpPotions.First());
+                        _game.CurrentCreature.Inventory.Remove(hpPotions.First());
+                        hpPotions.Remove(hpPotions.First());
                         Parent.Refresh();
                     };
                     Controls.Add(hp);
                 }
             }
 
-            if (MpPotions.Any())
+            if (mpPotions.Any())
             {
                 e.Graphics.DrawImage(Resource.MPpotion, new Point(990, 10));
                 if (!Controls.Find("MpPotion", true).Any())
@@ -79,9 +79,9 @@ namespace Game.Control
                     mp.Click += (a, b) =>
                     {
                         _game.CurrentCreature.Characteristics[Characteristics.Mana] +=
-                            MpPotions.First().Actions.First(x => x.characteristic == Characteristics.Mana).value;
-                        _game.CurrentCreature.Inventory.Remove(MpPotions.First());
-                        MpPotions.Remove(MpPotions.First());
+                            mpPotions.First().Actions.First(x => x.characteristic == Characteristics.Mana).value;
+                        _game.CurrentCreature.Inventory.Remove(mpPotions.First());
+                        mpPotions.Remove(mpPotions.First());
                         Parent.Refresh();
                     };
                     Controls.Add(mp);

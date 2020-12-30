@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Game.Model
+namespace GameCore.Model
 {
     public class Player
     {

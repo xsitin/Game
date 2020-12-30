@@ -1,10 +1,10 @@
 ﻿using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using Game.Model;
+using GameCore.Model;
 using GameCore.Resources;
 
-namespace Game.Control
+namespace GameCore.Control
 {
     public sealed class BasicHeroCardControl : UserControl
     {

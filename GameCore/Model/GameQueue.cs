@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Game.Model
+namespace GameCore.Model
 {
     public class GameQueue
     {

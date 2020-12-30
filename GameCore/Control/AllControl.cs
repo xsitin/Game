@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using Game.Model;
+using GameCore.Model;
 
-namespace Game.Control
+namespace GameCore.Control
 {
     public partial class AllControl : UserControl
     {
@@ -47,18 +47,18 @@ namespace Game.Control
                 foreach (var key in hero.StandardChars.Keys.Where(key => hero.Characteristics != null))
                     if (hero.Characteristics != null)
                         hero.Characteristics[key] = hero.StandardChars[key];
-                _player.Gold += _game._reward.money;
+                _player.Gold += _game.Reward.money;
                 var mers = new List<Hero>();
                 var fac = new HeroesFactory(_player);
                 for (var i = 0; i < 4; i++) mers.Add(fac.GetRandomHero());
                 _player.Mercenaries = mers;
-                ((Form1) Application.OpenForms["Main"]! ?? throw new InvalidOperationException()).VillageControls();
+                ((View.Form1) Application.OpenForms["Main"]! ?? throw new InvalidOperationException()).VillageControls();
                 Dispose();
                 return;
             }
 
             Controls.Clear();
-            if (!_fieldControl._enemies.Any(x => x.Characteristics[Characteristics.Health] > 0))
+            if (!_fieldControl.Enemies.Any(x => x.Characteristics[Characteristics.Health] > 0))
                 _fieldControl = new FieldControl(_game.Heroes, _game.Enemy) {Name = "Field"};
             _fieldControl.Location = new Point(250, 200);
             _fieldControl.Size = new Size(1920, 800);

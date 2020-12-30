@@ -4,11 +4,11 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
-using Game.Control;
-using Game.Model;
+using GameCore.Control;
+using GameCore.Model;
 using GameCore.Resources;
 
-namespace Game
+namespace GameCore.View
 {
     public sealed partial class Form1 : Form
     {

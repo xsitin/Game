@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Windows.Forms;
 
-namespace Game.Model
+namespace GameCore.Model
 {
     public class Game
     {
@@ -10,7 +10,7 @@ namespace Game.Model
         private int _counter;
 
         private Team<EnemyHero> _enemy;
-        public (int exp, int money) _reward;
+        public (int exp, int money) Reward;
 
         public BasicCreature CurrentCreature;
         public Team<Hero> Heroes;
@@ -77,8 +77,8 @@ namespace Game.Model
                 var res = MessageBox.Show("Хотите продолжить?", "", MessageBoxButtons.YesNo);
                 var heroes = Heroes.GetTeamList();
                 var level = heroes.Sum(x => ((Hero) x).Level) / heroes.Count();
-                _reward.exp += (int) Math.Round(100 + level * 100 + 300 * Math.Pow(level, 0.5)) / 3;
-                _reward.money += level * 200;
+                Reward.exp += (int) Math.Round(100 + level * 100 + 300 * Math.Pow(level, 0.5)) / 3;
+                Reward.money += level * 200;
                 if (res == DialogResult.Yes)
                 {
                     Enemy = _enemyFactory.GetEnemyTeam();
@@ -87,7 +87,7 @@ namespace Game.Model
                     return;
                 }
 
-                foreach (var h in Heroes.GetTeamList()) ((Hero) h).Exp += _reward.exp;
+                foreach (var h in Heroes.GetTeamList()) ((Hero) h).Exp += Reward.exp;
                 IsEnd = true;
                 Application.OpenForms["Main"]?.Controls["MainCntrl"].Refresh();
                 return;

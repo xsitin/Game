@@ -1,17 +1,17 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
-using Game.Model;
+using GameCore.Model;
 
-namespace Game.Control
+namespace GameCore.Control
 {
     public sealed class HeroInventoryControl : UserControl
     {
         private readonly Hero _hero;
         private readonly Player _player;
         private readonly Size _size = new(420, 390);
-        private readonly Form1 _form1;
+        private readonly View.Form1 _form1;
 
-        public HeroInventoryControl(Hero hero, Player player, Form1? form1)
+        public HeroInventoryControl(Hero hero, Player player, View.Form1? form1)
         {
             _hero = hero;
             MinimumSize = _size;

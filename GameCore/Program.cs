@@ -1,8 +1,8 @@
 using System;
 using System.Windows.Forms;
-using Game.Model;
+using GameCore.Model;
 
-namespace Game
+namespace GameCore
 {
     internal static class Program
     {
@@ -11,7 +11,7 @@ namespace Game
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            var form = new Form1 {Name = "Main"};
+            var form = new View.Form1 {Name = "Main"};
             Application.ApplicationExit += (a, e) =>
             {
                 if (form.Player != null)

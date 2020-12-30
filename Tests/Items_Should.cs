@@ -4,57 +4,57 @@ using NUnit.Framework;
 
 namespace Tests
 {
-    internal class Items_Should
+    internal class ItemsShould
     {
-        private EnemyHero enemyArcher;
-        private Team<EnemyHero> enemySquad;
-        private EnemyHero enemyWarrior1;
-        private EnemyHero enemyWarrior2;
-        private EnemyHero enemyWizard;
-        private Hero heroArcher;
-        private Team<Hero> heroSquad;
-        private Hero heroWarrior;
+        private EnemyHero _enemyArcher;
+        private Team<EnemyHero> _enemySquad;
+        private EnemyHero _enemyWarrior1;
+        private EnemyHero _enemyWarrior2;
+        private EnemyHero _enemyWizard;
+        private Hero _heroArcher;
+        private Team<Hero> _heroSquad;
+        private Hero _heroWarrior;
 
         [SetUp]
         public void SetUp()
         {
-            heroWarrior = new Hero("Герой", new Dictionary<Characteristics, int> {[Characteristics.Health] = 200},
+            _heroWarrior = new Hero("Герой", new Dictionary<Characteristics, int> {[Characteristics.Health] = 200},
                 new List<ActiveItem>(), Specialization.Warrior, Position.Melee, Location.SomeLocation);
-            heroArcher = new Hero("Герой", new Dictionary<Characteristics, int> {[Characteristics.Health] = 200},
+            _heroArcher = new Hero("Герой", new Dictionary<Characteristics, int> {[Characteristics.Health] = 200},
                 new List<ActiveItem>(), Specialization.Archer, Position.Range, Location.SomeLocation);
-            enemyWizard = new EnemyHero("Злодей", new Dictionary<Characteristics, int> {[Characteristics.Health] = 200},
+            _enemyWizard = new EnemyHero("Злодей", new Dictionary<Characteristics, int> {[Characteristics.Health] = 200},
                 new List<ActiveItem>(), Specialization.Wizard, Position.Range, Location.SomeLocation);
-            enemyArcher = new EnemyHero("Злодей", new Dictionary<Characteristics, int> {[Characteristics.Health] = 200},
+            _enemyArcher = new EnemyHero("Злодей", new Dictionary<Characteristics, int> {[Characteristics.Health] = 200},
                 new List<ActiveItem>(), Specialization.Archer, Position.Range, Location.SomeLocation);
-            enemyWarrior1 = new EnemyHero("Злодей",
+            _enemyWarrior1 = new EnemyHero("Злодей",
                 new Dictionary<Characteristics, int> {[Characteristics.Health] = 200},
                 new List<ActiveItem>(), Specialization.Warrior, Position.Range, Location.SomeLocation);
-            enemyWarrior2 = new EnemyHero("Злодей",
+            _enemyWarrior2 = new EnemyHero("Злодей",
                 new Dictionary<Characteristics, int> {[Characteristics.Health] = 200},
                 new List<ActiveItem>(), Specialization.Warrior, Position.Range, Location.SomeLocation);
 
-            var heroMelee = new List<Hero> {heroWarrior};
-            var heroRangers = new List<Hero> {heroArcher};
-            heroSquad = new Team<Hero>(heroMelee, heroRangers);
+            var heroMelee = new List<Hero> {_heroWarrior};
+            var heroRangers = new List<Hero> {_heroArcher};
+            _heroSquad = new Team<Hero>(heroMelee, heroRangers);
 
-            var enemyMelee = new List<EnemyHero> {enemyWarrior1, enemyWarrior2};
-            var enemyRangers = new List<EnemyHero> {enemyWizard, enemyArcher};
-            enemySquad = new Team<EnemyHero>(enemyMelee, enemyRangers);
+            var enemyMelee = new List<EnemyHero> {_enemyWarrior1, _enemyWarrior2};
+            var enemyRangers = new List<EnemyHero> {_enemyWizard, _enemyArcher};
+            _enemySquad = new Team<EnemyHero>(enemyMelee, enemyRangers);
         }
 
         [Test]
         public void Test_OneItem_OneTarget()
         {
             var poison = new ActiveItem("poison", new[] {(Characteristics.Health, -20)});
-            poison.Use(enemyWizard);
-            Assert.AreEqual(180, enemyWizard.Characteristics[Characteristics.Health]);
+            poison.Use(_enemyWizard);
+            Assert.AreEqual(180, _enemyWizard.Characteristics[Characteristics.Health]);
         }
 
         [Test]
         public void Test_OneItem_SomeTargets()
         {
             var poison = new ActiveItem("poison", new[] {(Characteristics.Health, -20)});
-            var targets = enemySquad.GetTeamList().ToArray();
+            var targets = _enemySquad.GetTeamList().ToArray();
             poison.Use(targets);
 
             foreach (var target in targets)
@@ -64,12 +64,12 @@ namespace Tests
         [Test]
         public void Test_SomeItem_OneTarget()
         {
-            Assert.AreEqual(200, enemyWizard.Characteristics[Characteristics.Health]);
+            Assert.AreEqual(200, _enemyWizard.Characteristics[Characteristics.Health]);
             var poison = new ActiveItem("poison", new[] {(Characteristics.Health, -20)});
             var healingPotion = new ActiveItem("heal", new[] {(Characteristics.Health, 20)});
-            poison.Use(enemyWizard);
-            healingPotion.Use(enemyWizard);
-            Assert.AreEqual(200, enemyWizard.Characteristics[Characteristics.Health]);
+            poison.Use(_enemyWizard);
+            healingPotion.Use(_enemyWizard);
+            Assert.AreEqual(200, _enemyWizard.Characteristics[Characteristics.Health]);
         }
 
         [Test]
@@ -77,11 +77,11 @@ namespace Tests
         {
             var poison = new ActiveItem("poison", new[] {(Characteristics.Health, -20)});
             var healingPotion = new ActiveItem("heal", new[] {(Characteristics.Health, 20)});
-            poison.Use(enemyWizard);
-            healingPotion.Use(heroWarrior);
+            poison.Use(_enemyWizard);
+            healingPotion.Use(_heroWarrior);
 
-            Assert.AreEqual(180, enemyWizard.Characteristics[Characteristics.Health]);
-            Assert.AreEqual(220, heroWarrior.Characteristics[Characteristics.Health]);
+            Assert.AreEqual(180, _enemyWizard.Characteristics[Characteristics.Health]);
+            Assert.AreEqual(220, _heroWarrior.Characteristics[Characteristics.Health]);
         }
 
         [Test]
@@ -90,8 +90,8 @@ namespace Tests
             var poison = new ActiveItem("poison", new[] {(Characteristics.Health, -20)});
             var healingPotion = new ActiveItem("heal", new[] {(Characteristics.Health, 20)});
 
-            var enemies = enemySquad.GetTeamList().ToArray();
-            var heroes = heroSquad.GetTeamList().ToArray();
+            var enemies = _enemySquad.GetTeamList().ToArray();
+            var heroes = _heroSquad.GetTeamList().ToArray();
             poison.Use(enemies);
             healingPotion.Use(heroes);
 
@@ -105,10 +105,10 @@ namespace Tests
         public void Test_OneMultiItem_OneTarget()
         {
             var heal = new ActiveItem("heal", new[] {(Characteristics.Health, 20), (Characteristics.Initiative, 1)});
-            heal.Use(heroWarrior);
+            heal.Use(_heroWarrior);
 
-            Assert.AreEqual(220, heroWarrior.Characteristics[Characteristics.Health]);
-            Assert.True(heroWarrior.Characteristics[Characteristics.Initiative] == 31);
+            Assert.AreEqual(220, _heroWarrior.Characteristics[Characteristics.Health]);
+            Assert.True(_heroWarrior.Characteristics[Characteristics.Initiative] == 31);
         }
 
         [Test]
@@ -116,7 +116,7 @@ namespace Tests
         {
             var poison = new ActiveItem("poison",
                 new[] {(Characteristics.Health, -20), (Characteristics.Initiative, -1)});
-            var targets = enemySquad.GetTeamList().ToArray();
+            var targets = _enemySquad.GetTeamList().ToArray();
             poison.Use(targets);
 
             foreach (var target in targets)
@@ -129,10 +129,10 @@ namespace Tests
         [Test]
         public void Test_Buffusingitem()
         {
-            var poising = new Buff(enemyWizard, 1, "poising", (Characteristics.Health, -10));
+            var poising = new Buff(_enemyWizard, 1, "poising", (Characteristics.Health, -10));
             var arrowWithPoison = new ActiveItem("ArrowWithPoison", new (Characteristics, int)[0], poising);
-            arrowWithPoison.Use(enemyWizard);
-            Assert.True(enemyWizard.Characteristics[Characteristics.Health] == 190);
+            arrowWithPoison.Use(_enemyWizard);
+            Assert.True(_enemyWizard.Characteristics[Characteristics.Health] == 190);
         }
     }
 }

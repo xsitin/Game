@@ -1,8 +1,8 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
-using Game.Model;
+using GameCore.Model;
 
-namespace Game.Control
+namespace GameCore.Control
 {
     public sealed class ActiveTeam : UserControl
     {
@@ -10,7 +10,7 @@ namespace Game.Control
         private readonly Player _player;
         private readonly Size _size = new(420, 390);
 
-        public ActiveTeam(Hero hero, Player player, Form1 form1)
+        public ActiveTeam(Hero hero, Player player, View.Form1 form1)
         {
             _hero = hero;
             _player = player;
@@ -68,7 +68,7 @@ namespace Game.Control
             {
                 if (ParentForm?.Controls["Upgrade"].Controls.Count == 1) return;
                 ParentForm?.Controls["Upgrade"].Controls
-                    .Add(new HeroInventoryControl(hero, player, ParentForm as Form1));
+                    .Add(new HeroInventoryControl(hero, player, ParentForm as View.Form1));
                 Dispose();
             };
             Controls.Add(inventory);

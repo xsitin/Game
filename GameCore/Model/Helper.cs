@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.Entity.Core.EntityClient;
 using System.Drawing;
 using System.IO;
 using GameCore.Resources;
 using Newtonsoft.Json;
 
-namespace Game.Model
+namespace GameCore.Model
 {
     public class
         Helper //класс отвечающий за доступ к данным в проекте, к примеру, за получение необходимых для view картинок
@@ -99,17 +98,17 @@ namespace Game.Model
             }
         };
 
-        private static int previous;
+        private static int _previous;
 
         public static string GetName()
         {
-            var Names = Resource.Names.Split(new[] {"\r\n"}, StringSplitOptions.RemoveEmptyEntries);
+            var names = Resource.Names.Split(new[] {"\r\n"}, StringSplitOptions.RemoveEmptyEntries);
             var r = new Random();
-            var val = r.Next(0, Names.Length - 1);
-            while (val == previous)
-                val = r.Next(0, Names.Length - 1);
-            previous = val;
-            return Names[val];
+            var val = r.Next(0, names.Length - 1);
+            while (val == _previous)
+                val = r.Next(0, names.Length - 1);
+            _previous = val;
+            return names[val];
         }
 
         public static void SaveGame(Player player)
@@ -127,14 +126,9 @@ namespace Game.Model
             var way = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             way = Path.Combine(way, "Game");
             way = Path.Combine(way, playerName);
-            if (File.Exists(way))
-            {
-                var text = File.ReadAllText(way);
-                return
-                    JsonConvert.DeserializeObject<Player>(text);
-            }
-
-            return new Player();
+            if (!File.Exists(way)) return new Player();
+            var text = File.ReadAllText(way);
+            return JsonConvert.DeserializeObject<Player>(text);
         }
 
         //private string Save = @"{"Gold":100,"PlayerName":"Player1","Heroes":[{"Inventory":{"Heap":[],"Size":0},"Buffs":[],"StandardChars":{"Health":200,"Mana":100,"Initiative":30,"PhysicalDamage":15,"PhysicalProtection":20,"Evasion":10,"MagicalProtection":10},"UpgradePoints":0,"Exp":0,"Name":"Lyur","Characteristics":{"Health":200,"Mana":100,"Initiative":30,"PhysicalDamage":15,"PhysicalProtection":20,"Evasion":10,"MagicalProtection":10},"Level":1,"Location":0,"Specialization":1,"Skills":[{"Range":3,"IsMagic":false,"Name":"Base Hit","Level":1,"ManaCost":0,"Effect":[{"Item1":0,"Item2":-15}],"Buff":null}],"Position":0},{"Inventory":{"Heap":[],"Size":0},"Buffs":[],"StandardChars":{"Health":200,"Mana":100,"Initiative":30,"PhysicalDamage":15,"PhysicalProtection":20,"Evasion":10,"MagicalProtection":10},"UpgradePoints":0,"Exp":0,"Name":"Soks","Characteristics":{"Health":200,"Mana":100,"Initiative":30,"PhysicalDamage":15,"PhysicalProtection":20,"Evasion":10,"MagicalProtection":10},"Level":1,"Location":0,"Specialization":2,"Skills":[{"Range":3,"IsMagic":false,"Name":"Base Hit","Level":1,"ManaCost":0,"Effect":[{"Item1":0,"Item2":-15}],"Buff":null}],"Position":1}],"Mercenaries":[{"Inventory":{"Heap":[],"Size":0},"Buffs":[],"StandardChars":{"Health":200,"Mana":100,"Initiative":30,"PhysicalDamage":15,"PhysicalProtection":20,"Evasion":10,"MagicalProtection":10},"UpgradePoints":0,"Exp":0,"Name":"Lyur","Characteristics":{"Health":200,"Mana":100,"Initiative":30,"PhysicalDamage":15,"PhysicalProtection":20,"Evasion":10,"MagicalProtection":10},"Level":1,"Location":0,"Specialization":1,"Skills":[{"Range":3,"IsMagic":false,"Name":"Base Hit","Level":1,"ManaCost":0,"Effect":[{"Item1":0,"Item2":-15}],"Buff":null}],"Position":0},{"Inventory":{"Heap":[],"Size":0},"Buffs":[],"StandardChars":{"Health":200,"Mana":100,"Initiative":30,"PhysicalDamage":15,"PhysicalProtection":20,"Evasion":10,"MagicalProtection":10},"UpgradePoints":0,"Exp":0,"Name":"Soks","Characteristics":{"Health":200,"Mana":100,"Initiative":30,"PhysicalDamage":15,"PhysicalProtection":20,"Evasion":10,"MagicalProtection":10},"Level":1,"Location":0,"Specialization":2,"Skills":[{"Range":3,"IsMagic":false,"Name":"Base Hit","Level":1,"ManaCost":0,"Effect":[{"Item1":0,"Item2":-15}],"Buff":null}],"Position":1}],"Storage":[{"Actions":[{"Item1":0,"Item2":20}],"Buff":null,"Action":null,"Name":"heal"}],"Shop":[]}";

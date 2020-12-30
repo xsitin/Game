@@ -12,19 +12,19 @@ namespace Tests
         [SetUp]
         public void SetUp()
         {
-            Pl = new Player();
-            Pl.Heroes = new List<Hero>();
-            Pl.Heroes.AddRange(Helper.GetHeroTeam(3, 3, 10000000).GetTeamList().Cast<Hero>());
-            Factory = new HeroesFactory(Pl);
+            _pl = new Player();
+            _pl.Heroes = new List<Hero>();
+            _pl.Heroes.AddRange(Helper.GetHeroTeam(3, 3, 10000000).GetTeamList().Cast<Hero>());
+            _factory = new HeroesFactory(_pl);
         }
 
-        private HeroesFactory Factory;
-        private Player Pl;
+        private HeroesFactory _factory;
+        private Player _pl;
 
         [Test]
         public void MagicTest()
         {
-            Assert.AreEqual(Pl.Heroes.Max(x => x.Level) / 5 * 5, Factory.GetRandomHero().Level);
+            Assert.AreEqual(_pl.Heroes.Max(x => x.Level) / 5 * 5, _factory.GetRandomHero().Level);
         }
 
         private static class Helper

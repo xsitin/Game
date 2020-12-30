@@ -1,9 +1,9 @@
 ﻿using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using Game.Model;
+using GameCore.Model;
 
-namespace Game.Control
+namespace GameCore.Control
 {
     public sealed class UpgradeSkill : UserControl
     {

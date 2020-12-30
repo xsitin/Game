@@ -1,18 +1,18 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
-using Game.Model;
+using GameCore.Model;
 using GameCore.Resources;
 
-namespace Game.Control
+namespace GameCore.Control
 {
     public sealed class GoldControl : UserControl
     {
-        private readonly Player Player;
+        private readonly Player _player;
 
         public GoldControl(Player player)
         {
             DoubleBuffered = true;
-            Player = player;
+            _player = player;
             BackColor = Color.Transparent;
             Size = new Size(400, 400);
         }
@@ -21,7 +21,7 @@ namespace Game.Control
         {
             var brush = new SolidBrush(Color.Gold);
             e.Graphics.DrawImage(Resource.GoldBack, new Rectangle(0, 0, 100, 100));
-            e.Graphics.DrawString(Player.Gold.ToString(), new Font(FontFamily.GenericSerif, 26), brush, 90, 35);
+            e.Graphics.DrawString(_player.Gold.ToString(), new Font(FontFamily.GenericSerif, 26), brush, 90, 35);
         }
     }
 }

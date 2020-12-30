@@ -1,7 +1,7 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
 
-namespace Game.Control
+namespace GameCore.Control
 {
     public class TargetFiller : UserControl
     {

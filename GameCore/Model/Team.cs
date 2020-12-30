@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Game.Model
+namespace GameCore.Model
 {
     public class Team<T> where T : BasicCreature
     {
@@ -23,8 +23,8 @@ namespace Game.Model
             SecondLine = new List<T>();
         }
 
-        public List<T> FirstLine { get; set; }
-        public List<T> SecondLine { get; set; }
+        public List<T> FirstLine { get; protected set; }
+        public List<T> SecondLine { get; protected set; }
 
         public List<BasicCreature> GetTeamList()
         {
@@ -33,19 +33,17 @@ namespace Game.Model
 
         public void MakeStepForward()
         {
-            if (FirstLine.Count == 0 && SecondLine.Count != 0)
-            {
-                FirstLine = SecondLine;
-                SecondLine = new List<T>();
-            }
+            if (FirstLine.Count != 0 || SecondLine.Count == 0) return;
+            FirstLine = SecondLine;
+            SecondLine = new List<T>();
         }
 
         public void Update()
         {
-            FirstLine = FirstLine.Where(x => x.Characteristics != null && x.Characteristics[Characteristics.Health] > 0)
+            FirstLine = FirstLine.Where(x => x.Characteristics[Characteristics.Health] > 0)
                 .ToList();
             SecondLine = SecondLine
-                .Where(x => x.Characteristics != null && x.Characteristics[Characteristics.Health] > 0).ToList();
+                .Where(x => x.Characteristics[Characteristics.Health] > 0).ToList();
             MakeStepForward();
         }
     }
