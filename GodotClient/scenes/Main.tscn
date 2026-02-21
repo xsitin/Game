@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://main_scene"]
+
+[ext_resource type="Script" path="res://scripts/Main.cs" id="1_main"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_main")
+
+[node name="Status" type="Label" parent="."]
+offset_right = 760.0
+offset_bottom = 120.0
+text = "Godot migration bootstrap\nNext: port game loop and combat scene"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
