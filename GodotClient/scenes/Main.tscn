@@ -1,0 +1,82 @@
+[gd_scene load_steps=6 format=3 uid="uid://main_scene"]
+
+[ext_resource type="Script" path="res://scripts/Main.cs" id="1_main"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_title"]
+font_size = 28
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_main")
+
+[node name="RootMargin" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = -24.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Layout" type="VBoxContainer" parent="RootMargin"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Title" type="Label" parent="RootMargin/Layout"]
+layout_mode = 2
+text = "Game: Godot rewrite prototype"
+label_settings = SubResource("LabelSettings_title")
+
+[node name="Status" type="RichTextLabel" parent="RootMargin/Layout"]
+custom_minimum_size = Vector2(0, 240)
+layout_mode = 2
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+
+[node name="SkillRow" type="HBoxContainer" parent="RootMargin/Layout"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="SkillSelect" type="OptionButton" parent="RootMargin/Layout/SkillRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TargetSelect" type="OptionButton" parent="RootMargin/Layout/SkillRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CastButton" type="Button" parent="RootMargin/Layout/SkillRow"]
+layout_mode = 2
+text = "Cast"
+
+[node name="Actions" type="HBoxContainer" parent="RootMargin/Layout"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="AttackButton" type="Button" parent="RootMargin/Layout/Actions"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Quick attack"
+
+[node name="HealButton" type="Button" parent="RootMargin/Layout/Actions"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Quick heal"
+
+[node name="EndTurnButton" type="Button" parent="RootMargin/Layout/Actions"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Skip turn"
+
+[node name="RestartButton" type="Button" parent="RootMargin/Layout"]
+layout_mode = 2
+text = "Restart battle"
