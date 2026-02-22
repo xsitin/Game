@@ -1,0 +1,151 @@
+[gd_scene load_steps=2 format=3 uid="uid://BattlePanel"]
+
+[ext_resource type="Texture2D" path="res://assets/backgrounds/battle.png" id="1_bg"]
+
+[node name="BattlePanel" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 3
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stretch_mode = 2
+texture = ExtResource("1_bg")
+mouse_filter = 2
+z_index = -1
+
+[node name="BattleContent" type="VBoxContainer" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 8
+modulate = Color(1, 1, 1, 0.9)
+
+[node name="BattleCombatants" type="HBoxContainer" parent="BattleContent"]
+layout_mode = 2
+theme_override_constants/separation = 8
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HeroPanel" type="PanelContainer" parent="BattleContent/BattleCombatants"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_minimum_size = Vector2(0, 160)
+
+[node name="HeroPanelLayout" type="VBoxContainer" parent="BattleContent/BattleCombatants/HeroPanel"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="HeroLabel" type="Label" parent="BattleContent/BattleCombatants/HeroPanel/HeroPanelLayout"]
+layout_mode = 2
+text = "Heroes"
+
+[node name="HeroList" type="ItemList" parent="BattleContent/BattleCombatants/HeroPanel/HeroPanelLayout"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 200)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+fixed_icon_size = Vector2(32, 32)
+icon_scale = 1.0
+select_mode = 0
+
+[node name="EnemyPanel" type="PanelContainer" parent="BattleContent/BattleCombatants"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_minimum_size = Vector2(0, 160)
+
+[node name="EnemyPanelLayout" type="VBoxContainer" parent="BattleContent/BattleCombatants/EnemyPanel"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="EnemyLabel" type="Label" parent="BattleContent/BattleCombatants/EnemyPanel/EnemyPanelLayout"]
+layout_mode = 2
+text = "Enemies"
+
+[node name="EnemyList" type="ItemList" parent="BattleContent/BattleCombatants/EnemyPanel/EnemyPanelLayout"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 200)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+fixed_icon_size = Vector2(32, 32)
+icon_scale = 1.0
+select_mode = 0
+
+[node name="StatusContainer" type="ScrollContainer" parent="BattleContent"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 160)
+size_flags_vertical = 3
+
+[node name="Status" type="RichTextLabel" parent="BattleContent/StatusContainer"]
+layout_mode = 2
+bbcode_enabled = true
+scroll_active = true
+
+[node name="ActiveTurnLabel" type="Label" parent="BattleContent"]
+layout_mode = 2
+text = "Active turn: Hero"
+custom_minimum_size = Vector2(0, 24)
+
+[node name="SkillRow" type="HBoxContainer" parent="BattleContent"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+
+[node name="SkillSelect" type="OptionButton" parent="BattleContent/SkillRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TargetSelect" type="OptionButton" parent="BattleContent/SkillRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CastButton" type="Button" parent="BattleContent/SkillRow"]
+layout_mode = 2
+text = "Cast"
+
+[node name="Actions" type="HBoxContainer" parent="BattleContent"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+
+[node name="AttackButton" type="Button" parent="BattleContent/Actions"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Quick attack"
+
+[node name="HealButton" type="Button" parent="BattleContent/Actions"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Quick heal"
+
+[node name="EndTurnButton" type="Button" parent="BattleContent/Actions"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Skip turn"
+
+[node name="BattleActions" type="HBoxContainer" parent="BattleContent"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+
+[node name="RestartButton" type="Button" parent="BattleContent/BattleActions"]
+layout_mode = 2
+text = "Restart"
+
+[node name="BackToHubButton" type="Button" parent="BattleContent/BattleActions"]
+layout_mode = 2
+text = "Back to Hub"

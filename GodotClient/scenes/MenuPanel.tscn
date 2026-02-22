@@ -1,0 +1,63 @@
+[gd_scene load_steps=2 format=3 uid="uid://MenuPanel"]
+
+[ext_resource type="Texture2D" path="res://assets/backgrounds/village.png" id="1_bg"]
+
+[node name="MenuPanel" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 3
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stretch_mode = 2
+texture = ExtResource("1_bg")
+mouse_filter = 2
+z_index = -1
+
+[node name="MenuContent" type="VBoxContainer" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 12
+custom_constants/separation = 12
+modulate = Color(1, 1, 1, 0.9)
+
+[node name="MenuHeading" type="Label" parent="MenuContent"]
+layout_mode = 2
+text = "Runners of the Ember"
+
+[node name="MenuInfo" type="Label" parent="MenuContent"]
+layout_mode = 2
+text = "Gather heroes, stock supplies, and head into the wilderness."
+
+[node name="MenuButtons" type="VBoxContainer" parent="MenuContent"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 6
+
+[node name="NewGameButton" type="Button" parent="MenuContent/MenuButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Start New Campaign"
+
+[node name="ContinueButton" type="Button" parent="MenuContent/MenuButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Continue"
+
+[node name="LegacyButton" type="Button" parent="MenuContent/MenuButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Import legacy save"

@@ -1,0 +1,78 @@
+[gd_scene load_steps=2 format=3 uid="uid://HubPanel"]
+
+[ext_resource type="Texture2D" path="res://assets/backgrounds/village.png" id="1_bg"]
+
+[node name="HubPanel" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 3
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stretch_mode = 2
+texture = ExtResource("1_bg")
+mouse_filter = 2
+z_index = -1
+
+[node name="HubContent" type="VBoxContainer" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 8
+custom_constants/separation = 8
+modulate = Color(1, 1, 1, 0.9)
+
+[node name="HubHeading" type="Label" parent="HubContent"]
+layout_mode = 2
+text = "Barracks"
+
+[node name="HubSubheading" type="Label" parent="HubContent"]
+layout_mode = 2
+text = "Select your vanguard and manage the roster."
+
+[node name="HubStats" type="Label" parent="HubContent"]
+layout_mode = 2
+text = "Gold: 0 | Heroes ready: 3"
+
+[node name="HeroScroll" type="ScrollContainer" parent="HubContent"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HeroSelectionGrid" type="GridContainer" parent="HubContent/HeroScroll"]
+columns = 2
+grow_horizontal = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HubActions" type="HBoxContainer" parent="HubContent"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 12
+
+[node name="EnterBattleButton" type="Button" parent="HubContent/HubActions"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Enter Battle"
+
+[node name="OpenShopButton" type="Button" parent="HubContent/HubActions"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Visit Shop"
+
+[node name="BackToMenuButton" type="Button" parent="HubContent/HubActions"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Back to Menu"
