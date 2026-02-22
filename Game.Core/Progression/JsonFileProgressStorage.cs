@@ -23,7 +23,7 @@ public sealed class JsonFileProgressStorage : IProgressStorage
         {
             if (!File.Exists(_path))
             {
-                return new ProgressState();
+                return new ProgressState().Normalize();
             }
 
             var json = File.ReadAllText(_path);
@@ -32,7 +32,7 @@ public sealed class JsonFileProgressStorage : IProgressStorage
         }
         catch
         {
-            return new ProgressState();
+            return new ProgressState().Normalize();
         }
     }
 
