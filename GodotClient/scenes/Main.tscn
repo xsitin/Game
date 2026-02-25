@@ -1,0 +1,63 @@
+[gd_scene load_steps=6 format=3 uid="uid://main_scene"]
+
+[ext_resource type="Script" path="res://scripts/Main.cs" id="1_main"]
+[ext_resource type="PackedScene" path="res://scenes/MenuPanel.tscn" id="2_menu"]
+[ext_resource type="PackedScene" path="res://scenes/HubPanel.tscn" id="3_hub"]
+[ext_resource type="PackedScene" path="res://scenes/BattlePanel.tscn" id="4_battle"]
+[ext_resource type="PackedScene" path="res://scenes/ShopPanel.tscn" id="5_shop"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_title"]
+font_size = 28
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_main")
+
+[node name="RootMargin" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = -24.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Layout" type="VBoxContainer" parent="RootMargin"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 12
+
+[node name="Title" type="Label" parent="RootMargin/Layout"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Game: Godot rewrite prototype"
+label_settings = SubResource("LabelSettings_title")
+
+[node name="PanelStack" type="Control" parent="RootMargin/Layout"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MenuPanel" parent="RootMargin/Layout/PanelStack" instance=ExtResource("2_menu")]
+
+[node name="HubPanel" parent="RootMargin/Layout/PanelStack" instance=ExtResource("3_hub")]
+visible = false
+
+[node name="BattlePanel" parent="RootMargin/Layout/PanelStack" instance=ExtResource("4_battle")]
+visible = false
+
+[node name="ShopPanel" parent="RootMargin/Layout/PanelStack" instance=ExtResource("5_shop")]
+visible = false

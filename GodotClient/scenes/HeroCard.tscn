@@ -1,0 +1,46 @@
+[gd_scene load_steps=1 format=3 uid="uid://HeroCard"]
+
+[node name="HeroCard" type="PanelContainer"]
+margin_right = 6.0
+margin_bottom = 6.0
+clip_contents = true
+
+[node name="Content" type="HBoxContainer" parent="."]
+layout_mode = 3
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 8
+
+[node name="Portrait" type="TextureRect" parent="Content"]
+expand = true
+stretch_mode = 2
+size_flags_horizontal = 0
+custom_minimum_size = Vector2(96, 96)
+
+[node name="Details" type="VBoxContainer" parent="Content"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="NameLabel" type="Label" parent="Content/Details"]
+text = "Hero"
+
+[node name="RoleLabel" type="Label" parent="Content/Details"]
+text = "Specialization"
+
+[node name="LevelLabel" type="Label" parent="Content/Details"]
+text = "Level 1"
+
+[node name="ActiveCheck" type="CheckBox" parent="Content/Details"]
+text = "Active"
+
+[node name="HpBar" type="ProgressBar" parent="Content/Details"]
+min_value = 0
+max_value = 100
+value = 100
+custom_minimum_size = Vector2(0, 12)
+
+[node name="ManaBar" type="ProgressBar" parent="Content/Details"]
+min_value = 0
+max_value = 100
+value = 100
+custom_minimum_size = Vector2(0, 12)

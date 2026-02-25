@@ -1,0 +1,116 @@
+[gd_scene load_steps=2 format=3 uid="uid://ShopPanel"]
+
+[ext_resource type="Texture2D" path="res://assets/backgrounds/shop.png" id="1_bg"]
+
+[node name="ShopPanel" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 3
+size_flags_horizontal = 3
+size_flags_vertical = 3
+stretch_mode = 2
+texture = ExtResource("1_bg")
+mouse_filter = 2
+z_index = -1
+
+[node name="ShopContent" type="VBoxContainer" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 8
+modulate = Color(1, 1, 1, 0.9)
+
+[node name="ShopHeading" type="Label" parent="ShopContent"]
+layout_mode = 2
+text = "Trading Post"
+
+[node name="ShopDetails" type="Label" parent="ShopContent"]
+layout_mode = 2
+text = "Spend gold to acquire supplies before heading out."
+
+[node name="ShopColumns" type="HBoxContainer" parent="ShopContent"]
+layout_mode = 2
+theme_override_constants/separation = 12
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="InventoryPanel" type="PanelContainer" parent="ShopContent/ShopColumns"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_minimum_size = Vector2(0, 220)
+
+[node name="InventoryPanelLayout" type="VBoxContainer" parent="ShopContent/ShopColumns/InventoryPanel"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="InventoryTitle" type="Label" parent="ShopContent/ShopColumns/InventoryPanel/InventoryPanelLayout"]
+layout_mode = 2
+text = "Inventory"
+
+[node name="InventoryScroll" type="ScrollContainer" parent="ShopContent/ShopColumns/InventoryPanel/InventoryPanelLayout"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="InventoryList" type="VBoxContainer" parent="ShopContent/ShopColumns/InventoryPanel/InventoryPanelLayout/InventoryScroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ShopItemsPanel" type="PanelContainer" parent="ShopContent/ShopColumns"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_minimum_size = Vector2(0, 220)
+
+[node name="ShopPanelLayout" type="VBoxContainer" parent="ShopContent/ShopColumns/ShopItemsPanel"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="ShopTitle" type="Label" parent="ShopContent/ShopColumns/ShopItemsPanel/ShopPanelLayout"]
+layout_mode = 2
+text = "Shop"
+
+[node name="ShopScroll" type="ScrollContainer" parent="ShopContent/ShopColumns/ShopItemsPanel/ShopPanelLayout"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ShopList" type="VBoxContainer" parent="ShopContent/ShopColumns/ShopItemsPanel/ShopPanelLayout/ShopScroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ShopButtons" type="HBoxContainer" parent="ShopContent"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 12
+
+[node name="BuyButton" type="Button" parent="ShopContent/ShopButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Buy most expensive"
+
+[node name="SellButton" type="Button" parent="ShopContent/ShopButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Sell junk"
+
+[node name="BackToHubButton" type="Button" parent="ShopContent/ShopButtons"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Back to Hub"

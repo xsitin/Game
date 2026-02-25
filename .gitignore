@@ -198,3 +198,7 @@ FakesAssemblies/
 *Solved.cs
 
 .idea/
+
+# Godot local cache and backups
+GodotClient/.godot/
+GodotClient/GameGodot.csproj.old
